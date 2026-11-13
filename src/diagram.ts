@@ -37,7 +37,7 @@ function onDiagramKeydown(event: KeyboardEvent) {
 document.addEventListener("keydown", onDiagramKeydown);
 if (import.meta.hot) import.meta.hot.dispose(() => document.removeEventListener("keydown", onDiagramKeydown));
 
-export function diagram(d: Diagram, additions: Edge[], onChange?: () => void, presentation: "sheet" | "paper" | "solution" = "sheet", labels?: () => Record<string, string>) {
+export function diagram(d: Diagram, additions: Edge[], onChange?: () => void, presentation: "sheet" | "paper" | "solution" = "sheet", labels?: () => Record<string, string>, estimatedPoints?: number) {
   if (presentation !== "paper" && d.sheetLayout) {
     d = { ...d, ...d.sheetLayout, fixedPath: undefined, solutionPath: undefined };
   }
@@ -133,6 +133,9 @@ export function diagram(d: Diagram, additions: Edge[], onChange?: () => void, pr
       canvas.append(label);
     }
     if (d.fixedPath) grayLines.append(svg("path", {d: d.fixedPath, fill: "none", stroke: "#66777b", "stroke-width": 1.6}));
+    if (presentation === "paper") for (const [name, path] of Object.entries(d.fixedParts ?? {})) {
+      grayLines.append(svg("path", {d: path, class: "paper-overlay", "data-figure-part": name}));
+    }
     if (presentation === "solution" && d.solutionPath)
       canvas.append(svg("path", {d: d.solutionPath, fill: "none", stroke: "#097464", "stroke-width": answerStrokeWidth}));
     const names = labels?.() ?? {};
@@ -177,6 +180,7 @@ export function diagram(d: Diagram, additions: Edge[], onChange?: () => void, pr
         stroke: fixed ? "#66777b" : "#097464",
         "stroke-width": fixed ? 1.8 : answerStrokeWidth,
       });
+      if (presentation === "paper") line.setAttribute("data-figure-part", a + "→" + b);
       if (type === "1対多")
         line.setAttribute(
           "marker-end",
@@ -263,7 +267,12 @@ export function diagram(d: Diagram, additions: Edge[], onChange?: () => void, pr
     canvas.setAttribute("role", "img");
     return canvas;
   }
-  panel.append(el("h3", d.title), frame);
+  const title = el("h3", d.title);
+  if (estimatedPoints !== undefined) {
+    title.className = "scored-diagram-title";
+    title.append(el("span", "予想配点 " + estimatedPoints + "点", "diagram-score"));
+  }
+  panel.append(title, frame);
   const footer = el("div", "", "diagram-footer");
   const legend = el("div", "", "diagram-legend");
   const symbols = [

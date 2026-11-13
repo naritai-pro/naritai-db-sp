@@ -6,6 +6,7 @@ import { materials, bookletText, figureReferences, showPaperTarget, showFigure }
 import "./style.css";
 import { library } from "./library";
 import { button, el, link } from "./dom";
+import { sectionScores } from "./review-scores";
 import { diagram } from "./diagram";
 import { empty, read, type Edge } from "./store";
 import type { Question } from "./exam";
@@ -65,6 +66,11 @@ function save() {
 function exportText(q: Question, withAnswer: boolean, section: number) {
   const blocks = [
     "# " + q.source + "　" + q.title,
+    "相談範囲：" + (section ? q.sections[section - 1].heading : "大問全体"),
+    withAnswer
+      ? "自分の答案とIPA解答例を照合し、正しく答えた点、改善点、本文の根拠を小問ごとに教えてください。得点を示す場合は推定としてください。"
+      : "自分の答案を踏まえ、答えを明かさずに、次に確認する本文・図表と考え方のヒントをください。",
+    "予想配点は当サイト独自の推定です。まとめて配点した欄は一組として扱ってください。",
     "出典：" + q.paper,
     "## 問題",
     bookletText(q),
@@ -79,23 +85,40 @@ function exportText(q: Question, withAnswer: boolean, section: number) {
   q.sections.forEach((s, i) => {
     const n = i + 1;
     if (section && n !== section) return;
-    blocks.push("## 設問" + n + "　" + s.title);
-    for (const {model: d, key} of diagramSlots(q, n)) {
-      blocks.push(
-        d.title, d.task,
-        "エンティティ：" + d.nodes.map((v) => v[0]).join("、"),
-        "問題で与えられた関係：\n" + graph(d.fixed),
-        "自分が追加した関係：\n" +
-          (record.edges[key]?.length ? graph(record.edges[key]) : "未解答"),
-      );
-      if (withAnswer) blocks.push("IPA解答例の追加関係：\n" + graph(d.answer));
-    }
-    for (const [k, label, answer] of s.fields) {
-      blocks.push(
-        label,
-        "自分の答案：" + (record.fields[k]?.trim() || "未解答"),
-      );
-      if (withAnswer) blocks.push("IPA解答例（表記を変換）：" + answer);
+    blocks.push("## " + s.heading);
+    const fields = new Map(s.fields.map(field => [field[0], field]));
+    const slots = diagramSlots(q, n);
+    const diagrams = new Map(slots.map(slot => ["diagram:" + slot.index, slot]));
+    const prompts = new Map(s.prompts.map(prompt => [
+      prompt.before === "diagram" ? "diagram:" + slots[0]?.index : prompt.before, prompt.lines,
+    ]));
+    let heading = "";
+    for (const [id, score] of sectionScores(q.id, i, s.heading)) {
+      if (heading !== score.heading) {
+        heading = score.heading;
+        blocks.push("### " + heading);
+      }
+      const prompt = prompts.get(id);
+      if (prompt) blocks.push(prompt.join("\n"));
+      const { ids, points } = score.item;
+      if (id === ids[0]) {
+        const names = ids.map(key => diagrams.get(key)?.model.title ?? fields.get(key)![1]);
+        blocks.push(names.join("・") + "｜予想配点 " + (ids.length > 1 ? "計" : "") + points + "点");
+      }
+      const slot = diagrams.get(id);
+      if (slot) {
+        const d = slot.model;
+        blocks.push(
+          "エンティティ：" + d.nodes.map(v => v[0]).join("、"),
+          "問題で与えられた関係：\n" + graph(d.fixed),
+          "自分が追加した関係：\n" + (record.edges[slot.key]?.length ? graph(record.edges[slot.key]) : "未解答"),
+        );
+        if (withAnswer) blocks.push("IPA解答例の追加関係：\n" + graph(d.answer));
+      } else {
+        const [, label, answer] = fields.get(id)!;
+        blocks.push(label + "の答案：" + (record.fields[id]?.trim() || "未解答"));
+        if (withAnswer) blocks.push("IPA解答例（表記を変換）：" + answer);
+      }
     }
   });
   if (withAnswer) blocks.push("解答例の出典：" + q.solution);
@@ -114,12 +137,12 @@ function copyBox(q: Question, withAnswer: boolean) {
   area.append(
     scope,
     button(
-      withAnswer ? "問題・答案・解答例をコピー" : "問題と答案をコピー",
+      "相談用にコピー",
       async () => {
         const value = exportText(q, withAnswer, Number(scope.value));
         try {
           await navigator.clipboard.writeText(value);
-          result.textContent = "コピーしました。ChatGPTに貼り付けられます。";
+          result.textContent = "コピーしました。お使いのAIに貼り付けてください。";
         } catch {
           const t = el("textarea");
           t.readOnly = true;
@@ -179,7 +202,8 @@ function renderQuestion(q: Question, reviewing: boolean) {
     toggle.onchange = () => sheet.classList.toggle("show-own-answers", toggle.checked);
     const label = el("label", "", "review-toggle");
     label.append(toggle, "自分の答案を表示");
-    sheet.append(label);
+    tabs.before(label);
+    sheet.append(el("p", "予想配点は当サイト独自の推定です。自己採点の目安としてお使いください。", "score-note"), copyBox(q, reviewing));
   }
   for (const [i, s] of q.sections.entries()) {
     const n = i + 1,
@@ -187,6 +211,23 @@ function renderQuestion(q: Question, reviewing: boolean) {
     const title = el("h2");
     title.append(figureReferences(s.heading, q));
     part.append(title);
+    const scores = reviewing ? sectionScores(q.id, i, s.heading) : undefined;
+    const shownHeadings = new Set<string>();
+    function appendScoreHeading(id: string) {
+      const score = scores?.get(id);
+      if (score && !shownHeadings.has(score.heading)) {
+        part.append(el("h3", score.heading, "score-heading"));
+        shownHeadings.add(score.heading);
+      }
+    }
+    function appendScoreCell(row: HTMLTableRowElement, id: string) {
+      const { item } = scores!.get(id)!;
+      if (id !== item.ids[0]) return;
+      const cell = row.insertCell();
+      cell.rowSpan = item.ids.length;
+      cell.className = "score-cell";
+      cell.textContent = (item.ids.length > 1 ? "計" : "") + item.points + "点";
+    }
     function appendPrompt(before: string) {
       const prompt = s.prompts.find(group => group.before === before);
       for (const line of prompt?.lines ?? []) {
@@ -230,6 +271,8 @@ function renderQuestion(q: Question, reviewing: boolean) {
     function appendDiagram(slot: typeof slots[number], before: string) {
       if (drawn.has(slot.index)) return;
       drawn.add(slot.index);
+      const scoreId = "diagram:" + slot.index;
+      appendScoreHeading(scoreId);
       appendPrompt(before);
       appendExplanation(before);
       const d = slot.model;
@@ -250,7 +293,13 @@ function renderQuestion(q: Question, reviewing: boolean) {
         hooks.push(() => panel.dispatchEvent(new Event("diagram-labels")));
         labelRefresh.set(field, hooks);
       }
-      if (reviewing) part.append(el("h3", "IPA 解答例"), diagram(d, d.answer as Edge[], undefined, "solution", () => labels(models)));
+      if (scores) {
+        const points = scores.get(scoreId)!.item.points;
+        part.append(
+          el("h3", "IPA 解答例"),
+          diagram(d, d.answer as Edge[], undefined, "solution", () => labels(models), points),
+        );
+      }
     }
     // Keep diagrams beside their own prompt, including consecutive diagrams
     // and diagrams whose section has no following text field.
@@ -266,15 +315,16 @@ function renderQuestion(q: Question, reviewing: boolean) {
     let shared: ReturnType<typeof schemaControls> | undefined;
     for (const [k, label, answer] of s.fields) {
       diagramsBefore(k);
+      appendScoreHeading(k);
       appendPrompt(k);
       appendExplanation(k);
       const singleAnswer = k === "1-1" || k === "1-2a" || k === "3-2";
       if (reviewing) {
         let table = part.lastElementChild;
-        if (!(table instanceof HTMLTableElement) || !table.classList.contains("review-answers")) {
-          const answers = el("table", "", "review-answers");
+        if (!(table instanceof HTMLTableElement) || !table.classList.contains("field-answers")) {
+          const answers = el("table", "", "review-answers field-answers");
           const header = answers.createTHead().insertRow();
-          header.append(el("th", "解答欄"), el("th", "IPA 解答例"), el("th", "自分の答案", "own-answer"));
+          header.append(el("th", "解答欄"), el("th", "IPA 解答例"), el("th", "予想配点", "score-cell"), el("th", "自分の答案", "own-answer"));
           answers.createTBody();
           part.append(answers);
           table = answers;
@@ -284,6 +334,7 @@ function renderQuestion(q: Question, reviewing: boolean) {
         name.scope = "row";
         row.append(name);
         row.insertCell().append(schemaPreview(answer, "model"));
+        appendScoreCell(row, k);
         const own = row.insertCell();
         own.className = "own-answer";
         const value = record.fields[k]?.trim() || "未解答";
@@ -300,7 +351,7 @@ function renderQuestion(q: Question, reviewing: boolean) {
             grid = el("div", "", gridClass);
             if (compactSchema) {
               shared = schemaControls(grid as HTMLElement, k);
-              grid.append(shared.hint, shared.toolbar(), el("div", "", "schema-fields"), shared.toolbar());
+              grid.append(shared.hint, el("div", "", "schema-fields"), shared.toolbar());
             }
             part.append(grid);
           }
@@ -320,7 +371,7 @@ function renderQuestion(q: Question, reviewing: boolean) {
     if (reviewing && !q.explanations) part.append(el("h3", "考え方"), el("p", s.note));
     sheet.append(part);
   }
-  sheet.append(el("h2", "ChatGPTで相談する"), copyBox(q, reviewing));
+  sheet.append(el("h2", "AIに相談する"), copyBox(q, reviewing));
   if (!reviewing) sheet.append(link("解説と答え合わせへ →", review, "primary"));
 }
 async function route() {

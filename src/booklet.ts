@@ -317,9 +317,13 @@ function figureParts(figure: Element) {
     if (!parts.has(key)) parts.set(key, new Set());
     parts.get(key)!.add(element);
   }
+  for (const part of figure.querySelectorAll("[data-figure-part]"))
+    add(part.getAttribute("data-figure-part"), part);
   for (const group of figure.querySelectorAll("svg g:has(> rect):has(> text)"))
     add(group.querySelector("text")!.textContent, group);
-  for (const line of figure.querySelectorAll(".schema-frame > pre, .schema-frame > p")) {
+  const lines = figure.querySelectorAll(".schema-frame > pre, .schema-frame > p");
+  for (const [index, line] of lines.entries()) {
+    add("本文の" + (index + 1) + "行目", line);
     const text = line.textContent.trim();
     const name = /^([①-⑳](?:-\d+)?|[^（(\s]+(?=[（(]))/.exec(text);
     if (name) add(name[1], line);
@@ -327,6 +331,7 @@ function figureParts(figure: Element) {
     if (clause) add(clause[1].toUpperCase(), line);
   }
   for (const row of figure.querySelectorAll("tbody > tr")) {
+    if (row instanceof HTMLTableRowElement) add("表の" + (row.sectionRowIndex + 1) + "行目", row);
     const cell = row.firstElementChild;
     if (cell && cell.textContent.trim().length <= 30) add(cell.textContent, row);
   }
@@ -408,7 +413,9 @@ function sqlTable(sql: string) {
     if (start < 0) code.textContent = text;
     else {
       const end = text.indexOf(" AS 中央移動平均", start);
-      code.append(text.slice(0, start), el("u", text.slice(start, end)), text.slice(end));
+      const formula = el("u", text.slice(start, end));
+      formula.dataset.figurePart = "㋐";
+      code.append(text.slice(0, start), formula, text.slice(end));
     }
     body.insertRow().insertCell().append(code);
   }
@@ -454,10 +461,11 @@ function archiveTables(caption: string, data: NonNullable<MaterialBlock["table"]
       header.append(th);
     }
     const body = table.createTBody();
-    for (const cells of data.rows) {
+    for (const [rowIndex, cells] of data.rows.entries()) {
       const row = body.insertRow();
       for (const index of indices) {
         const cell = row.insertCell(), value = cells[index];
+        cell.dataset.figurePart = (rowIndex + 1) + "行" + (index + 1) + "列";
         if (value === null) {
           cell.className = "masked";
           cell.setAttribute("aria-label", "網掛け（非表示）");
@@ -534,6 +542,13 @@ export function materials(q: Question, reviewing: boolean, evidence: ReadonlyMap
         item.append(frame, el("figcaption", block.text));
       } else if (block.table) {
         item.append(archiveTables(block.text, block.table, block.underline));
+      } else if (block.illustration && block.illustrationParts && reviewing) {
+        const svg = vector("svg", { viewBox: block.illustrationParts.viewBox, class: "paper-illustration", role: "img", "aria-label": block.description ?? block.text });
+        const [x, y, width, height] = block.illustrationParts.viewBox.split(" ");
+        svg.append(vector("image", {href: block.illustration, x, y, width, height}));
+        for (const [name, path] of Object.entries(block.illustrationParts.paths))
+          svg.append(vector("path", {d: path, class: "paper-overlay", "data-figure-part": name}));
+        item.append(svg, el("figcaption", block.text));
       } else if (block.illustration) {
         const image = el("img");
         image.src = block.illustration;
@@ -542,7 +557,12 @@ export function materials(q: Question, reviewing: boolean, evidence: ReadonlyMap
         item.append(image, el("figcaption", block.text));
       } else item.append(renderPassage(block.text, block.underline));
       paper.append(item);
-      for (const note of block.notes ?? []) paper.append(el("p", note, "paper-note"));
+      for (const [i, note] of (block.notes ?? []).entries()) {
+        const paragraph = el("p", note, "paper-note");
+        paragraph.dataset.figurePart = "注記" + (i + 1);
+        if (block.reference) item.append(paragraph);
+        else paper.append(paragraph);
+      }
     }
     box.append(bar, paper);
     return box;

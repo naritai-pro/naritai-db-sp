@@ -10,6 +10,7 @@ export type Diagram = (typeof original.diagrams)[number] & {
   allowParallel?: boolean;
   nodeFields?: Record<string, string>;
   fixedPath?: string;
+  fixedParts?: Record<string, string>;
   solutionPath?: string;
   nodeSizes?: Record<string, [number, number]>;
   boxSize?: [number, number];
@@ -26,6 +27,7 @@ export interface MaterialBlock {
   table?: { headers: string[]; rows: (string | null)[][] };
   diagramIndex?: number;
   illustration?: string;
+  illustrationParts?: { viewBox: string; paths: Record<string, string> };
   description?: string;
   notes?: string[];
 }

@@ -134,6 +134,8 @@ button {
 .sheet-heading .paper-bar { min-height: 51px; background: white; border: 1px solid #cad5ce; border-radius: 12px 12px 0 0; flex-wrap: nowrap; white-space: nowrap; overflow-x: auto; }
 .sheet-heading .paper-bar > * { flex-shrink: 0; }
 .sheet-heading .tabs { margin-left: auto; gap: 10px; }
+.sheet-heading .review-toggle + .tabs { margin-left: 0; }
+.sheet-heading .tabs + a { border-inline-start: 1px solid #cad5ce; padding-inline-start: 10px; }
 .layout > article :is(textarea, input, select, button, a) { scroll-margin-top: 6rem; }
 .materials {
   min-width: 0;
@@ -443,7 +445,7 @@ pre {
 .paper-evidence { color: inherit; background: #fff2a6; }
 .paper-evidence:focus { color: #102f49; background: #a9d9ff; outline: 2px solid #246eaa; }
 
-.review-toggle { display: flex; align-items: center; gap: .4em; width: fit-content; margin: .65em 0; font-size: .9rem; cursor: pointer; }
+.review-toggle { display: flex; align-items: center; gap: .4em; margin: 0; padding-inline-end: 10px; border-inline-end: 1px solid #cad5ce; font-size: .85rem; cursor: pointer; }
 .review-toggle input { width: auto; margin: 0; }
 .layout > article:not(.show-own-answers) .own-answer { display: none; }
 .review-answers { width: 100%; margin: .45em 0 .75em; border-collapse: collapse; font-size: .88rem; }
@@ -468,4 +470,30 @@ pre {
   fill: #c6e6ff;
   stroke: #246eaa;
   stroke-width: 2.5;
+}
+
+.paper-illustration { display: block; width: 100%; height: auto; }
+.paper-overlay { fill: none; stroke: none; pointer-events: none; }
+.paper-viewport svg path.paper-figure-selected {
+  outline: none;
+  stroke: #1674bd;
+  stroke-width: 3.5;
+  vector-effect: non-scaling-stroke;
+}
+
+.score-note { color: #47625a; font-size: .85rem; }
+.score-heading { margin: 1.2em 0 .4em; }
+.review-answers .score-cell { width: 5em; text-align: right; vertical-align: middle; font-variant-numeric: tabular-nums; }
+.review-answers thead .score-cell { white-space: nowrap; }
+
+.scored-diagram-title { display: flex; align-items: center; gap: .75em; }
+.diagram-score {
+  flex: none;
+  margin-inline-start: auto;
+  padding: .2em .6em;
+  border-radius: .25em;
+  background: #eaf5ee;
+  color: #225844;
+  font-size: .85rem;
+  white-space: nowrap;
 }

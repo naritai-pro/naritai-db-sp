@@ -1,0 +1,1122 @@
+{
+  "2021-autumn-db-pm1-q1": [
+    [
+      {"label": "（1）", "items": [
+        {"ids": ["archive-1-1-1"], "points": 1},
+        {"ids": ["archive-1-1-2"], "points": 1},
+        {"ids": ["archive-1-1-3"], "points": 1},
+        {"ids": ["archive-1-1-4"], "points": 1},
+        {"ids": ["archive-1-1-5"], "points": 1},
+        {"ids": ["archive-1-1-6"], "points": 1},
+        {"ids": ["archive-1-1-7"], "points": 1},
+        {"ids": ["archive-1-1-8"], "points": 2},
+        {"ids": ["archive-1-1-9"], "points": 2},
+        {"ids": ["archive-1-1-10"], "points": 2},
+        {"ids": ["archive-1-1-11"], "points": 2}
+      ]},
+      {"label": "（2）", "items": [
+        {"ids": ["diagram:0"], "points": 9}
+      ]}
+    ],
+    [
+      {"label": "（1）", "items": [
+        {"ids": ["archive-2-1-1"], "points": 3},
+        {"ids": ["archive-2-1-2", "archive-2-1-3"], "points": 3},
+        {"ids": ["archive-2-1-4", "archive-2-1-5"], "points": 3}
+      ]},
+      {"label": "（2）", "items": [
+        {"ids": ["archive-2-2-1"], "points": 2},
+        {"ids": ["archive-2-2-2"], "points": 3}
+      ]},
+      {"label": "（3）", "items": [
+        {"ids": ["archive-2-3-1"], "points": 1},
+        {"ids": ["archive-2-3-2"], "points": 5}
+      ]}
+    ],
+    [
+      {"label": "（1）", "items": [
+        {"ids": ["archive-3-1-1"], "points": 3}
+      ]},
+      {"label": "（2）", "items": [
+        {"ids": ["archive-3-2-1"], "points": 3}
+      ]}
+    ]
+  ],
+  "2021-autumn-db-pm1-q2": [
+    [
+      {"label": "（1）", "items": [
+        {"ids": ["archive-1-1-1"], "points": 2},
+        {"ids": ["archive-1-1-2"], "points": 1},
+        {"ids": ["archive-1-1-3"], "points": 2},
+        {"ids": ["archive-1-1-4"], "points": 1},
+        {"ids": ["archive-1-1-5"], "points": 1},
+        {"ids": ["archive-1-1-6"], "points": 2},
+        {"ids": ["archive-1-1-7"], "points": 2},
+        {"ids": ["archive-1-1-8"], "points": 2}
+      ]},
+      {"label": "（2）", "items": [
+        {"ids": ["archive-1-2-1"], "points": 3},
+        {"ids": ["archive-1-2-2"], "points": 3}
+      ]},
+      {"label": "（3）", "items": [
+        {"ids": ["archive-1-3-1"], "points": 4}
+      ]}
+    ],
+    [
+      {"label": "（1）", "items": [
+        {"ids": ["archive-2-1-1"], "points": 4}
+      ]},
+      {"label": "（2）", "items": [
+        {"ids": ["archive-2-2-1"], "points": 2},
+        {"ids": ["archive-2-2-2"], "points": 3}
+      ]},
+      {"label": "（3）", "items": [
+        {"ids": ["archive-2-3-1"], "points": 5}
+      ]},
+      {"label": "（4）", "items": [
+        {"ids": ["archive-2-4-1"], "points": 4}
+      ]}
+    ],
+    [
+      {"label": "（1）", "items": [
+        {"ids": ["archive-3-1-1"], "points": 5}
+      ]},
+      {"label": "（2）", "items": [
+        {"ids": ["archive-3-2-1"], "points": 4}
+      ]}
+    ]
+  ],
+  "2021-autumn-db-pm1-q3": [
+    [
+      {"label": "（1）", "items": [
+        {"ids": ["archive-1-1-1"], "points": 2},
+        {"ids": ["archive-1-1-2"], "points": 2},
+        {"ids": ["archive-1-1-3"], "points": 1},
+        {"ids": ["archive-1-1-4"], "points": 1},
+        {"ids": ["archive-1-1-5"], "points": 2}
+      ]},
+      {"label": "（2）", "items": [
+        {"ids": ["archive-1-2-1"], "points": 5}
+      ]},
+      {"label": "（3）", "items": [
+        {"ids": ["archive-1-3-1"], "points": 2},
+        {"ids": ["archive-1-3-2"], "points": 2},
+        {"ids": ["archive-1-3-3"], "points": 2},
+        {"ids": ["archive-1-3-4"], "points": 2},
+        {"ids": ["archive-1-3-5"], "points": 2}
+      ]},
+      {"label": "（4）", "items": [
+        {"ids": ["archive-1-4-1"], "points": 2},
+        {"ids": ["archive-1-4-2"], "points": 2}
+      ]}
+    ],
+    [
+      {"label": "（1）", "items": [
+        {"ids": ["archive-2-1-1"], "points": 1},
+        {"ids": ["archive-2-1-2"], "points": 1},
+        {"ids": ["archive-2-1-3"], "points": 2},
+        {"ids": ["archive-2-1-4"], "points": 2},
+        {"ids": ["archive-2-1-5"], "points": 3}
+      ]},
+      {"label": "（2）", "items": [
+        {"ids": ["archive-2-2-1"], "points": 4}
+      ]},
+      {"label": "（3）", "items": [
+        {"ids": ["archive-2-3-1"], "points": 2},
+        {"ids": ["archive-2-3-2", "archive-2-3-3"], "points": 2},
+        {"ids": ["archive-2-3-4"], "points": 3},
+        {"ids": ["archive-2-3-5"], "points": 3}
+      ]}
+    ]
+  ],
+  "2021-autumn-db-pm2-q1": [
+    [
+      {"label": "（1）", "items": [
+        {"ids": ["pm2-s1-f1"], "points": 3},
+        {"ids": ["pm2-s1-f2"], "points": 2},
+        {"ids": ["pm2-s1-f3"], "points": 2},
+        {"ids": ["pm2-s1-f4"], "points": 1},
+        {"ids": ["pm2-s1-f5"], "points": 1}
+      ]},
+      {"label": "（2）", "items": [
+        {"ids": ["pm2-s1-f6"], "points": 2},
+        {"ids": ["pm2-s1-f7"], "points": 3},
+        {"ids": ["pm2-s1-f8"], "points": 3}
+      ]},
+      {"label": "（3）", "items": [
+        {"ids": ["pm2-s1-f9"], "points": 4},
+        {"ids": ["pm2-s1-f10"], "points": 5}
+      ]},
+      {"label": "（4）", "items": [
+        {"ids": ["pm2-s1-f11"], "points": 3},
+        {"ids": ["pm2-s1-f12"], "points": 3}
+      ]}
+    ],
+    [
+      {"label": "（1）", "items": [
+        {"ids": ["pm2-s2-f1"], "points": 5},
+        {"ids": ["pm2-s2-f2"], "points": 4}
+      ]},
+      {"label": "（2）", "items": [
+        {"ids": ["pm2-s2-f3"], "points": 2},
+        {"ids": ["pm2-s2-f4"], "points": 2},
+        {"ids": ["pm2-s2-f5"], "points": 2},
+        {"ids": ["pm2-s2-f6"], "points": 4}
+      ]}
+    ],
+    [
+      {"label": "（1）", "items": [
+        {"ids": ["pm2-s3-f1"], "points": 2},
+        {"ids": ["pm2-s3-f2"], "points": 2},
+        {"ids": ["pm2-s3-f3"], "points": 2},
+        {"ids": ["pm2-s3-f4"], "points": 2},
+        {"ids": ["pm2-s3-f5"], "points": 1},
+        {"ids": ["pm2-s3-f6"], "points": 2},
+        {"ids": ["pm2-s3-f7"], "points": 4}
+      ]},
+      {"label": "（2）", "items": [
+        {"ids": ["pm2-s3-f8"], "points": 5},
+        {"ids": ["pm2-s3-f9"], "points": 3},
+        {"ids": ["pm2-s3-f10"], "points": 2},
+        {"ids": ["pm2-s3-f11"], "points": 2},
+        {"ids": ["pm2-s3-f12"], "points": 2}
+      ]},
+      {"label": "（3）", "items": [
+        {"ids": ["pm2-s3-f13"], "points": 2},
+        {"ids": ["pm2-s3-f14"], "points": 1},
+        {"ids": ["pm2-s3-f15"], "points": 3},
+        {"ids": ["pm2-s3-f16"], "points": 2},
+        {"ids": ["pm2-s3-f17"], "points": 1},
+        {"ids": ["pm2-s3-f18"], "points": 4},
+        {"ids": ["pm2-s3-f19"], "points": 2},
+        {"ids": ["pm2-s3-f20"], "points": 1},
+        {"ids": ["pm2-s3-f21"], "points": 4}
+      ]}
+    ]
+  ],
+  "2021-autumn-db-pm2-q2": [
+    [
+      {"label": "（1）", "items": [
+        {"ids": ["pm2-s1-f1"], "points": 2},
+        {"ids": ["diagram:0"], "points": 12}
+      ]},
+      {"label": "（2）", "items": [
+        {"ids": ["pm2-s1-f2"], "points": 2},
+        {"ids": ["diagram:1"], "points": 14}
+      ]},
+      {"label": "（3）", "items": [
+        {"ids": ["pm2-s1-f3"], "points": 2},
+        {"ids": ["pm2-s1-f4"], "points": 2},
+        {"ids": ["pm2-s1-f5"], "points": 2},
+        {"ids": ["pm2-s1-f6"], "points": 3},
+        {"ids": ["pm2-s1-f7"], "points": 2},
+        {"ids": ["pm2-s1-f8"], "points": 2}
+      ]},
+      {"label": "（4）", "items": [
+        {"ids": ["pm2-s1-f9"], "points": 1},
+        {"ids": ["pm2-s1-f10"], "points": 2},
+        {"ids": ["pm2-s1-f11"], "points": 1},
+        {"ids": ["pm2-s1-f12"], "points": 3},
+        {"ids": ["pm2-s1-f13"], "points": 1},
+        {"ids": ["pm2-s1-f14"], "points": 1},
+        {"ids": ["pm2-s1-f15"], "points": 2},
+        {"ids": ["pm2-s1-f16"], "points": 3},
+        {"ids": ["pm2-s1-f17"], "points": 2},
+        {"ids": ["pm2-s1-f18"], "points": 2},
+        {"ids": ["pm2-s1-f19"], "points": 2},
+        {"ids": ["pm2-s1-f20"], "points": 2},
+        {"ids": ["pm2-s1-f21"], "points": 2},
+        {"ids": ["pm2-s1-f22"], "points": 1},
+        {"ids": ["pm2-s1-f23"], "points": 2},
+        {"ids": ["pm2-s1-f24"], "points": 2}
+      ]}
+    ],
+    [
+      {"label": "（1）", "items": [
+        {"ids": ["diagram:2"], "points": 8}
+      ]},
+      {"label": "（2）", "items": [
+        {"ids": ["pm2-s2-f1"], "points": 2},
+        {"ids": ["pm2-s2-f2"], "points": 2},
+        {"ids": ["pm2-s2-f3"], "points": 2},
+        {"ids": ["pm2-s2-f4"], "points": 1},
+        {"ids": ["pm2-s2-f5"], "points": 2},
+        {"ids": ["pm2-s2-f6"], "points": 1},
+        {"ids": ["pm2-s2-f7"], "points": 2},
+        {"ids": ["pm2-s2-f8"], "points": 2}
+      ]},
+      {"label": "（3）", "items": [
+        {"ids": ["pm2-s2-f9", "pm2-s2-f10"], "points": 2},
+        {"ids": ["pm2-s2-f11", "pm2-s2-f12"], "points": 2},
+        {"ids": ["pm2-s2-f13", "pm2-s2-f14"], "points": 2}
+      ]}
+    ]
+  ],
+  "2022-autumn-db-pm1-q1": [
+    [
+      {"label": "（1）", "items": [
+        {"ids": ["diagram:0"], "points": 12}
+      ]},
+      {"label": "（2）", "items": [
+        {"ids": ["archive-1-2-1"], "points": 3},
+        {"ids": ["archive-1-2-2"], "points": 1},
+        {"ids": ["archive-1-2-3"], "points": 2},
+        {"ids": ["archive-1-2-4"], "points": 3},
+        {"ids": ["archive-1-2-5"], "points": 2},
+        {"ids": ["archive-1-2-6"], "points": 2}
+      ]}
+    ],
+    [
+      {"label": "（1）", "items": [
+        {"ids": ["archive-2-1-1"], "points": 2},
+        {"ids": ["archive-2-1-2"], "points": 2},
+        {"ids": ["archive-2-1-3"], "points": 2},
+        {"ids": ["diagram:1"], "points": 7}
+      ]},
+      {"label": "（2）", "items": [
+        {"ids": ["archive-2-3-1"], "points": 2},
+        {"ids": ["archive-2-3-2"], "points": 2},
+        {"ids": ["archive-2-3-3"], "points": 2},
+        {"ids": ["archive-2-3-4"], "points": 2},
+        {"ids": ["archive-2-3-5"], "points": 2},
+        {"ids": ["archive-2-3-6"], "points": 2}
+      ]}
+    ]
+  ],
+  "2022-autumn-db-pm1-q2": [
+    [
+      {"label": "（1）", "items": [
+        {"ids": ["archive-1-1-1"], "points": 2},
+        {"ids": ["archive-1-1-2"], "points": 1}
+      ]},
+      {"label": "（2）", "items": [
+        {"ids": ["archive-1-2-1", "archive-1-2-2"], "points": 4}
+      ]},
+      {"label": "（3）", "items": [
+        {"ids": ["archive-1-3-1"], "points": 2},
+        {"ids": ["archive-1-3-2"], "points": 2},
+        {"ids": ["archive-1-3-3"], "points": 2},
+        {"ids": ["archive-1-3-4"], "points": 2},
+        {"ids": ["archive-1-3-5"], "points": 2},
+        {"ids": ["archive-1-3-6"], "points": 2}
+      ]},
+      {"label": "（4）", "items": [
+        {"ids": ["archive-1-4-1"], "points": 2},
+        {"ids": ["archive-1-4-2"], "points": 2},
+        {"ids": ["archive-1-4-3"], "points": 1}
+      ]},
+      {"label": "（5）", "items": [
+        {"ids": ["archive-1-5-1"], "points": 3},
+        {"ids": ["archive-1-5-2"], "points": 3}
+      ]}
+    ],
+    [
+      {"label": "（1）", "items": [
+        {"ids": ["archive-2-1-1"], "points": 1},
+        {"ids": ["archive-2-1-2"], "points": 2},
+        {"ids": ["archive-2-1-3"], "points": 2},
+        {"ids": ["archive-2-1-4"], "points": 2},
+        {"ids": ["archive-2-1-5"], "points": 2}
+      ]},
+      {"label": "（2）", "items": [
+        {"ids": ["archive-2-2-1"], "points": 6}
+      ]},
+      {"label": "（3）", "items": [
+        {"ids": ["archive-2-3-1"], "points": 5}
+      ]}
+    ]
+  ],
+  "2022-autumn-db-pm1-q3": [
+    [
+      {"label": "（1）", "items": [
+        {"ids": ["archive-1-1-1"], "points": 6}
+      ]},
+      {"label": "（2）", "items": [
+        {"ids": ["archive-1-2-1"], "points": 7}
+      ]}
+    ],
+    [
+      {"label": "（1）", "items": [
+        {"ids": ["archive-2-1-1"], "points": 4},
+        {"ids": ["archive-2-1-2"], "points": 4},
+        {"ids": ["archive-2-1-3"], "points": 4}
+      ]},
+      {"label": "（2）", "items": [
+        {"ids": ["archive-2-2-1", "archive-2-2-2"], "points": 6}
+      ]}
+    ],
+    [
+      {"label": "（1）", "items": [
+        {"ids": ["archive-3-1-1"], "points": 2},
+        {"ids": ["archive-3-1-2"], "points": 2},
+        {"ids": ["archive-3-1-3", "archive-3-1-4"], "points": 3},
+        {"ids": ["archive-3-1-5", "archive-3-1-6"], "points": 3}
+      ]},
+      {"label": "（2）", "items": [
+        {"ids": ["archive-3-2-1"], "points": 9}
+      ]}
+    ]
+  ],
+  "2022-autumn-db-pm2-q1": [
+    [
+      {"label": "（1）", "items": [
+        {"ids": ["pm2-s1-f1"], "points": 1},
+        {"ids": ["pm2-s1-f2"], "points": 1},
+        {"ids": ["pm2-s1-f3"], "points": 1},
+        {"ids": ["pm2-s1-f4"], "points": 1},
+        {"ids": ["pm2-s1-f5"], "points": 1},
+        {"ids": ["pm2-s1-f6"], "points": 1},
+        {"ids": ["pm2-s1-f7"], "points": 4},
+        {"ids": ["pm2-s1-f8"], "points": 4}
+      ]},
+      {"label": "（2）", "items": [
+        {"ids": ["pm2-s1-f9"], "points": 3},
+        {"ids": ["pm2-s1-f10"], "points": 2},
+        {"ids": ["pm2-s1-f11"], "points": 3},
+        {"ids": ["pm2-s1-f12"], "points": 3},
+        {"ids": ["pm2-s1-f13"], "points": 4}
+      ]},
+      {"label": "（3）", "items": [
+        {"ids": ["pm2-s1-f14"], "points": 1},
+        {"ids": ["pm2-s1-f15"], "points": 1},
+        {"ids": ["pm2-s1-f16"], "points": 1},
+        {"ids": ["pm2-s1-f17"], "points": 1},
+        {"ids": ["pm2-s1-f18"], "points": 1},
+        {"ids": ["pm2-s1-f19"], "points": 1},
+        {"ids": ["pm2-s1-f20"], "points": 1},
+        {"ids": ["pm2-s1-f21"], "points": 1},
+        {"ids": ["pm2-s1-f22"], "points": 1}
+      ]}
+    ],
+    [
+      {"label": "（1）", "items": [
+        {"ids": ["pm2-s2-f1"], "points": 7}
+      ]},
+      {"label": "（2）", "items": [
+        {"ids": ["pm2-s2-f2"], "points": 8}
+      ]},
+      {"label": "（3）", "items": [
+        {"ids": ["pm2-s2-f3"], "points": 3}
+      ]},
+      {"label": "（4）", "items": [
+        {"ids": ["pm2-s2-f4"], "points": 6},
+        {"ids": ["pm2-s2-f5"], "points": 6}
+      ]}
+    ],
+    [
+      {"label": "（1）", "items": [
+        {"ids": ["pm2-s3-f1"], "points": 3},
+        {"ids": ["pm2-s3-f2"], "points": 4}
+      ]},
+      {"label": "（2）", "items": [
+        {"ids": ["pm2-s3-f3"], "points": 2},
+        {"ids": ["pm2-s3-f4"], "points": 6}
+      ]},
+      {"label": "（3）", "items": [
+        {"ids": ["pm2-s3-f5"], "points": 7}
+      ]},
+      {"label": "（4）", "items": [
+        {"ids": ["pm2-s3-f6"], "points": 4},
+        {"ids": ["pm2-s3-f7"], "points": 6}
+      ]}
+    ]
+  ],
+  "2022-autumn-db-pm2-q2": [
+    [
+      {"label": "（1）", "items": [
+        {"ids": ["pm2-s1-f1"], "points": 3},
+        {"ids": ["diagram:1"], "points": 10}
+      ]},
+      {"label": "（2）", "items": [
+        {"ids": ["pm2-s1-f2"], "points": 2},
+        {"ids": ["pm2-s1-f3"], "points": 2},
+        {"ids": ["pm2-s1-f4"], "points": 2},
+        {"ids": ["pm2-s1-f5"], "points": 2},
+        {"ids": ["diagram:2"], "points": 5}
+      ]},
+      {"label": "（3）", "items": [
+        {"ids": ["pm2-s1-f6"], "points": 5}
+      ]}
+    ],
+    [
+      {"label": "（1）", "items": [
+        {"ids": ["pm2-s2-f1", "pm2-s2-f2"], "points": 5},
+        {"ids": ["pm2-s2-f3"], "points": 3},
+        {"ids": ["pm2-s2-f4", "pm2-s2-f5", "pm2-s2-f6"], "points": 5},
+        {"ids": ["pm2-s2-f7", "pm2-s2-f8"], "points": 4}
+      ]},
+      {"label": "（2）", "items": [
+        {"ids": ["pm2-s2-f9"], "points": 3},
+        {"ids": ["pm2-s2-f10"], "points": 3}
+      ]},
+      {"label": "（3）", "items": [
+        {"ids": ["pm2-s2-f11"], "points": 6}
+      ]}
+    ],
+    [
+      {"label": "（1）", "items": [
+        {"ids": ["pm2-s3-f1", "pm2-s3-f2"], "points": 4},
+        {"ids": ["pm2-s3-f3", "pm2-s3-f4"], "points": 4}
+      ]},
+      {"label": "（2）", "items": [
+        {"ids": ["pm2-s3-f5", "pm2-s3-f6"], "points": 4}
+      ]},
+      {"label": "（3）", "items": [
+        {"ids": ["pm2-s3-f7"], "points": 4},
+        {"ids": ["pm2-s3-f8", "pm2-s3-f9"], "points": 4}
+      ]},
+      {"label": "（4）", "items": [
+        {"ids": ["pm2-s3-f10", "pm2-s3-f11"], "points": 4},
+        {"ids": ["pm2-s3-f12", "pm2-s3-f13"], "points": 4}
+      ]},
+      {"label": "（5）", "items": [
+        {"ids": ["pm2-s3-f14"], "points": 7},
+        {"ids": ["pm2-s3-f15", "pm2-s3-f16"], "points": 5}
+      ]}
+    ]
+  ],
+  "2023-autumn-db-pm1-q1": [
+    [
+      {"label": "（1）", "items": [
+        {"ids": ["archive-1-1-1"], "points": 3}
+      ]},
+      {"label": "（2）", "items": [
+        {"ids": ["archive-1-2-1"], "points": 1},
+        {"ids": ["archive-1-2-2"], "points": 4},
+        {"ids": ["archive-1-2-3"], "points": 5}
+      ]}
+    ],
+    [
+      {"label": "（1）", "items": [
+        {"ids": ["diagram:0"], "points": 9}
+      ]},
+      {"label": "（2）", "items": [
+        {"ids": ["archive-2-2-1"], "points": 1},
+        {"ids": ["archive-2-2-2"], "points": 2},
+        {"ids": ["archive-2-2-3"], "points": 2},
+        {"ids": ["archive-2-2-4"], "points": 3},
+        {"ids": ["archive-2-2-5"], "points": 2}
+      ]}
+    ],
+    [
+      {"label": "（1）", "items": [
+        {"ids": ["archive-3-1-1"], "points": 4},
+        {"ids": ["archive-3-1-2", "archive-3-1-3"], "points": 3}
+      ]},
+      {"label": "（2）", "items": [
+        {"ids": ["archive-3-2-1"], "points": 5},
+        {"ids": ["archive-3-2-2"], "points": 3},
+        {"ids": ["archive-3-2-3"], "points": 3}
+      ]}
+    ]
+  ],
+  "2023-autumn-db-pm1-q2": [
+    [
+      {"label": "（1）", "items": [
+        {"ids": ["diagram:0"], "points": 10}
+      ]},
+      {"label": "（2）", "items": [
+        {"ids": ["archive-1-2-1"], "points": 1},
+        {"ids": ["archive-1-2-2"], "points": 3},
+        {"ids": ["archive-1-2-3"], "points": 3},
+        {"ids": ["archive-1-2-4"], "points": 1}
+      ]}
+    ],
+    [
+      {"label": "（1）", "items": [
+        {"ids": ["archive-2-1-1"], "points": 1},
+        {"ids": ["archive-2-1-2"], "points": 1},
+        {"ids": ["archive-2-1-3", "archive-2-1-4"], "points": 2}
+      ]},
+      {"label": "（2）", "items": [
+        {"ids": ["archive-2-2-1", "archive-2-2-2"], "points": 2},
+        {"ids": ["archive-2-2-3", "archive-2-2-4"], "points": 2},
+        {"ids": ["archive-2-2-5", "archive-2-2-6"], "points": 2}
+      ]}
+    ],
+    [
+      {"label": "（1）", "items": [
+        {"ids": ["diagram:1"], "points": 7}
+      ]},
+      {"label": "（2）", "items": [
+        {"ids": ["archive-3-2-1"], "points": 1},
+        {"ids": ["archive-3-2-2"], "points": 1},
+        {"ids": ["archive-3-2-3"], "points": 2},
+        {"ids": ["archive-3-2-4"], "points": 2},
+        {"ids": ["archive-3-2-5"], "points": 1},
+        {"ids": ["archive-3-2-6"], "points": 1},
+        {"ids": ["archive-3-2-7"], "points": 2}
+      ]},
+      {"label": "（3）", "items": [
+        {"ids": ["archive-3-3-1"], "points": 2},
+        {"ids": ["archive-3-3-2"], "points": 3}
+      ]}
+    ]
+  ],
+  "2023-autumn-db-pm1-q3": [
+    [
+      {"label": "（1）", "items": [
+        {"ids": ["archive-1-1-1"], "points": 3},
+        {"ids": ["archive-1-1-2"], "points": 2}
+      ]},
+      {"label": "（2）", "items": [
+        {"ids": ["archive-1-2-1"], "points": 5}
+      ]},
+      {"label": "（3）", "items": [
+        {"ids": ["archive-1-3-1"], "points": 2},
+        {"ids": ["archive-1-3-2"], "points": 2},
+        {"ids": ["archive-1-3-3"], "points": 2}
+      ]},
+      {"label": "（4）", "items": [
+        {"ids": ["archive-1-4-1"], "points": 2},
+        {"ids": ["archive-1-4-2"], "points": 2},
+        {"ids": ["archive-1-4-3"], "points": 2}
+      ]}
+    ],
+    [
+      {"label": "（1）", "items": [
+        {"ids": ["archive-2-1-1"], "points": 5}
+      ]},
+      {"label": "（2）", "items": [
+        {"ids": ["archive-2-2-1"], "points": 3}
+      ]},
+      {"label": "（3）", "items": [
+        {"ids": ["archive-2-3-1"], "points": 6}
+      ]},
+      {"label": "（4）", "items": [
+        {"ids": ["archive-2-4-1"], "points": 5}
+      ]},
+      {"label": "（5）", "items": [
+        {"ids": ["archive-2-5-1"], "points": 2},
+        {"ids": ["archive-2-5-2"], "points": 2},
+        {"ids": ["archive-2-5-3"], "points": 2},
+        {"ids": ["archive-2-5-4"], "points": 2},
+        {"ids": ["archive-2-5-5"], "points": 1}
+      ]}
+    ]
+  ],
+  "2023-autumn-db-pm2-q1": [
+    [
+      {"label": "（1）", "items": [
+        {"ids": ["pm2-1-1"], "points": 4}
+      ]},
+      {"label": "（2）", "items": [
+        {"ids": ["pm2-1-2"], "points": 2},
+        {"ids": ["pm2-1-3"], "points": 2},
+        {"ids": ["pm2-1-4"], "points": 2},
+        {"ids": ["pm2-1-5"], "points": 2},
+        {"ids": ["pm2-1-6"], "points": 2}
+      ]}
+    ],
+    [
+      {"label": "（1）", "items": [
+        {"ids": ["pm2-2-1"], "points": 4},
+        {"ids": ["pm2-2-2"], "points": 5}
+      ]},
+      {"label": "（2）", "items": [
+        {"ids": ["pm2-2-3"], "points": 2},
+        {"ids": ["pm2-2-4"], "points": 2},
+        {"ids": ["pm2-2-5"], "points": 1},
+        {"ids": ["pm2-2-6"], "points": 1},
+        {"ids": ["pm2-2-7"], "points": 1},
+        {"ids": ["pm2-2-8"], "points": 2}
+      ]},
+      {"label": "（3）", "items": [
+        {"ids": ["pm2-2-9"], "points": 3},
+        {"ids": ["pm2-2-10"], "points": 2},
+        {"ids": ["pm2-2-11"], "points": 2},
+        {"ids": ["pm2-2-12"], "points": 3}
+      ]},
+      {"label": "（4）", "items": [
+        {"ids": ["pm2-2-13"], "points": 4}
+      ]},
+      {"label": "（5）", "items": [
+        {"ids": ["pm2-2-14", "pm2-2-15"], "points": 4},
+        {"ids": ["pm2-2-16", "pm2-2-17"], "points": 4}
+      ]}
+    ],
+    [
+      {"label": "（1）", "items": [
+        {"ids": ["pm2-3-1"], "points": 2},
+        {"ids": ["pm2-3-2"], "points": 2},
+        {"ids": ["pm2-3-3"], "points": 2},
+        {"ids": ["pm2-3-4"], "points": 2},
+        {"ids": ["pm2-3-5"], "points": 2},
+        {"ids": ["pm2-3-6"], "points": 2}
+      ]},
+      {"label": "（2）", "items": [
+        {"ids": ["pm2-3-7"], "points": 5},
+        {"ids": ["pm2-3-8"], "points": 5}
+      ]},
+      {"label": "（3）", "items": [
+        {"ids": ["pm2-3-9"], "points": 7}
+      ]},
+      {"label": "（4）", "items": [
+        {"ids": ["pm2-3-10"], "points": 2},
+        {"ids": ["pm2-3-11"], "points": 2},
+        {"ids": ["pm2-3-12"], "points": 2}
+      ]},
+      {"label": "（5）", "items": [
+        {"ids": ["pm2-3-13"], "points": 6},
+        {"ids": ["pm2-3-14"], "points": 5}
+      ]}
+    ]
+  ],
+  "2023-autumn-db-pm2-q2": [
+    [
+      {"label": "（1）", "items": [
+        {"ids": ["pm2-1-1"], "points": 2},
+        {"ids": ["pm2-1-2"], "points": 2}
+      ]},
+      {"label": "（2）", "items": [
+        {"ids": ["diagram:0"], "points": 24}
+      ]},
+      {"label": "（3）", "items": [
+        {"ids": ["diagram:1"], "points": 12}
+      ]},
+      {"label": "（4）", "items": [
+        {"ids": ["pm2-1-3"], "points": 1},
+        {"ids": ["pm2-1-4"], "points": 3},
+        {"ids": ["pm2-1-5"], "points": 2},
+        {"ids": ["pm2-1-6"], "points": 2},
+        {"ids": ["pm2-1-7"], "points": 3},
+        {"ids": ["pm2-1-8"], "points": 3},
+        {"ids": ["pm2-1-9"], "points": 3},
+        {"ids": ["pm2-1-10"], "points": 1},
+        {"ids": ["pm2-1-11"], "points": 1},
+        {"ids": ["pm2-1-12"], "points": 1},
+        {"ids": ["pm2-1-13"], "points": 3},
+        {"ids": ["pm2-1-14"], "points": 2},
+        {"ids": ["pm2-1-15"], "points": 3},
+        {"ids": ["pm2-1-16"], "points": 2},
+        {"ids": ["pm2-1-17"], "points": 1},
+        {"ids": ["pm2-1-18"], "points": 2},
+        {"ids": ["pm2-1-19"], "points": 4},
+        {"ids": ["pm2-1-20"], "points": 3},
+        {"ids": ["pm2-1-21"], "points": 3},
+        {"ids": ["pm2-1-22"], "points": 3},
+        {"ids": ["pm2-1-23"], "points": 2},
+        {"ids": ["pm2-1-24"], "points": 2},
+        {"ids": ["pm2-1-25"], "points": 4},
+        {"ids": ["pm2-1-26"], "points": 1},
+        {"ids": ["pm2-1-27"], "points": 5}
+      ]}
+    ]
+  ],
+  "2024-autumn-db-pm1-q1": [
+    [
+      {"label": "（1）", "items": [
+        {"ids": ["diagram:0"], "points": 12}
+      ]},
+      {"label": "（2）", "items": [
+        {"ids": ["archive-1-2-1"], "points": 4},
+        {"ids": ["archive-1-2-2"], "points": 3}
+      ]}
+    ],
+    [
+      {"label": "（1）", "items": [
+        {"ids": ["diagram:1"], "points": 7}
+      ]},
+      {"label": "（2）", "items": [
+        {"ids": ["archive-2-2-1"], "points": 2},
+        {"ids": ["archive-2-2-2"], "points": 2},
+        {"ids": ["archive-2-2-3"], "points": 3},
+        {"ids": ["archive-2-2-4"], "points": 3},
+        {"ids": ["archive-2-2-5"], "points": 2}
+      ]}
+    ],
+    [
+      {"label": "（1）", "items": [
+        {"ids": ["archive-3-1-1"], "points": 4}
+      ]},
+      {"label": "（2）", "items": [
+        {"ids": ["archive-3-2-1"], "points": 4},
+        {"ids": ["archive-3-2-2"], "points": 4}
+      ]}
+    ]
+  ],
+  "2024-autumn-db-pm1-q2": [
+    [
+      {"label": "（1）", "items": [
+        {"ids": ["archive-1-1-1"], "points": 2},
+        {"ids": ["archive-1-1-2"], "points": 2},
+        {"ids": ["archive-1-1-3"], "points": 2},
+        {"ids": ["archive-1-1-4"], "points": 2}
+      ]},
+      {"label": "（2）", "items": [
+        {"ids": ["archive-1-2-row1-0", "archive-1-2-row1-1", "archive-1-2-row1-2", "archive-1-2-row1-3"], "points": 3},
+        {"ids": ["archive-1-2-row2-0", "archive-1-2-row2-1", "archive-1-2-row2-2", "archive-1-2-row2-3"], "points": 3},
+        {"ids": ["archive-1-2-row3-0", "archive-1-2-row3-1", "archive-1-2-row3-2", "archive-1-2-row3-3"], "points": 3},
+        {"ids": ["archive-1-2-row4-0", "archive-1-2-row4-1", "archive-1-2-row4-2", "archive-1-2-row4-3"], "points": 3}
+      ]},
+      {"label": "（3）", "items": [
+        {"ids": ["archive-1-3-1"], "points": 5}
+      ]}
+    ],
+    [
+      {"label": "（1）", "items": [
+        {"ids": ["archive-2-1-1"], "points": 2},
+        {"ids": ["archive-2-1-2"], "points": 2},
+        {"ids": ["archive-2-1-3"], "points": 2},
+        {"ids": ["archive-2-1-4"], "points": 2}
+      ]},
+      {"label": "（2）", "items": [
+        {"ids": ["archive-2-2-1"], "points": 7}
+      ]},
+      {"label": "（3）", "items": [
+        {"ids": ["archive-2-3-1"], "points": 5},
+        {"ids": ["archive-2-3-2"], "points": 5}
+      ]}
+    ]
+  ],
+  "2024-autumn-db-pm1-q3": [
+    [
+      {"label": "（1）", "items": [
+        {"ids": ["archive-1-1-1"], "points": 2},
+        {"ids": ["archive-1-1-2"], "points": 1},
+        {"ids": ["archive-1-1-3"], "points": 2},
+        {"ids": ["archive-1-1-4"], "points": 2},
+        {"ids": ["archive-1-1-5"], "points": 1}
+      ]},
+      {"label": "（2）", "items": [
+        {"ids": ["archive-1-2-1"], "points": 2},
+        {"ids": ["archive-1-2-2"], "points": 2}
+      ]},
+      {"label": "（3）", "items": [
+        {"ids": ["archive-1-3-1"], "points": 3},
+        {"ids": ["archive-1-3-2"], "points": 3}
+      ]}
+    ],
+    [
+      {"label": "", "items": [
+        {"ids": ["archive-2-1-1"], "points": 2},
+        {"ids": ["archive-2-1-2"], "points": 2},
+        {"ids": ["archive-2-1-3"], "points": 2},
+        {"ids": ["archive-2-1-4"], "points": 2}
+      ]}
+    ],
+    [
+      {"label": "（1）", "items": [
+        {"ids": ["archive-3-1-1"], "points": 5}
+      ]},
+      {"label": "（2）", "items": [
+        {"ids": ["archive-3-2-1"], "points": 3}
+      ]},
+      {"label": "（3）", "items": [
+        {"ids": ["archive-3-3-1"], "points": 5}
+      ]},
+      {"label": "（4）", "items": [
+        {"ids": ["archive-3-4-1"], "points": 2},
+        {"ids": ["archive-3-4-2"], "points": 2},
+        {"ids": ["archive-3-4-3"], "points": 3},
+        {"ids": ["archive-3-4-4"], "points": 2},
+        {"ids": ["archive-3-4-5"], "points": 2}
+      ]}
+    ]
+  ],
+  "2024-autumn-db-pm2-q1": [
+    [
+      {"label": "（1）", "items": [
+        {"ids": ["pm2-1-1"], "points": 4},
+        {"ids": ["pm2-1-2"], "points": 4}
+      ]},
+      {"label": "（2）", "items": [
+        {"ids": ["pm2-1-3"], "points": 1},
+        {"ids": ["pm2-1-4"], "points": 2},
+        {"ids": ["pm2-1-5"], "points": 2},
+        {"ids": ["pm2-1-6"], "points": 2},
+        {"ids": ["pm2-1-7"], "points": 2},
+        {"ids": ["pm2-1-8"], "points": 1},
+        {"ids": ["pm2-1-9"], "points": 2},
+        {"ids": ["pm2-1-10"], "points": 2},
+        {"ids": ["pm2-1-11"], "points": 1},
+        {"ids": ["pm2-1-12"], "points": 3},
+        {"ids": ["pm2-1-13"], "points": 3},
+        {"ids": ["pm2-1-14"], "points": 3},
+        {"ids": ["pm2-1-15"], "points": 3}
+      ]}
+    ],
+    [
+      {"label": "（1）", "items": [
+        {"ids": ["pm2-2-1"], "points": 2},
+        {"ids": ["pm2-2-2"], "points": 2},
+        {"ids": ["pm2-2-3"], "points": 5},
+        {"ids": ["pm2-2-4", "pm2-2-5"], "points": 5}
+      ]},
+      {"label": "（2）", "items": [
+        {"ids": ["pm2-2-6"], "points": 2},
+        {"ids": ["pm2-2-7"], "points": 2},
+        {"ids": ["pm2-2-8"], "points": 2},
+        {"ids": ["pm2-2-9"], "points": 5}
+      ]},
+      {"label": "（3）", "items": [
+        {"ids": ["pm2-2-10"], "points": 6},
+        {"ids": ["pm2-2-11"], "points": 5},
+        {"ids": ["pm2-2-12"], "points": 2},
+        {"ids": ["pm2-2-13"], "points": 5}
+      ]}
+    ],
+    [
+      {"label": "（1）", "items": [
+        {"ids": ["pm2-3-1"], "points": 3},
+        {"ids": ["pm2-3-2"], "points": 3},
+        {"ids": ["pm2-3-3"], "points": 3},
+        {"ids": ["pm2-3-4"], "points": 3},
+        {"ids": ["pm2-3-5"], "points": 2}
+      ]},
+      {"label": "（2）", "items": [
+        {"ids": ["pm2-3-6"], "points": 2},
+        {"ids": ["pm2-3-7"], "points": 4},
+        {"ids": ["pm2-3-8"], "points": 2}
+      ]}
+    ]
+  ],
+  "2024-autumn-db-pm2-q2": [
+    [
+      {"label": "（1）", "items": [
+        {"ids": ["diagram:0"], "points": 15}
+      ]},
+      {"label": "（2）", "items": [
+        {"ids": ["diagram:1"], "points": 23}
+      ]},
+      {"label": "（3）", "items": [
+        {"ids": ["pm2-1-1"], "points": 1},
+        {"ids": ["pm2-1-2"], "points": 3},
+        {"ids": ["pm2-1-3"], "points": 2},
+        {"ids": ["pm2-1-4"], "points": 2},
+        {"ids": ["pm2-1-5"], "points": 1},
+        {"ids": ["pm2-1-6"], "points": 1},
+        {"ids": ["pm2-1-7"], "points": 2},
+        {"ids": ["pm2-1-8"], "points": 4},
+        {"ids": ["pm2-1-9"], "points": 4}
+      ]},
+      {"label": "（4）", "items": [
+        {"ids": ["pm2-1-10"], "points": 3},
+        {"ids": ["pm2-1-11"], "points": 4},
+        {"ids": ["pm2-1-12"], "points": 3},
+        {"ids": ["pm2-1-13"], "points": 3},
+        {"ids": ["pm2-1-14"], "points": 2},
+        {"ids": ["pm2-1-15"], "points": 4},
+        {"ids": ["pm2-1-16"], "points": 3},
+        {"ids": ["pm2-1-17"], "points": 3},
+        {"ids": ["pm2-1-18"], "points": 4},
+        {"ids": ["pm2-1-19"], "points": 3},
+        {"ids": ["pm2-1-20"], "points": 3},
+        {"ids": ["pm2-1-21"], "points": 1},
+        {"ids": ["pm2-1-22"], "points": 3},
+        {"ids": ["pm2-1-23"], "points": 3}
+      ]}
+    ]
+  ],
+  "2025-autumn-db-pm1-q1": [
+    [
+      {"label": "（1）", "items": [
+        {"ids": ["uni-a"], "points": 2}
+      ]},
+      {"label": "（2）", "items": [
+        {"ids": ["diagram:0"], "points": 17}
+      ]},
+      {"label": "（3）", "items": [
+        {"ids": ["uni-ア"], "points": 2},
+        {"ids": ["uni-イ"], "points": 2},
+        {"ids": ["uni-ウ"], "points": 1},
+        {"ids": ["uni-エ"], "points": 1},
+        {"ids": ["uni-オ"], "points": 1},
+        {"ids": ["uni-カ"], "points": 2},
+        {"ids": ["uni-キ"], "points": 3},
+        {"ids": ["uni-ク"], "points": 2},
+        {"ids": ["uni-ケ"], "points": 1},
+        {"ids": ["uni-コ"], "points": 2},
+        {"ids": ["uni-サ"], "points": 2},
+        {"ids": ["uni-シ"], "points": 2},
+        {"ids": ["uni-ス"], "points": 2}
+      ]}
+    ],
+    [
+      {"label": "", "items": [
+        {"ids": ["uni-セ"], "points": 2},
+        {"ids": ["uni-ソ"], "points": 2},
+        {"ids": ["uni-タ"], "points": 1},
+        {"ids": ["uni-チ"], "points": 1},
+        {"ids": ["uni-ツ"], "points": 2}
+      ]}
+    ]
+  ],
+  "2025-autumn-db-pm1-q2": [
+    [
+      {"label": "（1）", "items": [
+        {"ids": ["1-1"], "points": 4}
+      ]},
+      {"label": "（2）", "items": [
+        {"ids": ["1-2a"], "points": 2},
+        {"ids": ["1-2b"], "points": 5},
+        {"ids": ["1-2s"], "points": 6}
+      ]}
+    ],
+    [
+      {"label": "（1）", "items": [
+        {"ids": ["diagram:0"], "points": 8}
+      ]},
+      {"label": "（2）", "items": [
+        {"ids": ["2-a"], "points": 2},
+        {"ids": ["2-b"], "points": 2},
+        {"ids": ["2-c"], "points": 3},
+        {"ids": ["2-d"], "points": 2}
+      ]}
+    ],
+    [
+      {"label": "（1）", "items": [
+        {"ids": ["diagram:1"], "points": 5}
+      ]},
+      {"label": "（2）", "items": [
+        {"ids": ["3-2"], "points": 11}
+      ]}
+    ]
+  ],
+  "2025-autumn-db-pm1-q3": [
+    [
+      {"label": "（1）", "items": [
+        {"ids": ["inv-a"], "points": 2},
+        {"ids": ["inv-b"], "points": 2},
+        {"ids": ["inv-c"], "points": 1},
+        {"ids": ["inv-d"], "points": 1},
+        {"ids": ["inv-e"], "points": 2},
+        {"ids": ["inv-f"], "points": 2},
+        {"ids": ["inv-g"], "points": 1},
+        {"ids": ["inv-h", "inv-i"], "points": 2}
+      ]},
+      {"label": "（2）", "items": [
+        {"ids": ["inv-reason"], "points": 4}
+      ]}
+    ],
+    [
+      {"label": "（1）", "items": [
+        {"ids": ["inv-j"], "points": 2},
+        {"ids": ["inv-k"], "points": 2}
+      ]},
+      {"label": "（2）", "items": [
+        {"ids": ["inv-l"], "points": 2},
+        {"ids": ["inv-m"], "points": 3},
+        {"ids": ["inv-n"], "points": 1}
+      ]},
+      {"label": "（3）", "items": [
+        {"ids": ["inv-o"], "points": 4}
+      ]},
+      {"label": "（4）", "items": [
+        {"ids": ["inv-p"], "points": 4}
+      ]}
+    ],
+    [
+      {"label": "（1）", "items": [
+        {"ids": ["inv-q"], "points": 1},
+        {"ids": ["inv-r"], "points": 1},
+        {"ids": ["inv-s"], "points": 1},
+        {"ids": ["inv-t"], "points": 2},
+        {"ids": ["inv-u"], "points": 2},
+        {"ids": ["inv-v"], "points": 2}
+      ]},
+      {"label": "（2）", "items": [
+        {"ids": ["inv-index"], "points": 6}
+      ]}
+    ]
+  ],
+  "2025-autumn-db-pm2-q1": [
+    [
+      {"label": "（1）", "items": [
+        {"ids": ["pm2-1-1"], "points": 2},
+        {"ids": ["pm2-1-2"], "points": 2},
+        {"ids": ["pm2-1-3"], "points": 3},
+        {"ids": ["pm2-1-4"], "points": 3}
+      ]},
+      {"label": "（2）", "items": [
+        {"ids": ["pm2-1-5"], "points": 6},
+        {"ids": ["pm2-1-6"], "points": 6}
+      ]}
+    ],
+    [
+      {"label": "（1）", "items": [
+        {"ids": ["pm2-2-1"], "points": 3},
+        {"ids": ["pm2-2-2"], "points": 3},
+        {"ids": ["pm2-2-3"], "points": 7}
+      ]},
+      {"label": "（2）", "items": [
+        {"ids": ["pm2-2-4"], "points": 3},
+        {"ids": ["pm2-2-5"], "points": 3},
+        {"ids": ["pm2-2-6"], "points": 2},
+        {"ids": ["pm2-2-7"], "points": 5},
+        {"ids": ["pm2-2-8"], "points": 6}
+      ]}
+    ],
+    [
+      {"label": "（1）", "items": [
+        {"ids": ["pm2-3-1", "pm2-3-2"], "points": 4},
+        {"ids": ["pm2-3-3"], "points": 5},
+        {"ids": ["pm2-3-4"], "points": 7},
+        {"ids": ["pm2-3-5"], "points": 3}
+      ]},
+      {"label": "（2）", "items": [
+        {"ids": ["pm2-3-6"], "points": 6},
+        {"ids": ["pm2-3-7"], "points": 6},
+        {"ids": ["pm2-3-8"], "points": 5}
+      ]},
+      {"label": "（3）", "items": [
+        {"ids": ["pm2-3-9"], "points": 2},
+        {"ids": ["pm2-3-10"], "points": 8}
+      ]}
+    ]
+  ],
+  "2025-autumn-db-pm2-q2": [
+    [
+      {"label": "（1）", "items": [
+        {"ids": ["diagram:0"], "points": 15}
+      ]},
+      {"label": "（2）", "items": [
+        {"ids": ["diagram:1"], "points": 10}
+      ]},
+      {"label": "（3）", "items": [
+        {"ids": ["pm2-1-1"], "points": 1},
+        {"ids": ["pm2-1-2"], "points": 1},
+        {"ids": ["pm2-1-3"], "points": 2},
+        {"ids": ["pm2-1-4"], "points": 3},
+        {"ids": ["pm2-1-5"], "points": 2},
+        {"ids": ["pm2-1-6"], "points": 3},
+        {"ids": ["pm2-1-7"], "points": 2},
+        {"ids": ["pm2-1-8"], "points": 2},
+        {"ids": ["pm2-1-9"], "points": 2}
+      ]},
+      {"label": "（4）", "items": [
+        {"ids": ["pm2-1-10"], "points": 2},
+        {"ids": ["pm2-1-11"], "points": 2},
+        {"ids": ["pm2-1-12"], "points": 2},
+        {"ids": ["pm2-1-13"], "points": 2},
+        {"ids": ["pm2-1-14"], "points": 2},
+        {"ids": ["pm2-1-15"], "points": 2},
+        {"ids": ["pm2-1-16"], "points": 2},
+        {"ids": ["pm2-1-17"], "points": 2},
+        {"ids": ["pm2-1-18"], "points": 2},
+        {"ids": ["pm2-1-19"], "points": 2},
+        {"ids": ["pm2-1-20"], "points": 2},
+        {"ids": ["pm2-1-21"], "points": 3}
+      ]}
+    ],
+    [
+      {"label": "（1）", "items": [
+        {"ids": ["diagram:2"], "points": 8},
+        {"ids": ["pm2-2-1"], "points": 1},
+        {"ids": ["pm2-2-2"], "points": 1},
+        {"ids": ["pm2-2-3"], "points": 1},
+        {"ids": ["pm2-2-4"], "points": 1}
+      ]},
+      {"label": "（2）", "items": [
+        {"ids": ["pm2-2-5"], "points": 4},
+        {"ids": ["pm2-2-6"], "points": 3},
+        {"ids": ["pm2-2-7"], "points": 4},
+        {"ids": ["pm2-2-8"], "points": 4}
+      ]},
+      {"label": "（3）", "items": [
+        {"ids": ["pm2-2-9"], "points": 2},
+        {"ids": ["pm2-2-10"], "points": 3}
+      ]}
+    ]
+  ]
+}

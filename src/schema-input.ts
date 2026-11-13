@@ -28,7 +28,7 @@ function serialize(text: string, ranges: KeyRange[]) {
   return result + text.slice(offset);
 }
 
-export const schemaInstructions = "属性名を選択し、Aキーで主キー、Sキーで外部キーの下線を付け外しできます。ボタンでも操作できます。";
+export const schemaInstructions = "属性名を選択し、1キーで主キー、2キーで外部キーの下線を付け外しできます。ボタンでも操作できます。";
 
 type KeyRole = "pk" | "fk";
 
@@ -50,7 +50,7 @@ export function schemaControls(root: HTMLElement, id: string) {
     const bar = el("div", "", "controls schema-tools");
     for (const [role, caption] of [["pk", "主キー"], ["fk", "外部キー"]] as const) {
       const toggle = button("", () => apply?.(role));
-      toggle.setAttribute("aria-keyshortcuts", role === "pk" ? "A" : "S");
+      toggle.setAttribute("aria-keyshortcuts", role === "pk" ? "1" : "2");
       toggle.append(el("span", caption, role));
       toggle.disabled = true;
       toggle.onmousedown = event => event.preventDefault();
@@ -115,10 +115,10 @@ export function schemaInput(id: string, prompt: string, saved: string, update: (
   input.addEventListener("keydown", event => {
     if (event.isComposing || event.keyCode === 229 || event.ctrlKey || event.metaKey ||
         event.altKey || event.shiftKey || !hasSelection()) return;
-    const key = event.key.toLowerCase();
-    if (key !== "a" && key !== "s") return;
+    const key = event.key;
+    if (key !== "1" && key !== "2") return;
     event.preventDefault();
-    if (!event.repeat) toggleKey(key === "a" ? "pk" : "fk");
+    if (!event.repeat) toggleKey(key === "1" ? "pk" : "fk");
   });
   function refreshButtons() {
     if (document.activeElement === input) controls.select(hasSelection() ? toggleKey : undefined);
