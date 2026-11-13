@@ -39,6 +39,10 @@ export async function renderMorning(app: HTMLElement, year: number, part: Mornin
   const count = paper.questions.length;
   const prefix = "dbsp:morning:" + year + "-" + part + ":";
   const progress = new Map<number, Progress>();
+  const reviews = new Map<number, Progress>();
+  let reviewing = new URLSearchParams(location.search).get("review") === "wrong";
+  const active = () => reviewing ? reviews : progress;
+  const reviewPrefix = prefix + "review:";
   const updateRows = new Map<number, () => void>();
   const heading = morningInfo(year, part).heading;
   const wrapper = el("div", "", "morning");
@@ -54,6 +58,46 @@ export async function renderMorning(app: HTMLElement, year: number, part: Mornin
   notice.setAttribute("role", "status");
   const score = el("p");
   score.setAttribute("role", "status");
+  const reviewScore = el("p");
+  reviewScore.setAttribute("role", "status");
+  const titleNode = el("h1", heading);
+  function mistakes() {
+    return paper.questions.filter(q => {
+      const answer = progress.get(q.number)?.answer;
+      return answer && answer !== q.answer;
+    });
+  }
+  function setMode(value: boolean) {
+    reviewing = value;
+    const url = new URL(location.href);
+    if (value) url.searchParams.set("review", "wrong");
+    else url.searchParams.delete("review");
+    url.hash = "";
+    history.replaceState(null, "", url);
+    titleNode.textContent = heading + (value ? "　復習" : "");
+    for (const render of updateRows.values()) render();
+    updateScore();
+  }
+  const returnButton = button("初回の結果を見る", () => {
+    setMode(false);
+    footer.scrollIntoView();
+  });
+  const retry = button("間違えた問題だけ解き直す", () => {
+    const missed = mistakes();
+    if (!missed.length) return;
+    if (missed.every(q => reviews.get(q.number)?.answer)) {
+      for (const q of missed) {
+        try { localStorage.removeItem(reviewPrefix + q.number); }
+        catch { notice.textContent = "復習の記録を削除できませんでした。"; }
+        reviews.set(q.number, blank());
+      }
+    }
+    setMode(true);
+    const next = missed.find(q => !reviews.get(q.number)?.answer) ?? missed[0];
+    const question = document.getElementById("q" + next.number)!;
+    question.scrollIntoView();
+    question.querySelector<HTMLElement>("h2")?.focus({preventScroll:true});
+  });
   function updateScore() {
     let answered = 0, correct = 0;
     for (const q of paper.questions) {
@@ -62,11 +106,24 @@ export async function renderMorning(app: HTMLElement, year: number, part: Mornin
       if (answer === q.answer) correct++;
     }
     score.textContent = answered === count
-      ? count + "問中 " + correct + "問正解　" + Number((correct * 100 / count).toFixed(1)) + "／100点"
+      ? "初回：" + count + "問中 " + correct + "問正解　" + Number((correct * 100 / count).toFixed(1)) + "／100点"
       : "解答済み " + answered + "／" + count + "問　正解 " + correct + "問";
+    const missed = mistakes();
+    const done = missed.filter(q => reviews.get(q.number)?.answer);
+    const hits = done.filter(q => reviews.get(q.number)?.answer === q.answer);
+    if (reviewing && (answered !== count || !missed.length)) {
+      setMode(false);
+      return;
+    }
+    titleNode.textContent = heading + (reviewing ? "　復習" : "");
+    returnButton.hidden = !reviewing;
+    retry.hidden = answered !== count || !missed.length || (reviewing && done.length < missed.length);
+    retry.textContent = done.length && done.length < missed.length ? "間違えた問題の復習を続ける" : "間違えた問題だけ解き直す";
+    reviewScore.hidden = !reviewing && !done.length;
+    reviewScore.textContent = "復習：" + missed.length + "問中 " + done.length + "問解答・" + hits.length + "問正解";
   }
-  function readProgress(n: number) {
-    const key = prefix + n;
+  function readProgress(n: number, review = false) {
+    const key = (review ? reviewPrefix : prefix) + n;
     let state = blank();
     try {
       const raw = localStorage.getItem(key);
@@ -78,12 +135,17 @@ export async function renderMorning(app: HTMLElement, year: number, part: Mornin
         } else localStorage.removeItem(key);
       }
     } catch { notice.textContent = "端末の進捗を読み込めません。"; }
-    progress.set(n, state);
+    (review ? reviews : progress).set(n, state);
   }
   function save(n: number, state: Progress) {
     state.updated = Date.now();
-    progress.set(n, state);
-    try { localStorage.setItem(prefix + n, JSON.stringify(state)); }
+    if (!reviewing && !progress.get(n)?.answer) {
+      reviews.set(n, blank());
+      try { localStorage.removeItem(reviewPrefix + n); }
+      catch { notice.textContent = "端末の復習記録を更新できませんでした。"; }
+    }
+    active().set(n, state);
+    try { localStorage.setItem((reviewing ? reviewPrefix : prefix) + n, JSON.stringify(state)); }
     catch { notice.textContent = "このブラウザでは進捗を保存できません。"; }
     updateRows.get(n)!();
     updateScore();
@@ -94,15 +156,16 @@ export async function renderMorning(app: HTMLElement, year: number, part: Mornin
   confirm.popover = "auto";
   confirm.setAttribute("role", "dialog");
   confirm.setAttribute("aria-labelledby", "morning-reset-title");
-  const prompt = el("p", "この年度の" + count + "問の解答と除外した選択肢を消して、最初から解き直しますか？");
+  const prompt = el("p", "この年度の" + count + "問の初回・復習の記録を消して、最初から解き直しますか？");
   prompt.id = "morning-reset-title";
   reset.popoverTargetElement = confirm;
   const cancel = button("キャンセル", () => confirm.hidePopover());
   cancel.autofocus = true;
   confirm.append(prompt, cancel, button("リセットする", () => {
     for (const [n, render] of updateRows) {
-      try { localStorage.removeItem(prefix + n); }
+      try { localStorage.removeItem(prefix + n); localStorage.removeItem(reviewPrefix + n); }
       catch { notice.textContent = "端末に保存した進捗を削除できませんでした。"; }
+      reviews.set(n, blank());
       progress.set(n, blank());
       render();
     }
@@ -120,14 +183,17 @@ export async function renderMorning(app: HTMLElement, year: number, part: Mornin
   window.addEventListener("resize", placeConfirm, {signal});
   nav.addEventListener("click", () => { if (narrow.matches) index.open = false; });
   index.append(reset, confirm, notice, nav);
-  sheet.append(el("h1", heading), el("p", "左の記号を押すと解答が確定します。右の文章を押すと候補から外れ、もう一度押すと戻ります。"), link("採点状況を見る", "#result"));
+  sheet.append(titleNode, returnButton, el("p", "左の記号を押すと解答が確定します。右の文章を押すと候補から外れ、もう一度押すと戻ります。"), link("採点状況を見る", "#result"));
   for (const q of paper.questions) {
     const n = q.number;
     readProgress(n);
+    readProgress(n, true);
     const section = el("section");
     section.id = "q" + n;
     const title = "問" + n;
-    section.append(el("h2", title), content("div", q.stem, "stem"));
+    const questionHeading = el("h2", title);
+    questionHeading.tabIndex = -1;
+    section.append(questionHeading, content("div", q.stem, "stem"));
     if (q.figure) {
       if (q.figure.startsWith("/morning/figures/")) {
         const image = el("img");
@@ -148,7 +214,7 @@ export async function renderMorning(app: HTMLElement, year: number, part: Mornin
       const label = labels[i];
       const row = el("div", "", "row");
       const letter = button(label, () => {
-        save(n, {...progress.get(n)!, answer: label});
+        save(n, {...active().get(n)!, answer: label});
         feedback.focus({preventScroll:true});
         feedback.scrollIntoView({block:"nearest"});
       });
@@ -156,7 +222,7 @@ export async function renderMorning(app: HTMLElement, year: number, part: Mornin
       letter.setAttribute("aria-label", title + " " + label + "で解答");
       const choice = content("button", html, "choice");
       choice.onclick = () => {
-        const state = progress.get(n)!;
+        const state = active().get(n)!;
         const excluded = state.excluded.includes(label) ? state.excluded.filter(item => item !== label) : [...state.excluded, label];
         save(n, {...state, excluded});
       };
@@ -165,7 +231,10 @@ export async function renderMorning(app: HTMLElement, year: number, part: Mornin
       return {label, row, letter, choice};
     });
     function render() {
-      const {answer, excluded} = progress.get(n)!;
+      const first = progress.get(n)!.answer;
+      section.hidden = reviewing && (!first || first === q.answer);
+      anchor.hidden = section.hidden;
+      const {answer, excluded} = active().get(n)!;
       const hit = answer === q.answer;
       const result = !answer ? "未回答" : hit ? "正解" : "不正解";
       mark.textContent = !answer ? "-" : hit ? "○" : "×";
@@ -190,17 +259,20 @@ export async function renderMorning(app: HTMLElement, year: number, part: Mornin
     sheet.append(section);
   }
   function refresh(n: number) {
+    if (!updateRows.has(n)) return;
     readProgress(n);
+    readProgress(n, true);
     updateRows.get(n)?.();
   }
   window.addEventListener("storage", event => {
     if (event.key === null) for (const n of updateRows.keys()) refresh(n);
+    else if (event.key.startsWith(reviewPrefix)) refresh(Number(event.key.slice(reviewPrefix.length)));
     else if (event.key.startsWith(prefix)) refresh(Number(event.key.slice(prefix.length)));
     updateScore();
   }, {signal});
   const footer = el("footer");
   footer.id = "result";
-  footer.append(el("h2", "採点結果"), score, el("p", "進捗はこのブラウザに、各問の最終変更から6か月間保存されます。"),
+  footer.append(el("h2", "採点結果"), score, reviewScore, retry, el("p", "進捗はこのブラウザに、各問の最終変更から6か月間保存されます。"),
     el("p", "出典：IPA " + (part === "am1" ? "高度試験共通 " : "データベーススペシャリスト試験 ") + heading + " 問1〜" + count + "。図表と選択肢の配置を演習用に整えています。解説は本教材用に作成しました。"),
     link("公式問題冊子", paper.source), document.createTextNode("　"), link("公式解答例", paper.answerSource));
   sheet.append(footer);

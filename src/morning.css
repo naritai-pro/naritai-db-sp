@@ -1,4 +1,6 @@
 .morning {
+  [hidden] {display:none !important}
+  .morning-sheet > button, footer button {background:#126854;color:white}
   display:grid;
   grid-template-columns:minmax(0,52rem) 10rem;
   gap:1rem;
