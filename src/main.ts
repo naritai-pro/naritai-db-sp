@@ -1,6 +1,7 @@
 import { questionReset } from "./question-reset";
 import { setupPhone, phoneQuestion, resetPhone, morningIndex } from "./phone";
-import { pastPapers } from "./past-papers";
+import { partTree, treeAnswer } from "./part-tree";
+import { pastAnswerHistory, pastNotesText } from "./past-paper-history";
 import { morningInfo, morningTerm, morningRoute } from "./morning-catalog";
 import { enablePaperHighlights } from "./paper-highlights";
 import { questionPath, resolveRoute } from "./routes";
@@ -25,17 +26,19 @@ const exercises = new Map<string, () => Promise<{default: Question}>>([
   ["2025-autumn-db-pm1-q3", () => import("./inventory")],
 ]);
 for (const id of Object.keys(questionTitles)) {
-  if (!pastPapers.has(id) && !exercises.has(id)) exercises.set(id, archiveModules["./archive/" + id + ".json"]);
+  if (!exercises.has(id)) exercises.set(id, archiveModules["./archive/" + id + ".json"]);
 }
 function sessionName(id: string) {
   return id.includes("-pm2-") ? "午後Ⅱ" : "午後Ⅰ";
 }
 function diagramSlots(q: Question, section: number) {
   return q.diagrams.map((model, index) => ({model, index})).filter(slot => slot.model.section === section)
-    .map((slot, order) => ({...slot, key: order === 0 ? String(section) : section + ":" + slot.index}));
+    .map((slot, order) => ({...slot, key: slot.model.storageKey ?? (order === 0 ? String(section) : section + ":" + slot.index)}));
 }
 function examTerm(id: string) {
-  return "令和" + (Number(id.slice(0, 4)) - 2018) + "年度 秋期";
+  const year = Number(id.slice(0, 4));
+  const era = year < 2020 ? "平成" + (year - 1988) : "令和" + (year - 2018);
+  return era + "年度 " + morningTerm(year);
 }
 const lifetime = new AbortController();
 const navigatorTree = library(new Set(Object.keys(questionTitles)), lifetime.signal);
@@ -117,14 +120,21 @@ function exportText(q: Question, withAnswer: boolean, section: number) {
           "問題で与えられた関係：\n" + graph(d.fixed),
           "自分が追加した関係：\n" + (record.edges[slot.key]?.length ? graph(record.edges[slot.key]) : "未解答"),
         );
-        if (withAnswer) blocks.push("IPA解答例の追加関係：\n" + graph(d.answer));
+        const ownNames = Object.entries(d.nodeFields ?? {}).filter(([, key]) => record.fields[key]?.trim());
+        if (ownNames.length) blocks.push("自分が記入したエンティティ名：" + JSON.stringify(Object.fromEntries(ownNames.map(([node,key]) => [node, record.fields[key]]))));
+        if (withAnswer) {
+          if (d.solutionLabels) blocks.push("IPA解答例のエンティティ名：" + JSON.stringify(d.solutionLabels));
+          blocks.push("IPA解答例の追加関係：\n" + graph(d.answer));
+        }
       } else {
         const [, label, answer] = fields.get(id)!;
-        blocks.push(label + "の答案：" + (record.fields[id]?.trim() || "未解答"));
-        if (withAnswer) blocks.push("IPA解答例（表記を変換）：" + answer);
+        const own = id === "deadlock-case2" ? treeAnswer(record) : record.fields[id]?.trim();
+        blocks.push(label + "の答案：" + (own || "未解答"));
+        if (withAnswer) blocks.push("IPA解答例（表記を変換）：" + (id === "deadlock-case2" ? treeAnswer(record, true) : answer));
       }
     }
   });
+  blocks.push(...pastNotesText(record, section));
   if (withAnswer) blocks.push("解答例の出典：" + q.solution);
   return blocks.join("\n\n");
 }
@@ -198,6 +208,12 @@ function renderQuestion(q: Question, reviewing: boolean) {
   original.rel = "noopener";
   const bar = el("div", "", "paper-bar");
   bar.append(el("h2", reviewing ? "解説と答え合わせ" : "解答用紙"), tabs, original);
+  if (reviewing && q.comment) {
+    const commentary = link("IPA採点講評 ↗", q.comment);
+    commentary.target = "_blank";
+    commentary.rel = "noopener";
+    bar.append(commentary);
+  }
   heading.append(bar);
   sheet.append(heading);
   if (reviewing) {
@@ -209,6 +225,8 @@ function renderQuestion(q: Question, reviewing: boolean) {
     tabs.before(label);
     sheet.append(el("p", "予想配点は当サイト独自の推定です。自己採点の目安としてお使いください。", "score-note"), copyBox(q, reviewing));
   }
+  const labelRefresh = new Map<string, (() => void)[]>();
+  const modelAnswers = Object.fromEntries(q.sections.flatMap(s => s.fields.map(([k, , answer]) => [k, answer])));
   for (const [i, s] of q.sections.entries()) {
     const n = i + 1,
       part = el("section");
@@ -271,7 +289,6 @@ function renderQuestion(q: Question, reviewing: boolean) {
     }
     const slots = diagramSlots(q, n);
     const drawn = new Set<number>();
-    const labelRefresh = new Map<string, (() => void)[]>();
     function appendDiagram(slot: typeof slots[number], before: string) {
       if (drawn.has(slot.index)) return;
       drawn.add(slot.index);
@@ -281,7 +298,6 @@ function renderQuestion(q: Question, reviewing: boolean) {
       appendExplanation(before);
       const d = slot.model;
       const added = (record.edges[slot.key] ??= []);
-      const models = Object.fromEntries(s.fields.map(([k, , answer]) => [k, answer]));
       function labels(values: Record<string, string>) {
         return Object.fromEntries(Object.entries(d.nodeFields ?? {}).map(([node, field]) => [node, values[field]?.trim() || node]));
       }
@@ -301,7 +317,7 @@ function renderQuestion(q: Question, reviewing: boolean) {
         const points = scores.get(scoreId)!.item.points;
         part.append(
           el("h3", "IPA 解答例"),
-          diagram(d, d.answer as Edge[], undefined, "solution", () => labels(models), points),
+          diagram(d, d.answer as Edge[], undefined, "solution", () => labels(modelAnswers), points),
         );
       }
     }
@@ -322,6 +338,11 @@ function renderQuestion(q: Question, reviewing: boolean) {
       appendScoreHeading(k);
       appendPrompt(k);
       appendExplanation(k);
+      if (k === "deadlock-case2") {
+        if (scores) part.append(el("p", "予想配点 " + scores.get(k)!.item.points + "点", "score-note"));
+        part.append(partTree(record, save, reviewing));
+        continue;
+      }
       const singleAnswer = k === "1-1" || k === "1-2a" || k === "3-2";
       if (reviewing) {
         let table = part.lastElementChild;
@@ -410,27 +431,20 @@ async function route() {
     }
     return;
   }
-  const past = pastPapers.get(id);
-  if (past) {
-    const controller = new AbortController();
-    morningLifetime = controller;
-    const signal = AbortSignal.any([controller.signal, lifetime.signal]);
-    const { renderPastPaper } = await import("./past-paper-view");
-    if (signal.aborted) return;
-    restore(id);
-    renderPastPaper(app, past, reviewing, status, record, save, signal);
-  } else if (exercise) {
+  if (exercise) {
     const { default: q } = await exercise();
     if (lifetime.signal.aborted || location.href !== requested) return;
     restore(id);
     renderQuestion(q, reviewing);
+    const history = pastAnswerHistory(id, record);
+    if (history) app.querySelector(".layout > article")?.append(history);
   } else if (entry) {
     const card = el("article", "", "card catalog");
     const source = link("IPAの問題冊子を開く ↗", entry.paper, "primary");
     source.target = "_blank";
     source.rel = "noopener";
     card.append(el("h2", "問題冊子"), el("p", "この問題の解答画面は未収録です。公式の問題冊子で " + entry.title + " を参照できます。"), source);
-    app.replaceChildren(el("small", entry.year + "年度 秋期", "eyebrow"), el("h1", entry.title), card);
+    app.replaceChildren(el("small", entry.year + "年度 " + morningTerm(entry.year), "eyebrow"), el("h1", entry.title), card);
   } else {
     app.replaceChildren(
       el("h1", page.heading),

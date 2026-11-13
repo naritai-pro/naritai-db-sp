@@ -143,7 +143,13 @@ export function diagram(d: Diagram, additions: Edge[], onChange?: () => void, pr
     }
     if (presentation === "solution" && d.solutionPath)
       canvas.append(svg("path", {d: d.solutionPath, fill: "none", stroke: "#097464", "stroke-width": answerStrokeWidth}));
-    const names = labels?.() ?? {};
+    for (const [cx, cy, r] of d.fixedOpenDots ?? []) grayLines.append(svg("circle", {cx, cy, r, fill: "white", stroke: "#66777b", "stroke-width": 1.6}));
+    for (const [cx, cy, r] of d.fixedDots ?? []) grayLines.append(svg("circle", {cx, cy, r, fill: "#66777b"}));
+    if (presentation === "solution") {
+      for (const [cx, cy, r] of d.solutionOpenDots ?? []) canvas.append(svg("circle", {cx, cy, r, fill: "white", stroke: "#097464", "stroke-width": answerStrokeWidth}));
+      for (const [cx, cy, r] of d.solutionDots ?? []) canvas.append(svg("circle", {cx, cy, r, fill: "#097464"}));
+    }
+    const names = presentation === "solution" && d.solutionLabels ? d.solutionLabels : labels?.() ?? {};
     const all = [...d.fixed, ...additions];
     all.forEach(([a, b, savedType], i) => {
       const [type, firstMark, lastMark] = savedType.split("|");
@@ -252,7 +258,7 @@ export function diagram(d: Diagram, additions: Edge[], onChange?: () => void, pr
         }),
       );
       const lines = name === id ? d.labelLines?.[id] : undefined;
-      const fontSize = d.nodeSizes || name !== id ? Math.min(d.fontSize ?? 12, height / (lines ? 2.2 : 1.2),
+      const fontSize = d.nodeSizes || name !== id ? Math.min(d.fontSize ?? 12, height / ((lines?.length ?? 1) + .2),
         (width - 5) / Math.max(...(lines ?? [name]).map(line => Array.from(line).reduce(
           (length, char) => length + (char.charCodeAt(0) < 128 ? .65 : 1), 0))))
         : d.routes ? 10 : name.length > 8 ? 12 : 14;
@@ -263,7 +269,7 @@ export function diagram(d: Diagram, additions: Edge[], onChange?: () => void, pr
       });
       if (lines) {
         lines.forEach((line, index) => {
-          const span = svg("tspan", { x: 0, y: fontSize * (index === 0 ? -.18 : .86) });
+          const span = svg("tspan", { x: 0, y: fontSize * (.34 + (index - (lines.length - 1) / 2) * 1.04) });
           span.textContent = line;
           text.append(span);
         });

@@ -271,6 +271,8 @@ export function bookletText(q: Question) {
     const rows = block.table ? [block.table.headers, ...block.table.rows] : [];
     return [
       block.text, ...(block.underline ? ["下線部：" + block.underline] : []), ...(block.lines ?? []),
+      ...(block.layout ? block.layout.labels.map(([x, y, , , text]) => "(" + x + ", " + y + ") " + text) : []),
+      ...(block.layout?.rules.length ? ["図中の線（始点x,y・終点x,y）：" + JSON.stringify(block.layout.rules)] : []),
       ...rows.map(row => row.map(cell => cell ?? "（網掛け）").join("\t")),
       ...(model ? [JSON.stringify({ entities: model.nodes.map(n => n[0]), relationships: model.fixed })] : []),
       ...(block.description ? [block.description] : []), ...(block.notes ?? []),
@@ -535,10 +537,24 @@ export function materials(q: Question, reviewing: boolean, evidence: ReadonlyMap
   }
   if (q.materialBlocks) {
     for (const block of q.materialBlocks) {
-      const item = el(block.illustration || block.diagramIndex !== undefined || block.lines || block.table ? "figure" : block.heading ? "h3" : "p");
+      const item = el(block.layout || block.illustration || block.diagramIndex !== undefined || block.lines || block.table ? "figure" : block.heading ? "h3" : "p");
       if (block.reference) item.id = "paper-figure-" + block.reference;
       if (block.diagramIndex !== undefined) {
         item.append(diagram(q.diagrams[block.diagramIndex], [], undefined, "paper"), el("figcaption", block.text));
+      } else if (block.layout) {
+        const {width, height, rules, labels, paths} = block.layout;
+        const svg = vector("svg", {viewBox: "0 0 " + width + " " + height, class: "paper-illustration", role: "img", "aria-label": block.text});
+        if (rules.length) {
+          svg.append(vector("path", {d: rules.map(([x1,y1,x2,y2]) => "M"+x1+" "+y1+"L"+x2+" "+y2).join(" "), fill: "none", stroke: "currentColor", "stroke-width": .9}));
+        }
+        if (paths?.length) svg.append(vector("path", {d: paths.join(" "), fill: "currentColor", "fill-rule": "evenodd"}));
+        for (const [x,y,w,h,value] of labels) {
+          if (!value.trim()) continue;
+          const text = vector("text", {x,y, "font-size": h * .82, textLength: w, lengthAdjust: "spacingAndGlyphs"});
+          text.textContent = value;
+          svg.append(text);
+        }
+        item.append(svg, el("figcaption", block.text));
       } else if (block.lines) {
         const frame = el("div", "", "schema-frame archive-lines");
         for (const line of block.lines) frame.append(archiveText(line));
@@ -559,6 +575,12 @@ export function materials(q: Question, reviewing: boolean, evidence: ReadonlyMap
         image.loading = "lazy";
         item.append(image, el("figcaption", block.text));
       } else item.append(renderPassage(block.text, block.underline));
+      if (block.sourcePage) {
+        const ref = link("IPA原本 p." + block.sourcePage + " ↗", q.paper.split("#")[0] + "#page=" + block.sourcePage, "figure-source");
+        ref.target = "_blank";
+        ref.rel = "noopener";
+        item.append(ref);
+      }
       paper.append(item);
       for (const [i, note] of (block.notes ?? []).entries()) {
         const paragraph = el("p", note, "paper-note");
