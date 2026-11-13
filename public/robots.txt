@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ipa-db-sp.naritai.app/sitemap.xml

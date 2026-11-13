@@ -11,18 +11,17 @@ import { diagram } from "./diagram";
 import { empty, read, type Edge } from "./store";
 import type { Question } from "./exam";
 
-import archiveTitles from "./archive-titles.json";
+import { origin, pageInfo, questionTitles } from "./seo";
 const archiveModules = import.meta.glob<{default: Question}>("./archive/*.json");
 
 const app = document.querySelector<HTMLElement>("#app")!;
-const exercises = new Map<string, { title: string; load: () => Promise<{default: Question}> }>([
-  ["2025-autumn-db-pm1-q1", { title: "大学の学習管理システム", load: () => import("./university") }],
-  ["2025-autumn-db-pm1-q2", { title: "化学メーカーの営業販売管理システム", load: () => import("./question.json") }],
-  ["2025-autumn-db-pm1-q3", { title: "オフィスじゅう器メーカーの在庫管理システム", load: () => import("./inventory") }],
+const exercises = new Map<string, () => Promise<{default: Question}>>([
+  ["2025-autumn-db-pm1-q1", () => import("./university")],
+  ["2025-autumn-db-pm1-q2", () => import("./question.json")],
+  ["2025-autumn-db-pm1-q3", () => import("./inventory")],
 ]);
-for (const [id, title] of Object.entries(archiveTitles)) {
-  const load = archiveModules["./archive/" + id + ".json"];
-  exercises.set(id, {title, load});
+for (const id of Object.keys(questionTitles)) {
+  if (!exercises.has(id)) exercises.set(id, archiveModules["./archive/" + id + ".json"]);
 }
 function sessionName(id: string) {
   return id.includes("-pm2-") ? "午後Ⅱ" : "午後Ⅰ";
@@ -376,11 +375,18 @@ function renderQuestion(q: Question, reviewing: boolean) {
 }
 async function route() {
   const {id, reviewing} = resolveRoute();
+  const page = pageInfo(id, reviewing);
+  document.title = page.title;
+  document.querySelector('meta[name="description"]')?.setAttribute("content", page.description);
+  document.querySelector('meta[property="og:title"]')?.setAttribute("content", page.title);
+  document.querySelector('meta[property="og:description"]')?.setAttribute("content", page.description);
+  document.querySelector('meta[property="og:url"]')?.setAttribute("content", origin + page.path);
+  document.querySelector('link[rel="canonical"]')?.setAttribute("href", origin + page.path);
   const requested = location.href;
   const entry = navigatorTree.select(id);
   const exercise = exercises.get(id);
   if (exercise) {
-    const { default: q } = await exercise.load();
+    const { default: q } = await exercise();
     if (lifetime.signal.aborted || location.href !== requested) return;
     restore(id);
     renderQuestion(q, reviewing);
