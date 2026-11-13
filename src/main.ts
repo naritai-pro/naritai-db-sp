@@ -409,11 +409,11 @@ function renderQuestion(q: Question, reviewing: boolean) {
   phoneQuestion(layout, sheet, booklet, reviewing);
   if (!reviewing) sheet.append(link("解説と答え合わせへ →", review, "primary"));
 }
-let morningLifetime: AbortController | undefined;
+let routeLifetime: AbortController | undefined;
 async function route() {
   resetPhone();
   delete app.dataset.morning;
-  morningLifetime?.abort();
+  routeLifetime?.abort();
   const morning = morningRoute(location.pathname);
   const {id, reviewing} = resolveRoute();
   const page = morning ? morningInfo(morning.year, morning.part) : pageInfo(id, reviewing);
@@ -428,7 +428,7 @@ async function route() {
   const exercise = exercises.get(id);
   if (morning) {
     const controller = new AbortController();
-    morningLifetime = controller;
+    routeLifetime = controller;
     const signal = AbortSignal.any([controller.signal, lifetime.signal]);
     app.replaceChildren(el("p", "問題を読み込み中…"));
     try {

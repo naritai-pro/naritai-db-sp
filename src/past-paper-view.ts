@@ -100,8 +100,11 @@ function viewer(title: string, url: string, official: string, signal: AbortSigna
     if (signal.aborted) return;
     doc = pdf;
     for (let n = 1; n <= doc.numPages; n++) {
-      const paperPage = ink ? ink.firstPage + n - 1 : undefined;
-      const label = ink && paperPage ? paperPage <= ink.lastPage ? "冊子 p." + paperPage : "表記ルール " + (paperPage - ink.lastPage) : n + " / " + doc.numPages;
+      let label = n + " / " + doc.numPages;
+      if (ink) {
+        const paperPage = ink.firstPage + n - 1;
+        label = paperPage <= ink.lastPage ? "冊子 p." + paperPage : "表記ルール " + (paperPage - ink.lastPage);
+      }
       pageSelect.add(new Option(label, String(n)));
     }
     void show();

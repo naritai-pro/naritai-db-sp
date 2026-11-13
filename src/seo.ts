@@ -22,12 +22,15 @@ export function pageInfo(id = "", reviewing = false) {
   const [year, pm, number] = questionPath(id).slice(1).split("/");
   const exam = year + "年度 " + morningTerm(Number(year)) + " " + (pm === "pm1" ? "午後Ⅰ" : "午後Ⅱ") + " 問" + number.slice(1);
   const heading = exam + "「" + questionTitles[id] + "」";
+  const reviewDescription = pastPapers.has(id)
+    ? "の解答例と採点講評。自分の答案をIPAの原本と見比べられます。"
+    : "の解説。設問ごとに自分の答案とIPAの解答例を見比べて、答えの導き方を確認できます。";
   return {
     path: questionPath(id) + (reviewing ? "/answer" : ""),
     heading,
     title: heading + (reviewing ? "の解答例・解説" : "の過去問演習") + "｜" + siteName,
     description: "データベーススペシャリスト試験 " + heading + (reviewing
-      ? pastPapers.has(id) ? "の解答例と採点講評。自分の答案をIPAの原本と見比べられます。" : "の解説。設問ごとに自分の答案とIPAの解答例を見比べて、答えの導き方を確認できます。"
+      ? reviewDescription
       : "の演習ページ。問題文と図表を参照しながら設問ごとに答案を入力できます。答案はブラウザに自動保存され、途中から再開できます。"),
   };
 }
