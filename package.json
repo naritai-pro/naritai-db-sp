@@ -6,6 +6,7 @@
     "dev": "vite --host 127.0.0.1 --port 4173 --strictPort",
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview --port 4174",
+    "check:morning": "node scripts/check-morning.mjs",
     "check:archive": "node scripts/check-archive.mjs && node scripts/check-scores.mjs"
   },
   "devDependencies": {

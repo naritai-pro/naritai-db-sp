@@ -14,7 +14,7 @@ export function pageInfo(id = "", reviewing = false) {
   if (!questionTitles[id]) return {
     path: "/", heading: "データベーススペシャリスト試験の過去問演習",
     title: "データベーススペシャリスト試験の過去問演習・解説",
-    description: "データベーススペシャリスト試験の過去問をブラウザで演習できます。現在は2021〜2025年度秋期の午後Ⅰ・午後Ⅱを全25問収録。問題文や図表を見ながら解答し、IPAの解答例と解説で復習できます。",
+    description: "データベーススペシャリスト試験の過去問をブラウザで演習できます。2016〜2025年度の午前Ⅰ・午前Ⅱと、2021〜2025年度の午後Ⅰ・午後Ⅱを収録。問題文や図表を見ながら解答し、IPAの解答例と解説で復習できます。",
   };
   const [year, pm, number] = questionPath(id).slice(1).split("/");
   const exam = year + "年度 秋期 " + (pm === "pm1" ? "午後Ⅰ" : "午後Ⅱ") + " 問" + number.slice(1);

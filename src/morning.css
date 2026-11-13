@@ -1,0 +1,86 @@
+.morning {
+  display:grid;
+  grid-template-columns:minmax(0,52rem) 10rem;
+  gap:1rem;
+  max-width:63rem;
+  margin:auto;
+  align-items:start;
+  color: #182e3c;
+  line-height: 1.8;
+  section, footer {padding:1.4rem 0;border-bottom:1px solid #c8d4d4}
+  .index button {border:1px solid #afbfbe;background:white;color:inherit;padding:.25rem .65rem;margin-top:.4rem}
+  .index nav {margin-bottom:0}
+  .storage-notice:empty {display:none}
+  .index .morning-confirm {position:fixed;inset:auto;margin:0;width:min(18rem,calc(100vw - 1rem));padding:1rem;border:1px solid #afbfbe;border-radius:.65rem;color:inherit;box-shadow:0 6px 24px #18383529}
+  .morning-confirm button:last-child {background:#914337;color:white;margin-left:.5rem}
+  .stem, .figure, .choice {overflow:auto}
+  img {max-width:100%;height:auto}
+  .choice {font-weight:400;color:inherit}
+  .stem, .figure {margin-bottom:1rem}
+  h1,h2{line-height:1.4}
+  h1{font-size:clamp(1.55rem,4vw,2.3rem)}
+  h2{font-size:1.3rem;color:#184b50}
+  button{font:inherit;cursor:pointer;color:inherit}
+  button:focus-visible{outline:3px solid #2266a3;outline-offset:2px}
+  button:disabled{cursor:default}
+  .row{display:grid;grid-template-columns:3.2rem minmax(0,1fr);gap:0;margin:.55rem 0}
+  .letter,.choice{border:1px solid #afbfbe;border-radius:.4rem;background:white;padding:.6rem}
+  .row .letter{border-radius:.4rem 0 0 .4rem;border-right:0}
+  .row .choice{border-radius:0 .4rem .4rem 0}
+  .row button:focus-visible{position:relative;z-index:1}
+  .letter{font-weight:700;color:#00585a;background:#e8f4f1}
+  .choice{text-align:left;line-height:1.65}
+  .excluded .choice,.excluded .letter{background:#ededed;color:#61696a}
+  .excluded .choice{text-decoration:line-through}
+  .right .letter{background:#08624f;color:white}
+  .wrong .letter{background:#914337;color:white}
+  .feedback{margin-top:.9rem;padding:1rem;background:#eef5f2;border-left:4px solid #487d6b}
+  .feedback p{margin:.4rem 0 0}
+  .scroll,pre{max-width:100%;overflow:auto}
+  table{border-collapse:collapse;white-space:nowrap;font-size:.92rem;margin:.6rem 0}
+  td,th,.schema span{border:1px solid #73858a;padding:.25rem .5rem}
+  th{background:#edf2f1}
+  caption{text-align:left;font-weight:bold}
+  svg{display:block;max-width:100%;height:auto}
+  svg line,svg rect{stroke:#273940;stroke-width:1.6}
+  svg rect{fill:white}
+  svg text{font:16px system-ui;fill:#192b32}
+  pre{background:#edf2f1;padding:.8rem;font:14px/1.75 monospace}
+  .schema{display:flex;flex-wrap:wrap}
+  .schema i{font-style:normal;border-bottom:1px dashed;padding-bottom:3px}
+  .pair,.eq{display:flex;gap:.5rem 1rem;flex-wrap:wrap}
+  .frac{display:inline-flex;vertical-align:middle;flex-direction:column;text-align:center;line-height:1.4}
+  .frac span:first-child{border-bottom:1px solid}
+  a{color:#005c63}
+  footer p[role="status"]{font-variant-numeric:tabular-nums}
+
+
+
+  .morning-sheet{min-width:0;width:100%}
+
+  .index{position:sticky;top:1rem;margin:1rem .75rem 0 0;padding:.7rem;background:white;border:1px solid #c8d4d4;border-radius:.6rem}
+
+  .index summary{font-weight:700;color:#184b50;cursor:pointer}
+
+  .index nav{display:grid;grid-template-columns:1fr 1fr;gap:.3rem;margin-top:.6rem;max-height:calc(100dvh - 7rem);overflow:auto;padding:2px}
+
+  .index a{display:flex;justify-content:space-between;align-items:center;padding:.4rem .45rem;border-radius:.3rem;color:inherit;text-decoration:none;background:#f3f5f5;font-size:.9rem}
+
+  .index a:hover,.index a:focus-visible{outline:2px solid #367b78;outline-offset:-2px}
+
+  .index small{color:#586465}
+  .index .right{background:#e3f2eb}
+  .index .right small{color:#08624f}
+  .index .wrong{background:#faece7}
+  .index .wrong small{color:#914337}
+
+  @media(max-width:64rem){&{display:flex;flex-direction:column;gap:0}
+  .index{order:-1;top:0;z-index:3;width:100%;margin:0;padding:.65rem 1rem;border-radius:0}
+  .index nav{grid-template-columns:repeat(auto-fit,minmax(4rem,1fr));max-height:45dvh}
+  section,footer{scroll-margin-top:3.5rem}
+  }
+
+
+  .index nav{max-height:calc(100dvh - 10rem)}
+  @media(max-width:64rem){.index nav{max-height:45dvh}}
+}

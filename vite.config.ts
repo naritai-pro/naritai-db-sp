@@ -1,9 +1,11 @@
+import { morningInfo, morningParts, morningYears } from "./src/morning-catalog.ts";
 import { defineConfig } from "vite";
 import { origin, pageInfo, questionTitles, siteName } from "./src/seo.ts";
 
 const home = pageInfo();
 const questions = Object.keys(questionTitles).sort().reverse().map(id => [pageInfo(id), pageInfo(id, true)]);
-const pages = [home, ...questions.flat()];
+const mornings = morningParts.flatMap(part => morningYears.map(year => morningInfo(year, part)));
+const pages = [home, ...mornings, ...questions.flat()];
 const escape = (value: string) => value.replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;");
 function render(template: string, page: typeof home) {
   const url = origin + page.path;
@@ -27,7 +29,8 @@ function render(template: string, page: typeof home) {
     `<meta name="twitter:card" content="summary_large_image" />`,
   ].join("\n    ");
   const links = page === home
-    ? "<ul>" + questions.map(([q]) => `<li><a href="${q.path}">${escape(q.heading)}</a></li>`).join("") + "</ul>"
+    ? "<ul>" + [...mornings, ...questions.map(([q]) => q)].map(q => `<li><a href="${q.path}">${escape(q.heading)}</a></li>`).join("") + "</ul>"
+    : mornings.includes(page) ? '<a href="/">年度一覧</a>'
     : page.path.endsWith("/answer")
       ? `<a href="${page.path.slice(0, -7)}">問題を解く</a>`
       : `<a href="${page.path}/answer">解答例・解説を見る</a>`;

@@ -1,3 +1,4 @@
+import { morningInfo, morningRoute } from "./morning-catalog";
 import { enablePaperHighlights } from "./paper-highlights";
 import { questionPath, resolveRoute } from "./routes";
 import { schemaControls, schemaPreview } from "./schema-input";
@@ -373,9 +374,13 @@ function renderQuestion(q: Question, reviewing: boolean) {
   sheet.append(el("h2", "AIに相談する"), copyBox(q, reviewing));
   if (!reviewing) sheet.append(link("解説と答え合わせへ →", review, "primary"));
 }
+let morningLifetime: AbortController | undefined;
 async function route() {
+  delete app.dataset.morning;
+  morningLifetime?.abort();
+  const morning = morningRoute(location.pathname);
   const {id, reviewing} = resolveRoute();
-  const page = pageInfo(id, reviewing);
+  const page = morning ? morningInfo(morning.year, morning.part) : pageInfo(id, reviewing);
   document.title = page.title;
   document.querySelector('meta[name="description"]')?.setAttribute("content", page.description);
   document.querySelector('meta[property="og:title"]')?.setAttribute("content", page.title);
@@ -385,6 +390,19 @@ async function route() {
   const requested = location.href;
   const entry = navigatorTree.select(id);
   const exercise = exercises.get(id);
+  if (morning) {
+    const controller = new AbortController();
+    morningLifetime = controller;
+    const signal = AbortSignal.any([controller.signal, lifetime.signal]);
+    app.replaceChildren(el("p", "問題を読み込み中…"));
+    try {
+      const {renderMorning} = await import("./morning");
+      await renderMorning(app, morning.year, morning.part, signal);
+    } catch {
+      if (!signal.aborted) app.replaceChildren(el("p", "問題を読み込めませんでした。"), button("再読み込み", () => void route()));
+    }
+    return;
+  }
   if (exercise) {
     const { default: q } = await exercise();
     if (lifetime.signal.aborted || location.href !== requested) return;
@@ -401,7 +419,7 @@ async function route() {
     app.replaceChildren(
       el("h1", page.heading),
       el("p", page.description),
-      el("p", "左のサイドバーで午後Ⅰ・午後Ⅱを開き、解きたい問番号の下にある年度を選んでください。午前Ⅰ・午前Ⅱの過去問も追加予定です。"),
+      el("p", "左の一覧から区分と年度を選んでください。午前は年度ごとに、午後は大問ごとに演習できます。"),
     );
   }
   window.scrollTo(0, 0);
@@ -413,11 +431,12 @@ document.addEventListener("click", event => {
   if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
   const anchor = event.target instanceof Element ? event.target.closest("a") : null;
   if (!anchor || anchor.target || anchor.hasAttribute("download") || anchor.origin !== location.origin) return;
+  if (app.dataset.morning && anchor.hash && anchor.pathname === location.pathname && anchor.search === location.search) return;
   event.preventDefault();
   if (anchor.href !== location.href) history.pushState(null, "", anchor.href);
   void route();
 }, {signal: lifetime.signal});
-window.addEventListener("popstate", route, {signal: lifetime.signal});
+window.addEventListener("popstate", () => { if (app.dataset.morning !== location.pathname) void route(); }, {signal: lifetime.signal});
 if (import.meta.hot) {
   import.meta.hot.accept();
   import.meta.hot.dispose(data => {

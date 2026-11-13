@@ -1,0 +1,341 @@
+<!doctype html><html lang="ja"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>令和7年度秋期 DB午前Ⅱ｜25問演習</title><style>
+*{box-sizing:border-box}body{margin:0;background:#f9faf9;color:#182e3c;font:16px/1.8 system-ui,sans-serif}main{max-width:52rem;margin:auto;padding:1rem clamp(12px,3vw,32px) 5rem}header,section,footer{padding:1.4rem 0;border-bottom:1px solid #c8d4d4}h1,h2{line-height:1.4}h1{font-size:clamp(1.55rem,4vw,2.3rem)}h2{font-size:1.3rem;color:#184b50}button{font:inherit;cursor:pointer;color:inherit}button:focus-visible{outline:3px solid #2266a3;outline-offset:2px}button:disabled{cursor:default}.row{display:grid;grid-template-columns:3.2rem minmax(0,1fr);gap:0;margin:.55rem 0}.letter,.choice{border:1px solid #afbfbe;border-radius:.4rem;background:white;padding:.6rem}.row .letter{border-radius:.4rem 0 0 .4rem;border-right:0}.row .choice{border-radius:0 .4rem .4rem 0}.row button:focus-visible{position:relative;z-index:1}.letter{font-weight:700;color:#00585a;background:#e8f4f1}.choice{text-align:left;line-height:1.65}.excluded .choice,.excluded .letter{background:#ededed;color:#61696a}.excluded .choice{text-decoration:line-through}.right .letter{background:#08624f;color:white}.wrong .letter{background:#914337;color:white}.feedback{margin-top:.9rem;padding:1rem;background:#eef5f2;border-left:4px solid #487d6b}.feedback p{margin:.4rem 0 0}.scroll,pre{max-width:100%;overflow:auto}table{border-collapse:collapse;white-space:nowrap;font-size:.92rem;margin:.6rem 0}td,th,.schema span{border:1px solid #73858a;padding:.25rem .5rem}th{background:#edf2f1}caption{text-align:left;font-weight:bold}svg{display:block;max-width:100%;height:auto}svg line,svg rect{stroke:#273940;stroke-width:1.6}svg rect{fill:white}svg text{font:16px system-ui;fill:#192b32}pre{background:#edf2f1;padding:.8rem;font:14px/1.75 monospace}.schema{display:flex;flex-wrap:wrap}.schema i{font-style:normal;border-bottom:1px dashed;padding-bottom:3px}.pair,.eq{display:flex;gap:.5rem 1rem;flex-wrap:wrap}.frac{display:inline-flex;vertical-align:middle;flex-direction:column;text-align:center;line-height:1.4}.frac span:first-child{border-bottom:1px solid}a{color:#005c63}#progress{font-variant-numeric:tabular-nums}
+.layout{display:grid;grid-template-columns:minmax(0,52rem) 10rem;gap:1rem;max-width:63rem;margin:auto;align-items:start}
+main{width:100%;min-width:0}
+.index{position:sticky;top:1rem;margin:1rem .75rem 0 0;padding:.7rem;background:white;border:1px solid #c8d4d4;border-radius:.6rem}
+.index summary{font-weight:700;color:#184b50;cursor:pointer}
+.index nav{display:grid;grid-template-columns:1fr 1fr;gap:.3rem;margin-top:.6rem;max-height:calc(100dvh - 7rem);overflow:auto;padding:2px}
+.index a{display:flex;justify-content:space-between;align-items:center;padding:.4rem .45rem;border-radius:.3rem;color:inherit;text-decoration:none;background:#f3f5f5;font-size:.9rem}
+.index a:hover,.index a:focus-visible{outline:2px solid #367b78;outline-offset:-2px}
+.index small{color:#586465}.index .right{background:#e3f2eb}.index .right small{color:#08624f}.index .wrong{background:#faece7}.index .wrong small{color:#914337}
+@media(max-width:54rem){.layout{display:flex;flex-direction:column;gap:0}.index{order:-1;top:0;z-index:3;width:100%;margin:0;padding:.65rem 1rem;border-radius:0}.index nav{grid-template-columns:repeat(auto-fit,minmax(4rem,1fr));max-height:45dvh}section,footer{scroll-margin-top:3.5rem}}
+.reset-area{margin-top:.5rem}
+.reset-area button{border:1px solid #afbfbe;border-radius:.4rem;background:white;padding:.25rem .65rem}
+#reset-confirm{position:fixed;inset:auto;margin:0;width:min(18rem,calc(100vw - 1rem));padding:1rem;border:1px solid #afbfbe;border-radius:.65rem;color:inherit;box-shadow:0 6px 24px #18383529}
+#reset-confirm p{margin:0 0 .75rem}
+#confirm-reset{background:#914337;color:white}
+.index nav{max-height:calc(100dvh - 10rem)}
+@media(max-width:54rem){.index nav{max-height:45dvh}}
+</style><div class="layout"><main><header><p>データベーススペシャリスト試験</p><h1>令和7年度秋期　午前Ⅱ</h1><p>左の記号を押すと解答が確定します。右の文章を押すと候補から外れ、もう一度押すと戻ります。</p><a href="#result">採点状況を見る</a></header>
+<section id="q1" data-key="ア"><h2>問1</h2><p>グラフデータモデルの一つである，プロパティグラフに関する記述のうち，適切なものはどれか。</p>
+<div class="row"><button type="button" class="letter" aria-label="問1 アで解答">ア</button><button type="button" class="choice" aria-pressed="false" aria-label="アを候補から外す：グラフはノード，リレーションシップ，プロパティで示すことができる。">グラフはノード，リレーションシップ，プロパティで示すことができる。</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問1 イで解答">イ</button><button type="button" class="choice" aria-pressed="false" aria-label="イを候補から外す：ノードはプロパティをもつことができるが，リレーションシップはプロパティをもつことができない。">ノードはプロパティをもつことができるが，リレーションシップはプロパティをもつことができない。</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問1 ウで解答">ウ</button><button type="button" class="choice" aria-pressed="false" aria-label="ウを候補から外す：プロパティは，主語，述語，目的語のトリプルと呼ばれるデータ構造で表す。">プロパティは，主語，述語，目的語のトリプルと呼ばれるデータ構造で表す。</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問1 エで解答">エ</button><button type="button" class="choice" aria-pressed="false" aria-label="エを候補から外す：リレーションシップは開始ノード，終了ノードともに複数のノードに接続することができる。">リレーションシップは開始ノード，終了ノードともに複数のノードに接続することができる。</button></div>
+<div class="feedback" hidden><strong></strong><p>人をノード、所属先とのつながりをリレーションシップとすると、氏名は人の属性、着任日はつながりの属性として記録できる。このようにノードにもリレーションシップにもプロパティを付けられる。主語・述語・目的語の三つ組はRDFの表現である。</p></div></section>
+<section id="q2" data-key="エ"><h2>問2</h2><p>概念データモデルの説明として，最も適切なものはどれか。</p>
+<div class="row"><button type="button" class="letter" aria-label="問2 アで解答">ア</button><button type="button" class="choice" aria-pressed="false" aria-label="アを候補から外す：階層モデル，ネットワークモデル，関係モデルがある。">階層モデル，ネットワークモデル，関係モデルがある。</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問2 イで解答">イ</button><button type="button" class="choice" aria-pressed="false" aria-label="イを候補から外す：業務プロセスを抽象化して表現したものである。">業務プロセスを抽象化して表現したものである。</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問2 ウで解答">ウ</button><button type="button" class="choice" aria-pressed="false" aria-label="ウを候補から外す：集中型DBMSを導入するか，分散型DBMSを導入するかによって内容が変わる。">集中型DBMSを導入するか，分散型DBMSを導入するかによって内容が変わる。</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問2 エで解答">エ</button><button type="button" class="choice" aria-pressed="false" aria-label="エを候補から外す：対象世界の情報構造を抽象化して表現したものである。">対象世界の情報構造を抽象化して表現したものである。</button></div>
+<div class="feedback" hidden><strong></strong><p>例えば販売業務なら、顧客・注文・商品という実体と、それらの間の関係を表す。「どんな情報があり、どう結び付くか」が概念データモデルの対象になる。業務を処理する順序や、どのサーバに表を配置するかは別の設計事項である。</p></div></section>
+<section id="q3" data-key="ア"><h2>問3</h2><p>UMLを用いて表した商品と倉庫のデータモデルに関する記述のうち，適切なものはどれか。ここで，商品の倉庫間の移動はないものとする。</p><div class="scroll"><svg role="img" aria-label="商品と倉庫のUML図。在庫商品につき商品1、倉庫1、入庫1件以上、出庫0件以上。商品につき在庫商品1件以上、倉庫につき在庫商品0件以上。入庫・出庫につき在庫商品1。" viewBox="0 0 595 215" width="595" style="min-width:493px"><title>商品と倉庫のUML図</title><desc>在庫商品につき商品1、倉庫1、入庫1件以上、出庫0件以上。商品につき在庫商品1件以上、倉庫につき在庫商品0件以上。入庫・出庫につき在庫商品1。</desc><line x1="110" y1="175" x2="235" y2="175"/><line x1="339" y1="175" x2="481" y2="175"/><line x1="183" y1="82" x2="262" y2="146"/><line x1="390" y1="82" x2="315" y2="146"/><rect x="6" y="147" width="104" height="56"/><line x1="6" y1="175" x2="110" y2="175"/><text x="16" y="167">商品</text><text x="14" y="197">商品コード</text><rect x="235" y="147" width="104" height="56"/><line x1="235" y1="175" x2="339" y2="175"/><text x="245" y="167">在庫商品</text><text x="243" y="197">/在庫数量</text><rect x="481" y="147" width="104" height="56"/><line x1="481" y1="175" x2="585" y2="175"/><text x="491" y="167">倉庫</text><text x="489" y="197">倉庫番号</text><rect x="97" y="3" width="104" height="80"/><line x1="97" y1="31" x2="201" y2="31"/><text x="107" y="23">入庫</text><text x="105" y="53">入庫年月日</text><text x="105" y="75">数量</text><rect x="378" y="3" width="104" height="80"/><line x1="378" y1="31" x2="482" y2="31"/><text x="388" y="23">出庫</text><text x="386" y="53">出庫年月日</text><text x="386" y="75">数量</text><text x="116" y="197">1</text><text x="191" y="197">1..＊</text><text x="344" y="197">0..＊</text><text x="467" y="197">1</text><text x="409" y="168">格納先</text><text x="150" y="101">1..＊</text><text x="235" y="140">1</text><text x="338" y="140">1</text><text x="388" y="101">0..＊</text></svg></div>
+<div class="row"><button type="button" class="letter" aria-label="問3 アで解答">ア</button><button type="button" class="choice" aria-pressed="false" aria-label="アを候補から外す：1種類の商品を二つの倉庫に初めて入庫すると，“在庫商品”データが2件追加される。">1種類の商品を二つの倉庫に初めて入庫すると，“在庫商品”データが2件追加される。</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問3 イで解答">イ</button><button type="button" class="choice" aria-pressed="false" aria-label="イを候補から外す：2種類の商品を一つの倉庫に入庫すると，“入庫”データが1件追加される。">2種類の商品を一つの倉庫に入庫すると，“入庫”データが1件追加される。</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問3 ウで解答">ウ</button><button type="button" class="choice" aria-pressed="false" aria-label="ウを候補から外す：格納先となる倉庫が確定していない商品が存在する。">格納先となる倉庫が確定していない商品が存在する。</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問3 エで解答">エ</button><button type="button" class="choice" aria-pressed="false" aria-label="エを候補から外す：出庫の実績がない在庫商品は存在しない。">出庫の実績がない在庫商品は存在しない。</button></div>
+<div class="feedback" hidden><strong></strong><p>図の「在庫商品」から倉庫側の端を見ると、多重度は1。各在庫商品には倉庫が一つ決まる。同じ商品を二つの倉庫に初めて入れると、商品と格納先の組合せが二つできるので、在庫商品も2件増える。出庫側は0..＊なので、まだ出庫していない在庫商品も表せる。</p></div></section>
+<section id="q4" data-key="エ"><h2>問4</h2><p>従業員の，従業員番号，氏名及び使用できるプログラム言語を管理するために，“従業員”表及び“プログラム言語”表を設計する。“プログラム言語を2種類以上使用できる従業員がいる。プログラム言語を全く使用できない従業員もいる。”という状況を管理する“プログラム言語”表の設計として，適切なものはどれか。ここで，実線の下線は主キーを表す。</p><p>〔従業員表〕<br>従業員（<u>従業員番号</u>，氏名）</p>
+<div class="row"><button type="button" class="letter" aria-label="問4 アで解答">ア</button><button type="button" class="choice" aria-pressed="false" aria-label="アを候補から外す：プログラム言語（氏名，プログラム言語）">プログラム言語（<u>氏名</u>，プログラム言語）</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問4 イで解答">イ</button><button type="button" class="choice" aria-pressed="false" aria-label="イを候補から外す：プログラム言語（従業員番号，プログラム言語）">プログラム言語（従業員番号，<u>プログラム言語</u>）</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問4 ウで解答">ウ</button><button type="button" class="choice" aria-pressed="false" aria-label="ウを候補から外す：プログラム言語（従業員番号，プログラム言語）">プログラム言語（<u>従業員番号</u>，プログラム言語）</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問4 エで解答">エ</button><button type="button" class="choice" aria-pressed="false" aria-label="エを候補から外す：プログラム言語（従業員番号，プログラム言語）">プログラム言語（<u>従業員番号</u>，<u>プログラム言語</u>）</button></div>
+<div class="feedback" hidden><strong></strong><p>従業員番号と言語の組を主キーにする。例えば（101, Java）と（101, SQL）は別の行になり、さらに（102, SQL）も登録できる。片方の列だけを主キーにすると、どちらかの登録が妨げられる。使える言語がない従業員は従業員表にだけ登録すればよい。</p></div></section>
+<section id="q5" data-key="エ"><h2>問5</h2><p>関数従属に関する記述のうち，適切なものはどれか。ここで，A，B，Cはある関係の属性の集合とする。</p>
+<div class="row"><button type="button" class="letter" aria-label="問5 アで解答">ア</button><button type="button" class="choice" aria-pressed="false" aria-label="アを候補から外す：BがAに関数従属し，CがAに関数従属すれば，CはBに関数従属する。">BがAに関数従属し，CがAに関数従属すれば，CはBに関数従属する。</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問5 イで解答">イ</button><button type="button" class="choice" aria-pressed="false" aria-label="イを候補から外す：BがAの部分集合であり，CがAに関数従属すれば，CはBに関数従属する。">BがAの部分集合であり，CがAに関数従属すれば，CはBに関数従属する。</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問5 ウで解答">ウ</button><button type="button" class="choice" aria-pressed="false" aria-label="ウを候補から外す：BがAの部分集合であれば，AはBに関数従属する。">BがAの部分集合であれば，AはBに関数従属する。</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問5 エで解答">エ</button><button type="button" class="choice" aria-pressed="false" aria-label="エを候補から外す：BとCの和集合がAに関数従属すれば，BとCはそれぞれがAに関数従属する。">BとCの和集合がAに関数従属すれば，BとCはそれぞれがAに関数従属する。</button></div>
+<div class="feedback" hidden><strong></strong><p>Aが等しい任意の2行でBとCの組全体が一致するなら、そのうちBだけを見ても、Cだけを見ても値は一致する。したがって A → B∪C から A → B と A → C を導ける。これは関数従属性の分解則である。</p></div></section>
+<section id="q6" data-key="ウ"><h2>問6</h2><p>次の表に対して，第3正規形まで正規化を行った場合，少なくとも幾つの表に分割されるか。ここで，顧客の1回の注文に対して一つの受注番号が割り当てられ，顧客は1回の注文で一つ以上の商品を注文できるものとする。</p><div class="scroll"><table><caption>受注データ</caption><thead><tr><th>受注番号</th><th>顧客コード</th><th>顧客名</th><th>受注日</th><th>商品コード</th><th>商品名</th><th>単価</th><th>受注数</th><th>受注金額</th></tr></thead><tbody><tr><td>1055</td><td>A7053</td><td>鈴木電気</td><td>2025-07-01</td><td>T035</td><td>テレビA</td><td>85,000</td><td>10</td><td>850,000</td></tr><tr><td>1055</td><td>A7053</td><td>鈴木電気</td><td>2025-07-01</td><td>K083</td><td>無線スピーカーA</td><td>23,000</td><td>5</td><td>115,000</td></tr><tr><td>1055</td><td>A7053</td><td>鈴木電気</td><td>2025-07-01</td><td>S172</td><td>Blu-ray プレイヤーB</td><td>78,000</td><td>3</td><td>234,000</td></tr><tr><td>2030</td><td>B7060</td><td>中村商会</td><td>2025-07-03</td><td>T050</td><td>テレビB</td><td>90,000</td><td>3</td><td>270,000</td></tr><tr><td>2030</td><td>B7060</td><td>中村商会</td><td>2025-07-03</td><td>S172</td><td>Blu-ray プレイヤーB</td><td>78,000</td><td>10</td><td>780,000</td></tr><tr><td>3025</td><td>C9025</td><td>佐藤電気</td><td>2025-07-03</td><td>T035</td><td>テレビA</td><td>85,000</td><td>3</td><td>255,000</td></tr><tr><td>3025</td><td>C9025</td><td>佐藤電気</td><td>2025-07-03</td><td>K085</td><td>無線スピーカーB</td><td>25,000</td><td>2</td><td>50,000</td></tr><tr><td>3025</td><td>C9025</td><td>佐藤電気</td><td>2025-07-03</td><td>S171</td><td>Blu-ray プレイヤーA</td><td>50,000</td><td>8</td><td>400,000</td></tr><tr><td>3090</td><td>B7060</td><td>中村商会</td><td>2025-07-04</td><td>T050</td><td>テレビB</td><td>90,000</td><td>1</td><td>90,000</td></tr><tr><td>3090</td><td>B7060</td><td>中村商会</td><td>2025-07-04</td><td>T035</td><td>テレビA</td><td>85,000</td><td>2</td><td>170,000</td></tr></tbody></table></div>
+<div class="row"><button type="button" class="letter" aria-label="問6 アで解答">ア</button><button type="button" class="choice" aria-pressed="false" aria-label="アを候補から外す：2">2</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問6 イで解答">イ</button><button type="button" class="choice" aria-pressed="false" aria-label="イを候補から外す：3">3</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問6 ウで解答">ウ</button><button type="button" class="choice" aria-pressed="false" aria-label="ウを候補から外す：4">4</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問6 エで解答">エ</button><button type="button" class="choice" aria-pressed="false" aria-label="エを候補から外す：5">5</button></div>
+<div class="feedback" hidden><strong></strong><p>まず受注番号だけで決まる受注日・顧客コードを受注表へ、商品コードだけで決まる商品名・単価を商品表へ分ける。顧客名は顧客コードで決まるので顧客表に独立させる。最後に、受注番号と商品コードの組に対応する受注数を受注明細表に置く。これで顧客・商品・受注・受注明細の4表になる。明細の金額は単価×受注数で求められる。</p></div></section>
+<section id="q7" data-key="ウ"><h2>問7</h2><p>SQLの3値論理において，a，bに入る字句の組合せはどれか。</p><p>“真 AND 不定”は［ a ］であり，“偽 AND 不定”は［ b ］である。</p>
+<div class="row"><button type="button" class="letter" aria-label="問7 アで解答">ア</button><button type="button" class="choice" aria-pressed="false" aria-label="アを候補から外す：a：偽　b：偽">a：偽　b：偽</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問7 イで解答">イ</button><button type="button" class="choice" aria-pressed="false" aria-label="イを候補から外す：a：偽　b：不定">a：偽　b：不定</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問7 ウで解答">ウ</button><button type="button" class="choice" aria-pressed="false" aria-label="ウを候補から外す：a：不定　b：偽">a：不定　b：偽</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問7 エで解答">エ</button><button type="button" class="choice" aria-pressed="false" aria-label="エを候補から外す：a：不定　b：不定">a：不定　b：不定</button></div>
+<div class="feedback" hidden><strong></strong><p>ANDは両方が真のときだけ真になる。真と不定を組み合わせると、もう片方が真か偽かで結果が変わるため不定のまま。一方が偽なら、もう片方がどちらでも結果は偽。したがって a は不定、b は偽になる。</p></div></section>
+<section id="q8" data-key="ウ"><h2>問8</h2><p>表定義に基づいて作成された“システム担当者”表において，トランザクションAの複合文内のSQL文全てを正常終了させるためにaに入れる字句はどれか。ここで，実線の下線は主キーを表す。</p><p>〔表定義〕</p><pre>CREATE TABLE システム担当者 (
+    システム番号 INTEGER,
+    担当者番号 INTEGER NOT NULL,
+    CONSTRAINT PK_システム番号 PRIMARY KEY(システム番号),
+    CONSTRAINT UK_担当者番号 UNIQUE(担当者番号)
+        DEFERRABLE INITIALLY IMMEDIATE
+)</pre><div class="scroll"><table><caption>システム担当者</caption><thead><tr><th><u>システム番号</u></th><th>担当者番号</th></tr></thead><tbody><tr><td>1234</td><td>111</td></tr><tr><td>6789</td><td>222</td></tr></tbody></table></div><p>〔トランザクションAの複合文内のSQL文〕</p><pre>SET CONSTRAINTS ［ a ］;
+UPDATE システム担当者 SET 担当者番号 = 222 WHERE システム番号 = 1234;
+UPDATE システム担当者 SET 担当者番号 = 111 WHERE システム番号 = 6789;
+COMMIT;</pre>
+<div class="row"><button type="button" class="letter" aria-label="問8 アで解答">ア</button><button type="button" class="choice" aria-pressed="false" aria-label="アを候補から外す：PK_システム番号 DEFERRED">PK_システム番号 DEFERRED</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問8 イで解答">イ</button><button type="button" class="choice" aria-pressed="false" aria-label="イを候補から外す：PK_システム番号 IMMEDIATE">PK_システム番号 IMMEDIATE</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問8 ウで解答">ウ</button><button type="button" class="choice" aria-pressed="false" aria-label="ウを候補から外す：UK_担当者番号 DEFERRED">UK_担当者番号 DEFERRED</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問8 エで解答">エ</button><button type="button" class="choice" aria-pressed="false" aria-label="エを候補から外す：UK_担当者番号 IMMEDIATE">UK_担当者番号 IMMEDIATE</button></div>
+<div class="feedback" hidden><strong></strong><p>担当者番号を交換すると、最初のUPDATE直後だけは2行とも222になる。2回目のUPDATE後には222と111に分かれる。そこで遅延可能と定義された担当者番号の一意制約にDEFERREDを指定し、コミット時に検査する。システム番号の値は一度も変わらない。</p></div></section>
+<section id="q9" data-key="エ"><h2>問9</h2><p>“名簿1”表と“名簿2”表のそれぞれ対応する行が全て等しいかどうかを確認するSQL文のa，b，cに入れる適切な字句はどれか。</p><div class="pair"><div class="scroll"><table><caption>名簿1</caption><thead><tr><th>名前</th><th>住所</th><th>性別</th><th>年齢</th></tr></thead><tbody><tr><td>試験 太郎</td><td>東京</td><td>男</td><td>22</td></tr><tr><td>情報 花子</td><td>大阪</td><td>女</td><td>24</td></tr><tr><td>処理 一郎</td><td>京都</td><td>男</td><td>35</td></tr></tbody></table></div><div class="scroll"><table><caption>名簿2</caption><thead><tr><th>名前</th><th>住所</th><th>性別</th><th>年齢</th></tr></thead><tbody><tr><td>試験 太郎</td><td>東京</td><td>男</td><td>22</td></tr><tr><td>情報 花子</td><td>大阪</td><td>女</td><td>24</td></tr><tr><td>処理 一郎</td><td>京都</td><td>男</td><td>35</td></tr></tbody></table></div></div><p>〔SQL文〕</p><pre>SELECT CASE WHEN COUNT(*) = 0 THEN '等しい' ELSE '異なる' END AS 結果
+  FROM ((SELECT * FROM 名簿1 ［ a ］ SELECT * FROM 名簿2)
+         ［ b ］
+        (SELECT * FROM 名簿1 ［ c ］ SELECT * FROM 名簿2)
+       ) COMPARE</pre>
+<div class="row"><button type="button" class="letter" aria-label="問9 アで解答">ア</button><button type="button" class="choice" aria-pressed="false" aria-label="アを候補から外す：a：EXCEPT　b：UNION ALL　c：INTERSECT">a：EXCEPT　b：UNION ALL　c：INTERSECT</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問9 イで解答">イ</button><button type="button" class="choice" aria-pressed="false" aria-label="イを候補から外す：a：EXCEPT　b：UNION　c：INTERSECT">a：EXCEPT　b：UNION　c：INTERSECT</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問9 ウで解答">ウ</button><button type="button" class="choice" aria-pressed="false" aria-label="ウを候補から外す：a：UNION ALL　b：INTERSECT　c：UNION">a：UNION ALL　b：INTERSECT　c：UNION</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問9 エで解答">エ</button><button type="button" class="choice" aria-pressed="false" aria-label="エを候補から外す：a：UNION　b：EXCEPT　c：INTERSECT">a：UNION　b：EXCEPT　c：INTERSECT</button></div>
+<div class="feedback" hidden><strong></strong><p>二つの名簿のどちらかにある行をUNIONで集め、両方にある行をINTERSECTで求める。前者から後者をEXCEPTで引くと、片方にしかない行だけが残る。その件数が0なら行の集合は等しい。この比較では、重複する同一行の個数までは区別しない。</p></div></section>
+<section id="q10" data-key="イ"><h2>問10</h2><p>関係演算において，商演算と同等な結果が得られる演算の組合せはどれか。</p>
+<div class="row"><button type="button" class="letter" aria-label="問10 アで解答">ア</button><button type="button" class="choice" aria-pressed="false" aria-label="アを候補から外す：直積演算と差演算と選択演算">直積演算と差演算と選択演算</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問10 イで解答">イ</button><button type="button" class="choice" aria-pressed="false" aria-label="イを候補から外す：直積演算と射影演算と差演算">直積演算と射影演算と差演算</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問10 ウで解答">ウ</button><button type="button" class="choice" aria-pressed="false" aria-label="ウを候補から外す：直積演算と射影演算と和演算">直積演算と射影演算と和演算</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問10 エで解答">エ</button><button type="button" class="choice" aria-pressed="false" aria-label="エを候補から外す：直積演算と選択演算と和演算">直積演算と選択演算と和演算</button></div>
+<div class="feedback" hidden><strong></strong><p>商は「要求された全種類を満たすもの」を求める演算。例えば候補者を履修表から射影し、候補者と必修科目の直積を作る。そこから実際の履修を引けば不足した組が残る。不足のある候補者を射影して全候補者から引くと、全科目を履修した人だけが残る。使った演算は直積・射影・差である。</p></div></section>
+<section id="q11" data-key="ア"><h2>問11</h2><p>図のような関係データベースの“注文”表と“注文明細”表がある。“注文”表の行を削除すると，対応する“注文明細”表の行が，自動的に削除されるようにしたい。参照制約定義の削除規則（ON DELETE）に指定する語句はどれか。ここで，図中の実線の下線は主キーを，破線の下線は外部キーを表す。</p><p>注文</p><div class="schema"><span><u>注文番号</u></span><span>注文日</span><span><i>顧客番号</i></span></div><p>注文明細</p><div class="schema"><span><i><u>注文番号</u></i></span><span><u>明細番号</u></span><span><i>商品番号</i></span><span>数量</span></div>
+<div class="row"><button type="button" class="letter" aria-label="問11 アで解答">ア</button><button type="button" class="choice" aria-pressed="false" aria-label="アを候補から外す：CASCADE">CASCADE</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問11 イで解答">イ</button><button type="button" class="choice" aria-pressed="false" aria-label="イを候補から外す：INTERSECT">INTERSECT</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問11 ウで解答">ウ</button><button type="button" class="choice" aria-pressed="false" aria-label="ウを候補から外す：RESTRICT">RESTRICT</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問11 エで解答">エ</button><button type="button" class="choice" aria-pressed="false" aria-label="エを候補から外す：UNIQUE">UNIQUE</button></div>
+<div class="feedback" hidden><strong></strong><p>注文明細の注文番号は、親である注文の行を参照する。外部キーにON DELETE CASCADEを指定すると、親の削除がその親を参照する明細に伝わる。RESTRICTを指定すると、参照する明細がある間は親の削除が拒否される。</p></div></section>
+<section id="q12" data-key="ア"><h2>問12</h2><p>DBMSをシステム障害発生後に再立上げするとき，ロールフォワードすべきトランザクションとロールバックすべきトランザクションの組合せとして，適切なものはどれか。ここで，トランザクションの中で実行される処理内容は次のとおりとする。</p><div class="scroll"><table><caption>処理内容</caption><thead><tr><th>トランザクション</th><th>データベースに対するRead回数とWrite回数</th></tr></thead><tbody><tr><td>T1，T2</td><td>Read 10，Write 20</td></tr><tr><td>T3，T4</td><td>Read 100</td></tr><tr><td>T5，T6</td><td>Read 20，Write 10</td></tr></tbody></table></div><div class="scroll"><svg role="img" aria-label="トランザクションの時間図。チェックポイント前にT1がコミット。T2はその前に始まり後にコミット。T3・T6はその後に始まり障害時に未コミット。T4はその前に始まり未コミット。T5はその後に始まりコミット。" viewBox="0 0 530 250" width="530" style="min-width:439px"><title>トランザクションの時間図</title><desc>チェックポイント前にT1がコミット。T2はその前に始まり後にコミット。T3・T6はその後に始まり障害時に未コミット。T4はその前に始まり未コミット。T5はその後に始まりコミット。</desc><line x1="30" y1="30" x2="470" y2="30"/><text x="455" y="28">➝</text><text x="424" y="19">時間</text><line x1="432" y1="30" x2="432" y2="240"/><text x="440" y="148">障害発生</text><text x="2" y="76">T1</text><line x1="45" y1="71" x2="116" y2="71"/><circle cx="116" cy="71" r="5"/><text x="2" y="105">T2</text><line x1="70" y1="100" x2="293" y2="100"/><circle cx="293" cy="100" r="5"/><text x="2" y="134">T3</text><line x1="206" y1="129" x2="432" y2="129"/><text x="2" y="163">T4</text><line x1="35" y1="158" x2="432" y2="158"/><text x="2" y="192">T5</text><line x1="187" y1="187" x2="350" y2="187"/><circle cx="350" cy="187" r="5"/><text x="2" y="221">T6</text><line x1="246" y1="216" x2="432" y2="216"/><rect x="136" y="47" width="32" height="186"/><text x="143" y="65">チ</text><text x="143" y="83">ェ</text><text x="143" y="101">ッ</text><text x="143" y="119">ク</text><text x="143" y="137">ポ</text><text x="143" y="155">イ</text><text x="143" y="173">ン</text><text x="143" y="191">ト</text></svg></div><p>線の右端の黒丸（●）はコミット済み，黒丸のない線は未コミットを示す。</p>
+<div class="row"><button type="button" class="letter" aria-label="問12 アで解答">ア</button><button type="button" class="choice" aria-pressed="false" aria-label="アを候補から外す：ロールフォワード：T2，T5　ロールバック：T6">ロールフォワード：T2，T5　ロールバック：T6</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問12 イで解答">イ</button><button type="button" class="choice" aria-pressed="false" aria-label="イを候補から外す：ロールフォワード：T2，T5　ロールバック：T3，T6">ロールフォワード：T2，T5　ロールバック：T3，T6</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問12 ウで解答">ウ</button><button type="button" class="choice" aria-pressed="false" aria-label="ウを候補から外す：ロールフォワード：T1，T2，T5　ロールバック：T6">ロールフォワード：T1，T2，T5　ロールバック：T6</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問12 エで解答">エ</button><button type="button" class="choice" aria-pressed="false" aria-label="エを候補から外す：ロールフォワード：T1，T2，T5　ロールバック：T3，T6">ロールフォワード：T1，T2，T5　ロールバック：T3，T6</button></div>
+<div class="feedback" hidden><strong></strong><p>図の黒丸はコミットを表す。更新のあるT2とT5はチェックポイント後にコミットしているので更新を再適用する。更新のあるT6は障害時に未コミットなので取り消す。T1はチェックポイント前にコミット済み。T3とT4は図の線が障害時点まで続いていても、表を見ると読取りだけなので、取り消す更新がない。</p></div></section>
+<section id="q13" data-key="エ"><h2>問13</h2><p>RDBMSのクラスタ化インデックスに関する記述のうち，適切なものはどれか。</p>
+<div class="row"><button type="button" class="letter" aria-label="問13 アで解答">ア</button><button type="button" class="choice" aria-pressed="false" aria-label="アを候補から外す：外部キーのインデックスはクラスタ化インデックスである。">外部キーのインデックスはクラスタ化インデックスである。</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問13 イで解答">イ</button><button type="button" class="choice" aria-pressed="false" aria-label="イを候補から外す：クラスタ化インデックスは，一つのテーブルに複数作成できる。">クラスタ化インデックスは，一つのテーブルに複数作成できる。</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問13 ウで解答">ウ</button><button type="button" class="choice" aria-pressed="false" aria-label="ウを候補から外す：一つのテーブルには，クラスタ化インデックスか非クラスタ化インデックスのいずれか一方だけが作成できる。">一つのテーブルには，クラスタ化インデックスか非クラスタ化インデックスのいずれか一方だけが作成できる。</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問13 エで解答">エ</button><button type="button" class="choice" aria-pressed="false" aria-label="エを候補から外す：レコードは，クラスタ化インデックスの対象列の値の順に並べられ，可能な限り物理的に連続してブロックに格納される。">レコードは，クラスタ化インデックスの対象列の値の順に並べられ，可能な限り物理的に連続してブロックに格納される。</button></div>
+<div class="feedback" hidden><strong></strong><p>クラスタ化インデックスは、対象列のキー順にレコードを配置する。同じ範囲のキーを読むとき、近いブロックからまとめて読みやすくなる。一つの表のレコード配置に採用できる順序は一つだが、別の検索キーに対する非クラスタ化インデックスは併設できる。</p></div></section>
+<section id="q14" data-key="イ"><h2>問14</h2><p>データベースのREDOのべき等（idempotent）の説明として，適切なものはどれか。</p>
+<div class="row"><button type="button" class="letter" aria-label="問14 アで解答">ア</button><button type="button" class="choice" aria-pressed="false" aria-label="アを候補から外す：REDOによる障害回復の時間を短縮するために，あるルールに従って整合性のとれたデータを記憶媒体に適宜反映すること。">REDOによる障害回復の時間を短縮するために，あるルールに従って整合性のとれたデータを記憶媒体に適宜反映すること。</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問14 イで解答">イ</button><button type="button" class="choice" aria-pressed="false" aria-label="イを候補から外す：REDOを繰り返し実行しても，正常終了するときには1回実行したときと同じデータの状態になること。">REDOを繰り返し実行しても，正常終了するときには1回実行したときと同じデータの状態になること。</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問14 ウで解答">ウ</button><button type="button" class="choice" aria-pressed="false" aria-label="ウを候補から外す：事前に取得していたバックアップデータを記憶媒体に復旧し，そのデータに対してREDOを実行すること。">事前に取得していたバックアップデータを記憶媒体に復旧し，そのデータに対してREDOを実行すること。</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問14 エで解答">エ</button><button type="button" class="choice" aria-pressed="false" aria-label="エを候補から外す：トランザクションをコミットする前にREDOに必要な情報を書き出し，データの更新はそのあとで行うこと。">トランザクションをコミットする前にREDOに必要な情報を書き出し，データの更新はそのあとで行うこと。</button></div>
+<div class="feedback" hidden><strong></strong><p>同じ更新のREDOを繰り返しても、最後のデータが1回適用した場合と一致する性質をべき等という。例えば残高を更新後の120に戻すなら、2回目も120になる。差額20を毎回足すだけでは、再実行で140になってしまう。</p></div></section>
+<section id="q15" data-key="ウ"><h2>問15</h2><p>トランザクションT1，T2を同時実行した際に，次の異状を防ぐことができるトランザクションの隔離性水準のうち，最も水準の低いものはどれか。</p><p>〔異状〕<br>T1が同じデータを複数回読み込んでいる途中で，T2がそのデータを更新してコミットしたことによって，T1が更新していないにもかかわらずT1が読み込むデータが変わってしまう。</p>
+<div class="row"><button type="button" class="letter" aria-label="問15 アで解答">ア</button><button type="button" class="choice" aria-pressed="false" aria-label="アを候補から外す：READ COMMITTED">READ COMMITTED</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問15 イで解答">イ</button><button type="button" class="choice" aria-pressed="false" aria-label="イを候補から外す：READ UNCOMMITTED">READ UNCOMMITTED</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問15 ウで解答">ウ</button><button type="button" class="choice" aria-pressed="false" aria-label="ウを候補から外す：REPEATABLE READ">REPEATABLE READ</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問15 エで解答">エ</button><button type="button" class="choice" aria-pressed="false" aria-label="エを候補から外す：SERIALIZABLE">SERIALIZABLE</button></div>
+<div class="feedback" hidden><strong></strong><p>T1が同じ行を読み直したとき、途中でコミットしたT2の更新によって値が変わるのは反復不能読取りである。READ COMMITTEDでは各読取りの時点でコミット済みの値を読めるため、この現象が起こり得る。選択肢の中でこれを防ぐ最も低い水準はREPEATABLE READである。</p></div></section>
+<section id="q16" data-key="エ"><h2>問16</h2><p>二つのトランザクションT1とT2を並列に実行した結果が，T1の完了後にT2を実行した結果，又はT2の完了後にT1を実行した結果と等しい場合，このトランザクションスケジュールの性質を何と呼ぶか。</p>
+<div class="row"><button type="button" class="letter" aria-label="問16 アで解答">ア</button><button type="button" class="choice" aria-pressed="false" aria-label="アを候補から外す：一貫性">一貫性</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問16 イで解答">イ</button><button type="button" class="choice" aria-pressed="false" aria-label="イを候補から外す：原子性">原子性</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問16 ウで解答">ウ</button><button type="button" class="choice" aria-pressed="false" aria-label="ウを候補から外す：耐久性">耐久性</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問16 エで解答">エ</button><button type="button" class="choice" aria-pressed="false" aria-label="エを候補から外す：直列化可能">直列化可能</button></div>
+<div class="feedback" hidden><strong></strong><p>T1とT2の処理が入り交じっていても、T1→T2またはT2→T1のどちらかで順番に処理した場合と同等なら、そのスケジュールは直列化可能である。原子性は、一つのトランザクションの変更が全部反映されるか全部取り消されるかという性質である。</p></div></section>
+<section id="q17" data-key="エ"><h2>問17</h2><p>DBMSにおいて，トランザクション間でデッドロックが発生していることを検出するために使用するものはどれか。</p>
+<div class="row"><button type="button" class="letter" aria-label="問17 アで解答">ア</button><button type="button" class="choice" aria-pressed="false" aria-label="アを候補から外す：2相ロック">2相ロック</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問17 イで解答">イ</button><button type="button" class="choice" aria-pressed="false" aria-label="イを候補から外す：時刻印アルゴリズム">時刻印アルゴリズム</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問17 ウで解答">ウ</button><button type="button" class="choice" aria-pressed="false" aria-label="ウを候補から外す：チェックポイント">チェックポイント</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問17 エで解答">エ</button><button type="button" class="choice" aria-pressed="false" aria-label="エを候補から外す：待ちグラフ">待ちグラフ</button></div>
+<div class="feedback" hidden><strong></strong><p>待ちグラフで、待つ側から資源を保持する側へ矢印を引く。T1がT2を待ち、T2がT1を待つと矢印が一周し、互いに先へ進めない。この循環を探すことでデッドロックを検出する。2相ロックを使っていても相互待ちは起こり得る。</p></div></section>
+<section id="q18" data-key="エ"><h2>問18</h2><p>ブロックチェーンのデータ構造の特徴として，適切なものはどれか。</p>
+<div class="row"><button type="button" class="letter" aria-label="問18 アで解答">ア</button><button type="button" class="choice" aria-pressed="false" aria-label="アを候補から外す：検索のための中間ノードと，実データへのポインタを格納する葉ノードをインデックスとしてもつ。">検索のための中間ノードと，実データへのポインタを格納する葉ノードをインデックスとしてもつ。</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問18 イで解答">イ</button><button type="button" class="choice" aria-pressed="false" aria-label="イを候補から外す：時刻印が付与された複数のバージョンから成るデータをスナップショットとしてもつ。">時刻印が付与された複数のバージョンから成るデータをスナップショットとしてもつ。</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問18 ウで解答">ウ</button><button type="button" class="choice" aria-pressed="false" aria-label="ウを候補から外す：実データから作成したビットマップをインデックスとしてもつ。">実データから作成したビットマップをインデックスとしてもつ。</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問18 エで解答">エ</button><button type="button" class="choice" aria-pressed="false" aria-label="エを候補から外す：直前のトランザクションデータの正当性を検証するためのハッシュ値をもつ。">直前のトランザクションデータの正当性を検証するためのハッシュ値をもつ。</button></div>
+<div class="feedback" hidden><strong></strong><p>各ブロックは前のブロックの内容に対応するハッシュ値を含む。過去の内容を書き換えると計算し直したハッシュ値が後続ブロックの参照値と一致しなくなる。この連鎖に着目してエを選ぶ。ハッシュで確認できるのは履歴の整合性であり、記録した取引内容そのものの真偽とは区別する。</p></div></section>
+<section id="q19" data-key="イ"><h2>問19</h2><p>暗号化処理時における暗号化装置の消費電力を測定するなどして，当該装置内部の秘密情報を推定する攻撃はどれか。</p>
+<div class="row"><button type="button" class="letter" aria-label="問19 アで解答">ア</button><button type="button" class="choice" aria-pressed="false" aria-label="アを候補から外す：キーロガー">キーロガー</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問19 イで解答">イ</button><button type="button" class="choice" aria-pressed="false" aria-label="イを候補から外す：サイドチャネル攻撃">サイドチャネル攻撃</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問19 ウで解答">ウ</button><button type="button" class="choice" aria-pressed="false" aria-label="ウを候補から外す：スミッシング">スミッシング</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問19 エで解答">エ</button><button type="button" class="choice" aria-pressed="false" aria-label="エを候補から外す：中間者攻撃">中間者攻撃</button></div>
+<div class="feedback" hidden><strong></strong><p>暗号装置の消費電力や処理時間など、処理に伴って外部から観測できる情報を手掛かりにするのがサイドチャネル攻撃である。設問では「消費電力」が判断の根拠になる。キーロガーが記録するのはキー入力である。</p></div></section>
+<section id="q20" data-key="ウ"><h2>問20</h2><p>メッセージにRSA方式のディジタル署名を付与して2者間で送受信する。そのときに使用するディジタル署名の検証鍵とその使用方法はどれか。</p>
+<div class="row"><button type="button" class="letter" aria-label="問20 アで解答">ア</button><button type="button" class="choice" aria-pressed="false" aria-label="アを候補から外す：受信者の公開鍵であり，送信者がメッセージダイジェストからディジタル署名を作成する際に使用する。">受信者の公開鍵であり，送信者がメッセージダイジェストからディジタル署名を作成する際に使用する。</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問20 イで解答">イ</button><button type="button" class="choice" aria-pressed="false" aria-label="イを候補から外す：受信者の秘密鍵であり，受信者がディジタル署名からメッセージダイジェストを取り出す際に使用する。">受信者の秘密鍵であり，受信者がディジタル署名からメッセージダイジェストを取り出す際に使用する。</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問20 ウで解答">ウ</button><button type="button" class="choice" aria-pressed="false" aria-label="ウを候補から外す：送信者の公開鍵であり，受信者がディジタル署名からメッセージダイジェストを取り出す際に使用する。">送信者の公開鍵であり，受信者がディジタル署名からメッセージダイジェストを取り出す際に使用する。</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問20 エで解答">エ</button><button type="button" class="choice" aria-pressed="false" aria-label="エを候補から外す：送信者の秘密鍵であり，送信者がメッセージダイジェストからディジタル署名を作成する際に使用する。">送信者の秘密鍵であり，送信者がメッセージダイジェストからディジタル署名を作成する際に使用する。</button></div>
+<div class="feedback" hidden><strong></strong><p>送信者は自分の秘密鍵で署名を作り、受信者はそれと対になる送信者の公開鍵で署名を検証する。受信者は受け取った本文からもダイジェストを計算し、署名がその本文に対応するかを確認する。エが説明しているのは署名を作る側の操作である。</p></div></section>
+<section id="q21" data-key="イ"><h2>問21</h2><p>秘密鍵が漏えいした場合であっても，過去に通信した暗号文を復号することができないという暗号技術の性質はどれか。</p>
+<div class="row"><button type="button" class="letter" aria-label="問21 アで解答">ア</button><button type="button" class="choice" aria-pressed="false" aria-label="アを候補から外す：一方向性">一方向性</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問21 イで解答">イ</button><button type="button" class="choice" aria-pressed="false" aria-label="イを候補から外す：前方秘匿性">前方秘匿性</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問21 ウで解答">ウ</button><button type="button" class="choice" aria-pressed="false" aria-label="ウを候補から外す：第二原像計算困難性">第二原像計算困難性</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問21 エで解答">エ</button><button type="button" class="choice" aria-pressed="false" aria-label="エを候補から外す：等価安全性">等価安全性</button></div>
+<div class="feedback" hidden><strong></strong><p>前方秘匿性があれば、長期の秘密鍵が後で漏れても、以前に記録された通信の暗号文をその鍵から復号できない。例えば通信ごとに一時的な鍵交換を行い、使い終わった秘密を消すことで、過去のセッション鍵を長期鍵から再現できないようにする。</p></div></section>
+<section id="q22" data-key="イ"><h2>問22</h2><p>容量がa Mバイトでアクセス時間がxナノ秒の命令キャッシュと，容量がb Mバイトでアクセス時間がyナノ秒の主記憶をもつシステムにおいて，CPUからみた，主記憶と命令キャッシュとを合わせた平均アクセス時間を表す式はどれか。ここで，読み込みたい命令コードが命令キャッシュに<u>存在しない確率</u>をrとし，キャッシュ管理に関するオーバヘッドは無視できるものとする。</p>
+<div class="row"><button type="button" class="letter" aria-label="問22 アで解答">ア</button><button type="button" class="choice" aria-pressed="false" aria-label="アを候補から外す：(1−r)・aa＋b・x ＋ r・ba＋b・y"><span class="frac"><span>(1−r)・a</span><span>a＋b</span></span>・x ＋ <span class="frac"><span>r・b</span><span>a＋b</span></span>・y</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問22 イで解答">イ</button><button type="button" class="choice" aria-pressed="false" aria-label="イを候補から外す：(1−r)・x ＋ r・y">(1−r)・x ＋ r・y</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問22 ウで解答">ウ</button><button type="button" class="choice" aria-pressed="false" aria-label="ウを候補から外す：r・aa＋b・x ＋ (1−r)・ba＋b・y"><span class="frac"><span>r・a</span><span>a＋b</span></span>・x ＋ <span class="frac"><span>(1−r)・b</span><span>a＋b</span></span>・y</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問22 エで解答">エ</button><button type="button" class="choice" aria-pressed="false" aria-label="エを候補から外す：r・x ＋ (1−r)・y">r・x ＋ (1−r)・y</button></div>
+<div class="feedback" hidden><strong></strong><p>rは命令がキャッシュに「存在しない」確率。したがってヒットは1−rで時間はx、ミスはrで時間はyとなり、設問の前提での加重平均は (1−r)×x＋r×y。r＝0なら答えがx、r＝1ならyになることでも確かめられる。容量a・bで重み付けする必要はない。</p></div></section>
+<section id="q23" data-key="ウ"><h2>問23</h2><p>4台の磁気ディスクから構成されたRAID6のディスクアレイシステムがあり，パリティの計算方法は次のとおりである。磁気ディスク2と磁気ディスク3が故障したとき，データブロックA₁，A₂を復元するのに必要なデータブロックの組合せとして適切なものはどれか。ここで，パリティの計算方法では，“データブロックX”の内容を“X”で示し，⊕は排他的論理和を示す。</p><div class="scroll"><table><caption>ディスクアレイシステム（各列はデータブロック）</caption><thead><tr><th>磁気ディスク1</th><th>磁気ディスク2</th><th>磁気ディスク3</th><th>磁気ディスク4</th></tr></thead><tbody><tr><td>Aₚ</td><td>A₁</td><td>A₂</td><td>Aᵥ</td></tr><tr><td>B₁</td><td>Bₚ</td><td>B₂</td><td>Bᵥ</td></tr><tr><td>Cₚ</td><td>C₁</td><td>C₂</td><td>Cᵥ</td></tr><tr><td>D₁</td><td>Dₚ</td><td>D₂</td><td>Dᵥ</td></tr></tbody></table></div><p>〔パリティの計算方法〕</p><div class="eq"><span>Aᵥ＝D₁⊕A₂</span><span>Bᵥ＝A₁⊕B₂</span><span>Cᵥ＝B₁⊕C₂</span><span>Dᵥ＝C₁⊕D₂</span><span>Aₚ＝A₁⊕A₂</span><span>Bₚ＝B₁⊕B₂</span><span>Cₚ＝C₁⊕C₂</span><span>Dₚ＝D₁⊕D₂</span></div>
+<div class="row"><button type="button" class="letter" aria-label="問23 アで解答">ア</button><button type="button" class="choice" aria-pressed="false" aria-label="アを候補から外す：B₁，Aₚ，Aᵥ">B₁，Aₚ，Aᵥ</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問23 イで解答">イ</button><button type="button" class="choice" aria-pressed="false" aria-label="イを候補から外す：B₁，Aₚ，Bᵥ">B₁，Aₚ，Bᵥ</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問23 ウで解答">ウ</button><button type="button" class="choice" aria-pressed="false" aria-label="ウを候補から外す：D₁，Aₚ，Aᵥ">D₁，Aₚ，Aᵥ</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問23 エで解答">エ</button><button type="button" class="choice" aria-pressed="false" aria-label="エを候補から外す：D₁，Aₚ，Bᵥ">D₁，Aₚ，Bᵥ</button></div>
+<div class="feedback" hidden><strong></strong><p>故障後もディスク1のD₁・Aₚとディスク4のAᵥを読める。図の Aᵥ＝D₁⊕A₂ の両辺にD₁をXORすると A₂＝Aᵥ⊕D₁。次に Aₚ＝A₁⊕A₂ から A₁＝Aₚ⊕A₂ と求まる。同じ値を2回XORすると打ち消し合うので、まずA₂を復元し、それを使ってA₁も復元できる。</p></div></section>
+<section id="q24" data-key="ア"><h2>問24</h2><p>オブジェクト指向における抽象クラスで，<u>できないこと</u>はどれか。</p>
+<div class="row"><button type="button" class="letter" aria-label="問24 アで解答">ア</button><button type="button" class="choice" aria-pressed="false" aria-label="アを候補から外す：インスタンスを生成すること">インスタンスを生成すること</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問24 イで解答">イ</button><button type="button" class="choice" aria-pressed="false" aria-label="イを候補から外す：サブクラスをもつこと">サブクラスをもつこと</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問24 ウで解答">ウ</button><button type="button" class="choice" aria-pressed="false" aria-label="ウを候補から外す：スーパークラスをもつこと">スーパークラスをもつこと</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問24 エで解答">エ</button><button type="button" class="choice" aria-pressed="false" aria-label="エを候補から外す：属性をもつこと">属性をもつこと</button></div>
+<div class="feedback" hidden><strong></strong><p>設問が聞いているのは「できないこと」。抽象クラスには共通の属性や振る舞いを定義でき、継承関係も持てるが、そのクラス自体のインスタンスを直接生成することはできない。例えば抽象クラス「図形」を継承した具象クラス「円」なら、その円のインスタンスを作れる。</p></div></section>
+<section id="q25" data-key="ウ"><h2>問25</h2><p>エクストリームプログラミング（XP）のプラクティスとして，適切なものはどれか。</p>
+<div class="row"><button type="button" class="letter" aria-label="問25 アで解答">ア</button><button type="button" class="choice" aria-pressed="false" aria-label="アを候補から外す：1週間の労働時間は，チームで相談して自由に決める。">1週間の労働時間は，チームで相談して自由に決める。</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問25 イで解答">イ</button><button type="button" class="choice" aria-pressed="false" aria-label="イを候補から外す：ソースコードの再利用は，作成者だけが行う。">ソースコードの再利用は，作成者だけが行う。</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問25 ウで解答">ウ</button><button type="button" class="choice" aria-pressed="false" aria-label="ウを候補から外す：単体テストを終えたプログラムは，すぐに結合して，結合テストを行う。">単体テストを終えたプログラムは，すぐに結合して，結合テストを行う。</button></div>
+<div class="row"><button type="button" class="letter" aria-label="問25 エで解答">エ</button><button type="button" class="choice" aria-pressed="false" aria-label="エを候補から外す：プログラミングは1人で行う。">プログラミングは1人で行う。</button></div>
+<div class="feedback" hidden><strong></strong><p>単体テストを通った変更を早く全体に取り込み、組み合わせても動作するかを確かめるのは、XPの継続的インテグレーションに合う。変更を小さく頻繁に結合するほど、不整合の原因となった変更を絞りやすい。ほかにペアプログラミングやコードの共同所有もXPのプラクティスである。</p></div></section>
+<footer id="result"><h2>採点結果</h2><p id="progress">解答済み 0／25問</p><p>出典：IPA 令和7年度秋期 データベーススペシャリスト試験 午前Ⅱ 問1〜25。原本をテキスト化し、図表と選択肢の配置を演習用に整えています。解説は本教材用に作成しました。</p><a href="https://www.ipa.go.jp/shiken/mondai-kaiotu/nl10bi0000009lh8-att/2025r07a_db_am2_qs.pdf">公式問題冊子</a>　<a href="https://www.ipa.go.jp/shiken/mondai-kaiotu/nl10bi0000009lh8-att/2025r07a_db_am2_ans.pdf">公式解答例</a></footer></main><details class="index"><summary>問題一覧</summary><div class="reset-area"><button id="reset" popovertarget="reset-confirm">リセット</button><div id="reset-confirm" popover role="dialog" aria-labelledby="reset-title"><p id="reset-title">全25問の解答と除外した選択肢を消して、最初から解き直しますか？</p><button popovertarget="reset-confirm" popovertargetaction="hide" autofocus>キャンセル</button> <button id="confirm-reset">リセットする</button></div><small id="storage-error" hidden>このブラウザでは進捗を保存できません。</small></div><nav aria-label="問題一覧"></nav></details></div><script>
+const questions = document.querySelectorAll('section[data-key]');
+const indexPanel = document.querySelector('.index');
+const indexNav = indexPanel.querySelector('nav');
+const narrowScreen = matchMedia('(max-width:54rem)');
+function setIndexLayout() {
+  indexPanel.open = !narrowScreen.matches;
+}
+setIndexLayout();
+narrowScreen.addEventListener('change', setIndexLayout);
+indexNav.addEventListener('click', event => {
+  if (narrowScreen.matches && event.target.closest('a')) indexPanel.open = false;
+});
+const prefix = 'naritai-db-sp:2025-autumn-db-am2:';
+const labels = ['ア', 'イ', 'ウ', 'エ'];
+const refreshers = new Map();
+const storageError = document.querySelector('#storage-error');
+
+function readProgress(id) {
+  try {
+    const key = prefix + id;
+    const value = JSON.parse(localStorage.getItem(key));
+    if (value) {
+      // Before expiry was introduced, progress had no timestamp.
+      if (value.updated === undefined) {
+        value.updated = Date.now();
+        localStorage.setItem(key, JSON.stringify(value));
+      }
+      const expiry = new Date(value.updated);
+      const day = expiry.getDate();
+      expiry.setDate(1);
+      expiry.setMonth(expiry.getMonth() + 6);
+      expiry.setDate(Math.min(day, new Date(expiry.getFullYear(), expiry.getMonth() + 1, 0).getDate()));
+      if (!Number.isFinite(value.updated) || expiry.getTime() <= Date.now()) {
+        localStorage.removeItem(key);
+        return {answer: null, excluded: []};
+      }
+    }
+    return {
+      answer: labels.includes(value?.answer) ? value.answer : null,
+      excluded: labels.filter(label => Array.isArray(value?.excluded) && value.excluded.includes(label))
+    };
+  } catch {
+    return {answer: null, excluded: []};
+  }
+}
+
+function updateScore() {
+  const answered = indexNav.querySelectorAll('.right,.wrong').length;
+  const correct = indexNav.querySelectorAll('.right').length;
+  document.querySelector('#progress').textContent = answered === questions.length
+    ? '25問中 ' + correct + '問正解　' + (correct * 4) + '／100点'
+    : '解答済み ' + answered + '／25問　正解 ' + correct + '問';
+}
+
+for (const question of questions) {
+  const title = question.querySelector('h2').textContent;
+  const key = question.dataset.key;
+  const link = document.createElement('a');
+  const status = document.createElement('small');
+  link.href = '#' + question.id;
+  link.append(title + ' ', status);
+  indexNav.append(link);
+  const rows = question.querySelectorAll('.row');
+  const feedback = question.querySelector('.feedback');
+  let progress = readProgress(question.id);
+
+  function render() {
+    const {answer, excluded} = progress;
+    const result = !answer ? '未回答' : answer === key ? '正解' : '不正解';
+    link.classList.toggle('right', result === '正解');
+    link.classList.toggle('wrong', result === '不正解');
+    link.setAttribute('aria-label', title + ' ' + result);
+    status.textContent = !answer ? '-' : answer === key ? '○' : '×';
+    for (const row of rows) {
+      const letter = row.querySelector('.letter');
+      const choice = row.querySelector('.choice');
+      const label = letter.textContent;
+      const omitted = excluded.includes(label) && !(answer && label === key);
+      row.classList.toggle('excluded', omitted);
+      row.classList.toggle('right', Boolean(answer) && label === key);
+      row.classList.toggle('wrong', answer === label && label !== key);
+      letter.disabled = Boolean(answer) || omitted;
+      choice.disabled = Boolean(answer);
+      choice.setAttribute('aria-pressed', String(omitted));
+      choice.setAttribute('aria-label', label + (omitted ? 'を候補に戻す：' : 'を候補から外す：') + choice.textContent);
+    }
+    feedback.hidden = !answer;
+    feedback.querySelector('strong').textContent = answer ? result + '　あなたの解答：' + answer + '　正答：' + key : '';
+    updateScore();
+  }
+
+  function save() {
+    try {
+      localStorage.setItem(prefix + question.id, JSON.stringify({...progress, updated: Date.now()}));
+    } catch {
+      storageError.hidden = false;
+    }
+    render();
+  }
+
+  for (const row of rows) {
+    const letter = row.querySelector('.letter');
+    const label = letter.textContent;
+    row.querySelector('.choice').addEventListener('click', () => {
+      progress.excluded = progress.excluded.includes(label)
+        ? progress.excluded.filter(item => item !== label)
+        : [...progress.excluded, label];
+      save();
+    });
+    letter.addEventListener('click', () => {
+      progress.answer = label;
+      save();
+      feedback.tabIndex = -1;
+      feedback.focus({preventScroll:true});
+      feedback.scrollIntoView({block:'nearest'});
+    });
+  }
+  refreshers.set(prefix + question.id, () => {
+    progress = readProgress(question.id);
+    render();
+  });
+  render();
+}
+
+window.addEventListener('storage', event => {
+  if (event.key === null) {
+    for (const refresh of refreshers.values()) refresh();
+  } else {
+    refreshers.get(event.key)?.();
+  }
+});
+
+const confirmPanel = document.querySelector('#reset-confirm');
+const resetButton = document.querySelector('#reset');
+function positionConfirmation() {
+  const anchor = resetButton.getBoundingClientRect();
+  confirmPanel.style.left = Math.max(8, Math.min(anchor.left, innerWidth - confirmPanel.offsetWidth - 8)) + 'px';
+  confirmPanel.style.top = Math.max(8, Math.min(anchor.bottom + 6, innerHeight - confirmPanel.offsetHeight - 8)) + 'px';
+}
+confirmPanel.addEventListener('toggle', event => {
+  if (event.newState === 'open') positionConfirmation();
+});
+window.addEventListener('resize', () => {
+  if (confirmPanel.matches(':popover-open')) positionConfirmation();
+});
+document.querySelector('#confirm-reset').addEventListener('click', () => {
+  for (const [key, refresh] of refreshers) {
+    try {
+      localStorage.removeItem(key);
+    } catch {
+      storageError.hidden = false;
+    }
+    refresh();
+  }
+  confirmPanel.hidePopover();
+  resetButton.focus();
+});
+</script></html>
