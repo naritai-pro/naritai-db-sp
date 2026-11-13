@@ -533,7 +533,15 @@
         ]
       },
       "reference": 1,
-      "sourcePage": 25
+      "sourcePage": 25,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2016-pm2-q2-t1-02e9f538.webp",
+          "width": 855,
+          "height": 350,
+          "page": 25
+        }
+      ]
     },
     {
       "text": "〔概念データモデルと関係スキーマの設計〕",
@@ -572,7 +580,15 @@
       "text": "図1　概念データモデル（未完成）",
       "diagramIndex": 0,
       "reference": 2,
-      "sourcePage": 26
+      "sourcePage": 26,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2016-pm2-q2-f1-1faa8a87.webp",
+          "width": 1117,
+          "height": 1657,
+          "page": 26
+        }
+      ]
     },
     {
       "text": "図2　関係スキーマ（未完成）",
@@ -619,7 +635,15 @@
         "作業対応明細（PK[対応明細番号]，作業時間）"
       ],
       "reference": 3,
-      "sourcePage": 27
+      "sourcePage": 27,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2016-pm2-q2-f2-2746ad20.webp",
+          "width": 1136,
+          "height": 1653,
+          "page": 27
+        }
+      ]
     },
     {
       "text": "解答に当たっては，巻頭の表記ルールに従うこと。ただし，エンティティタイプ間の対応関係にゼロを含むか否かの表記は必要ない。"

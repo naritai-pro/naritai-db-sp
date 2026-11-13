@@ -652,7 +652,15 @@
         ]
       },
       "reference": 1,
-      "sourcePage": 22
+      "sourcePage": 22,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2020-pm2-q2-f1-c20e4f3b.webp",
+          "width": 867,
+          "height": 239,
+          "page": 22
+        }
+      ]
     },
     {
       "text": "4．業務のやり方",
@@ -2304,7 +2312,15 @@
         ]
       },
       "reference": 2,
-      "sourcePage": 24
+      "sourcePage": 24,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2020-pm2-q2-f2-96664617.webp",
+          "width": 1092,
+          "height": 1299,
+          "page": 24
+        }
+      ]
     },
     {
       "text": "表1　業務内容及び業務の流れにおける情報",
@@ -3109,7 +3125,15 @@
         ]
       },
       "reference": 3,
-      "sourcePage": 25
+      "sourcePage": 25,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2020-pm2-q2-t1-abc3e3ea.webp",
+          "width": 1157,
+          "height": 952,
+          "page": 25
+        }
+      ]
     },
     {
       "text": "〔設計した現状の概念データモデル及び関係スキーマ〕",
@@ -3122,13 +3146,29 @@
       "text": "図3　マスタ及び在庫領域の概念データモデル（未完成）",
       "diagramIndex": 0,
       "reference": 4,
-      "sourcePage": 26
+      "sourcePage": 26,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2020-pm2-q2-f3-7e62bd0f.webp",
+          "width": 1204,
+          "height": 1002,
+          "page": 26
+        }
+      ]
     },
     {
       "text": "図4　トランザクション領域の概念データモデル（未完成）",
       "diagramIndex": 1,
       "reference": 5,
-      "sourcePage": 26
+      "sourcePage": 26,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2020-pm2-q2-f4-1c13e9ed.webp",
+          "width": 1200,
+          "height": 591,
+          "page": 26
+        }
+      ]
     },
     {
       "text": "図5　マスタ及び在庫領域の関係スキーマ（未完成）",
@@ -3163,7 +3203,15 @@
         "BP在庫（PK[BP拠点コード]，［コ］，理論在庫数）"
       ],
       "reference": 6,
-      "sourcePage": 27
+      "sourcePage": 27,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2020-pm2-q2-f5-c2099195.webp",
+          "width": 1136,
+          "height": 925,
+          "page": 27
+        }
+      ]
     },
     {
       "text": "図6　トランザクション領域の関係スキーマ（未完成）",
@@ -3191,7 +3239,15 @@
         "支給部品理論出庫実績（PK[出庫番号]，［タ］）"
       ],
       "reference": 7,
-      "sourcePage": 27
+      "sourcePage": 27,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2020-pm2-q2-f6-b60fa53e.webp",
+          "width": 1135,
+          "height": 725,
+          "page": 27
+        }
+      ]
     },
     {
       "text": "〔現状業務の問題と解決策〕",
@@ -4529,7 +4585,15 @@
         ]
       },
       "reference": 8,
-      "sourcePage": 28
+      "sourcePage": 28,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2020-pm2-q2-f7-564811d2.webp",
+          "width": 1062,
+          "height": 755,
+          "page": 28
+        }
+      ]
     },
     {
       "text": "③　現状の関係スキーマが、②に示した荷量計算が可能なデータ構造であることを検証するために、関係スキーマ処理フローを作成した。関係スキーマ処理フローの表記法を表2に、検証のために作成した関係スキーマ処理フローを図8に示す。"
@@ -4573,7 +4637,15 @@
         "注記4 GEN：では、演算式中のNULLは0に置き換えて演算する。"
       ],
       "reference": 9,
-      "sourcePage": 29
+      "sourcePage": 29,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2020-pm2-q2-t2-2fa7a164.webp",
+          "width": 1223,
+          "height": 1495,
+          "page": 29
+        }
+      ]
     },
     {
       "text": "図8　検証のために作成した関係スキーマ処理フロー（未完成）",
@@ -5836,7 +5908,15 @@
         "網掛け部分のサには，図6のサと同じ字句が入る。"
       ],
       "reference": 10,
-      "sourcePage": 30
+      "sourcePage": 30,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2020-pm2-q2-f8-ce8936a8.webp",
+          "width": 1145,
+          "height": 1225,
+          "page": 30
+        }
+      ]
     },
     {
       "text": "解答に当たっては、巻頭の表記ルールに従うこと。ただし、エンティティタイプ間の対応関係にゼロを含むか否かの表記は必要ない。"
@@ -5890,7 +5970,15 @@
       "text": "図9　追加したエンティティタイプが関連する範囲の概念データモデル",
       "diagramIndex": 2,
       "reference": 11,
-      "sourcePage": 31
+      "sourcePage": 31,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2020-pm2-q2-f9-9f6fcf4c.webp",
+          "width": 897,
+          "height": 140,
+          "page": 31
+        }
+      ]
     },
     {
       "text": "（3）（2）で追加したエンティティタイプ“確定輸送指示”について、関係スキーマを答えよ。"

@@ -508,7 +508,15 @@
         ]
       },
       "reference": 1,
-      "sourcePage": 19
+      "sourcePage": 19,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2016-pm1-q3-f1-258cec2a.webp",
+          "width": 610,
+          "height": 458,
+          "page": 19
+        }
+      ]
     },
     {
       "text": "［営業支援システムの概要］"
@@ -530,7 +538,15 @@
         "訪問実績（PK[顧客番号]，PK[社員番号]，PK[訪問実施日]，訪問開始時刻，訪問終了時刻，訪問結果）"
       ],
       "reference": 2,
-      "sourcePage": 19
+      "sourcePage": 19,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2016-pm1-q3-f2-a399171e.webp",
+          "width": 1104,
+          "height": 253,
+          "page": 19
+        }
+      ]
     },
     {
       "text": "2．セキュリティ要件",
@@ -598,7 +614,15 @@
       ],
       "reference": 3,
       "text": "表1　営業1課及び営業2課のビューの定義",
-      "sourcePage": 20
+      "sourcePage": 20,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2016-pm1-q3-t1-8fa47d3f.webp",
+          "width": 1026,
+          "height": 297,
+          "page": 20
+        }
+      ]
     },
     {
       "text": "Fさんは、ビューを用いることを前提に、次のようにロールを設計し、運用することに決めた。営業課別ビューのアクセス権限をロールに付与する手順を，表2に示す。"
@@ -662,7 +686,15 @@
       ],
       "reference": 4,
       "text": "表2　営業課別ビューのアクセス権限をロールに付与する手順（未完成）",
-      "sourcePage": 21
+      "sourcePage": 21,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2016-pm1-q3-t2-ef61bf8a.webp",
+          "width": 1079,
+          "height": 586,
+          "page": 21
+        }
+      ]
     },
     {
       "text": "［ビューの設計変更］"
@@ -705,7 +737,15 @@
       ],
       "text": "表3　営業支援システムで使用する主なSQLの構文（未完成）",
       "reference": 5,
-      "sourcePage": 22
+      "sourcePage": 22,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2016-pm1-q3-t3-c0fb3bf6.webp",
+          "width": 1104,
+          "height": 673,
+          "page": 22
+        }
+      ]
     },
     {
       "text": "［セキュリティ要件の強化］"
@@ -749,7 +789,15 @@
         ]
       },
       "reference": 6,
-      "sourcePage": 23
+      "sourcePage": 23,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2016-pm1-q3-t4-e043cfd7.webp",
+          "width": 1104,
+          "height": 342,
+          "page": 23
+        }
+      ]
     },
     {
       "text": "設問1　［ビュー及びロールの設計］について、(1)，(2)に答えよ。",

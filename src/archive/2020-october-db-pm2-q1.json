@@ -1343,7 +1343,15 @@
         ]
       },
       "reference": 1,
-      "sourcePage": 6
+      "sourcePage": 6,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2020-pm2-q1-f1-8e9835cf.webp",
+          "width": 1217,
+          "height": 611,
+          "page": 6
+        }
+      ]
     },
     {
       "text": "（3）節電支援情報には，日射量を基に算出された標準発電量が含まれる。全国の800観測点で計測された日射量データを外部から取得する。"
@@ -1376,7 +1384,15 @@
         "使用電力（PK[住居番号]，PK[回路番号]，PK[年月日]，PK[時]，PK[分]，使用電力量）"
       ],
       "reference": 2,
-      "sourcePage": 7
+      "sourcePage": 7,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2020-pm2-q1-f2-87cb9946.webp",
+          "width": 1121,
+          "height": 573,
+          "page": 7
+        }
+      ]
     },
     {
       "text": "表1　主な列とその意味・制約",
@@ -1449,7 +1465,15 @@
         ]
       },
       "reference": 3,
-      "sourcePage": 7
+      "sourcePage": 7,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2020-pm2-q1-t1-6bd45894.webp",
+          "width": 1135,
+          "height": 791,
+          "page": 7
+        }
+      ]
     },
     {
       "text": "〔節電支援システムの処理〕",
@@ -1473,7 +1497,15 @@
         ]
       },
       "reference": 4,
-      "sourcePage": 8
+      "sourcePage": 8,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2020-pm2-q1-t2-3d03dbdd.webp",
+          "width": 1146,
+          "height": 682,
+          "page": 8
+        }
+      ]
     },
     {
       "text": "〔RDBMSの仕様〕",
@@ -1546,7 +1578,15 @@
         ]
       },
       "reference": 5,
-      "sourcePage": 9
+      "sourcePage": 9,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2020-pm2-q1-t3-596ac7d7.webp",
+          "width": 1131,
+          "height": 553,
+          "page": 9
+        }
+      ]
     },
     {
       "text": "2．ウィンドウ関数",
@@ -1579,7 +1619,15 @@
         "注記 3 ORDER BY句の［ASCIDESC］を省略した場合，ASC を指定した場合と同じ動作となる。"
       ],
       "reference": 6,
-      "sourcePage": 9
+      "sourcePage": 9,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2020-pm2-q1-t4-65b09757.webp",
+          "width": 1131,
+          "height": 632,
+          "page": 9
+        }
+      ]
     },
     {
       "text": "3．クラスタ構成のサポート",
@@ -1720,7 +1768,15 @@
         "注記表中の単位kは1,000, Mは100万，Gは10億を表す。"
       ],
       "reference": 7,
-      "sourcePage": 11
+      "sourcePage": 11,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2020-pm2-q1-t5-9bc41ad1.webp",
+          "width": 1094,
+          "height": 510,
+          "page": 11
+        }
+      ]
     },
     {
       "text": "2．テーブル定義表の作成",
@@ -1805,7 +1861,15 @@
         ]
       },
       "reference": 8,
-      "sourcePage": 11
+      "sourcePage": 11,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2020-pm2-q1-t6-bd548a3a.webp",
+          "width": 1045,
+          "height": 326,
+          "page": 11
+        }
+      ]
     },
     {
       "text": "表7　“発電”テーブルのテーブル定義表",
@@ -2192,7 +2256,15 @@
         ]
       },
       "reference": 9,
-      "sourcePage": 12
+      "sourcePage": 12,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2020-pm2-q1-t7-be5ccf46.webp",
+          "width": 1046,
+          "height": 367,
+          "page": 12
+        }
+      ]
     },
     {
       "text": "表8　“使用電力”テーブルのテーブル定義表",
@@ -2579,7 +2651,15 @@
         ]
       },
       "reference": 10,
-      "sourcePage": 12
+      "sourcePage": 12,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2020-pm2-q1-t8-45e5e3b8.webp",
+          "width": 1046,
+          "height": 367,
+          "page": 12
+        }
+      ]
     },
     {
       "text": "3．テーブル構造の検討",
@@ -2656,7 +2736,15 @@
         "注記網掛け部分は表示していない。"
       ],
       "reference": 11,
-      "sourcePage": 13
+      "sourcePage": 13,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2020-pm2-q1-t9-91772672.webp",
+          "width": 1075,
+          "height": 269,
+          "page": 13
+        }
+      ]
     },
     {
       "text": "（3）対策"
@@ -3062,7 +3150,15 @@
         ]
       },
       "reference": 12,
-      "sourcePage": 14
+      "sourcePage": 14,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2020-pm2-q1-t10-203ae774.webp",
+          "width": 1132,
+          "height": 866,
+          "page": 14
+        }
+      ]
     },
     {
       "lines": [
@@ -3085,7 +3181,15 @@
       ],
       "reference": 13,
       "text": "図3　処理3の問合せに用いるSQL文（未完成）",
-      "sourcePage": 14
+      "sourcePage": 14,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2020-pm2-q1-f3-5ffe68b2.webp",
+          "width": 1130,
+          "height": 739,
+          "page": 14
+        }
+      ]
     },
     {
       "text": "2．表2の処理4の問合せ",
@@ -3131,7 +3235,15 @@
         ]
       },
       "reference": 14,
-      "sourcePage": 15
+      "sourcePage": 15,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2020-pm2-q1-t11-0b000311.webp",
+          "width": 1129,
+          "height": 707,
+          "page": 15
+        }
+      ]
     },
     {
       "lines": [
@@ -3147,7 +3259,15 @@
       ],
       "reference": 15,
       "text": "図4　処理4の問合せに用いるSQL文（未完成）",
-      "sourcePage": 15
+      "sourcePage": 15,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2020-pm2-q1-f4-9d0459db.webp",
+          "width": 1131,
+          "height": 475,
+          "page": 15
+        }
+      ]
     },
     {
       "text": "〔性能テストの実施〕",
@@ -3386,7 +3506,15 @@
         ]
       },
       "reference": 16,
-      "sourcePage": 16
+      "sourcePage": 16,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2020-pm2-q1-t12-67a337a9.webp",
+          "width": 1068,
+          "height": 273,
+          "page": 16
+        }
+      ]
     },
     {
       "text": "3．テストデータの作成",
@@ -3437,7 +3565,15 @@
         ]
       },
       "reference": 17,
-      "sourcePage": 17
+      "sourcePage": 17,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2020-pm2-q1-t13-c14cc987.webp",
+          "width": 1115,
+          "height": 797,
+          "page": 17
+        }
+      ]
     },
     {
       "text": "4．性能テストの結果",
@@ -3874,7 +4010,15 @@
         ]
       },
       "reference": 18,
-      "sourcePage": 17
+      "sourcePage": 17,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2020-pm2-q1-f5-140e55ff.webp",
+          "width": 1120,
+          "height": 295,
+          "page": 17
+        }
+      ]
     },
     {
       "text": "設問1　〔データベースの物理設計〕について，（1），（2）に答えよ。",

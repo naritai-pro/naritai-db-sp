@@ -1077,7 +1077,15 @@
       ],
       "reference": 1,
       "text": "表1　主要なプログラムとテーブルの参照・更新の関係",
-      "sourcePage": 12
+      "sourcePage": 12,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2016-pm1-q2-t1-e712fc96.webp",
+          "width": 1140,
+          "height": 918,
+          "page": 12
+        }
+      ]
     },
     {
       "text": "（1） “商品”テーブル，“仕入先”テーブル及び“販売先”テーブルの追加，変更の要求は，“マスタ更新登録”テーブルに登録され，バッチプログラムで1件ずつコミットしながら反映される。"
@@ -1689,7 +1697,15 @@
       ],
       "reference": 2,
       "text": "図1　バッチプログラムの実行スケジュール",
-      "sourcePage": 13
+      "sourcePage": 13,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2016-pm1-q2-f1-b426b333.webp",
+          "width": 1072,
+          "height": 572,
+          "page": 13
+        }
+      ]
     },
     {
       "text": "〔データの入出力〕",
@@ -1904,7 +1920,15 @@
       },
       "reference": 3,
       "text": "表（設問1（1）のテーブル単位のバックアップ取得対象）",
-      "sourcePage": 16
+      "sourcePage": 16,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2016-pm1-q2-supp3-57b1db61.webp",
+          "width": 1035,
+          "height": 414,
+          "page": 16
+        }
+      ]
     },
     {
       "text": "（2） 図1で実行中のバッチプログラムがテーブルにアクセスしたとき，ディスク障害を検知して異常終了する場合がある。障害を検知したバッチプログラム名，ディスク障害の影響を受けたテーブル名，及びディスク復旧後の回復手順を，次の表にまとめた。表中の［a］～［f］に入れる適切な字句を答えよ。"
@@ -1936,7 +1960,15 @@
       },
       "reference": 4,
       "text": "表（設問1（2）のディスク復旧後の回復手順）",
-      "sourcePage": 16
+      "sourcePage": 16,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2016-pm1-q2-supp4-0b4eccb2.webp",
+          "width": 1124,
+          "height": 674,
+          "page": 16
+        }
+      ]
     },
     {
       "text": "設問2　バックアップ運用の見直しについて，（1）～（3）に答えよ。",

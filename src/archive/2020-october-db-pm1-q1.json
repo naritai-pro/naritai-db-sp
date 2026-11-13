@@ -329,7 +329,15 @@
       "text": "図1　概念データモデル（未完成）",
       "diagramIndex": 0,
       "reference": 1,
-      "sourcePage": 8
+      "sourcePage": 8,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2020-pm1-q1-f1-ccd578b4.webp",
+          "width": 996,
+          "height": 830,
+          "page": 8
+        }
+      ]
     },
     {
       "text": "図2　関係スキーマ（未完成）",
@@ -347,7 +355,15 @@
         "配送明細（PK[配送番号]，［g］，配送数量）"
       ],
       "reference": 2,
-      "sourcePage": 8
+      "sourcePage": 8,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2020-pm1-q1-f2-787796c0.webp",
+          "width": 1131,
+          "height": 531,
+          "page": 8
+        }
+      ]
     },
     {
       "text": "〔新たな商品の追加〕",
@@ -428,7 +444,15 @@
       "text": "図3　新たな商品を追加した概念データモデル（未完成）",
       "diagramIndex": 1,
       "reference": 3,
-      "sourcePage": 10
+      "sourcePage": 10,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2020-pm1-q1-f3-b4adbb9c.webp",
+          "width": 1116,
+          "height": 952,
+          "page": 10
+        }
+      ]
     },
     {
       "text": "図4　工場，物流センタ，ルート及び納入の関係スキーマ（未完成）",
@@ -444,7 +468,15 @@
         "納入明細（PK[納入番号]，PK[商品コード]，納入数量）"
       ],
       "reference": 4,
-      "sourcePage": 11
+      "sourcePage": 11,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2020-pm1-q1-f4-8e97553f.webp",
+          "width": 1130,
+          "height": 442,
+          "page": 11
+        }
+      ]
     },
     {
       "text": "解答に当たっては，巻頭の表記ルールに従うこと。ただし，エンティティタイプ間の対応関係にゼロを含むか否かの表記は必要ない。"

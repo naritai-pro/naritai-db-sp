@@ -656,7 +656,15 @@
         ]
       },
       "reference": 1,
-      "sourcePage": 7
+      "sourcePage": 7,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2016-pm1-q1-f1-31627da2.webp",
+          "width": 507,
+          "height": 433,
+          "page": 7
+        }
+      ]
     },
     {
       "text": "図2　ポイント交換履歴画面の例",
@@ -908,7 +916,15 @@
         ]
       },
       "reference": 2,
-      "sourcePage": 7
+      "sourcePage": 7,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2016-pm1-q1-f2-23f9a591.webp",
+          "width": 632,
+          "height": 433,
+          "page": 7
+        }
+      ]
     },
     {
       "text": "〔データモデルの設計〕",
@@ -921,7 +937,15 @@
       "text": "図3　N君が設計した概念データモデル（未完成）",
       "diagramIndex": 0,
       "reference": 3,
-      "sourcePage": 8
+      "sourcePage": 8,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2016-pm1-q1-f3-bd721e53.webp",
+          "width": 1082,
+          "height": 609,
+          "page": 8
+        }
+      ]
     },
     {
       "text": "図4　N君が設計した関係スキーマ（未完成）",
@@ -943,7 +967,15 @@
         "ポイント交換（PK[会員ID]，PK[交換年月日]，FK[付与年月]，PK[商品コード]，数量）"
       ],
       "reference": 4,
-      "sourcePage": 8
+      "sourcePage": 8,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2016-pm1-q1-f4-f034da7e.webp",
+          "width": 1081,
+          "height": 766,
+          "page": 8
+        }
+      ]
     },
     {
       "text": "図4の関係スキーマの主な属性とその意味・制約を，表1に示す。"
@@ -1031,7 +1063,15 @@
         ]
       },
       "reference": 5,
-      "sourcePage": 9
+      "sourcePage": 9,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2016-pm1-q1-t1-3af5fd33.webp",
+          "width": 1140,
+          "height": 1154,
+          "page": 9
+        }
+      ]
     },
     {
       "text": "設問1　関係“周辺施設”について，（1），（2）に答えよ。",
@@ -1257,7 +1297,15 @@
         ]
       },
       "reference": 6,
-      "sourcePage": 11
+      "sourcePage": 11,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2016-pm1-q1-t2-dac06d66.webp",
+          "width": 1021,
+          "height": 404,
+          "page": 11
+        }
+      ]
     }
   ],
   "diagrams": [

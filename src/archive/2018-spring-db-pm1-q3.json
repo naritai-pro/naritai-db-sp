@@ -401,7 +401,15 @@
         "年齢列のデータ型はSMALLINT型，商品説明列及び住所列はVARCHAR型である。"
       ],
       "reference": 1,
-      "sourcePage": 20
+      "sourcePage": 20,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2018-pm1-q3-f1-250cb68f.webp",
+          "width": 1128,
+          "height": 485,
+          "page": 20
+        }
+      ]
     },
     {
       "text": "表1　主な列の意味・制約",
@@ -594,7 +602,15 @@
         ]
       },
       "reference": 2,
-      "sourcePage": 20
+      "sourcePage": 20,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2018-pm1-q3-t1-277c30a2.webp",
+          "width": 1129,
+          "height": 595,
+          "page": 20
+        }
+      ]
     },
     {
       "lines": [
@@ -603,7 +619,15 @@
       ],
       "reference": 3,
       "text": "図2　年齢区分と年齢の組合せを限定する検査制約（未完成）",
-      "sourcePage": 20
+      "sourcePage": 20,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2018-pm1-q3-f2-94fff54b.webp",
+          "width": 1072,
+          "height": 165,
+          "page": 20
+        }
+      ]
     },
     {
       "text": "3．物理DB設計及び実装の作業工程表",
@@ -694,7 +718,15 @@
         "注1）“店舗利用”テーブルについては，1日分の性能測定用データを生成する。"
       ],
       "reference": 4,
-      "sourcePage": 21
+      "sourcePage": 21,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2018-pm1-q3-t2-cbd57679.webp",
+          "width": 1128,
+          "height": 1009,
+          "page": 21
+        }
+      ]
     },
     {
       "text": "（1）作業W4（追加索引設計）で、利用額の精算時に実行されるDMLの例を表3に、FさんがDML2及びDML3のために追加した索引を表4に示す。"
@@ -726,7 +758,15 @@
       ],
       "text": "表3　利用額の精算時に実行されるDMLの例",
       "reference": 5,
-      "sourcePage": 21
+      "sourcePage": 21,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2018-pm1-q3-t3-a9bad6f3.webp",
+          "width": 1131,
+          "height": 438,
+          "page": 21
+        }
+      ]
     },
     {
       "table": {
@@ -753,7 +793,15 @@
       },
       "reference": 6,
       "text": "表4　DML2及びDML3のために追加した索引",
-      "sourcePage": 22
+      "sourcePage": 22,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2018-pm1-q3-t4-42a971b9.webp",
+          "width": 980,
+          "height": 211,
+          "page": 22
+        }
+      ]
     },
     {
       "text": "（2）作業W5（表領域設計）で、可変長列があるテーブルのストレージ所要量を見積もる計算の手順を、表5に示す。また、作業W6（DML性能予測）で、DML性能の指標としてDMLのテーブルからの読込みページ数を、表5の見積結果を用いて予測する計算の手順を、表6に示す。"
@@ -773,7 +821,15 @@
         ]
       },
       "reference": 7,
-      "sourcePage": 22
+      "sourcePage": 22,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2018-pm1-q3-t5-441c8bbb.webp",
+          "width": 1128,
+          "height": 567,
+          "page": 22
+        }
+      ]
     },
     {
       "text": "表6　テーブルからの読込みページ数を予測する計算の手順（未完成）",
@@ -1066,7 +1122,15 @@
         ]
       },
       "reference": 8,
-      "sourcePage": 22
+      "sourcePage": 22,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2018-pm1-q3-t6-f2e69665.webp",
+          "width": 1128,
+          "height": 458,
+          "page": 22
+        }
+      ]
     },
     {
       "text": "〔G部長の指摘〕",

@@ -296,7 +296,15 @@
         ]
       },
       "reference": 1,
-      "sourcePage": 13
+      "sourcePage": 13,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2020-pm1-q2-t1-2b7e67b4.webp",
+          "width": 1142,
+          "height": 265,
+          "page": 13
+        }
+      ]
     },
     {
       "text": "2. レプリケーション機能",
@@ -343,7 +351,15 @@
         "座席状況（PK[公演番号]，PK[公演日]，PK[開演時刻]，PK[座席番号]，空席フラグ，仮予約フラグ，…）"
       ],
       "reference": 2,
-      "sourcePage": 14
+      "sourcePage": 14,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2020-pm1-q2-f1-0640f023.webp",
+          "width": 1130,
+          "height": 338,
+          "page": 14
+        }
+      ]
     },
     {
       "text": "図2　販売管理システムの主なテーブルのテーブル構造（一部省略）",
@@ -353,7 +369,15 @@
         "チケット（PK[公演番号]，PK[公演日]，PK[開演時刻]，PK[座席番号]，席種，FK[購入番号]，購入フラグ）"
       ],
       "reference": 3,
-      "sourcePage": 14
+      "sourcePage": 14,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2020-pm1-q2-f2-d76b96c5.webp",
+          "width": 1129,
+          "height": 213,
+          "page": 14
+        }
+      ]
     },
     {
       "text": "〔チケット販売業務の概要〕",
@@ -1344,7 +1368,15 @@
         ]
       },
       "reference": 4,
-      "sourcePage": 16
+      "sourcePage": 16,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2020-pm1-q2-f3-02e10251.webp",
+          "width": 1155,
+          "height": 509,
+          "page": 16
+        }
+      ]
     },
     {
       "lines": [
@@ -1358,7 +1390,15 @@
       ],
       "reference": 5,
       "text": "図4　チケット情報一覧を出力するSQL文の構文（未完成）",
-      "sourcePage": 16
+      "sourcePage": 16,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2020-pm1-q2-f4-f4b4015f.webp",
+          "width": 1132,
+          "height": 447,
+          "page": 16
+        }
+      ]
     },
     {
       "text": "〔オンラインチケット販売処理の設計〕",
@@ -1670,7 +1710,15 @@
         ]
       },
       "reference": 6,
-      "sourcePage": 17
+      "sourcePage": 17,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2020-pm1-q2-f5-537be930.webp",
+          "width": 1143,
+          "height": 933,
+          "page": 17
+        }
+      ]
     },
     {
       "text": "図5の内容のレビューを行った。レビューでの指摘内容と対策を表2に示す。"
@@ -1690,7 +1738,15 @@
         ]
       },
       "reference": 7,
-      "sourcePage": 18
+      "sourcePage": 18,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2020-pm1-q2-t2-82d0200f.webp",
+          "width": 1133,
+          "height": 381,
+          "page": 18
+        }
+      ]
     },
     {
       "text": "〔レプリケーションの設計〕",
@@ -1896,7 +1952,15 @@
         ]
       },
       "reference": 8,
-      "sourcePage": 18
+      "sourcePage": 18,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2020-pm1-q2-f6-2ea9dfd8.webp",
+          "width": 1132,
+          "height": 366,
+          "page": 18
+        }
+      ]
     },
     {
       "text": "表3　指摘内容と対策（未完成）",
@@ -1913,7 +1977,15 @@
         ]
       },
       "reference": 9,
-      "sourcePage": 18
+      "sourcePage": 18,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2020-pm1-q2-t3-17a8c351.webp",
+          "width": 1162,
+          "height": 298,
+          "page": 18
+        }
+      ]
     },
     {
       "text": "表4　イベント型レプリケーション機能の設定内容（未完成）",
@@ -2007,7 +2079,15 @@
         ]
       },
       "reference": 10,
-      "sourcePage": 19
+      "sourcePage": 19,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2020-pm1-q2-t4-1d46fd30.webp",
+          "width": 851,
+          "height": 255,
+          "page": 19
+        }
+      ]
     },
     {
       "text": "設問1 〔チケット情報一覧を出力するSQL文の設計〕について，図4中の［a］～［g］に入れる適切な字句を答えよ。",

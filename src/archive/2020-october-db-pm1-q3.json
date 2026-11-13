@@ -483,7 +483,15 @@
         "網掛け部分は，主キーであるが表示していない。"
       ],
       "reference": 1,
-      "sourcePage": 20
+      "sourcePage": 20,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2020-pm1-q3-f1-d1250a62.webp",
+          "width": 1130,
+          "height": 565,
+          "page": 20
+        }
+      ]
     },
     {
       "text": "表1　主な列の意味・制約",
@@ -516,7 +524,15 @@
         ]
       },
       "reference": 2,
-      "sourcePage": 21
+      "sourcePage": 21,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2020-pm1-q3-t1-6a5e5648.webp",
+          "width": 1138,
+          "height": 645,
+          "page": 21
+        }
+      ]
     },
     {
       "text": "〔見直しの方針〕",
@@ -569,7 +585,15 @@
         ]
       },
       "reference": 3,
-      "sourcePage": 22
+      "sourcePage": 22,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2020-pm1-q3-t2-314979c0.webp",
+          "width": 1132,
+          "height": 216,
+          "page": 22
+        }
+      ]
     },
     {
       "text": "表3　“法人会員”テーブルの制約の定義（未完成）",
@@ -732,7 +756,15 @@
         ]
       },
       "reference": 4,
-      "sourcePage": 22
+      "sourcePage": 22,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2020-pm1-q3-t3-888dd814.webp",
+          "width": 1127,
+          "height": 161,
+          "page": 22
+        }
+      ]
     },
     {
       "text": "見直し後の“会員”，“売上”テーブルのテーブル構造を，図2に示す。"
@@ -747,7 +779,15 @@
         "売上（PK[年]，PK[月]，PK[日]，PK[店舗コード]，PK[レジ番号]，PK[レシート番号]，PK[レシート明細番号]，FK[会員区分]，FK[会員番号]，FK[商品コード]，販売額，クーポン額，…）"
       ],
       "reference": 5,
-      "sourcePage": 22
+      "sourcePage": 22,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2020-pm1-q3-f2-175c0b29.webp",
+          "width": 1131,
+          "height": 174,
+          "page": 22
+        }
+      ]
     },
     {
       "text": "Fさんは，次の規則に基づいてテーブル定義表を作成し，テーブルを定義した。"
@@ -813,7 +853,15 @@
         "注記網掛け部分は表示していない。"
       ],
       "reference": 6,
-      "sourcePage": 23
+      "sourcePage": 23,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2020-pm1-q3-t4-a02e35ab.webp",
+          "width": 1132,
+          "height": 762,
+          "page": 23
+        }
+      ]
     },
     {
       "text": "〔見直し後の販売情報の分析〕",
@@ -836,7 +884,15 @@
       ],
       "reference": 7,
       "text": "図3　分析B1用SQL文の構文（未完成）",
-      "sourcePage": 23
+      "sourcePage": 23,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2020-pm1-q3-f3-11542a54.webp",
+          "width": 986,
+          "height": 335,
+          "page": 23
+        }
+      ]
     },
     {
       "table": {
@@ -870,7 +926,15 @@
       },
       "reference": 8,
       "text": "表5　分析B1用SQL文の実行結果",
-      "sourcePage": 24
+      "sourcePage": 24,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2020-pm1-q3-t5-1f5d2583.webp",
+          "width": 687,
+          "height": 260,
+          "page": 24
+        }
+      ]
     },
     {
       "text": "〔サマリテーブルの作成〕",
@@ -916,7 +980,15 @@
       },
       "reference": 9,
       "text": "表6　処理時間の改善を要望された分析用SQL文を調べた結果（未完成）",
-      "sourcePage": 24
+      "sourcePage": 24,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2020-pm1-q3-t6-fa09620f.webp",
+          "width": 1131,
+          "height": 340,
+          "page": 24
+        }
+      ]
     },
     {
       "lines": [
@@ -929,7 +1001,15 @@
       ],
       "reference": 10,
       "text": "図4　分析B2用SQL文の構文",
-      "sourcePage": 24
+      "sourcePage": 24,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2020-pm1-q3-f4-7c4e25c0.webp",
+          "width": 1121,
+          "height": 335,
+          "page": 24
+        }
+      ]
     },
     {
       "text": "設問1　〔テーブルの統合〕について，(1)～(3)に答えよ。",

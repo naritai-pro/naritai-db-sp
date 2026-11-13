@@ -440,7 +440,15 @@
       "text": "図1　概念データモデル（未完成）",
       "diagramIndex": 0,
       "reference": 1,
-      "sourcePage": 9
+      "sourcePage": 9,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2019-pm1-q1-f1-1dec0e14.webp",
+          "width": 1110,
+          "height": 666,
+          "page": 9
+        }
+      ]
     },
     {
       "text": "図2　関係スキーマ（未完成）",
@@ -460,7 +468,15 @@
         "会員ポイント（PK[会員番号]，ポイント残高）"
       ],
       "reference": 2,
-      "sourcePage": 9
+      "sourcePage": 9,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2019-pm1-q1-f2-7c100adc.webp",
+          "width": 1134,
+          "height": 659,
+          "page": 9
+        }
+      ]
     },
     {
       "text": "〔指摘事項〕",
@@ -604,7 +620,15 @@
       },
       "reference": 3,
       "text": "表1　日付が変わった時点及び参加申込受付時点で評価する決定表（未完成）",
-      "sourcePage": 10
+      "sourcePage": 10,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2019-pm1-q1-t1-68b6bdb8.webp",
+          "width": 1102,
+          "height": 626,
+          "page": 10
+        }
+      ]
     },
     {
       "text": "〔新たな要件の追加〕",

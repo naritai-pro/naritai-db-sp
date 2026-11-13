@@ -723,7 +723,15 @@
         "支払伝票（PK[支払予定日]，PK[支払番号]，FK[社員番号]，支払金額，振込口座情報，振込先，支払実行日）"
       ],
       "reference": 1,
-      "sourcePage": 9
+      "sourcePage": 9,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2018-pm2-q1-f1-3d012237.webp",
+          "width": 1127,
+          "height": 1065,
+          "page": 9
+        }
+      ]
     },
     {
       "text": "表1　主な列とその意味・制約",
@@ -752,7 +760,15 @@
         ]
       },
       "reference": 2,
-      "sourcePage": 10
+      "sourcePage": 10,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2018-pm2-q1-t1-668505e5.webp",
+          "width": 1127,
+          "height": 1034,
+          "page": 10
+        }
+      ]
     },
     {
       "text": "表2　主なテーブルの見積行数・データ所要量",
@@ -806,7 +822,15 @@
         "注記網掛け部分は表示していない。"
       ],
       "reference": 3,
-      "sourcePage": 10
+      "sourcePage": 10,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2018-pm2-q1-t2-c717ff6c.webp",
+          "width": 1127,
+          "height": 587,
+          "page": 10
+        }
+      ]
     },
     {
       "text": "(3) 経費精算システムの処理"
@@ -1841,7 +1865,15 @@
         ]
       },
       "reference": 4,
-      "sourcePage": 11
+      "sourcePage": 11,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2018-pm2-q1-t3-d725ebba.webp",
+          "width": 1138,
+          "height": 713,
+          "page": 11
+        }
+      ]
     },
     {
       "text": "表4　バッチPGMの処理内容",
@@ -1866,7 +1898,15 @@
         ]
       },
       "reference": 5,
-      "sourcePage": 11
+      "sourcePage": 11,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2018-pm2-q1-t4-22dc64f8.webp",
+          "width": 1127,
+          "height": 576,
+          "page": 11
+        }
+      ]
     },
     {
       "text": "〔RDBMSの仕様〕",
@@ -1951,7 +1991,15 @@
         ]
       },
       "reference": 6,
-      "sourcePage": 12
+      "sourcePage": 12,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2018-pm2-q1-t5-b0626508.webp",
+          "width": 1125,
+          "height": 634,
+          "page": 12
+        }
+      ]
     },
     {
       "text": "〔テーブルの物理設計〕",
@@ -2777,7 +2825,15 @@
         ]
       },
       "reference": 7,
-      "sourcePage": 14
+      "sourcePage": 14,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2018-pm2-q1-t6-a925aac8.webp",
+          "width": 1132,
+          "height": 927,
+          "page": 14
+        }
+      ]
     },
     {
       "text": "2．データ所要量の見積り",
@@ -2821,7 +2877,15 @@
         "注記項番6のデータ所要量は、項番1〜5の値を用いて算出する。"
       ],
       "reference": 8,
-      "sourcePage": 14
+      "sourcePage": 14,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2018-pm2-q1-t7-9ff4fc10.webp",
+          "width": 960,
+          "height": 423,
+          "page": 14
+        }
+      ]
     },
     {
       "text": "〔性能見積り・評価〕",
@@ -2952,7 +3016,15 @@
         "注記網掛け部分は表示していない。"
       ],
       "reference": 9,
-      "sourcePage": 16
+      "sourcePage": 16,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2018-pm2-q1-t8-02091a84.webp",
+          "width": 1111,
+          "height": 326,
+          "page": 16
+        }
+      ]
     },
     {
       "text": "2．制限事項・管理機能",
@@ -3089,7 +3161,15 @@
         ]
       },
       "reference": 10,
-      "sourcePage": 18
+      "sourcePage": 18,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2018-pm2-q1-t9-f5552998.webp",
+          "width": 1112,
+          "height": 236,
+          "page": 18
+        }
+      ]
     },
     {
       "text": "(2) 可用性，安全性，保守性"

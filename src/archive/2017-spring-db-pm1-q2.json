@@ -260,7 +260,15 @@
         "出庫（PK[出庫番号]，出庫年月日，FK[出庫元倉庫コード]，FK[出庫先倉庫コード]，FK[出庫先工場コード]，FK[部品番号]，出庫数量，FK[出庫便番号]，処理状況）"
       ],
       "reference": 1,
-      "sourcePage": 12
+      "sourcePage": 12,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2017-pm1-q2-f1-4e9659aa.webp",
+          "width": 1104,
+          "height": 327,
+          "page": 12
+        }
+      ]
     },
     {
       "text": "〔在庫管理業務の概要〕",
@@ -401,7 +409,15 @@
         ]
       },
       "reference": 2,
-      "sourcePage": 14
+      "sourcePage": 14,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2017-pm1-q2-t1-40f43f05.webp",
+          "width": 1184,
+          "height": 252,
+          "page": 14
+        }
+      ]
     },
     {
       "text": "(2) 索引を使わずに，テーブルスキャンで全ての行に順次アクセスする場合，検索条件に合致するか否かにかかわらず全行がロック対象となる。索引スキャンの場合，索引から読み込んだ行だけがロック対象となる。"
@@ -432,7 +448,15 @@
       },
       "reference": 3,
       "text": "表2　集計 AP で実行する SQL の構文（未完成）",
-      "sourcePage": 14
+      "sourcePage": 14,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2017-pm1-q2-t2-89dcfdfd.webp",
+          "width": 1125,
+          "height": 506,
+          "page": 14
+        }
+      ]
     },
     {
       "text": "〔在庫引当 AP の改修〕",
@@ -530,7 +554,15 @@
         ]
       },
       "reference": 4,
-      "sourcePage": 15
+      "sourcePage": 15,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2017-pm1-q2-f2-9c0c5d50.webp",
+          "width": 1077,
+          "height": 364,
+          "page": 15
+        }
+      ]
     },
     {
       "text": "図3　READ COMMITTED で実行する改修後の在庫引当 AP（未完成）",
@@ -695,7 +727,15 @@
         ]
       },
       "reference": 5,
-      "sourcePage": 15
+      "sourcePage": 15,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2017-pm1-q2-f3-d906e57e.webp",
+          "width": 1100,
+          "height": 563,
+          "page": 15
+        }
+      ]
     },
     {
       "text": "〔出庫確定 AP の改修〕",
@@ -787,7 +827,15 @@
         ]
       },
       "reference": 6,
-      "sourcePage": 16
+      "sourcePage": 16,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2017-pm1-q2-f4-d444d2be.webp",
+          "width": 1078,
+          "height": 365,
+          "page": 16
+        }
+      ]
     },
     {
       "text": "設問1 〔分析機能の追加〕について，表2中の［a］～［e］に入れる適切な字句を答えよ。",
@@ -1040,7 +1088,15 @@
         ]
       },
       "reference": 7,
-      "sourcePage": 17
+      "sourcePage": 17,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2017-pm1-q2-f5-eeaa30cb.webp",
+          "width": 1050,
+          "height": 333,
+          "page": 17
+        }
+      ]
     },
     {
       "text": "(3) 図3中の［f］に入れる適切な字句を答えよ。"

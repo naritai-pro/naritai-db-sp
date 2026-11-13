@@ -303,7 +303,15 @@
         "年月日を示す列のデータ型は，DATE型とする。"
       ],
       "reference": 1,
-      "sourcePage": 13
+      "sourcePage": 13,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2018-pm1-q2-f1-e51a9d63.webp",
+          "width": 1126,
+          "height": 300,
+          "page": 13
+        }
+      ]
     },
     {
       "text": "〔人事情報管理の業務概要〕",
@@ -353,7 +361,15 @@
       ],
       "reference": 2,
       "text": "表1　退職した従業員の行を削除するSQLの構文（未完成）",
-      "sourcePage": 14
+      "sourcePage": 14,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2018-pm1-q2-t1-5a22aaac.webp",
+          "width": 1125,
+          "height": 399,
+          "page": 14
+        }
+      ]
     },
     {
       "text": "2. 従業員家族構成の変更",
@@ -543,7 +559,15 @@
         ]
       },
       "reference": 3,
-      "sourcePage": 15
+      "sourcePage": 15,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2018-pm1-q2-f2-28a9c672.webp",
+          "width": 851,
+          "height": 330,
+          "page": 15
+        }
+      ]
     },
     {
       "table": {
@@ -563,7 +587,15 @@
       ],
       "reference": 4,
       "text": "表2　一覧表を作成するSQLの構文（未完成）",
-      "sourcePage": 15
+      "sourcePage": 15,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2018-pm1-q2-t2-4396a8ad.webp",
+          "width": 1122,
+          "height": 517,
+          "page": 15
+        }
+      ]
     },
     {
       "text": "〔人事情報管理データベースで発生している問題点〕",
@@ -631,7 +663,15 @@
         "注”参照先には、参照先のテーブル名（参照先の列名）を示す。"
       ],
       "reference": 5,
-      "sourcePage": 16
+      "sourcePage": 16,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2018-pm1-q2-t3-d22739b7.webp",
+          "width": 1121,
+          "height": 482,
+          "page": 16
+        }
+      ]
     },
     {
       "text": "〔参照制約機能の利用の検討〕",
@@ -745,7 +785,15 @@
         ]
       },
       "reference": 6,
-      "sourcePage": 16
+      "sourcePage": 16,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2018-pm1-q2-f3-7eac5a86.webp",
+          "width": 1072,
+          "height": 290,
+          "page": 16
+        }
+      ]
     },
     {
       "text": "設問1 〔人事情報管理の業務概要〕について，(1)，(2)に答えよ。",

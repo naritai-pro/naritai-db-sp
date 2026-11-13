@@ -641,7 +641,15 @@
         ]
       },
       "reference": 1,
-      "sourcePage": 18
+      "sourcePage": 18,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2019-pm1-q3-f1-5ec97e38.webp",
+          "width": 983,
+          "height": 387,
+          "page": 18
+        }
+      ]
     },
     {
       "text": "3．主なテーブルのテーブル構造",
@@ -661,7 +669,15 @@
         "在庫（PK[品番]，在庫数，引当可能数，…）"
       ],
       "reference": 2,
-      "sourcePage": 18
+      "sourcePage": 18,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2019-pm1-q3-f2-1679c460.webp",
+          "width": 623,
+          "height": 175,
+          "page": 18
+        }
+      ]
     },
     {
       "text": "表1　“品目”テーブルの行（一部省略）",
@@ -764,7 +780,15 @@
         "注記網掛け部分は表示していない。"
       ],
       "reference": 3,
-      "sourcePage": 19
+      "sourcePage": 19,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2019-pm1-q3-t1-792156d5.webp",
+          "width": 570,
+          "height": 633,
+          "page": 19
+        }
+      ]
     },
     {
       "text": "表2　“構成”テーブルの行（未完成）",
@@ -1353,7 +1377,15 @@
         ]
       },
       "reference": 4,
-      "sourcePage": 19
+      "sourcePage": 19,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2019-pm1-q3-t2-9add1441.webp",
+          "width": 539,
+          "height": 812,
+          "page": 19
+        }
+      ]
     },
     {
       "text": "〔部品表に対する基本的な処理〕",
@@ -1417,7 +1449,15 @@
       ],
       "reference": 5,
       "text": "表3　SQLの構文の例（未完成）",
-      "sourcePage": 20
+      "sourcePage": 20,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2019-pm1-q3-t3-18455fab.webp",
+          "width": 1130,
+          "height": 909,
+          "page": 20
+        }
+      ]
     },
     {
       "text": "〔所要量計算処理プログラムの概要〕",
@@ -1476,7 +1516,15 @@
         ]
       },
       "reference": 6,
-      "sourcePage": 21
+      "sourcePage": 21,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2019-pm1-q3-t4-34d7660b.webp",
+          "width": 1152,
+          "height": 659,
+          "page": 21
+        }
+      ]
     },
     {
       "text": "〔Fさんの研修内容に対するK部長の指示〕",
@@ -1686,7 +1734,15 @@
         ]
       },
       "reference": 7,
-      "sourcePage": 22
+      "sourcePage": 22,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2019-pm1-q3-f3-177a64bf.webp",
+          "width": 433,
+          "height": 270,
+          "page": 22
+        }
+      ]
     },
     {
       "text": "図4　デッドロックのケース2（未完成）",
@@ -1860,7 +1916,15 @@
         ]
       },
       "reference": 8,
-      "sourcePage": 22
+      "sourcePage": 22,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2019-pm1-q3-f4-39b1658e.webp",
+          "width": 508,
+          "height": 270,
+          "page": 22
+        }
+      ]
     },
     {
       "text": "(4) 指示3に対して、Fさんは、プログラムの改良について、次のように説明した。“SQL4を、製品ごとレベルごと部品ごとに実行するのではなく、製品ごと部品ごとに集計した所要量をホスト変数HQTYに設定してから表4の手順⑥の前に実行するように、手順②～⑤を改良しました。”"

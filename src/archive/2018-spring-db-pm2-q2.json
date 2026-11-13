@@ -760,7 +760,15 @@
         ]
       },
       "reference": 1,
-      "sourcePage": 24
+      "sourcePage": 24,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2018-pm2-q2-t1-b79ae214.webp",
+          "width": 878,
+          "height": 437,
+          "page": 24
+        }
+      ]
     },
     {
       "text": "（4）製造指図"
@@ -1108,7 +1116,15 @@
         ]
       },
       "reference": 2,
-      "sourcePage": 27
+      "sourcePage": 27,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2018-pm2-q2-t2-e0624a98.webp",
+          "width": 990,
+          "height": 580,
+          "page": 27
+        }
+      ]
     },
     {
       "text": "概念データモデル及び関係スキーマの設計方針に基づいて作成した、概念データモデルを図1に、関係スキーマを図2に示す。"
@@ -1117,7 +1133,15 @@
       "text": "図1　概念データモデル（未完成）",
       "diagramIndex": 0,
       "reference": 3,
-      "sourcePage": 28
+      "sourcePage": 28,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2018-pm2-q2-f1-325a1d9d.webp",
+          "width": 1119,
+          "height": 1468,
+          "page": 28
+        }
+      ]
     },
     {
       "text": "図2　関係スキーマ（未完成）",
@@ -1157,7 +1181,15 @@
         "所要量展開（PK[受注#]，PK[受注明細#]，［r］）"
       ],
       "reference": 4,
-      "sourcePage": 29
+      "sourcePage": 29,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2018-pm2-q2-f2-b60ec014.webp",
+          "width": 1126,
+          "height": 1647,
+          "page": 29
+        }
+      ]
     },
     {
       "text": "解答に当たっては、巻頭の表記ルールに従うこと。"

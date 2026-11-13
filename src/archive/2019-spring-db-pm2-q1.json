@@ -575,7 +575,15 @@
         ]
       },
       "reference": 1,
-      "sourcePage": 7
+      "sourcePage": 7,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2019-pm2-q1-t1-45d8d5b1.webp",
+          "width": 1146,
+          "height": 489,
+          "page": 7
+        }
+      ]
     },
     {
       "text": "（3）窓口端末サーバでは，RDBMSが稼働していて，窓口端末のPCから収集したログファイルのデータを，約1時間ごとに“ログ収集”テーブルに格納している。"
@@ -631,7 +639,15 @@
         ]
       },
       "reference": 2,
-      "sourcePage": 8
+      "sourcePage": 8,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2019-pm2-q1-t2-8867e4e6.webp",
+          "width": 1145,
+          "height": 871,
+          "page": 8
+        }
+      ]
     },
     {
       "text": "2. ログ分析システムの構成",
@@ -686,7 +702,15 @@
         "注記　各テーブルの主キーには，索引が定義されている。網掛け部分は，表示していない。"
       ],
       "reference": 3,
-      "sourcePage": 9
+      "sourcePage": 9,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2019-pm2-q1-f1-fb2cb4d4.webp",
+          "width": 1135,
+          "height": 687,
+          "page": 9
+        }
+      ]
     },
     {
       "text": "表3　主なテーブルのデータ量見積り",
@@ -726,7 +750,15 @@
         "注記表中の単位Mは100万を表す。"
       ],
       "reference": 4,
-      "sourcePage": 9
+      "sourcePage": 9,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2019-pm2-q1-t3-c29fa4e2.webp",
+          "width": 1107,
+          "height": 242,
+          "page": 9
+        }
+      ]
     },
     {
       "text": "［RDBMSの主な仕様］"
@@ -1215,7 +1247,15 @@
         ]
       },
       "reference": 5,
-      "sourcePage": 12
+      "sourcePage": 12,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2019-pm2-q1-t4-d0eb74d7.webp",
+          "width": 1058,
+          "height": 501,
+          "page": 12
+        }
+      ]
     },
     {
       "text": "表5　主キー以外の索引定義対象テーブル名・列名（未完成）",
@@ -1293,7 +1333,15 @@
         ]
       },
       "reference": 6,
-      "sourcePage": 12
+      "sourcePage": 12,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2019-pm2-q1-t5-939069e0.webp",
+          "width": 993,
+          "height": 177,
+          "page": 12
+        }
+      ]
     },
     {
       "text": "2. 処理1の問合せ検討",
@@ -1320,7 +1368,15 @@
       ],
       "reference": 7,
       "text": "図2　処理1の問合せに用いるSQL文（未完成）",
-      "sourcePage": 12
+      "sourcePage": 12,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2019-pm2-q1-f2-3ac8cac5.webp",
+          "width": 1135,
+          "height": 650,
+          "page": 12
+        }
+      ]
     },
     {
       "text": "3. 処理2の問合せ検討",
@@ -1344,7 +1400,15 @@
       ],
       "reference": 8,
       "text": "図3　処理2の問合せに用いるSQL文の例1（未完成）",
-      "sourcePage": 13
+      "sourcePage": 13,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2019-pm2-q1-f3-aa54cba1.webp",
+          "width": 1135,
+          "height": 401,
+          "page": 13
+        }
+      ]
     },
     {
       "lines": [
@@ -1358,7 +1422,15 @@
       ],
       "reference": 9,
       "text": "図4　処理2の問合せに用いるSQL文の例2（未完成）",
-      "sourcePage": 13
+      "sourcePage": 13,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2019-pm2-q1-f4-3d04e754.webp",
+          "width": 1134,
+          "height": 364,
+          "page": 13
+        }
+      ]
     },
     {
       "lines": [
@@ -1372,7 +1444,15 @@
       ],
       "reference": 10,
       "text": "図5　処理2の問合せに用いるSQL文の例3（未完成）",
-      "sourcePage": 13
+      "sourcePage": 13,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2019-pm2-q1-f5-65067424.webp",
+          "width": 1136,
+          "height": 381,
+          "page": 13
+        }
+      ]
     },
     {
       "text": "［“ログ関連”テーブルの検討］"
@@ -1414,7 +1494,15 @@
       },
       "text": "表6　“ログ関連”テーブルのテーブル構造案",
       "reference": 11,
-      "sourcePage": 14
+      "sourcePage": 14,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2019-pm2-q1-t6-4a5fdf72.webp",
+          "width": 1144,
+          "height": 599,
+          "page": 14
+        }
+      ]
     },
     {
       "text": "表7　案1の行",
@@ -1463,7 +1551,15 @@
         ]
       },
       "reference": 12,
-      "sourcePage": 14
+      "sourcePage": 14,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2019-pm2-q1-t7-dc61c263.webp",
+          "width": 333,
+          "height": 439,
+          "page": 14
+        }
+      ]
     },
     {
       "text": "表8　案2の行",
@@ -1522,7 +1618,15 @@
         ]
       },
       "reference": 13,
-      "sourcePage": 14
+      "sourcePage": 14,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2019-pm2-q1-t8-841d341d.webp",
+          "width": 337,
+          "height": 439,
+          "page": 14
+        }
+      ]
     },
     {
       "text": "表9　案3の行",
@@ -1581,7 +1685,15 @@
         ]
       },
       "reference": 14,
-      "sourcePage": 14
+      "sourcePage": 14,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2019-pm2-q1-t9-6de72707.webp",
+          "width": 434,
+          "height": 439,
+          "page": 14
+        }
+      ]
     },
     {
       "text": "図6　案3の左端番号・右端番号付与の例",
@@ -2136,7 +2248,15 @@
         ]
       },
       "reference": 15,
-      "sourcePage": 15
+      "sourcePage": 15,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2019-pm2-q1-f6-9892fdc1.webp",
+          "width": 1111,
+          "height": 470,
+          "page": 15
+        }
+      ]
     },
     {
       "text": "2. テーブル構造案の検討",
@@ -2181,7 +2301,15 @@
       ],
       "text": "表10　問合せに用いるSQL文の案（未完成）",
       "reference": 16,
-      "sourcePage": 15
+      "sourcePage": 15,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2019-pm2-q1-t10-ec732d45.webp",
+          "width": 1131,
+          "height": 862,
+          "page": 15
+        }
+      ]
     },
     {
       "text": "3. テーブル構造案の評価",
@@ -2251,7 +2379,15 @@
         "注記 ｛内は、索引の列を定義順に記述したリストである。"
       ],
       "reference": 17,
-      "sourcePage": 16
+      "sourcePage": 16,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2019-pm2-q1-t11-f3e05fef.webp",
+          "width": 1128,
+          "height": 391,
+          "page": 16
+        }
+      ]
     },
     {
       "text": "2. “ログ基本”テーブルの物理分割",
@@ -2306,7 +2442,15 @@
         "網掛け部分は表示していない。"
       ],
       "reference": 18,
-      "sourcePage": 17
+      "sourcePage": 17,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2019-pm2-q1-t12-300b9ac1.webp",
+          "width": 1130,
+          "height": 424,
+          "page": 17
+        }
+      ]
     },
     {
       "text": "（2）探索対象ページ数試算による性能評価"
@@ -2408,7 +2552,15 @@
         "注記表中の単位Mは100万を表す。"
       ],
       "reference": 19,
-      "sourcePage": 18
+      "sourcePage": 18,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2019-pm2-q1-t13-a156e66e.webp",
+          "width": 1129,
+          "height": 543,
+          "page": 18
+        }
+      ]
     },
     {
       "text": "3. クラスタ構成の検討",

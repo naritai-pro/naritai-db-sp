@@ -3464,7 +3464,15 @@
         ]
       },
       "reference": 1,
-      "sourcePage": 24
+      "sourcePage": 24,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2017-pm2-q2-f1-1fba0288.webp",
+          "width": 1106,
+          "height": 954,
+          "page": 24
+        }
+      ]
     },
     {
       "text": "①　計画立案"
@@ -4014,7 +4022,15 @@
         ]
       },
       "reference": 2,
-      "sourcePage": 26
+      "sourcePage": 26,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2017-pm2-q2-f2-488da34b.webp",
+          "width": 1112,
+          "height": 412,
+          "page": 26
+        }
+      ]
     },
     {
       "text": "①　物流センタ補充"
@@ -4093,7 +4109,15 @@
       "text": "図3　計画生産品を対象に設計した概念データモデル（未完成）",
       "diagramIndex": 0,
       "reference": 3,
-      "sourcePage": 28
+      "sourcePage": 28,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2017-pm2-q2-f3-41d04793.webp",
+          "width": 1130,
+          "height": 1527,
+          "page": 28
+        }
+      ]
     },
     {
       "text": "図4　計画生産品を対象に設計した関係スキーマ（未完成）",
@@ -4133,7 +4157,15 @@
         "生産入庫（PK[生産番号]，生産入庫年月日，生産入庫数量）"
       ],
       "reference": 4,
-      "sourcePage": 29
+      "sourcePage": 29,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2017-pm2-q2-f4-f629e556.webp",
+          "width": 1134,
+          "height": 1500,
+          "page": 29
+        }
+      ]
     },
     {
       "text": "表1　補充生産品を対象に設計したエンティティタイプと属性の対応表（未完成）",
@@ -4974,13 +5006,29 @@
         ]
       },
       "reference": 5,
-      "sourcePage": 30
+      "sourcePage": 30,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2017-pm2-q2-t1-75485544.webp",
+          "width": 1110,
+          "height": 1470,
+          "page": 30
+        }
+      ]
     },
     {
       "text": "図5　補充生産品を対象に設計したトランザクション領域の概念データモデル（未完成）",
       "diagramIndex": 1,
       "reference": 6,
-      "sourcePage": 31
+      "sourcePage": 31,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2017-pm2-q2-f5-38d18b35.webp",
+          "width": 1103,
+          "height": 501,
+          "page": 31
+        }
+      ]
     },
     {
       "text": "解答に当たっては、次の7点に従うこと。"
@@ -5341,7 +5389,15 @@
         ]
       },
       "reference": 7,
-      "sourcePage": 32
+      "sourcePage": 32,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2017-pm2-q2-f6-f0de1f56.webp",
+          "width": 754,
+          "height": 392,
+          "page": 32
+        }
+      ]
     },
     {
       "text": "表2　補充要求，補充要求明細の統合前・統合後のエンティティタイプの対応",
@@ -5590,7 +5646,15 @@
         ]
       },
       "reference": 8,
-      "sourcePage": 33
+      "sourcePage": 33,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2017-pm2-q2-t2-dd6a7e67.webp",
+          "width": 980,
+          "height": 696,
+          "page": 33
+        }
+      ]
     },
     {
       "text": "(2)　「補充生産品生産要求」、「生産」、「生産入庫」の概念データモデルを図7に、関係スキーマを図8に示す。図8中の［ア］～［カ］に入れる一つ又は複数の属性名を答えよ。"
@@ -5884,7 +5948,15 @@
         ]
       },
       "reference": 9,
-      "sourcePage": 33
+      "sourcePage": 33,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2017-pm2-q2-f7-4a882b49.webp",
+          "width": 922,
+          "height": 220,
+          "page": 33
+        }
+      ]
     },
     {
       "text": "図8　補充生産品生産要求，生産，生産入庫の統合後の関係スキーマ",
@@ -5897,7 +5969,15 @@
         "補充生産品生産入庫（PK[生産番号]，［カ］）"
       ],
       "reference": 10,
-      "sourcePage": 33
+      "sourcePage": 33,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2017-pm2-q2-f8-af82af85.webp",
+          "width": 1132,
+          "height": 344,
+          "page": 33
+        }
+      ]
     }
   ],
   "diagrams": [

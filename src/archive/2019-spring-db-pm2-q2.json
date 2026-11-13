@@ -1704,7 +1704,15 @@
         ]
       },
       "reference": 1,
-      "sourcePage": 24
+      "sourcePage": 24,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2019-pm2-q2-t1-cf6acfee.webp",
+          "width": 1151,
+          "height": 1040,
+          "page": 24
+        }
+      ]
     },
     {
       "text": "（2）表1中の指示情報及び実績情報"
@@ -1881,13 +1889,29 @@
       "text": "図1　現状のマスタ及び在庫領域の概念データモデル（未完成）",
       "diagramIndex": 0,
       "reference": 2,
-      "sourcePage": 28
+      "sourcePage": 28,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2019-pm2-q2-f1-3bffedb2.webp",
+          "width": 1121,
+          "height": 809,
+          "page": 28
+        }
+      ]
     },
     {
       "text": "図2　現状のトランザクション領域の概念データモデル（未完成）",
       "diagramIndex": 1,
       "reference": 3,
-      "sourcePage": 28
+      "sourcePage": 28,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2019-pm2-q2-f2-84c94469.webp",
+          "width": 1116,
+          "height": 495,
+          "page": 28
+        }
+      ]
     },
     {
       "text": "図3　現状のマスタ及び在庫領域の関係スキーマ（未完成）",
@@ -1918,7 +1942,15 @@
         "貯蔵品目在庫（PK[貯蔵庫部門コード]，PK[貯蔵品目コード]，在庫数量，基準在庫数量，補充要求済みフラグ）"
       ],
       "reference": 4,
-      "sourcePage": 29
+      "sourcePage": 29,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2019-pm2-q2-f3-b85f2f87.webp",
+          "width": 1133,
+          "height": 877,
+          "page": 29
+        }
+      ]
     },
     {
       "text": "図4　現状のトランザクション領域の関係スキーマ（未完成）",
@@ -1944,7 +1976,15 @@
         "納品明細（PK[納品番号]，PK[納品明細番号]，納品数量，［k］）"
       ],
       "reference": 5,
-      "sourcePage": 29
+      "sourcePage": 29,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2019-pm2-q2-f4-ad7819d6.webp",
+          "width": 1131,
+          "height": 770,
+          "page": 29
+        }
+      ]
     },
     {
       "text": "（2）業務改革策に基づいて設計した概念データモデル及び関係スキーマ"
@@ -1956,7 +1996,15 @@
       "text": "図5　焼成指示に関わる範囲の概念データモデル（未完成）",
       "diagramIndex": 2,
       "reference": 6,
-      "sourcePage": 30
+      "sourcePage": 30,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2019-pm2-q2-f5-2d5a433c.webp",
+          "width": 783,
+          "height": 218,
+          "page": 30
+        }
+      ]
     },
     {
       "text": "図6　焼成指示に関わる範囲の関係スキーマ（未完成）",
@@ -1970,7 +2018,15 @@
         "焼成実績（PK[製造番号]，FK[焼成部門コード]，［n］）"
       ],
       "reference": 7,
-      "sourcePage": 30
+      "sourcePage": 30,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2019-pm2-q2-f6-f637360b.webp",
+          "width": 1149,
+          "height": 322,
+          "page": 30
+        }
+      ]
     },
     {
       "text": "解答に当たっては，巻頭の表記ルールに従うこと。ただし，エンティティタイプ間の対応関係にゼロを含むか否かの表記は必要ない。"
@@ -2438,7 +2494,15 @@
         ]
       },
       "reference": 8,
-      "sourcePage": 31
+      "sourcePage": 31,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2019-pm2-q2-t2-0cb78ee9.webp",
+          "width": 1153,
+          "height": 281,
+          "page": 31
+        }
+      ]
     },
     {
       "text": "（2）図5は未完成である。欠落しているリレーションシップを補って，図を完成させよ。"
@@ -2665,7 +2729,15 @@
         ]
       },
       "reference": 9,
-      "sourcePage": 31
+      "sourcePage": 31,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2019-pm2-q2-f7-bb71c922.webp",
+          "width": 937,
+          "height": 335,
+          "page": 31
+        }
+      ]
     }
   ],
   "diagrams": [

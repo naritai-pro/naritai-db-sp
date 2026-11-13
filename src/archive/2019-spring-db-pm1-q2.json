@@ -374,7 +374,15 @@
         ]
       },
       "reference": 1,
-      "sourcePage": 12
+      "sourcePage": 12,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2019-pm1-q2-t1-e37a35b1.webp",
+          "width": 1170,
+          "height": 266,
+          "page": 12
+        }
+      ]
     },
     {
       "text": "索引を使わずに，表探索で全ての行に順次アクセスする場合，検索条件に合致するか否かにかかわらず全行をロック対象とする。索引探索の場合，索引から読み込んだ行だけをロック対象とする。"
@@ -422,7 +430,15 @@
         "入庫（PK[入庫番号]，入庫年月日，FK[部品番号]，入庫数量）"
       ],
       "reference": 2,
-      "sourcePage": 13
+      "sourcePage": 13,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2019-pm1-q2-f1-107b97aa.webp",
+          "width": 1129,
+          "height": 397,
+          "page": 13
+        }
+      ]
     },
     {
       "text": "〔在庫管理業務の概要〕",
@@ -846,7 +862,15 @@
         ]
       },
       "reference": 3,
-      "sourcePage": 15
+      "sourcePage": 15,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2019-pm1-q2-f2-1b18e35c.webp",
+          "width": 1075,
+          "height": 340,
+          "page": 15
+        }
+      ]
     },
     {
       "text": "〔トリガでの定量発注の設計〕",
@@ -871,7 +895,15 @@
       ],
       "reference": 4,
       "text": "図3　トリガを定義するSQL（未完成）",
-      "sourcePage": 15
+      "sourcePage": 15,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2019-pm1-q2-f3-1c730aed.webp",
+          "width": 1077,
+          "height": 444,
+          "page": 15
+        }
+      ]
     },
     {
       "text": "表2　指摘内容と対策（未完成）",
@@ -888,7 +920,15 @@
         ]
       },
       "reference": 5,
-      "sourcePage": 15
+      "sourcePage": 15,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2019-pm1-q2-t2-b4673a77.webp",
+          "width": 1073,
+          "height": 270,
+          "page": 15
+        }
+      ]
     },
     {
       "text": "設問1　〔トリガでの在庫引当処理の設計〕について，(1)，(2)に答えよ。",

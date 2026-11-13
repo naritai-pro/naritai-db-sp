@@ -579,7 +579,15 @@
         ]
       },
       "reference": 1,
-      "sourcePage": 9
+      "sourcePage": 9,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2017-pm2-q1-t1-a65c87a0.webp",
+          "width": 1124,
+          "height": 342,
+          "page": 9
+        }
+      ]
     },
     {
       "text": "〔現行システムの概要〕",
@@ -619,7 +627,15 @@
         "時間軸（PK[時間軸ID]，年月日，年，月，四半期，年週番号，曜日，時間帯）"
       ],
       "reference": 2,
-      "sourcePage": 10
+      "sourcePage": 10,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2017-pm2-q1-f1-7ae1fbc6.webp",
+          "width": 1132,
+          "height": 836,
+          "page": 10
+        }
+      ]
     },
     {
       "text": "表2　現行店舗販売システムのCRUD",
@@ -1340,7 +1356,15 @@
         ]
       },
       "reference": 3,
-      "sourcePage": 10
+      "sourcePage": 10,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2017-pm2-q1-t2-3f4a9a0b.webp",
+          "width": 1126,
+          "height": 661,
+          "page": 10
+        }
+      ]
     },
     {
       "text": "2．現行OL販売システムのテーブル構造とCRUD",
@@ -1364,7 +1388,15 @@
         "配送指示明細（PK[配送指示番号]，PK[配送指示明細番号]，FK[注文番号]，FK[注文明細番号]，数量）"
       ],
       "reference": 4,
-      "sourcePage": 11
+      "sourcePage": 11,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2017-pm2-q1-f2-3dd29cc5.webp",
+          "width": 1131,
+          "height": 545,
+          "page": 11
+        }
+      ]
     },
     {
       "text": "表3　現行OL販売システムのCRUD",
@@ -2084,7 +2116,15 @@
         ]
       },
       "reference": 5,
-      "sourcePage": 11
+      "sourcePage": 11,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2017-pm2-q1-t3-70b59389.webp",
+          "width": 975,
+          "height": 711,
+          "page": 11
+        }
+      ]
     },
     {
       "text": "〔連携システムの概要〕",
@@ -2391,7 +2431,15 @@
         ]
       },
       "reference": 6,
-      "sourcePage": 14
+      "sourcePage": 14,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2017-pm2-q1-t4-cc66cf7d.webp",
+          "width": 1145,
+          "height": 727,
+          "page": 14
+        }
+      ]
     },
     {
       "text": "表5　テーブル配置検討表（未完成）",
@@ -2935,7 +2983,15 @@
         ]
       },
       "reference": 7,
-      "sourcePage": 14
+      "sourcePage": 14,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2017-pm2-q1-t5-42bc6079.webp",
+          "width": 1090,
+          "height": 667,
+          "page": 14
+        }
+      ]
     },
     {
       "text": "〔連携DBの設計・実装〕",
@@ -2967,7 +3023,15 @@
         "会員（PK[会員番号]，氏名，住所，電話番号，性別，生年月日，メールアドレス，使用可能ポイント，本年ポイント，前年ポイント，前々年ポイント，FK[店舗コード]，FK[店舗会員番号]，会員区分，［f］）"
       ],
       "reference": 8,
-      "sourcePage": 15
+      "sourcePage": 15,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2017-pm2-q1-f3-5f69ed63.webp",
+          "width": 1132,
+          "height": 254,
+          "page": 15
+        }
+      ]
     },
     {
       "text": "2．会員の個人情報漏えい防止対策",
@@ -3011,7 +3075,15 @@
       ],
       "reference": 9,
       "text": "図4　“会員V1”ビュー作成SQL文",
-      "sourcePage": 16
+      "sourcePage": 16,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2017-pm2-q1-f4-3cd2c82c.webp",
+          "width": 1130,
+          "height": 182,
+          "page": 16
+        }
+      ]
     },
     {
       "lines": [
@@ -3023,7 +3095,15 @@
       ],
       "reference": 10,
       "text": "図5　“会員V2”ビュー作成SQL文（未完成）",
-      "sourcePage": 16
+      "sourcePage": 16,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2017-pm2-q1-f5-629eac5b.webp",
+          "width": 1130,
+          "height": 258,
+          "page": 16
+        }
+      ]
     },
     {
       "text": "3．販売分析データの作成（バッチ処理）",
@@ -3042,7 +3122,15 @@
         "注記　店舗日締フラグ，OL日締フラグは，日締めの完了又は未完了の状態を表す。"
       ],
       "reference": 11,
-      "sourcePage": 17
+      "sourcePage": 17,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2017-pm2-q1-f6-85b3a771.webp",
+          "width": 1020,
+          "height": 165,
+          "page": 17
+        }
+      ]
     },
     {
       "text": "〔販売分析〕",
@@ -3064,7 +3152,15 @@
         "時間軸（PK[時間軸ID]，年月日，年，月，四半期，年週番号，曜日，時間帯）"
       ],
       "reference": 12,
-      "sourcePage": 17
+      "sourcePage": 17,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2017-pm2-q1-f7-c8294015.webp",
+          "width": 1132,
+          "height": 270,
+          "page": 17
+        }
+      ]
     },
     {
       "text": "2．販売分析処理の検討",
@@ -3115,7 +3211,15 @@
         ]
       },
       "reference": 13,
-      "sourcePage": 17
+      "sourcePage": 17,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2017-pm2-q1-t6-2dc23236.webp",
+          "width": 1085,
+          "height": 383,
+          "page": 17
+        }
+      ]
     },
     {
       "text": "設問1 〔テーブル配置の検討〕について，(1)，(2)に答えよ。",
@@ -3171,7 +3275,15 @@
         ]
       },
       "reference": 14,
-      "sourcePage": 18
+      "sourcePage": 18,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2017-pm2-q1-t7-720a6156.webp",
+          "width": 1018,
+          "height": 375,
+          "page": 18
+        }
+      ]
     },
     {
       "text": "また，“会員”テーブルの統合で追加した列間の検査制約を一つ挙げ，その内容を次の例に倣って40字以内で述べよ。"

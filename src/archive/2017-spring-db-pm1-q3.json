@@ -382,7 +382,15 @@
         "注記　売上年月列のデータ型は，YYYYMM形式のCHAR(6)型である。"
       ],
       "reference": 1,
-      "sourcePage": 18
+      "sourcePage": 18,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2017-pm1-q3-f1-01f5e502.webp",
+          "width": 1133,
+          "height": 304,
+          "page": 18
+        }
+      ]
     },
     {
       "text": "2．システムの運用の概要",
@@ -424,7 +432,15 @@
         "注記　売上年列のデータ型はYYYY形式のCHAR(4)型で，表示順列はSMALLINT型とする。"
       ],
       "reference": 2,
-      "sourcePage": 19
+      "sourcePage": 19,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2017-pm1-q3-f2-da29ecea.webp",
+          "width": 1100,
+          "height": 236,
+          "page": 19
+        }
+      ]
     },
     {
       "text": "〔“月別売上”テーブルの構造の変更〕",
@@ -853,7 +869,15 @@
         ]
       },
       "reference": 3,
-      "sourcePage": 20
+      "sourcePage": 20,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2017-pm1-q3-t1-53d5d90f.webp",
+          "width": 1120,
+          "height": 501,
+          "page": 20
+        }
+      ]
     },
     {
       "text": "（1）表1の二つのテーブルでは、複数行を索引のキー順に読み込む場合、アクセス経路が［ア］索引のとき、ページは順次に読み込まれるが、アクセス経路が［イ］索引のとき、1行当たり1ページがランダムに読み込まれる。"
@@ -893,7 +917,15 @@
       ],
       "reference": 4,
       "text": "表2　同じ年の二つの月の売上額の差を求めるSQLの構文（未完成）",
-      "sourcePage": 21
+      "sourcePage": 21,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2017-pm1-q3-t2-764d0366.webp",
+          "width": 1097,
+          "height": 453,
+          "page": 21
+        }
+      ]
     },
     {
       "text": "〔“社員連絡先”テーブルの構造の変更〕",
@@ -942,7 +974,15 @@
       ],
       "reference": 5,
       "text": "図3　“社員連絡先”テーブルに定義すべきだった検査制約（未完成）",
-      "sourcePage": 21
+      "sourcePage": 21,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2017-pm1-q3-f3-0bd61a1f.webp",
+          "width": 947,
+          "height": 164,
+          "page": 21
+        }
+      ]
     },
     {
       "text": "3．“社員連絡先B”テーブルの要件を、次のように整理した。",
@@ -974,7 +1014,15 @@
       ],
       "reference": 6,
       "text": "図4　“社員連絡先B”テーブルに行を移行するINSERT文（未完成）",
-      "sourcePage": 22
+      "sourcePage": 22,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2017-pm1-q3-f4-0c974cd7.webp",
+          "width": 1050,
+          "height": 368,
+          "page": 22
+        }
+      ]
     },
     {
       "text": "表3　移行元の行",
@@ -1013,7 +1061,15 @@
         ]
       },
       "reference": 7,
-      "sourcePage": 22
+      "sourcePage": 22,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2017-pm1-q3-t3-5f76923f.webp",
+          "width": 471,
+          "height": 344,
+          "page": 22
+        }
+      ]
     },
     {
       "text": "表4　移行先の行（未完成）",
@@ -1057,7 +1113,15 @@
         ]
       },
       "reference": 8,
-      "sourcePage": 22
+      "sourcePage": 22,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2017-pm1-q3-t4-79dcfd91.webp",
+          "width": 415,
+          "height": 393,
+          "page": 22
+        }
+      ]
     },
     {
       "text": "設問1　〔“月別売上”テーブルの構造の変更〕について、（1）～（3）に答えよ。",

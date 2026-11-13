@@ -685,7 +685,15 @@
         ]
       },
       "reference": 1,
-      "sourcePage": 8
+      "sourcePage": 8,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2017-pm1-q1-f1-19d2a244.webp",
+          "width": 1093,
+          "height": 403,
+          "page": 8
+        }
+      ]
     },
     {
       "text": "図2　承認画面の例",
@@ -1097,7 +1105,15 @@
         ]
       },
       "reference": 2,
-      "sourcePage": 8
+      "sourcePage": 8,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2017-pm1-q1-f2-2feb1609.webp",
+          "width": 1105,
+          "height": 468,
+          "page": 8
+        }
+      ]
     },
     {
       "text": "〔データモデルの設計〕",
@@ -1110,7 +1126,15 @@
       "text": "図3　S君が設計した概念データモデル（未完成）",
       "diagramIndex": 0,
       "reference": 3,
-      "sourcePage": 9
+      "sourcePage": 9,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2017-pm1-q1-f3-431fde5c.webp",
+          "width": 1104,
+          "height": 637,
+          "page": 9
+        }
+      ]
     },
     {
       "text": "図4　S君が設計した関係スキーマ（未完成）",
@@ -1131,7 +1155,15 @@
         "承認（PK[申請ひな形番号]，PK[申請連番]，PK[ステップ番号]，承認連番，承認処理結果，コメント，FK[承認者ユーザID]，承認日時）"
       ],
       "reference": 4,
-      "sourcePage": 9
+      "sourcePage": 9,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2017-pm1-q1-f4-35c5e9ce.webp",
+          "width": 1113,
+          "height": 729,
+          "page": 9
+        }
+      ]
     },
     {
       "text": "図4の関係スキーマの主な属性とその意味・制約を，表1に示す。"
@@ -1215,7 +1247,15 @@
         ]
       },
       "reference": 5,
-      "sourcePage": 10
+      "sourcePage": 10,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2017-pm1-q1-t1-9383292f.webp",
+          "width": 1130,
+          "height": 1162,
+          "page": 10
+        }
+      ]
     },
     {
       "text": "〔T部長の指摘事項〕",
@@ -1256,7 +1296,15 @@
         ]
       },
       "reference": 6,
-      "sourcePage": 11
+      "sourcePage": 11,
+      "sourceImages": [
+        {
+          "src": "/paper-figures/2017-pm1-q1-t-4f1ee95d.webp",
+          "width": 885,
+          "height": 177,
+          "page": 11
+        }
+      ]
     },
     {
       "text": "なお，候補キー及び表記法に示されている属性1，属性3，属性4が複数の属性から構成される場合は，｛｝でくくること。"
