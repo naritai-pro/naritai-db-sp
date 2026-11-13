@@ -32,6 +32,7 @@ export interface MaterialBlock {
   text: string;
   reference?: number;
   sourcePage?: number;
+  sourceImages?: { src: string; width: number; height: number; page: number }[];
   heading?: boolean;
   lines?: string[];
   table?: { headers: string[]; rows: (string | null)[][] };

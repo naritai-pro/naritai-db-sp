@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import {readFileSync} from "node:fs";
+import {readFileSync, statSync} from "node:fs";
 const read = f => JSON.parse(readFileSync(new URL("../src/" + f + ".json", import.meta.url)));
 const original = read("legacy-fields");
 let figures = 0, parts = 0, blanks = 0, trees = 0;
@@ -12,13 +12,18 @@ for (const [id, rows] of Object.entries(original)) {
     assert(fields.has(key), id + " 保存済み解答との互換性 " + key);
     blanks++;
   }
-  assert(q.materialBlocks.every(b => !b.illustration), id + " 資料が画像です");
+
   for (const d of q.diagrams) {
     assert(!d.background && !d.solutionImage && d.storageKey, id + " 関係図の画像または保存キー");
     assert(d.answer.length && d.solutionPath && d.nodes.length, id + " 公式解答図");
     figures++;
   }
   for (const b of q.materialBlocks.filter(b => b.reference)) {
+    assert(b.sourceImages?.length, id + " 原本図表なし " + b.text);
+    for (const image of b.sourceImages) {
+      assert(image.width > 0 && image.height > 0 && image.page >= 1, id + " 原本図表の寸法・ページ " + b.text);
+      assert(statSync(new URL("../public" + image.src, import.meta.url)).size > 0, image.src);
+    }
     assert(b.layout?.labels.length || b.table?.rows.length || b.lines?.length || b.diagramIndex !== undefined, id + " 空の図表 " + b.text);
   }
   const hasTree = fields.has("deadlock-case2");

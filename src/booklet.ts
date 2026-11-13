@@ -269,10 +269,12 @@ export function bookletText(q: Question) {
   if (q.materialBlocks) return q.materialBlocks.map(block => {
     const model = block.diagramIndex === undefined ? undefined : q.diagrams[block.diagramIndex];
     const rows = block.table ? [block.table.headers, ...block.table.rows] : [];
+    const sources = block.sourceImages?.map(image => "IPA原本 p." + image.page + "：" + q.paper.split("#")[0] + "#page=" + image.page) ?? [];
+    const layout = block.sourceImages?.length ? undefined : block.layout;
     return [
-      block.text, ...(block.underline ? ["下線部：" + block.underline] : []), ...(block.lines ?? []),
-      ...(block.layout ? block.layout.labels.map(([x, y, , , text]) => "(" + x + ", " + y + ") " + text) : []),
-      ...(block.layout?.rules.length ? ["図中の線（始点x,y・終点x,y）：" + JSON.stringify(block.layout.rules)] : []),
+      block.text, ...sources, ...(block.underline ? ["下線部：" + block.underline] : []), ...(block.lines ?? []),
+      ...(layout ? layout.labels.map(([x, y, , , text]) => "(" + x + ", " + y + ") " + text) : []),
+      ...(layout?.rules.length ? ["図中の線（始点x,y・終点x,y）：" + JSON.stringify(layout.rules)] : []),
       ...rows.map(row => row.map(cell => cell ?? "（網掛け）").join("\t")),
       ...(model ? [JSON.stringify({ entities: model.nodes.map(n => n[0]), relationships: model.fixed })] : []),
       ...(block.description ? [block.description] : []), ...(block.notes ?? []),
@@ -347,7 +349,12 @@ export function showFigure(number: number, labels: string[] = []) {
   if (!figure) return;
   figure.dispatchEvent(new Event("reveal-paper", {bubbles:true}));
   const parts = figureParts(figure);
-  const selected = labels.flatMap(label => [...(parts.get(label) ?? [])]).filter(el => el.getClientRects().length);
+  const matches = labels.flatMap(label => [...(parts.get(label) ?? [])]);
+  for (const match of matches) {
+    const details = match.closest("details");
+    if (details) details.open = true;
+  }
+  const selected = matches.filter(el => el.getClientRects().length);
   const targets = selected.length ? selected : [figure];
   showPaperTarget(figure.id, targets[0]);
   for (const target of targets) target.classList.add("paper-figure-selected");
@@ -499,6 +506,45 @@ function archiveTables(caption: string, data: NonNullable<MaterialBlock["table"]
   return wrap;
 }
 
+function sourceFigure(q: Question, block: MaterialBlock) {
+  const figure = el("figure", "", "source-figure");
+  figure.id = "paper-figure-" + block.reference;
+  for (const source of block.sourceImages ?? []) {
+    const image = el("img");
+    image.width = source.width;
+    image.height = source.height;
+    image.alt = block.text + "（IPA原本 p." + source.page + "）";
+    image.loading = "lazy";
+    image.src = source.src;
+    const zoom = link("", source.src);
+    zoom.target = "_blank";
+    zoom.rel = "noopener";
+    zoom.title = "図表を拡大";
+    zoom.append(image);
+    figure.append(zoom);
+  }
+  const footer = el("figcaption", "", "source-figure-links");
+  for (const page of new Set(block.sourceImages?.map(image => image.page))) {
+    const original = link("IPA原本 p." + page + " ↗", q.paper.split("#")[0] + "#page=" + page);
+    original.target = "_blank";
+    original.rel = "noopener";
+    footer.append(original);
+  }
+  figure.append(footer);
+  if (block.table || block.lines) {
+    const details = el("details");
+    details.append(el("summary", "テキスト表示"));
+    if (block.table) details.append(archiveTables(block.text, block.table, block.underline));
+    if (block.lines) {
+      const frame = el("div", "", "schema-frame archive-lines");
+      for (const line of block.lines) frame.append(archiveText(line));
+      details.append(frame);
+    }
+    figure.append(details);
+  }
+  return figure;
+}
+
 export function materials(q: Question, reviewing: boolean, evidence: ReadonlyMap<string, string>) {
   const box = el("aside", "", "card materials"),
     bar = el("div", "", "paper-bar");
@@ -537,6 +583,10 @@ export function materials(q: Question, reviewing: boolean, evidence: ReadonlyMap
   }
   if (q.materialBlocks) {
     for (const block of q.materialBlocks) {
+      if (block.sourceImages?.length) {
+        paper.append(sourceFigure(q, block));
+        continue;
+      }
       const item = el(block.layout || block.illustration || block.diagramIndex !== undefined || block.lines || block.table ? "figure" : block.heading ? "h3" : "p");
       if (block.reference) item.id = "paper-figure-" + block.reference;
       if (block.diagramIndex !== undefined) {
