@@ -7,7 +7,7 @@
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview --port 4174",
     "check:morning": "node scripts/check-morning.mjs",
-    "check:archive": "node scripts/check-archive.mjs && node scripts/check-scores.mjs && node scripts/check-past-papers.mjs",
+    "check:archive": "node scripts/check-archive.mjs && node scripts/check-scores.mjs && node scripts/check-past-papers.mjs && node scripts/check-legacy-exercises.mjs",
     "predev": "node scripts/prepare-pdf-assets.mjs",
     "prebuild": "node scripts/prepare-pdf-assets.mjs"
   },

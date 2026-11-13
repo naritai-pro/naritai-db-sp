@@ -1,0 +1,9196 @@
+{
+  "2016-spring-db-pm1-q1": [
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "候補キー",
+      "answer": "｛施設ID，駐車場ID｝，｛施設経度，施設緯度，駐車場ID｝"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "部分関数従属性",
+      "answer": "施設ID → 施設名"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "推移的関数従属性",
+      "answer": "施設ID → カテゴリコード → カテゴリ名"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "部分関数従属性の有無",
+      "answer": "あり",
+      "control": [
+        "あり",
+        "なし"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "推移的関数従属性の有無",
+      "answer": "あり",
+      "control": [
+        "あり",
+        "なし"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "正規形",
+      "answer": "第1正規形",
+      "control": "normal"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "関係スキーマ①",
+      "answer": "カテゴリ（PK[カテゴリコード]，カテゴリ名）",
+      "control": "schema"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "関係スキーマ②",
+      "answer": "施設（PK[施設ID]，施設名，施設経度，施設緯度，FK[カテゴリコード]，FK[施設エリアコード]）",
+      "control": "schema"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "関係スキーマ③",
+      "answer": "周辺施設（PK[駐車場ID]，PK[施設ID]，所要時間）",
+      "control": "schema"
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "a",
+      "answer": "FK[駐車場エリアコード]",
+      "control": "schema"
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "b",
+      "answer": "FK[駐車場ID]",
+      "control": "schema"
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "c",
+      "answer": "FK[会員ID]",
+      "control": "schema"
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "d",
+      "answer": "ポイント付与フラグ",
+      "control": "schema"
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "e",
+      "answer": "FK[会員ID]",
+      "control": "schema"
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "ポイント交換の問題",
+      "answer": "複数の付与年月のポイントを合算してポイント交換を行う場合，ポイントを消費したことを記録できない。",
+      "control": 50
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "(a)",
+      "answer": "付与年月",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "(c) 1行目：会員ID",
+      "answer": "T1234567",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "(c) 1行目：付与年月",
+      "answer": "2015-04",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "(c) 1行目：交換年月日",
+      "answer": "2015-06-10",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "(c) 1行目：消費ポイント",
+      "answer": "250",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "(c) 2行目：会員ID",
+      "answer": "T1234567",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "(c) 2行目：付与年月",
+      "answer": "2015-05",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "(c) 2行目：交換年月日",
+      "answer": "2015-06-10",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "(c) 2行目：消費ポイント",
+      "answer": "50",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "(c) 3行目：会員ID",
+      "answer": "T1234567",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "(c) 3行目：付与年月",
+      "answer": "2015-05",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "(c) 3行目：交換年月日",
+      "answer": "2015-07-20",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "(c) 3行目：消費ポイント",
+      "answer": "10",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "(c) 4行目：会員ID",
+      "answer": "T1234567",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "(c) 4行目：付与年月",
+      "answer": "2015-06",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "(c) 4行目：交換年月日",
+      "answer": "2015-07-20",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "(c) 4行目：消費ポイント",
+      "answer": "90",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "(b) 属性名 1列目",
+      "answer": "PK[会員ID]",
+      "control": "schema"
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "(b) 属性名 2列目",
+      "answer": "PK[付与年月]",
+      "control": "schema"
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "(b) 属性名 3列目",
+      "answer": "PK[交換年月日]",
+      "control": "schema"
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "(b) 属性名 4列目",
+      "answer": "消費ポイント",
+      "control": "schema"
+    }
+  ],
+  "2016-spring-db-pm1-q2": [
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "T1：マスタ更新登録",
+      "answer": "○",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "T1：商品",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "T1：仕入先",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "T1：販売先",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "T1：受注",
+      "answer": "○",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "T1：出荷指図",
+      "answer": "○",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "T1：出荷",
+      "answer": "○",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "T1：在庫",
+      "answer": "○",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "T1：発注対象データ",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "T1：需要予測",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "T1：日別販売実績",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "T1：月別販売実績",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "T1：分析用データ",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "T2：マスタ更新登録",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "T2：商品",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "T2：仕入先",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "T2：販売先",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "T2：受注",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "T2：出荷指図",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "T2：出荷",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "T2：在庫",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "T2：発注対象データ",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "T2：需要予測",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "T2：日別販売実績",
+      "answer": "○",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "T2：月別販売実績",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "T2：分析用データ",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "T3：マスタ更新登録",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "T3：商品",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "T3：仕入先",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "T3：販売先",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "T3：受注",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "T3：出荷指図",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "T3：出荷",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "T3：在庫",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "T3：発注対象データ",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "T3：需要予測",
+      "answer": "○",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "T3：日別販売実績",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "T3：月別販売実績",
+      "answer": "○",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "T3：分析用データ",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "T4：マスタ更新登録",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "T4：商品",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "T4：仕入先",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "T4：販売先",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "T4：受注",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "T4：出荷指図",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "T4：出荷",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "T4：在庫",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "T4：発注対象データ",
+      "answer": "○",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "T4：需要予測",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "T4：日別販売実績",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "T4：月別販売実績",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "T4：分析用データ",
+      "answer": "○",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "T5：マスタ更新登録",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "T5：商品",
+      "answer": "○",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "T5：仕入先",
+      "answer": "○",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "T5：販売先",
+      "answer": "○",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "T5：受注",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "T5：出荷指図",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "T5：出荷",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "T5：在庫",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "T5：発注対象データ",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "T5：需要予測",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "T5：日別販売実績",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "T5：月別販売実績",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "T5：分析用データ",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "a",
+      "answer": "更新ログによる回復機能，又は更新ログを用いたロールフォワード処理",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "b",
+      "answer": "商品",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "c",
+      "answer": "仕入先",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "d",
+      "answer": "販売先",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "e",
+      "answer": "再実行",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "f",
+      "answer": "継続",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "在庫：バックアップの種類",
+      "answer": "差分",
+      "control": [
+        "増分",
+        "差分"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "在庫：選択根拠",
+      "answer": "容量",
+      "control": [
+        "容量",
+        "時間"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "在庫：理由",
+      "answer": "変更されるページが特定範囲に局所化されているから",
+      "control": 30
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "出荷：バックアップの種類",
+      "answer": "増分",
+      "control": [
+        "増分",
+        "差分"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "出荷：選択根拠",
+      "answer": "時間",
+      "control": [
+        "容量",
+        "時間"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "出荷：理由",
+      "answer": "その日の追加ページ分だけのバックアップで済むから",
+      "control": 30
+    },
+    {
+      "section": 2,
+      "sub": 2,
+      "label": "テーブル名",
+      "answer": "分析用データ",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 3,
+      "label": "回復手順",
+      "answer": "3年分の販売実績を基に，バッチプログラム“分析用データ作成”を再実行する。",
+      "control": 40
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "ア",
+      "answer": "需要予測",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "イ",
+      "answer": "需要予測",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "ウ",
+      "answer": "発注対象データ",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "エ",
+      "answer": "発注対象データ作成",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "理由",
+      "answer": "“在庫”テーブルと，そのデータを反映したテーブルを参照しないから。",
+      "control": 40
+    }
+  ],
+  "2016-spring-db-pm1-q3": [
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "a",
+      "answer": "B11",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "b",
+      "answer": "B12",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "c",
+      "answer": "B10",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "実行順序",
+      "answer": "オ → カ → キ → イ → ウ → エ → ア → ク → ケ（オ・カ・キは順不同。イ・ウ・エ・アは順不同。）"
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "d",
+      "answer": "INNER JOIN 又は JOIN",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "e",
+      "answer": "LEFT OUTER JOIN 又は LEFT JOIN",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 2,
+      "label": "SQL文",
+      "answer": "SELECT S.社員番号, S.社員名, COUNT(*) 訪問回数\nFROM 社員 S INNER JOIN 訪問実績 HJ ON S.社員番号 = HJ.社員番号\nWHERE HJ.訪問実施日 >= ISODATE('2016-01-01')\nGROUP BY S.社員番号, S.社員名\nHAVING COUNT(*) >= ?"
+    },
+    {
+      "section": 2,
+      "sub": 3,
+      "label": "SQL文",
+      "answer": "SELECT 社員番号, 社員名, 訪問回数 FROM 社員別訪問回数ビュー WHERE 訪問回数 >= ?"
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "関係スキーマ",
+      "answer": "チームメンバ（PK[部門番号]，PK[チーム番号]，PK[社員番号]，PK[担当開始日]，担当終了日）",
+      "control": "schema"
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "社員番号",
+      "answer": "E111，E112，E116"
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "操作",
+      "answer": "部長を全チームに，課長を各チームにメンバとして登録する。",
+      "control": 30
+    },
+    {
+      "section": 3,
+      "sub": 3,
+      "label": "理由",
+      "answer": "課長は，社員の行の担当終了日を更新することで直ちにアクセスを制限できるから。",
+      "control": 40
+    }
+  ],
+  "2016-spring-db-pm2-q1": [
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "開始時刻：データ型",
+      "answer": "TIME",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "開始時刻：NOT NULL",
+      "answer": "Y",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "開始時刻：格納長（バイト）",
+      "answer": "3",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "行番号：データ型",
+      "answer": "SMALLINT",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "行番号：NOT NULL",
+      "answer": "Y",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "行番号：格納長（バイト）",
+      "answer": "2",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "終了時刻：データ型",
+      "answer": "TIME",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "終了時刻：NOT NULL",
+      "answer": "Y",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "終了時刻：格納長（バイト）",
+      "answer": "3",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "行動種別：データ型",
+      "answer": "CHAR(1)",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "行動種別：NOT NULL",
+      "answer": "Y",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "行動種別：格納長（バイト）",
+      "answer": "1",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "行動内容：データ型",
+      "answer": "NCHAR VARYING(1000)",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "行動内容：NOT NULL",
+      "answer": "N",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "行動内容：格納長（バイト）",
+      "answer": "121",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "支店コード：データ型",
+      "answer": "CHAR(4)",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "支店コード：NOT NULL",
+      "answer": "N",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "支店コード：格納長（バイト）",
+      "answer": "5",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "案件番号：データ型",
+      "answer": "INTEGER",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "案件番号：NOT NULL",
+      "answer": "N",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "案件番号：格納長（バイト）",
+      "answer": "5",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "a",
+      "answer": "(支店コード, 案件番号) REFERENCES 案件 (支店コード, 案件番号)",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "b",
+      "answer": "開始時刻 < 終了時刻",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "c",
+      "answer": "行動種別 IN ('1', '2', '3', '4', '5')",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "索引① の種類",
+      "answer": "P",
+      "control": [
+        "P",
+        "NU",
+        "U",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "索引② の種類",
+      "answer": "NU",
+      "control": [
+        "P",
+        "NU",
+        "U",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "索引③ の種類",
+      "answer": "（空欄）",
+      "control": [
+        "P",
+        "NU",
+        "U",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "行員番号：索引① の構成順",
+      "answer": "1",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "行員番号：索引② の構成順",
+      "answer": "（空欄）",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "行員番号：索引③ の構成順",
+      "answer": "（空欄）",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "予定日：索引① の構成順",
+      "answer": "2",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "予定日：索引② の構成順",
+      "answer": "（空欄）",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "予定日：索引③ の構成順",
+      "answer": "（空欄）",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "開始時刻：索引① の構成順",
+      "answer": "3",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "開始時刻：索引② の構成順",
+      "answer": "（空欄）",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "開始時刻：索引③ の構成順",
+      "answer": "（空欄）",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "行番号：索引① の構成順",
+      "answer": "4",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "行番号：索引② の構成順",
+      "answer": "（空欄）",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "行番号：索引③ の構成順",
+      "answer": "（空欄）",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "終了時刻：索引① の構成順",
+      "answer": "（空欄）",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "終了時刻：索引② の構成順",
+      "answer": "（空欄）",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "終了時刻：索引③ の構成順",
+      "answer": "（空欄）",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "行動種別：索引① の構成順",
+      "answer": "（空欄）",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "行動種別：索引② の構成順",
+      "answer": "（空欄）",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "行動種別：索引③ の構成順",
+      "answer": "（空欄）",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "行動内容：索引① の構成順",
+      "answer": "（空欄）",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "行動内容：索引② の構成順",
+      "answer": "（空欄）",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "行動内容：索引③ の構成順",
+      "answer": "（空欄）",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "支店コード：索引① の構成順",
+      "answer": "（空欄）",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "支店コード：索引② の構成順",
+      "answer": "1",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "支店コード：索引③ の構成順",
+      "answer": "（空欄）",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "案件番号：索引① の構成順",
+      "answer": "（空欄）",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "案件番号：索引② の構成順",
+      "answer": "2",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "案件番号：索引③ の構成順",
+      "answer": "（空欄）",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "d",
+      "answer": "148",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "e",
+      "answer": "24",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "f",
+      "answer": "50,000",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "g",
+      "answer": "200",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 3,
+      "label": "h",
+      "answer": "×",
+      "control": [
+        "○",
+        "×"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 3,
+      "label": "i",
+      "answer": "○",
+      "control": [
+        "○",
+        "×"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 3,
+      "label": "有効でない場合",
+      "answer": "復号関数名と鍵を盗まれた場合",
+      "control": 20
+    },
+    {
+      "section": 1,
+      "sub": 3,
+      "label": "トレードオフの事象",
+      "answer": "顧客名による検索に索引を使用できないので性能が劣化する。",
+      "control": 35
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "j",
+      "answer": "商品種別",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "k",
+      "answer": "運用商品",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "l",
+      "answer": "顧客基本",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "m",
+      "answer": "顧客詳細，顧客口座",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "n",
+      "answer": "取引，コンタクト履歴",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 2,
+      "label": "o",
+      "answer": "48",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 2,
+      "label": "p",
+      "answer": "80",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 2,
+      "label": "q",
+      "answer": "12",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 2,
+      "label": "r",
+      "answer": "B.抽出処理日 = CURRENT_DATE",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 2,
+      "label": "s",
+      "answer": "A.支店コード BETWEEN B.開始支店コード AND B.終了支店コード",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 3,
+      "label": "t",
+      "answer": "登録日が抽出処理日以前である",
+      "control": 20
+    },
+    {
+      "section": 2,
+      "sub": 3,
+      "label": "u",
+      "answer": "最終更新TSが抽出処理日よりも後である",
+      "control": 20
+    },
+    {
+      "section": 2,
+      "sub": 3,
+      "label": "v",
+      "answer": "E&I",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 3,
+      "label": "w",
+      "answer": "DI",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "x",
+      "answer": "UNION",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "y",
+      "answer": "EXCEPT",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "z",
+      "answer": "INTERSECT",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "要因①",
+      "answer": "商品コードの桁数の不一致",
+      "control": 20
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "修正内容①",
+      "answer": "選択リスト*を，列名をコンマで区切ったリストに変更し，現行DBの商品コードの前に‘00’を付加する演算を追加する。",
+      "control": 60
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "要因②",
+      "answer": "毎月末日の削除対象データの不一致",
+      "control": 20
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "修正内容②",
+      "answer": "現行DBのSELECT文に，案件の登録日が10年前の月初めより前のデータを抽出しない条件のWHERE句を追加する。",
+      "control": 60
+    }
+  ],
+  "2016-spring-db-pm2-q2": [
+    {
+      "section": 0,
+      "sub": 1,
+      "label": "ア",
+      "answer": "予防保全対応を実施する",
+      "control": "short"
+    },
+    {
+      "section": 0,
+      "sub": 1,
+      "label": "イ",
+      "answer": "対応明細を記録する",
+      "control": "short"
+    },
+    {
+      "section": 0,
+      "sub": 2,
+      "label": "あ",
+      "answer": "未利用地設置プラント",
+      "control": "short"
+    },
+    {
+      "section": 0,
+      "sub": 2,
+      "label": "い",
+      "answer": "製品部材対応",
+      "control": "short"
+    },
+    {
+      "section": 0,
+      "sub": 2,
+      "label": "う",
+      "answer": "号機構成品目",
+      "control": "short"
+    },
+    {
+      "section": 0,
+      "sub": 2,
+      "label": "え",
+      "answer": "故障現象対応品目",
+      "control": "short"
+    },
+    {
+      "section": 0,
+      "sub": 2,
+      "label": "お",
+      "answer": "保守対象号機",
+      "control": "short"
+    },
+    {
+      "section": 0,
+      "sub": 3,
+      "label": "a",
+      "answer": "PK[プラント番号]，下草刈り総面積",
+      "control": "schema"
+    },
+    {
+      "section": 0,
+      "sub": 3,
+      "label": "b",
+      "answer": "PK[製品番号]，PK[部材番号]，対応数",
+      "control": "schema"
+    },
+    {
+      "section": 0,
+      "sub": 3,
+      "label": "c",
+      "answer": "PK[プラント番号]，PK[号機番号]，PK[構成品目番号]，構成数",
+      "control": "schema"
+    },
+    {
+      "section": 0,
+      "sub": 3,
+      "label": "d",
+      "answer": "PK[故障現象番号]，PK[品目番号]，直接関連区分",
+      "control": "schema"
+    },
+    {
+      "section": 0,
+      "sub": 3,
+      "label": "e",
+      "answer": "FK[故障現象番号]，対応開始年月日，対応完了年月日，リコール概要",
+      "control": "schema"
+    },
+    {
+      "section": 0,
+      "sub": 3,
+      "label": "f",
+      "answer": "FK[リコール対応番号]，枠年月日，開始時刻，終了時刻，枠状況区分",
+      "control": "schema"
+    },
+    {
+      "section": 0,
+      "sub": 3,
+      "label": "g",
+      "answer": "PK[プラント番号]，PK[号機番号]，PK[契約番号]",
+      "control": "schema"
+    },
+    {
+      "section": 0,
+      "sub": 3,
+      "label": "h",
+      "answer": "FK[契約番号]，FK[営業所番号]，FK[班番号]，定期点検開始年月日，定期点検完了年月日，定期点検結果概要",
+      "control": "schema"
+    },
+    {
+      "section": 0,
+      "sub": 3,
+      "label": "i",
+      "answer": "PK[契約番号]，PK[監視年月日]，発電量，最高気温，最低気温，日射量",
+      "control": "schema"
+    },
+    {
+      "section": 0,
+      "sub": 3,
+      "label": "j",
+      "answer": "FK[営業所番号]，FK[班番号]，FK[問合せ番号]，FK[契約番号]，FK[監視年月日]",
+      "control": "schema"
+    },
+    {
+      "section": 0,
+      "sub": 3,
+      "label": "k",
+      "answer": "FK[契約番号]，FK[営業所番号]，FK[班番号]，作業時間，下草刈り開始年月日，下草刈り完了年月日",
+      "control": "schema"
+    },
+    {
+      "section": 0,
+      "sub": 3,
+      "label": "l",
+      "answer": "現調開始年月日，現調完了年月日，現調結果概要",
+      "control": "schema"
+    },
+    {
+      "section": 0,
+      "sub": 3,
+      "label": "m",
+      "answer": "FK[現調番号]，FK[定期点検番号]，FK[契約番号]，保全対応開始年月日，保全対応完了年月日",
+      "control": "schema"
+    },
+    {
+      "section": 0,
+      "sub": 3,
+      "label": "n",
+      "answer": "FK[現調番号]，FK[定期点検番号]，修理開始年月日，修理完了年月日",
+      "control": "schema"
+    },
+    {
+      "section": 0,
+      "sub": 3,
+      "label": "o",
+      "answer": "FK[プラント番号]，対応状況区分",
+      "control": "schema"
+    },
+    {
+      "section": 0,
+      "sub": 3,
+      "label": "p",
+      "answer": "FK[修理対応番号]，FK[予防保全対応番号]，FK[リコール対応番号]",
+      "control": "schema"
+    },
+    {
+      "section": 0,
+      "sub": 3,
+      "label": "q",
+      "answer": "FK[品目番号]，設置数",
+      "control": "schema"
+    },
+    {
+      "section": 0,
+      "sub": 3,
+      "label": "r",
+      "answer": "FK[品目番号]，回収品目製造番号",
+      "control": "schema"
+    }
+  ],
+  "2017-spring-db-pm1-q1": [
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "候補キー",
+      "answer": "｛電子会議番号，投稿番号｝，｛分野番号，表示順，投稿番号｝"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "部分関数従属性",
+      "answer": "電子会議番号 → 議題"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "推移的関数従属性",
+      "answer": "電子会議番号 → 分野番号 → 分野名"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "部分関数従属性の有無",
+      "answer": "あり",
+      "control": [
+        "あり",
+        "なし"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "推移的関数従属性の有無",
+      "answer": "あり",
+      "control": [
+        "あり",
+        "なし"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "正規形",
+      "answer": "第1正規形",
+      "control": "normal"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "関係スキーマ①",
+      "answer": "分野（PK[分野番号]，分野名）",
+      "control": "schema"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "関係スキーマ②",
+      "answer": "電子会議（PK[電子会議番号]，議題，FK[分野番号]，表示順，FK[作成者ユーザID]）",
+      "control": "schema"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "関係スキーマ③",
+      "answer": "投稿（PK[電子会議番号]，PK[投稿番号]，投稿本文，FK[投稿者ユーザID]）",
+      "control": "schema"
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "a",
+      "answer": "FK[主務グループID]",
+      "control": "schema"
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "b",
+      "answer": "FK[管理グループID]",
+      "control": "schema"
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "c",
+      "answer": "FK[送信元ユーザID]",
+      "control": "schema"
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "d",
+      "answer": "PK[送信先ユーザID]",
+      "control": "schema"
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "e",
+      "answer": "開封日時",
+      "control": "schema"
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "f",
+      "answer": "参加可否回答",
+      "control": "schema"
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "関係スキーマ①",
+      "answer": "ロール（PK[ロールID]，ロール名）",
+      "control": "schema"
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "関係スキーマ②",
+      "answer": "ロール付与先（PK[ロールID]，PK[ユーザID]）",
+      "control": "schema"
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "関係名",
+      "answer": "決裁ルート",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "属性名",
+      "answer": "承認ロールID",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "状況",
+      "answer": "一度承認を行った申請が差戻しされた後，再度承認処理を行ったとき",
+      "control": 40
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "関係スキーマ",
+      "answer": "承認（PK[申請ひな形番号]，PK[申請連番]，FK[ステップ番号]，PK[承認連番]，承認処理結果，コメント，FK[承認者ユーザID]，承認日時）",
+      "control": "schema"
+    }
+  ],
+  "2017-spring-db-pm1-q2": [
+    {
+      "section": 1,
+      "sub": 0,
+      "label": "a",
+      "answer": "SUM(S.出庫数量)",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 0,
+      "label": "b",
+      "answer": "LEFT OUTER JOIN",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 0,
+      "label": "c",
+      "answer": "GROUP BY B.部品番号,S.出庫年月日",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 0,
+      "label": "d",
+      "answer": "出庫便番号",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 0,
+      "label": "e",
+      "answer": "NOT NULL",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "実行された場合",
+      "answer": "“在庫”テーブルの同じ行に対して，先行するAPの①と②の間で，後続のAPの①が実行された場合",
+      "control": 60
+    },
+    {
+      "section": 2,
+      "sub": 2,
+      "label": "状態",
+      "answer": "出庫対象在庫数量が倉庫内在庫数量を超える。",
+      "control": 30
+    },
+    {
+      "section": 2,
+      "sub": 2,
+      "label": "実行状況 t2",
+      "answer": "①（別解：①②③④）",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 2,
+      "label": "実行状況 t4",
+      "answer": "（空欄）",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 2,
+      "label": "実行状況 t6",
+      "answer": "（空欄）",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 2,
+      "label": "実行状況 t8",
+      "answer": "②③④（別解：空欄）",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 3,
+      "label": "f",
+      "answer": "CURRENT",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "ア",
+      "answer": "倉庫コード",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "イ",
+      "answer": "部品番号",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "ウ",
+      "answer": "在庫",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "エ",
+      "answer": "ロックの解放待ち",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "オ",
+      "answer": "出庫元倉庫コード",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "カ",
+      "answer": "部品番号",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "キ",
+      "answer": "出庫",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "ク",
+      "answer": "テーブルスキャン",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "ケ",
+      "answer": "更新 又は 専有ロック",
+      "control": "short"
+    }
+  ],
+  "2017-spring-db-pm1-q3": [
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "ア",
+      "answer": "主",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "イ",
+      "answer": "副次",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "ウ",
+      "answer": "360,000",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "エ",
+      "answer": "3,600",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "オ",
+      "answer": "30,000",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "カ",
+      "answer": "1,000",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "キ",
+      "answer": "2",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "ク",
+      "answer": "2,000",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "ケ",
+      "answer": "200",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "コ",
+      "answer": "200",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "a",
+      "answer": "売上額 2 月 - 売上額 1 月",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "b",
+      "answer": "売上年 = '2017' 又は 売上年 = ?",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 3,
+      "label": "理由",
+      "answer": "比較する売上年月ごとに選択リストの列名を変更しなければならないから",
+      "control": 40
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "理由",
+      "answer": "電話番号が設定されている行だけを登録したいから",
+      "control": 25
+    },
+    {
+      "section": 2,
+      "sub": 2,
+      "label": "列名",
+      "answer": "社員ID，電話番号（順不同）"
+    },
+    {
+      "section": 2,
+      "sub": 3,
+      "label": "c",
+      "answer": "①",
+      "control": [
+        "①",
+        "②",
+        "③",
+        "④"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 3,
+      "label": "d",
+      "answer": "③",
+      "control": [
+        "①",
+        "②",
+        "③",
+        "④"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 3,
+      "label": "e",
+      "answer": "④",
+      "control": [
+        "①",
+        "②",
+        "③",
+        "④"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 4,
+      "label": "f",
+      "answer": "①",
+      "control": [
+        "①",
+        "②",
+        "③",
+        "④"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 4,
+      "label": "g",
+      "answer": "②",
+      "control": [
+        "①",
+        "②",
+        "③",
+        "④"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 4,
+      "label": "h",
+      "answer": "③",
+      "control": [
+        "①",
+        "②",
+        "③",
+        "④"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 5,
+      "label": "2行目：社員ID",
+      "answer": "E1",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 5,
+      "label": "2行目：表示順",
+      "answer": "2",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 5,
+      "label": "2行目：電話番号",
+      "answer": "3333",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 5,
+      "label": "3行目：社員ID",
+      "answer": "E2",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 5,
+      "label": "3行目：表示順",
+      "answer": "1",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 5,
+      "label": "3行目：電話番号",
+      "answer": "2222",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 5,
+      "label": "4行目：社員ID",
+      "answer": "E3",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 5,
+      "label": "4行目：表示順",
+      "answer": "1",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 5,
+      "label": "4行目：電話番号",
+      "answer": "3333",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 5,
+      "label": "5行目：社員ID",
+      "answer": "E4",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 5,
+      "label": "5行目：表示順",
+      "answer": "1",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 5,
+      "label": "5行目：電話番号",
+      "answer": "4444",
+      "control": "short"
+    }
+  ],
+  "2017-spring-db-pm2-q1": [
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "①",
+      "answer": "ポイント統合後の会員が購入時にポイントを使用した場合",
+      "control": 30
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "②",
+      "answer": "会員登録，POS入力，ポイント反映",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "a",
+      "answer": "配置方法②",
+      "control": [
+        "配置方法①",
+        "配置方法②",
+        "配置方法③",
+        "配置方法④",
+        "配置方法⑤"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "b",
+      "answer": "配置方法②",
+      "control": [
+        "配置方法①",
+        "配置方法②",
+        "配置方法③",
+        "配置方法④",
+        "配置方法⑤"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "c",
+      "answer": "配置方法①",
+      "control": [
+        "配置方法①",
+        "配置方法②",
+        "配置方法③",
+        "配置方法④",
+        "配置方法⑤"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "d",
+      "answer": "配置方法⑤",
+      "control": [
+        "配置方法①",
+        "配置方法②",
+        "配置方法③",
+        "配置方法④",
+        "配置方法⑤"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "e",
+      "answer": "配置方法①",
+      "control": [
+        "配置方法①",
+        "配置方法②",
+        "配置方法③",
+        "配置方法④",
+        "配置方法⑤"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "f　表7 2行目：追加する列名",
+      "answer": "廃止区分",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "f　表7 2行目：列値の内容",
+      "answer": "ポイントカードの廃止有無を表す値",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "f　表7 3行目：追加する列名",
+      "answer": "統合先会員番号",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "f　表7 3行目：列値の内容",
+      "answer": "ポイント統合後の統合先の会員番号",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "f　表7 4行目：追加する列名",
+      "answer": "統合申請日",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "f　表7 4行目：列値の内容",
+      "answer": "ポイント統合の申請日",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "f　表7 5行目：追加する列名",
+      "answer": "統合対象ポイント",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "f　表7 5行目：列値の内容",
+      "answer": "ポイント統合時点の使用可能ポイント",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "制約の内容",
+      "answer": "会員区分が店舗会員の場合，店舗コード及び店舗会員番号はNULLでない。",
+      "control": 40
+    },
+    {
+      "section": 2,
+      "sub": 2,
+      "label": "会員V1：権限の付与先",
+      "answer": "全従業員のユーザID"
+    },
+    {
+      "section": 2,
+      "sub": 2,
+      "label": "会員V2：権限の付与先",
+      "answer": "認可役職ロール及び認可担当職務ロール"
+    },
+    {
+      "section": 2,
+      "sub": 2,
+      "label": "g",
+      "answer": "従業員",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 2,
+      "label": "h",
+      "answer": "B.店舗コード = A.店舗コード AND B.従業員ID = CURRENT_USER",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 2,
+      "label": "i",
+      "answer": "A.会員番号 = B.統合先会員番号",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 2,
+      "label": "j",
+      "answer": "C.店舗コード = B.店舗コード AND C.従業員ID = CURRENT_USER",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 3,
+      "label": "日締処理で行う操作",
+      "answer": "行がなければ対応するフラグを完了，他方を未完了として行を追加し，行があれば対応するフラグを完了にして更新する。",
+      "control": 60
+    },
+    {
+      "section": 2,
+      "sub": 3,
+      "label": "トリガの定義内容①",
+      "answer": "更新"
+    },
+    {
+      "section": 2,
+      "sub": 3,
+      "label": "トリガの定義内容②",
+      "answer": "店舗日締フラグとOL日締フラグが共に完了であること"
+    },
+    {
+      "section": 2,
+      "sub": 3,
+      "label": "トリガの定義内容③",
+      "answer": "レプリケーションを無効化する。"
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "追加するテーブル",
+      "answer": "会員軸（PK[会員軸ID]，性別，居住地域，年齢層）",
+      "control": "schema"
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "k",
+      "answer": "会員軸 ID",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "l",
+      "answer": "チャネル区分",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "m",
+      "answer": "分類コード 1，分類コード 2，分類コード 3",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "ア",
+      "answer": "商品軸",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "イ",
+      "answer": "商品軸 ID で等結合し，大分類コードが‘K001’と一致する行を選択",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "ウ",
+      "answer": "会員軸",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "エ",
+      "answer": "会員軸IDで等結合し，性別が女性，かつ，年齢層が30代，かつ，居住地域が関東地域と一致する行を選択",
+      "control": "short"
+    }
+  ],
+  "2017-spring-db-pm2-q2": [
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "a",
+      "answer": "拠点名，拠点種類区分",
+      "control": "schema"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "b",
+      "answer": "FK[営業所営業部門コード]，FK[物流センタ拠点コード]",
+      "control": "schema"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "c",
+      "answer": "営業部門区分",
+      "control": "schema"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "d",
+      "answer": "得意先区分，請求得意先フラグ，FK[請求得意先コード]",
+      "control": "schema"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "e",
+      "answer": "FK[発注得意先コード]，FK[担当販売部営業部門コード]",
+      "control": "schema"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "f",
+      "answer": "FK[生産工場拠点コード]",
+      "control": "schema"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "g",
+      "answer": "基準在庫数量，補充ロットサイズ，実在庫数量，引当済数量",
+      "control": "schema"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "h",
+      "answer": "FK[広域得意先コード]",
+      "control": "schema"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "i",
+      "answer": "FK[納入元物流センタ拠点コード]",
+      "control": "schema"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "j",
+      "answer": "FK[要求元営業所拠点コード]",
+      "control": "schema"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "k",
+      "answer": "FK[入庫先物流センタ拠点コード]",
+      "control": "schema"
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "補充要求番号：物流センタ補充要求",
+      "answer": "KF",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "補充要求番号：補充要求明細",
+      "answer": "KF",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "補充要求番号：補充出庫",
+      "answer": "AF",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "補充要求番号：補充出庫明細",
+      "answer": "AF",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "補充要求番号：補充入庫",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "補充要求番号：補充入庫明細",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "補充要求年月日：物流センタ補充要求",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "補充要求年月日：補充要求明細",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "補充要求年月日：補充出庫",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "補充要求年月日：補充出庫明細",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "補充要求年月日：補充入庫",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "補充要求年月日：補充入庫明細",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "営業所拠点コード：物流センタ補充要求",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "営業所拠点コード：補充要求明細",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "営業所拠点コード：補充出庫",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "営業所拠点コード：補充出庫明細",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "営業所拠点コード：補充入庫",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "営業所拠点コード：補充入庫明細",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "物流センタ拠点コード：物流センタ補充要求",
+      "answer": "AF",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "物流センタ拠点コード：補充要求明細",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "物流センタ拠点コード：補充出庫",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "物流センタ拠点コード：補充出庫明細",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "物流センタ拠点コード：補充入庫",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "物流センタ拠点コード：補充入庫明細",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "補充要求明細番号：物流センタ補充要求",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "補充要求明細番号：補充要求明細",
+      "answer": "K",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "補充要求明細番号：補充出庫",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "補充要求明細番号：補充出庫明細",
+      "answer": "AF",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "補充要求明細番号：補充入庫",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "補充要求明細番号：補充入庫明細",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "補充要求数量：物流センタ補充要求",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "補充要求数量：補充要求明細",
+      "answer": "A",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "補充要求数量：補充出庫",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "補充要求数量：補充出庫明細",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "補充要求数量：補充入庫",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "補充要求数量：補充入庫明細",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "補充生産品商品コード：物流センタ補充要求",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "補充生産品商品コード：補充要求明細",
+      "answer": "AF",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "補充生産品商品コード：補充出庫",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "補充生産品商品コード：補充出庫明細",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "補充生産品商品コード：補充入庫",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "補充生産品商品コード：補充入庫明細",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "補充番号：物流センタ補充要求",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "補充番号：補充要求明細",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "補充番号：補充出庫",
+      "answer": "K",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "補充番号：補充出庫明細",
+      "answer": "KF",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "補充番号：補充入庫",
+      "answer": "KF",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "補充番号：補充入庫明細",
+      "answer": "KF",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "補充出庫年月日：物流センタ補充要求",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "補充出庫年月日：補充要求明細",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "補充出庫年月日：補充出庫",
+      "answer": "A",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "補充出庫年月日：補充出庫明細",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "補充出庫年月日：補充入庫",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "補充出庫年月日：補充入庫明細",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "補充明細番号：物流センタ補充要求",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "補充明細番号：補充要求明細",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "補充明細番号：補充出庫",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "補充明細番号：補充出庫明細",
+      "answer": "K",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "補充明細番号：補充入庫",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "補充明細番号：補充入庫明細",
+      "answer": "KF",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "補充出庫数量：物流センタ補充要求",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "補充出庫数量：補充要求明細",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "補充出庫数量：補充出庫",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "補充出庫数量：補充出庫明細",
+      "answer": "A",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "補充出庫数量：補充入庫",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "補充出庫数量：補充入庫明細",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "補充入庫年月日：物流センタ補充要求",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "補充入庫年月日：補充要求明細",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "補充入庫年月日：補充出庫",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "補充入庫年月日：補充出庫明細",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "補充入庫年月日：補充入庫",
+      "answer": "A",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "補充入庫年月日：補充入庫明細",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "補充入庫数量：物流センタ補充要求",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "補充入庫数量：補充要求明細",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "補充入庫数量：補充出庫",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "補充入庫数量：補充出庫明細",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "補充入庫数量：補充入庫",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "補充入庫数量：補充入庫明細",
+      "answer": "A",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "生産番号：物流センタ補充要求",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "生産番号：補充要求明細",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "生産番号：補充出庫",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "生産番号：補充出庫明細",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "生産番号：補充入庫",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "生産番号：補充入庫明細",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "生産要求年月日：物流センタ補充要求",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "生産要求年月日：補充要求明細",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "生産要求年月日：補充出庫",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "生産要求年月日：補充出庫明細",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "生産要求年月日：補充入庫",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "生産要求年月日：補充入庫明細",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "生産要求時刻：物流センタ補充要求",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "生産要求時刻：補充要求明細",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "生産要求時刻：補充出庫",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "生産要求時刻：補充出庫明細",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "生産要求時刻：補充入庫",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "生産要求時刻：補充入庫明細",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "生産要求数量：物流センタ補充要求",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "生産要求数量：補充要求明細",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "生産要求数量：補充出庫",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "生産要求数量：補充出庫明細",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "生産要求数量：補充入庫",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "生産要求数量：補充入庫明細",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "生産年月日：物流センタ補充要求",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "生産年月日：補充要求明細",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "生産年月日：補充出庫",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "生産年月日：補充出庫明細",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "生産年月日：補充入庫",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "生産年月日：補充入庫明細",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "生産数量：物流センタ補充要求",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "生産数量：補充要求明細",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "生産数量：補充出庫",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "生産数量：補充出庫明細",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "生産数量：補充入庫",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "生産数量：補充入庫明細",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "生産完了時刻：物流センタ補充要求",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "生産完了時刻：補充要求明細",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "生産完了時刻：補充出庫",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "生産完了時刻：補充出庫明細",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "生産完了時刻：補充入庫",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "生産完了時刻：補充入庫明細",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "生産入庫年月日：物流センタ補充要求",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "生産入庫年月日：補充要求明細",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "生産入庫年月日：補充出庫",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "生産入庫年月日：補充出庫明細",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "生産入庫年月日：補充入庫",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "生産入庫年月日：補充入庫明細",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "生産入庫数量：物流センタ補充要求",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "生産入庫数量：補充要求明細",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "生産入庫数量：補充出庫",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "生産入庫数量：補充出庫明細",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "生産入庫数量：補充入庫",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "生産入庫数量：補充入庫明細",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "入庫完了時刻：物流センタ補充要求",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "入庫完了時刻：補充要求明細",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "入庫完了時刻：補充出庫",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "入庫完了時刻：補充出庫明細",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "入庫完了時刻：補充入庫",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "入庫完了時刻：補充入庫明細",
+      "answer": "（空欄）",
+      "control": [
+        "K",
+        "KF",
+        "A",
+        "AF",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "補充要求 ／ 計画生産品：補充要求",
+      "answer": "○",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "補充要求 ／ 計画生産品：補充要求明細",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "補充要求 ／ 補充生産品：補充要求",
+      "answer": "○",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "補充要求 ／ 補充生産品：営業所補充要求",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "補充要求 ／ 補充生産品：物流センタ補充要求",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "補充要求 ／ 補充生産品：補充要求明細",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "営業所補充要求 ／ 計画生産品：補充要求",
+      "answer": "○",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "営業所補充要求 ／ 計画生産品：補充要求明細",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "営業所補充要求 ／ 補充生産品：補充要求",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "営業所補充要求 ／ 補充生産品：営業所補充要求",
+      "answer": "○",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "営業所補充要求 ／ 補充生産品：物流センタ補充要求",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "営業所補充要求 ／ 補充生産品：補充要求明細",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "物流センタ補充要求 ／ 計画生産品：補充要求",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "物流センタ補充要求 ／ 計画生産品：補充要求明細",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "物流センタ補充要求 ／ 補充生産品：補充要求",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "物流センタ補充要求 ／ 補充生産品：営業所補充要求",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "物流センタ補充要求 ／ 補充生産品：物流センタ補充要求",
+      "answer": "○",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "物流センタ補充要求 ／ 補充生産品：補充要求明細",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "補充要求明細 ／ 計画生産品：補充要求",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "補充要求明細 ／ 計画生産品：補充要求明細",
+      "answer": "○",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "補充要求明細 ／ 補充生産品：補充要求",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "補充要求明細 ／ 補充生産品：営業所補充要求",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "補充要求明細 ／ 補充生産品：物流センタ補充要求",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "補充要求明細 ／ 補充生産品：補充要求明細",
+      "answer": "○",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "計画生産品補充要求明細 ／ 計画生産品：補充要求",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "計画生産品補充要求明細 ／ 計画生産品：補充要求明細",
+      "answer": "○",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "計画生産品補充要求明細 ／ 補充生産品：補充要求",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "計画生産品補充要求明細 ／ 補充生産品：営業所補充要求",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "計画生産品補充要求明細 ／ 補充生産品：物流センタ補充要求",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "計画生産品補充要求明細 ／ 補充生産品：補充要求明細",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "補充生産品補充要求明細 ／ 計画生産品：補充要求",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "補充生産品補充要求明細 ／ 計画生産品：補充要求明細",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "補充生産品補充要求明細 ／ 補充生産品：補充要求",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "補充生産品補充要求明細 ／ 補充生産品：営業所補充要求",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "補充生産品補充要求明細 ／ 補充生産品：物流センタ補充要求",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "補充生産品補充要求明細 ／ 補充生産品：補充要求明細",
+      "answer": "○",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "ア",
+      "answer": "生産要求年月日，生産要求時刻，FK[補充生産品商品コード]，生産要求数量",
+      "control": "schema"
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "イ",
+      "answer": "生産年月日，生産数量",
+      "control": "schema"
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "ウ",
+      "answer": "生産完了時刻",
+      "control": "schema"
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "エ",
+      "answer": "FK[商品コード]，FK[入庫先物流センタ拠点コード]",
+      "control": "schema"
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "オ",
+      "answer": "生産入庫年月日，生産入庫数量",
+      "control": "schema"
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "カ",
+      "answer": "入庫完了時刻",
+      "control": "schema"
+    }
+  ],
+  "2018-spring-db-pm1-q1": [
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "a",
+      "answer": "組織区分",
+      "control": "schema"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "b",
+      "answer": "FK[SC組織コード]",
+      "control": "schema"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "c",
+      "answer": "FK[営業所組織コード]",
+      "control": "schema"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "d",
+      "answer": "FK[営業所組織コード]",
+      "control": "schema"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "e",
+      "answer": "PK[顧客コード]",
+      "control": "schema"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "f",
+      "answer": "FK[地域コード]",
+      "control": "schema"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "g",
+      "answer": "FK[社員番号]",
+      "control": "schema"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "h",
+      "answer": "FK[営業所組織コード]",
+      "control": "schema"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "i",
+      "answer": "FK[顧客コード]",
+      "control": "schema"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "j",
+      "answer": "FK[見積番号]",
+      "control": "schema"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "k",
+      "answer": "FK[顧客コード]",
+      "control": "schema"
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "商品：商品区分",
+      "answer": "○",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "商品：製品区分",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "商品：オプション区分",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "商品：単体セット製品区分",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "商品：シリーズコード",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "商品：製品サイズ",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "商品：標準設置時間",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "商品：設置サービス商品コード",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "商品：セット製品本体製品商品コード",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "製品：商品区分",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "製品：製品区分",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "製品：オプション区分",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "製品：単体セット製品区分",
+      "answer": "○",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "製品：シリーズコード",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "製品：製品サイズ",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "製品：標準設置時間",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "製品：設置サービス商品コード",
+      "answer": "○",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "製品：セット製品本体製品商品コード",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "設置サービス：商品区分",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "設置サービス：製品区分",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "設置サービス：オプション区分",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "設置サービス：単体セット製品区分",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "設置サービス：シリーズコード",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "設置サービス：製品サイズ",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "設置サービス：標準設置時間",
+      "answer": "○",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "設置サービス：設置サービス商品コード",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "設置サービス：セット製品本体製品商品コード",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "本体製品：商品区分",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "本体製品：製品区分",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "本体製品：オプション区分",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "本体製品：単体セット製品区分",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "本体製品：シリーズコード",
+      "answer": "○",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "本体製品：製品サイズ",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "本体製品：標準設置時間",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "本体製品：設置サービス商品コード",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "本体製品：セット製品本体製品商品コード",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "オプション製品：商品区分",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "オプション製品：製品区分",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "オプション製品：オプション区分",
+      "answer": "○",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "オプション製品：単体セット製品区分",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "オプション製品：シリーズコード",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "オプション製品：製品サイズ",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "オプション製品：標準設置時間",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "オプション製品：設置サービス商品コード",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "オプション製品：セット製品本体製品商品コード",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "セット製品：商品区分",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "セット製品：製品区分",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "セット製品：オプション区分",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "セット製品：単体セット製品区分",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "セット製品：シリーズコード",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "セット製品：製品サイズ",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "セット製品：標準設置時間",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "セット製品：設置サービス商品コード",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "セット製品：セット製品本体製品商品コード",
+      "answer": "○",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "単体製品：商品区分",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "単体製品：製品区分",
+      "answer": "○",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "単体製品：オプション区分",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "単体製品：単体セット製品区分",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "単体製品：シリーズコード",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "単体製品：製品サイズ",
+      "answer": "○",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "単体製品：標準設置時間",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "単体製品：設置サービス商品コード",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "単体製品：セット製品本体製品商品コード",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "関係スキーマ",
+      "answer": "出荷指示（PK[出荷指示番号]，出荷指示年月日）",
+      "control": "schema"
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "関係名",
+      "answer": "受注明細",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "属性名",
+      "answer": "出荷指示番号",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "①",
+      "answer": "セット製品の場合",
+      "control": 15
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "②",
+      "answer": "設置サービスの場合",
+      "control": 15
+    }
+  ],
+  "2018-spring-db-pm1-q2": [
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "a",
+      "answer": "'1'",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "b",
+      "answer": "21",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "c",
+      "answer": "CURRENT_DATE",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "d",
+      "answer": "従業員.部署コード",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "e",
+      "answer": "DISTINCT",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "f",
+      "answer": "ORDER BY",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "(a) 結果",
+      "answer": "正常終了",
+      "control": [
+        "正常終了",
+        "エラー"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "(a) 理由",
+      "answer": "（なし）"
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "(b) 結果",
+      "answer": "エラー",
+      "control": [
+        "正常終了",
+        "エラー"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "(b) 理由",
+      "answer": "“部署”テーブルの管理者従業員コードの参照制約に違反するから",
+      "control": 40
+    },
+    {
+      "section": 2,
+      "sub": 2,
+      "label": "テーブル名",
+      "answer": "従業員家族"
+    },
+    {
+      "section": 2,
+      "sub": 2,
+      "label": "実行タイミング",
+      "answer": "削除の後"
+    },
+    {
+      "section": 2,
+      "sub": 2,
+      "label": "処理内容",
+      "answer": "削除した行を別テーブルに挿入する。"
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "契機",
+      "answer": "①"
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "不具合",
+      "answer": "削除された部署に所属している従業員が，“従業員”テーブルから削除される。",
+      "control": 40
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "最初の空欄",
+      "answer": "③",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "2番目の空欄",
+      "answer": "⑤",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "3番目の空欄",
+      "answer": "①",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 3,
+      "label": "(a)",
+      "answer": "更新によって無くなった部署コードが，“従業員”テーブルの“部署コード”に存在しないことを確認する。",
+      "control": 55
+    },
+    {
+      "section": 3,
+      "sub": 3,
+      "label": "(b)",
+      "answer": "“従業員”テーブルの“部署コード”に索引がなく，全行を参照しなければならないから",
+      "control": 50
+    }
+  ],
+  "2018-spring-db-pm1-q3": [
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "店舗",
+      "answer": "施設ID，内線番号"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "精算",
+      "answer": "なし"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "a",
+      "answer": "年齢 < 12",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "b",
+      "answer": "年齢区分 = '2'",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "c",
+      "answer": "年齢 BETWEEN 12 AND 59",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "d",
+      "answer": "年齢 >= 60",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 3,
+      "label": "①",
+      "answer": "非ユニーク索引",
+      "control": [
+        "ユニーク索引",
+        "非ユニーク索引"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 3,
+      "label": "②",
+      "answer": "同じ券番号の行が精算時にまとめて追加されるから",
+      "control": 35
+    },
+    {
+      "section": 1,
+      "sub": 4,
+      "label": "ア",
+      "answer": "最大行長",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 4,
+      "label": "イ",
+      "answer": "有効ページ長",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 4,
+      "label": "ウ",
+      "answer": "平均行長",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 4,
+      "label": "エ",
+      "answer": "見積行数",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 4,
+      "label": "オ",
+      "answer": "ページ当たりの平均行数",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 4,
+      "label": "カ",
+      "answer": "ページ長",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 4,
+      "label": "キ",
+      "answer": "必要ページ数",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 5,
+      "label": "ク",
+      "answer": "必要ページ数",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 5,
+      "label": "ケ",
+      "answer": "探索行数",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 5,
+      "label": "コ",
+      "answer": "ページ当たりの平均行数",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "W3：直前",
+      "answer": "W1",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "W3：直後",
+      "answer": "W7",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "W9：直前",
+      "answer": "W1",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "W9：直後",
+      "answer": "W10",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 2,
+      "label": "DML",
+      "answer": "DML2，DML3"
+    },
+    {
+      "section": 2,
+      "sub": 2,
+      "label": "理由",
+      "answer": "作業W7直後のテーブルは空だと判断されて表探索に決められるから",
+      "control": 40
+    },
+    {
+      "section": 2,
+      "sub": 3,
+      "label": "あ",
+      "answer": "W10",
+      "control": "short"
+    }
+  ],
+  "2018-spring-db-pm2-q1": [
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "ア",
+      "answer": "精算期限，上司承認日，精査日，仮払金額，仮払金残高，支払実行日",
+      "control": "schema"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "イ",
+      "answer": "PK[申請番号]，PK[精算日]，精算金額",
+      "control": "schema"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "外貨金額：データ型",
+      "answer": "DECIMAL(12,2)",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "外貨金額：NOT NULL",
+      "answer": "N",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "外貨金額：格納長（バイト）",
+      "answer": "8",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "支払先：データ型",
+      "answer": "NCHAR VARYING(100)",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "支払先：NOT NULL",
+      "answer": "N",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "支払先：格納長（バイト）",
+      "answer": "45",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "支払目的：データ型",
+      "answer": "NCHAR VARYING(1000)",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "支払目的：NOT NULL",
+      "answer": "Y",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "支払目的：格納長（バイト）",
+      "answer": "132",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "支払予定日：データ型",
+      "answer": "DATE",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "支払予定日：NOT NULL",
+      "answer": "N",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "支払予定日：格納長（バイト）",
+      "answer": "5",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "支払番号：データ型",
+      "answer": "INTEGER",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "支払番号：NOT NULL",
+      "answer": "N",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "支払番号：格納長（バイト）",
+      "answer": "5",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "外貨金額：索引 P",
+      "answer": "（空欄）",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "外貨金額：索引 NU①",
+      "answer": "（空欄）",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "外貨金額：索引 NU②",
+      "answer": "（空欄）",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "外貨金額：索引 NU③",
+      "answer": "（空欄）",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "外貨金額：索引 U",
+      "answer": "（空欄）",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "支払先：索引 P",
+      "answer": "（空欄）",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "支払先：索引 NU①",
+      "answer": "（空欄）",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "支払先：索引 NU②",
+      "answer": "（空欄）",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "支払先：索引 NU③",
+      "answer": "（空欄）",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "支払先：索引 U",
+      "answer": "（空欄）",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "支払目的：索引 P",
+      "answer": "（空欄）",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "支払目的：索引 NU①",
+      "answer": "（空欄）",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "支払目的：索引 NU②",
+      "answer": "（空欄）",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "支払目的：索引 NU③",
+      "answer": "（空欄）",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "支払目的：索引 U",
+      "answer": "（空欄）",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "支払予定日：索引 P",
+      "answer": "（空欄）",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "支払予定日：索引 NU①",
+      "answer": "（空欄）",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "支払予定日：索引 NU②",
+      "answer": "（空欄）",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "支払予定日：索引 NU③",
+      "answer": "（空欄）",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "支払予定日：索引 U",
+      "answer": "1",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "支払番号：索引 P",
+      "answer": "（空欄）",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "支払番号：索引 NU①",
+      "answer": "（空欄）",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "支払番号：索引 NU②",
+      "answer": "（空欄）",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "支払番号：索引 NU③",
+      "answer": "（空欄）",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "支払番号：索引 U",
+      "answer": "2",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 3,
+      "label": "ウ",
+      "answer": "申請種別 = '1' OR 申請種別 = '2' AND 支払先 IS NOT NULL",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 4,
+      "label": "a",
+      "answer": "4,000",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 4,
+      "label": "b",
+      "answer": "15",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 4,
+      "label": "c",
+      "answer": "100,000",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 4,
+      "label": "d",
+      "answer": "400",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 0,
+      "label": "e",
+      "answer": "10",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 0,
+      "label": "f",
+      "answer": "2",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 0,
+      "label": "g",
+      "answer": "3",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 0,
+      "label": "h",
+      "answer": "1",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 0,
+      "label": "i",
+      "answer": "0.41",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "① 仮想CPU数",
+      "answer": "8"
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "① クラス名",
+      "answer": "C4"
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "②",
+      "answer": "更新ログの保存から障害発生までの間に更新がコミットされた場合",
+      "control": 35
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "j",
+      "answer": "115,500",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "k",
+      "answer": "220,000",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "l",
+      "answer": "1,432,600（1,322,400も可）",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "m",
+      "answer": "2,600（2,400も可）",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "n",
+      "answer": "2,600（2,400も可）",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "② 処理名",
+      "answer": "経費伝票作成"
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "② 対策内容",
+      "answer": "バッチPGMと同じ処理を行うストアドプロシジャを作成し，APから呼び出す。",
+      "control": 40
+    },
+    {
+      "section": 3,
+      "sub": 3,
+      "label": "対策",
+      "answer": "データベースを平日の8時に起動し，23時に停止する。",
+      "control": 30
+    }
+  ],
+  "2018-spring-db-pm2-q2": [
+    {
+      "section": 0,
+      "sub": 1,
+      "label": "ア",
+      "answer": "中間仕掛品の製造を指図する",
+      "control": "short"
+    },
+    {
+      "section": 0,
+      "sub": 1,
+      "label": "イ",
+      "answer": "構成部品を発注する",
+      "control": "short"
+    },
+    {
+      "section": 0,
+      "sub": 2,
+      "label": "購買ユニット：受注品目",
+      "answer": "○",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 0,
+      "sub": 2,
+      "label": "購買ユニット：投入品目",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 0,
+      "sub": 2,
+      "label": "購買ユニット：製造品目",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 0,
+      "sub": 2,
+      "label": "購買ユニット：発注品目",
+      "answer": "○",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 0,
+      "sub": 2,
+      "label": "中間仕掛品：受注品目",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 0,
+      "sub": 2,
+      "label": "中間仕掛品：投入品目",
+      "answer": "○",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 0,
+      "sub": 2,
+      "label": "中間仕掛品：製造品目",
+      "answer": "○",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 0,
+      "sub": 2,
+      "label": "中間仕掛品：発注品目",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 0,
+      "sub": 2,
+      "label": "構成部品：受注品目",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 0,
+      "sub": 2,
+      "label": "構成部品：投入品目",
+      "answer": "○",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 0,
+      "sub": 2,
+      "label": "構成部品：製造品目",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 0,
+      "sub": 2,
+      "label": "構成部品：発注品目",
+      "answer": "○",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 0,
+      "sub": 2,
+      "label": "専用すり合せ部品：受注品目",
+      "answer": "○",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 0,
+      "sub": 2,
+      "label": "専用すり合せ部品：投入品目",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 0,
+      "sub": 2,
+      "label": "専用すり合せ部品：製造品目",
+      "answer": "○",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 0,
+      "sub": 2,
+      "label": "専用すり合せ部品：発注品目",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 0,
+      "sub": 2,
+      "label": "汎用すり合せ部品：受注品目",
+      "answer": "○",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 0,
+      "sub": 2,
+      "label": "汎用すり合せ部品：投入品目",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 0,
+      "sub": 2,
+      "label": "汎用すり合せ部品：製造品目",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 0,
+      "sub": 2,
+      "label": "汎用すり合せ部品：発注品目",
+      "answer": "○",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 0,
+      "sub": 2,
+      "label": "ソフトウェア：受注品目",
+      "answer": "○",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 0,
+      "sub": 2,
+      "label": "ソフトウェア：投入品目",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 0,
+      "sub": 2,
+      "label": "ソフトウェア：製造品目",
+      "answer": "○",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 0,
+      "sub": 2,
+      "label": "ソフトウェア：発注品目",
+      "answer": "○",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 0,
+      "sub": 2,
+      "label": "設置・試運転：受注品目",
+      "answer": "○",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 0,
+      "sub": 2,
+      "label": "設置・試運転：投入品目",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 0,
+      "sub": 2,
+      "label": "設置・試運転：製造品目",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 0,
+      "sub": 2,
+      "label": "設置・試運転：発注品目",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 0,
+      "sub": 3,
+      "label": "あ",
+      "answer": "得意先",
+      "control": "short"
+    },
+    {
+      "section": 0,
+      "sub": 3,
+      "label": "い",
+      "answer": "商談",
+      "control": "short"
+    },
+    {
+      "section": 0,
+      "sub": 3,
+      "label": "う",
+      "answer": "入荷",
+      "control": "short"
+    },
+    {
+      "section": 0,
+      "sub": 4,
+      "label": "a",
+      "answer": "FK[上位部門コード]",
+      "control": "schema"
+    },
+    {
+      "section": 0,
+      "sub": 4,
+      "label": "b",
+      "answer": "取引先区分",
+      "control": "schema"
+    },
+    {
+      "section": 0,
+      "sub": 4,
+      "label": "c",
+      "answer": "契約先フラグ，出荷先フラグ",
+      "control": "schema"
+    },
+    {
+      "section": 0,
+      "sub": 4,
+      "label": "d",
+      "answer": "案件名，案件内容，商談年月日，FK[契約取引先コード]，FK[技術営業社員コード]",
+      "control": "schema"
+    },
+    {
+      "section": 0,
+      "sub": 4,
+      "label": "e",
+      "answer": "全体設計内容",
+      "control": "schema"
+    },
+    {
+      "section": 0,
+      "sub": 4,
+      "label": "f",
+      "answer": "工程順",
+      "control": "schema"
+    },
+    {
+      "section": 0,
+      "sub": 4,
+      "label": "g",
+      "answer": "すり合せ箇所",
+      "control": "schema"
+    },
+    {
+      "section": 0,
+      "sub": 4,
+      "label": "h",
+      "answer": "詳細仕様",
+      "control": "schema"
+    },
+    {
+      "section": 0,
+      "sub": 4,
+      "label": "i",
+      "answer": "開始予定年月日，終了予定年月日",
+      "control": "schema"
+    },
+    {
+      "section": 0,
+      "sub": 4,
+      "label": "j",
+      "answer": "FK[受注#]，FK[受注明細#]，専汎区分",
+      "control": "schema"
+    },
+    {
+      "section": 0,
+      "sub": 4,
+      "label": "k",
+      "answer": "FK[受注#]，FK[受注明細#]，指示年月日",
+      "control": "schema"
+    },
+    {
+      "section": 0,
+      "sub": 4,
+      "label": "l",
+      "answer": "FK[受注#]，FK[受注明細#]",
+      "control": "schema"
+    },
+    {
+      "section": 0,
+      "sub": 4,
+      "label": "m",
+      "answer": "FK[設計#]",
+      "control": "schema"
+    },
+    {
+      "section": 0,
+      "sub": 4,
+      "label": "n",
+      "answer": "FK[受注#]，FK[受注明細#]，納品方法",
+      "control": "schema"
+    },
+    {
+      "section": 0,
+      "sub": 4,
+      "label": "o",
+      "answer": "FK[製造品目コード]，製造指図数量，優先度",
+      "control": "schema"
+    },
+    {
+      "section": 0,
+      "sub": 4,
+      "label": "p",
+      "answer": "FK[製造品目コード]，製造指図数量",
+      "control": "schema"
+    },
+    {
+      "section": 0,
+      "sub": 4,
+      "label": "q",
+      "answer": "PK[入荷#]，入荷年月日，入荷数量，FK[発注#]",
+      "control": "schema"
+    },
+    {
+      "section": 0,
+      "sub": 4,
+      "label": "r",
+      "answer": "PK[所要量明細#]，FK[投入品目コード]，必要数量，引当済数量，FK[発注#]，FK[製造#]",
+      "control": "schema"
+    },
+    {
+      "section": 0,
+      "sub": 4,
+      "label": "追加するサブタイプ①",
+      "answer": "ユニット発注（PK[発注#]，FK[受注#]，FK[受注明細#]，直納区分）",
+      "control": "schema"
+    },
+    {
+      "section": 0,
+      "sub": 4,
+      "label": "追加するサブタイプ②",
+      "answer": "すり合せ部品発注（PK[発注#]，FK[設計#]，発注数量）",
+      "control": "schema"
+    },
+    {
+      "section": 0,
+      "sub": 4,
+      "label": "追加するサブタイプ③",
+      "answer": "ソフトウェア発注（PK[発注#]，FK[受注#]，FK[受注明細#]，瑕疵担保期間）",
+      "control": "schema"
+    },
+    {
+      "section": 0,
+      "sub": 4,
+      "label": "追加するサブタイプ④",
+      "answer": "構成部品定量発注（PK[発注#]，FK[発注品目コード]，発注数量，発注時在庫数量）",
+      "control": "schema"
+    },
+    {
+      "section": 0,
+      "sub": 4,
+      "label": "追加するサブタイプ⑤",
+      "answer": "構成部品都度発注（PK[発注#]，FK[発注品目コード]，発注数量，希望納入年月日）",
+      "control": "schema"
+    }
+  ],
+  "2019-spring-db-pm1-q1": [
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "a",
+      "answer": "FK[種目分類コード]",
+      "control": "schema"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "b",
+      "answer": "FK[主催者番号]",
+      "control": "schema"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "c",
+      "answer": "FK[種目コード]",
+      "control": "schema"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "d",
+      "answer": "PK[大会番号]",
+      "control": "schema"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "e",
+      "answer": "PK[会員番号]",
+      "control": "schema"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "f",
+      "answer": "入金年月日",
+      "control": "schema"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "g",
+      "answer": "使用ポイント",
+      "control": "schema"
+    },
+    {
+      "section": 2,
+      "sub": 0,
+      "label": "募集期間に対する本日：条件5",
+      "answer": "前",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 0,
+      "label": "募集期間に対する本日：条件6",
+      "answer": "中",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 0,
+      "label": "募集期間に対する本日：条件7",
+      "answer": "後",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 0,
+      "label": "募集期間に対する本日：条件8",
+      "answer": "後",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 0,
+      "label": "募集期間に対する本日：条件9",
+      "answer": "－（後も可）",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 0,
+      "label": "募集期間に対する本日：条件10",
+      "answer": "－（後も可）",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 0,
+      "label": "参加申込数：条件5",
+      "answer": "－",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 0,
+      "label": "参加申込数：条件6",
+      "answer": "－",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 0,
+      "label": "参加申込数：条件7",
+      "answer": "以下",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 0,
+      "label": "参加申込数：条件8",
+      "answer": "超過",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 0,
+      "label": "参加申込数：条件9",
+      "answer": "超過",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 0,
+      "label": "参加申込数：条件10",
+      "answer": "超過",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 0,
+      "label": "抽選年月日に対する本日：条件5",
+      "answer": "－（前も可）",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 0,
+      "label": "抽選年月日に対する本日：条件6",
+      "answer": "－（前も可）",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 0,
+      "label": "抽選年月日に対する本日：条件7",
+      "answer": "－",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 0,
+      "label": "抽選年月日に対する本日：条件8",
+      "answer": "前",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 0,
+      "label": "抽選年月日に対する本日：条件9",
+      "answer": "当日",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "① 関係名",
+      "answer": "抽選エントリ枠",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "① 属性名",
+      "answer": "FK[後続エントリ枠番号]",
+      "control": "schema"
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "② 関係名",
+      "answer": "参加申込み",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "② 属性名",
+      "answer": "抽選結果",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "③ 関係スキーマ",
+      "answer": "抽選結果（PK[大会番号]，PK[会員番号]，PK[エントリ枠番号]，抽選結果）",
+      "control": "schema"
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "属性名",
+      "answer": "PK[会員番号]，PK[ポイント付与年月日]，付与ポイント，使用済ポイント",
+      "control": "schema"
+    }
+  ],
+  "2019-spring-db-pm1-q2": [
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "ア",
+      "answer": "出庫要求明細",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "イ",
+      "answer": "挿入",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "ウ",
+      "answer": "部品番号",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "エ",
+      "answer": "在庫",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "オ",
+      "answer": "実在庫数量",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "カ",
+      "answer": "引当済数量",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "(a)",
+      "answer": "BEFOREトリガを実行した後に，別のトランザクションが割り込んで先に実行されてしまうと，AFTERトリガで不当な引当判定に基づいて更新することになる。",
+      "control": 80
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "(b)",
+      "answer": "FOR UPDATE句を指定する。",
+      "control": 20
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "a",
+      "answer": "ア",
+      "control": [
+        "ア",
+        "イ",
+        "ウ",
+        "エ",
+        "オ",
+        "カ",
+        "キ",
+        "ク"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "b",
+      "answer": "オ",
+      "control": [
+        "ア",
+        "イ",
+        "ウ",
+        "エ",
+        "オ",
+        "カ",
+        "キ",
+        "ク"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "c",
+      "answer": "ウ",
+      "control": [
+        "ア",
+        "イ",
+        "ウ",
+        "エ",
+        "オ",
+        "カ",
+        "キ",
+        "ク"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "d",
+      "answer": "キ",
+      "control": [
+        "ア",
+        "イ",
+        "ウ",
+        "エ",
+        "オ",
+        "カ",
+        "キ",
+        "ク"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 2,
+      "label": "あ",
+      "answer": "出庫",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 2,
+      "label": "い",
+      "answer": "在庫",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 2,
+      "label": "う",
+      "answer": "引当済数量",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 2,
+      "label": "え",
+      "answer": "発注済フラグ",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "テーブル名",
+      "answer": "在庫",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "①",
+      "answer": "出庫要求明細の登録と入庫を，それぞれ部品番号順に処理する。",
+      "control": 50
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "②",
+      "answer": "入庫は複数の部品をまとめず，部品ごとに別トランザクションで処理する。",
+      "control": 50
+    }
+  ],
+  "2019-spring-db-pm1-q3": [
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "ア",
+      "answer": "P3",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "イ",
+      "answer": "P6",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "ウ",
+      "answer": "P8",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "エ",
+      "answer": "P7",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "オ",
+      "answer": "P7",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "カ",
+      "answer": "P2",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "a",
+      "answer": "子品番",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "b",
+      "answer": "親品番",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 2,
+      "label": "P2",
+      "answer": "2",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 2,
+      "label": "P3",
+      "answer": "5",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 2,
+      "label": "P4",
+      "answer": "2",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "c",
+      "answer": "親品番",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "d",
+      "answer": "子品番",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "品番",
+      "answer": "AX",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "列名",
+      "answer": "子品番，親品番",
+      "control": "short"
+    },
+    {
+      "section": 4,
+      "sub": 1,
+      "label": "理由",
+      "answer": "単体部品は子部品がないのでSQL3の発行は不要だから",
+      "control": 30
+    },
+    {
+      "section": 4,
+      "sub": 2,
+      "label": "結果",
+      "answer": "処理が無限ループして終わらない。",
+      "control": 20
+    },
+    {
+      "section": 4,
+      "sub": 4,
+      "label": "実行順序",
+      "answer": "SQL4を部品の品番順に実行する。",
+      "control": 20
+    }
+  ],
+  "2019-spring-db-pm2-q1": [
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "処理5：支店",
+      "answer": "○",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "処理5：端末種別",
+      "answer": "○",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "処理5：窓口端末",
+      "answer": "○",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "処理5：取引種別",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "処理5：取引",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "処理5：画面",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "処理5：行員",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "処理5：行員所属",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "処理6：支店",
+      "answer": "○",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "処理6：端末種別",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "処理6：窓口端末",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "処理6：取引種別",
+      "answer": "○",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "処理6：取引",
+      "answer": "○",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "処理6：画面",
+      "answer": "○",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "処理6：行員",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "処理6：行員所属",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "1行目：テーブル名",
+      "answer": "窓口端末",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "1行目：索引を定義する列名",
+      "answer": "端末種別コード",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "2行目：テーブル名",
+      "answer": "取引",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "2行目：索引を定義する列名",
+      "answer": "取引種別コード",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 3,
+      "label": "a",
+      "answer": "IN('1','2')",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 3,
+      "label": "b",
+      "answer": "= '1'",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 3,
+      "label": "c",
+      "answer": "IS NULL",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 3,
+      "label": "d",
+      "answer": "ORDER BY 平均経過時間 DESC",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 4,
+      "label": "採番方法",
+      "answer": "店番，機番，TSの順に連続する整数",
+      "control": 20
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "e",
+      "answer": "ログ ID = '105'",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "f",
+      "answer": "B.親ログ ID",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "g",
+      "answer": "A.左端番号 >= B.左端番号",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "h",
+      "answer": "A.右端番号 <= B.右端番号",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 2,
+      "label": "i",
+      "answer": "4",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 2,
+      "label": "j",
+      "answer": "8",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 2,
+      "label": "k",
+      "answer": "3",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 2,
+      "label": "l",
+      "answer": "更新は行わない",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 2,
+      "label": "m",
+      "answer": "再帰的な問合せ",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 2,
+      "label": "n",
+      "answer": "結合",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 3,
+      "label": "理由",
+      "answer": "WHERE句の述語が関数を含む場合，表探索になるから",
+      "control": 30
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "①",
+      "answer": "一つの区分に行追加が集中し，待ちが発生するから",
+      "control": 30
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "②",
+      "answer": "検索キーが店番，機番，TSに限られるから",
+      "control": 30
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "o",
+      "answer": "60",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "p",
+      "answer": "60M",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "q",
+      "answer": "12",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "r",
+      "answer": "12M",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "ローカル索引を構成する列名",
+      "answer": "年月，店番"
+    },
+    {
+      "section": 3,
+      "sub": 3,
+      "label": "①",
+      "answer": "結合対象のデータが各ノードに分散しており，テーブル結合を行うごとにノード間通信が必要となるから",
+      "control": 50
+    },
+    {
+      "section": 3,
+      "sub": 3,
+      "label": "②",
+      "answer": "データの配置方法に複製を指定する。",
+      "control": 20
+    },
+    {
+      "section": 3,
+      "sub": 3,
+      "label": "③",
+      "answer": "分散キーをログID列だけに変更する。",
+      "control": 20
+    }
+  ],
+  "2019-spring-db-pm2-q2": [
+    {
+      "section": 1,
+      "sub": 3,
+      "label": "a",
+      "answer": "FK[要求先焼成部門コード]",
+      "control": "schema"
+    },
+    {
+      "section": 1,
+      "sub": 3,
+      "label": "b",
+      "answer": "調達内製区分，貯蔵区分",
+      "control": "schema"
+    },
+    {
+      "section": 1,
+      "sub": 3,
+      "label": "c",
+      "answer": "FK[代替外注成型材料品目コード]",
+      "control": "schema"
+    },
+    {
+      "section": 1,
+      "sub": 3,
+      "label": "d",
+      "answer": "FK[内製成型材料品目コード]",
+      "control": "schema"
+    },
+    {
+      "section": 1,
+      "sub": 3,
+      "label": "e",
+      "answer": "PK[生地材料品目コード]，PK[使用品目コード]，使用量",
+      "control": "schema"
+    },
+    {
+      "section": 1,
+      "sub": 3,
+      "label": "f",
+      "answer": "PK[内製成型材料品目コード]，PK[使用品目コード]，使用量",
+      "control": "schema"
+    },
+    {
+      "section": 1,
+      "sub": 3,
+      "label": "g",
+      "answer": "PK[製造番号]，PK[供給番号]，PK[供給明細番号]，引当数量",
+      "control": "schema"
+    },
+    {
+      "section": 1,
+      "sub": 3,
+      "label": "h",
+      "answer": "FK[成型材料製造依頼番号]，FK[補充要求番号]",
+      "control": "schema"
+    },
+    {
+      "section": 1,
+      "sub": 3,
+      "label": "i",
+      "answer": "PK[補充要求番号]，FK[要求先Mix部門コード]，在庫確認時間帯",
+      "control": "schema"
+    },
+    {
+      "section": 1,
+      "sub": 3,
+      "label": "j",
+      "answer": "PK[補充要求番号]，FK[注文番号]",
+      "control": "schema"
+    },
+    {
+      "section": 1,
+      "sub": 3,
+      "label": "k",
+      "answer": "FK[補充要求番号]",
+      "control": "schema"
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "① 行番号",
+      "answer": "3，9，10，12，14"
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "② 変更後の指示情報①",
+      "answer": "焼成指示"
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "② 変更後の指示情報②",
+      "answer": "焼成指示"
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "③ 指示情報",
+      "answer": "成型材料製造依頼書"
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "③ 実績情報",
+      "answer": "成型実績票"
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "③ 物流の始点・終点：食材業者",
+      "answer": "（空欄）",
+      "control": [
+        "F",
+        "T",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "③ 物流の始点・終点：本館貯蔵庫",
+      "answer": "（空欄）",
+      "control": [
+        "F",
+        "T",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "③ 物流の始点・終点：新館貯蔵庫",
+      "answer": "（空欄）",
+      "control": [
+        "F",
+        "T",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "③ 物流の始点・終点：本館Mix部門",
+      "answer": "（空欄）",
+      "control": [
+        "F",
+        "T",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "③ 物流の始点・終点：本館成型部門",
+      "answer": "F",
+      "control": [
+        "F",
+        "T",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "③ 物流の始点・終点：本館焼成部門",
+      "answer": "（空欄）",
+      "control": [
+        "F",
+        "T",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "③ 物流の始点・終点：新館Mix部門",
+      "answer": "（空欄）",
+      "control": [
+        "F",
+        "T",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "③ 物流の始点・終点：新館成型部門",
+      "answer": "T",
+      "control": [
+        "F",
+        "T",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "③ 物流の始点・終点：新館焼成部門",
+      "answer": "（空欄）",
+      "control": [
+        "F",
+        "T",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "③ 物流の始点・終点：MD",
+      "answer": "（空欄）",
+      "control": [
+        "F",
+        "T",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "③ 物流の始点・終点：CD",
+      "answer": "（空欄）",
+      "control": [
+        "F",
+        "T",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "③ 物流の始点・終点：BQ",
+      "answer": "（空欄）",
+      "control": [
+        "F",
+        "T",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "③ 物流の始点・終点：CF",
+      "answer": "（空欄）",
+      "control": [
+        "F",
+        "T",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "③ 物流の対象物：原材料",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "③ 物流の対象物：生地材料",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "③ 物流の対象物：成型材料",
+      "answer": "○",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "③ 物流の対象物：製品",
+      "answer": "（空欄）",
+      "control": [
+        "○",
+        "（空欄）"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 3,
+      "label": "l",
+      "answer": "PK[対象年月日]，PK[対象時間帯]，PK[焼成部門コード]，PK[焼成番号]，PK[要求番号]，PK[要求明細番号]，引当数量",
+      "control": "schema"
+    },
+    {
+      "section": 2,
+      "sub": 3,
+      "label": "m",
+      "answer": "FK[対象年月日]，FK[対象時間帯]，FK[焼成部門コード]，FK[焼成番号]",
+      "control": "schema"
+    },
+    {
+      "section": 2,
+      "sub": 3,
+      "label": "n",
+      "answer": "［FK[対象年月日]］，［FK[対象時間帯]］，FK[焼成番号]",
+      "control": "schema"
+    }
+  ],
+  "2020-october-db-pm1-q1": [
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "ア",
+      "answer": "発注",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "イ",
+      "answer": "発注明細",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "a",
+      "answer": "FK[ルート番号]，配送順序",
+      "control": "schema"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "b",
+      "answer": "生産ロットサイズ",
+      "control": "schema"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "c",
+      "answer": "FK[生産工場拠点コード]",
+      "control": "schema"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "d",
+      "answer": "PK[発注番号]，FK[店舗拠点コード]，発注登録日時，配送予定日時",
+      "control": "schema"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "e",
+      "answer": "PK[発注番号]，PK[発注明細番号]，FK[商品コード]，発注数量，FK[生産番号]，FK[配送番号]",
+      "control": "schema"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "f",
+      "answer": "FK[生産工場拠点コード]",
+      "control": "schema"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "g",
+      "answer": "PK[商品コード]",
+      "control": "schema"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "h",
+      "answer": "FK[店舗拠点コード]",
+      "control": "schema"
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "ウ",
+      "answer": "委託工場",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "エ",
+      "answer": "自社工場",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "オ",
+      "answer": "納入ルート",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "カ",
+      "answer": "配送ルート",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 2,
+      "label": "i",
+      "answer": "PK[拠点コード]，委託開始年月日",
+      "control": "schema"
+    },
+    {
+      "section": 2,
+      "sub": 2,
+      "label": "j",
+      "answer": "FK[工場拠点コード]，FK[物流センタ拠点コード]",
+      "control": "schema"
+    },
+    {
+      "section": 2,
+      "sub": 2,
+      "label": "k",
+      "answer": "FK[物流センタ拠点コード]",
+      "control": "schema"
+    },
+    {
+      "section": 2,
+      "sub": 3,
+      "label": "① カーディナリティ",
+      "answer": "1"
+    },
+    {
+      "section": 2,
+      "sub": 3,
+      "label": "① 発生する場合",
+      "answer": "自社工場から物流センタに納入する場合",
+      "control": 25
+    },
+    {
+      "section": 2,
+      "sub": 3,
+      "label": "② カーディナリティ",
+      "answer": "3"
+    },
+    {
+      "section": 2,
+      "sub": 3,
+      "label": "② 発生する場合",
+      "answer": "委託工場から物流センタに納入する場合",
+      "control": 25
+    }
+  ],
+  "2020-october-db-pm1-q2": [
+    {
+      "section": 1,
+      "sub": 0,
+      "label": "a",
+      "answer": "CASE WHEN",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 0,
+      "label": "b",
+      "answer": "IS NULL",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 0,
+      "label": "c",
+      "answer": "LEFT [OUTER] JOIN",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 0,
+      "label": "d",
+      "answer": "BETWEEN",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 0,
+      "label": "e",
+      "answer": "AND",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 0,
+      "label": "f",
+      "answer": "ORDER BY",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 0,
+      "label": "g",
+      "answer": "DESC",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "あ",
+      "answer": "同じ座席 又は 同じチケット",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "い",
+      "answer": "購入できない",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "う",
+      "answer": "購入番号",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "え",
+      "answer": "NULL",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "お",
+      "answer": "コミット",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 2,
+      "label": "ISOLATIONレベル",
+      "answer": "②",
+      "control": [
+        "①",
+        "②"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 2,
+      "label": "理由",
+      "answer": "同時実行した他者が同じ座席を仮予約できないようにするため",
+      "control": 30
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "ア",
+      "answer": "席種在庫",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "イ",
+      "answer": "座席状況",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "ウ",
+      "answer": "1 か所のデータを複数か所に複製",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "エ",
+      "answer": "キャンセルされた座席が空席として表示されない。",
+      "control": 30
+    },
+    {
+      "section": 3,
+      "sub": 3,
+      "label": "1行目：レプリケーション元テーブル",
+      "answer": "座席状況",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 3,
+      "label": "1行目：レプリケーション対象列",
+      "answer": "空席フラグ",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 3,
+      "label": "2行目：レプリケーション元テーブル",
+      "answer": "席種在庫",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 3,
+      "label": "2行目：レプリケーション対象列",
+      "answer": "空席数",
+      "control": "short"
+    }
+  ],
+  "2020-october-db-pm1-q3": [
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "a",
+      "answer": "地域(地域コード)",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "b",
+      "answer": "社員(社員 ID)",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "場合",
+      "answer": "個人会員番号と法人会員番号が重複する場合",
+      "control": 25
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "不都合",
+      "answer": "会員番号の登録が主キー重複違反で失敗する",
+      "control": 25
+    },
+    {
+      "section": 1,
+      "sub": 3,
+      "label": "c",
+      "answer": "Y",
+      "control": [
+        "Y",
+        "N"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 3,
+      "label": "d",
+      "answer": "Y",
+      "control": [
+        "Y",
+        "N"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 3,
+      "label": "e",
+      "answer": "N",
+      "control": [
+        "Y",
+        "N"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 3,
+      "label": "f",
+      "answer": "N",
+      "control": [
+        "Y",
+        "N"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 3,
+      "label": "g",
+      "answer": "N",
+      "control": [
+        "Y",
+        "N"
+      ]
+    },
+    {
+      "section": 1,
+      "sub": 3,
+      "label": "h",
+      "answer": "RESTRICT",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 3,
+      "label": "i",
+      "answer": "SET NULL",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 3,
+      "label": "j",
+      "answer": "性別 IN (‘M’,‘F’)",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 3,
+      "label": "k",
+      "answer": "年代 IS NOT NULL",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 3,
+      "label": "l",
+      "answer": "担当社員 ID IS NULL",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 3,
+      "label": "m",
+      "answer": "年代 IS NULL",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "あ",
+      "answer": "②",
+      "control": [
+        "①",
+        "②",
+        "③",
+        "④",
+        "⑤",
+        "⑥",
+        "⑦",
+        "⑧",
+        "⑨",
+        "⑩",
+        "⑪",
+        "⑫"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "い",
+      "answer": "①",
+      "control": [
+        "①",
+        "②",
+        "③",
+        "④",
+        "⑤",
+        "⑥",
+        "⑦",
+        "⑧",
+        "⑨",
+        "⑩",
+        "⑪",
+        "⑫"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "う",
+      "answer": "⑥",
+      "control": [
+        "①",
+        "②",
+        "③",
+        "④",
+        "⑤",
+        "⑥",
+        "⑦",
+        "⑧",
+        "⑨",
+        "⑩",
+        "⑪",
+        "⑫"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "え",
+      "answer": "④",
+      "control": [
+        "①",
+        "②",
+        "③",
+        "④",
+        "⑤",
+        "⑥",
+        "⑦",
+        "⑧",
+        "⑨",
+        "⑩",
+        "⑪",
+        "⑫"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "お",
+      "answer": "⑧",
+      "control": [
+        "①",
+        "②",
+        "③",
+        "④",
+        "⑤",
+        "⑥",
+        "⑦",
+        "⑧",
+        "⑨",
+        "⑩",
+        "⑪",
+        "⑫"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "か",
+      "answer": "⑨",
+      "control": [
+        "①",
+        "②",
+        "③",
+        "④",
+        "⑤",
+        "⑥",
+        "⑦",
+        "⑧",
+        "⑨",
+        "⑩",
+        "⑪",
+        "⑫"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "き",
+      "answer": "⑩",
+      "control": [
+        "①",
+        "②",
+        "③",
+        "④",
+        "⑤",
+        "⑥",
+        "⑦",
+        "⑧",
+        "⑨",
+        "⑩",
+        "⑪",
+        "⑫"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "く",
+      "answer": "⑫",
+      "control": [
+        "①",
+        "②",
+        "③",
+        "④",
+        "⑤",
+        "⑥",
+        "⑦",
+        "⑧",
+        "⑨",
+        "⑩",
+        "⑪",
+        "⑫"
+      ]
+    },
+    {
+      "section": 2,
+      "sub": 2,
+      "label": "販売額",
+      "answer": "分析対象の商品が全く売れなかった店舗の場合",
+      "control": 25
+    },
+    {
+      "section": 2,
+      "sub": 2,
+      "label": "クーポン額",
+      "answer": "分析対象の商品にクーポンを適用しなかった場合",
+      "control": 25
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "イ",
+      "answer": "200",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "ロ",
+      "answer": "36,000",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "ハ",
+      "answer": "4,200",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "A",
+      "answer": "性別，年代，小分類コード",
+      "control": "short"
+    }
+  ],
+  "2020-october-db-pm2-q1": [
+    {
+      "section": 1,
+      "sub": 1,
+      "label": "列名",
+      "answer": "世帯区分，地域コード"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "a",
+      "answer": "探索行数",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "b",
+      "answer": "ページ当たり平均行数",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "c",
+      "answer": "探索行数",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "d",
+      "answer": "540,000",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "e",
+      "answer": "6,000",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "f",
+      "answer": "540,000",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "② テーブル構造",
+      "answer": "日別計（PK[住居番号]，PK[年月日]，PK[電力区分]，電力量）",
+      "control": "schema"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "③ 最小読込みページ数",
+      "answer": "1",
+      "control": "short"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "③ 最大読込みページ数",
+      "answer": "120",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "g",
+      "answer": "CROSS",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "h",
+      "answer": "距離",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "i",
+      "answer": "AVG(標準発電量) AS 平均標準発電量",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "j",
+      "answer": "GROUP BY 住居番号, 年月日, 時",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 1,
+      "label": "k",
+      "answer": "SUM(発電量) AS 時間発電量",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 2,
+      "label": "l",
+      "answer": "①の結果と住居を住居番号で内結合",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 2,
+      "label": "m",
+      "answer": "平均使用電力量=[地域コード，階級番号ごとの合計使用電力量の平均]",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 2,
+      "label": "n",
+      "answer": "W3 の全行を選択",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 2,
+      "label": "o",
+      "answer": "①の結果と地域を地域コードで内結合",
+      "control": "short"
+    },
+    {
+      "section": 2,
+      "sub": 2,
+      "label": "p",
+      "answer": "PARTITION BY 地域コード ORDER BY 合計使用電力量 DESC",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "①",
+      "answer": "分散するテーブルは住居番号が分散キーであり，ノード当たりの行数とDBサーバの仕様が同じだから",
+      "control": 50
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "②",
+      "answer": "地域当たりの住居数が実データに近い比率で分散するように値を設定する。",
+      "control": 50
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "差異1",
+      "answer": "“機器ログ”テーブルは，住居番号，年月日順に行を追加したことで，クラスタ率が高くなったこと",
+      "control": 50
+    },
+    {
+      "section": 3,
+      "sub": 2,
+      "label": "差異2",
+      "answer": "処理2の実行によって，同時に実行される処理3が参照するページがバッファから追い出されたこと",
+      "control": 50
+    }
+  ],
+  "2020-october-db-pm2-q2": [
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "ア",
+      "answer": "生産ライン数",
+      "control": "schema"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "イ",
+      "answer": "FK[生産先コード]",
+      "control": "schema"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "ウ",
+      "answer": "FK[生産先コード]，FK[地点コード]",
+      "control": "schema"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "エ",
+      "answer": "設計番号",
+      "control": "schema"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "オ",
+      "answer": "汎用品仕様，FK[仕入先調達先コード]",
+      "control": "schema"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "カ",
+      "answer": "FK[生産先コード]，個体重量",
+      "control": "schema"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "キ",
+      "answer": "PK[部材品目コード]",
+      "control": "schema"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "ク",
+      "answer": "PK[部材品目コード]",
+      "control": "schema"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "ケ",
+      "answer": "PK[部材品目コード]",
+      "control": "schema"
+    },
+    {
+      "section": 1,
+      "sub": 2,
+      "label": "コ",
+      "answer": "PK[専用部品品目コード]",
+      "control": "schema"
+    },
+    {
+      "section": 2,
+      "sub": 2,
+      "label": "サ",
+      "answer": "FK[調達番号]",
+      "control": "schema"
+    },
+    {
+      "section": 2,
+      "sub": 2,
+      "label": "シ",
+      "answer": "FK[輸送番号]",
+      "control": "schema"
+    },
+    {
+      "section": 2,
+      "sub": 2,
+      "label": "ス",
+      "answer": "FK[受注番号]，FK[部材品目コード]",
+      "control": "schema"
+    },
+    {
+      "section": 2,
+      "sub": 2,
+      "label": "セ",
+      "answer": "FK[専用部品生産指示調達番号]，FK[部材品目コード]",
+      "control": "schema"
+    },
+    {
+      "section": 2,
+      "sub": 2,
+      "label": "ソ",
+      "answer": "FK[支給指示調達番号]",
+      "control": "schema"
+    },
+    {
+      "section": 2,
+      "sub": 2,
+      "label": "タ",
+      "answer": "FK[専用部品発注調達番号]，FK[子部品品目コード]，使用数",
+      "control": "schema"
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "a",
+      "answer": "輸送日",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "b",
+      "answer": "輸送日",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "c",
+      "answer": "輸送重量",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "d",
+      "answer": "ルート番号，積地巡回順",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "e",
+      "answer": "輸送重量",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "f",
+      "answer": "ルート番号，卸地巡回順",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "g",
+      "answer": "ルート番号（別解：積地巡回順）",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "h",
+      "answer": "ルート番号（別解：卸地巡回順）",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "i",
+      "answer": "積地巡回順（別解：ルート番号）",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "j",
+      "answer": "卸地巡回順（別解：ルート番号）",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 1,
+      "label": "k",
+      "answer": "荷積重量 － 荷卸重量",
+      "control": "short"
+    },
+    {
+      "section": 3,
+      "sub": 3,
+      "label": "属性名",
+      "answer": "PK[輸送番号]，FK[確定車両番号]",
+      "control": "schema"
+    }
+  ]
+}

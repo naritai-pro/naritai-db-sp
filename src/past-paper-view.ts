@@ -1,5 +1,13 @@
 import { getDocument, GlobalWorkerOptions, type PDFDocumentProxy } from "pdfjs-dist";
 import workerUrl from "pdfjs-dist/build/pdf.worker.min.mjs?url";
+import { partTree } from "./part-tree";
+import rawPrompts from "./legacy-prompts.json";
+import rawFields from "./legacy-fields.json";
+import rawDiagrams from "./legacy-diagrams.json";
+import { diagram } from "./diagram";
+import type { Diagram } from "./exam";
+import { schemaPreview } from "./schema-input";
+import { afternoonId } from "./past-papers";
 import { answerField } from "./answer-field";
 import { button, el, link } from "./dom";
 import { morningTerm } from "./morning-catalog";
@@ -8,7 +16,11 @@ import type { PastPaper } from "./past-papers";
 import type { RecordData } from "./store";
 
 GlobalWorkerOptions.workerSrc = workerUrl;
-type Point = [number, number];
+type PaperField = {section: number; sub: number; label: string; answer: string; control?: Parameters<typeof answerField>[4]};
+type PaperDiagram = Diagram & {sub: number; solutionImage: string};
+const promptsByQuestion: Record<string, Record<string, string[]>> = rawPrompts;
+const fieldsByQuestion = rawFields as Record<string, PaperField[]>;
+const diagramsByQuestion = rawDiagrams as unknown as Record<string, PaperDiagram[]>;
 
 function external(label: string, url: string) {
   const a = link(label, url);
@@ -18,7 +30,7 @@ function external(label: string, url: string) {
 }
 
 function viewer(title: string, url: string, official: string, signal: AbortSignal,
-  ink?: {record: RecordData; save: () => void; editable: boolean; firstPage: number; lastPage: number}) {
+  ink?: {record: RecordData; firstPage: number; lastPage: number}) {
   const view = el("div", "", "pdf-viewer");
   const controls = el("div", "", "pdf-controls");
   const message = el("div", "読み込み中…");
@@ -28,40 +40,6 @@ function viewer(title: string, url: string, official: string, signal: AbortSigna
   pageSelect.setAttribute("aria-label", title + "のページ");
   let doc: PDFDocumentProxy;
   let revision = 0;
-  let writing = false;
-  const pen = button("図に記入", () => {
-    writing = !writing;
-    pen.setAttribute("aria-pressed", String(writing));
-    pageHost.classList.toggle("writing", writing);
-  });
-  pen.setAttribute("aria-pressed", "false");
-  let overlay: HTMLCanvasElement | undefined;
-  function strokes(): Point[][] {
-    return ink?.record.strokes?.[pageSelect.value] ?? [];
-  }
-  function paint(current?: Point[]) {
-    if (!overlay) return;
-    const ctx = overlay.getContext("2d")!;
-    ctx.clearRect(0, 0, overlay.width, overlay.height);
-    ctx.lineWidth = overlay.width / 380;
-    ctx.strokeStyle = "#008254";
-    ctx.lineCap = "round";
-    ctx.lineJoin = "round";
-    for (const stroke of current ? [...strokes(), current] : strokes()) {
-      if (!stroke.length) continue;
-      ctx.beginPath();
-      ctx.moveTo(stroke[0][0] * overlay.width, stroke[0][1] * overlay.height);
-      for (const [x,y] of stroke.slice(1)) ctx.lineTo(x * overlay.width, y * overlay.height);
-      if (stroke.length === 1) ctx.lineTo(stroke[0][0] * overlay.width + 1, stroke[0][1] * overlay.height);
-      ctx.stroke();
-    }
-    undo.disabled = !strokes().length;
-  }
-  const undo = button("一筆戻す", () => {
-    strokes().pop();
-    ink?.save();
-    paint();
-  });
   const prev = button("前へ", () => step(-1));
   const next = button("次へ", () => step(1));
   function step(delta: number) {
@@ -75,7 +53,7 @@ function viewer(title: string, url: string, official: string, signal: AbortSigna
     next.disabled = number >= doc.numPages;
     message.textContent = "読み込み中…";
     pageHost.replaceChildren();
-    overlay = undefined;
+
     try {
       const page = await doc.getPage(number);
       if (signal.aborted || thisRevision !== revision) return;
@@ -90,52 +68,30 @@ function viewer(title: string, url: string, official: string, signal: AbortSigna
       if (signal.aborted || thisRevision !== revision) return;
       message.textContent = "";
       pageHost.replaceChildren(canvas);
-      if (!ink) return;
-      const inkLayer = el("canvas", "", "pdf-ink");
-      inkLayer.setAttribute("aria-hidden", "true");
-      inkLayer.width = canvas.width;
-      inkLayer.height = canvas.height;
-      overlay = inkLayer;
-      pageHost.append(inkLayer);
-      paint();
-      if (!ink.editable) return;
-      let points: Point[] | undefined;
-      let pointer: number | undefined;
-      function point(e: PointerEvent): Point {
-        const box = inkLayer.getBoundingClientRect();
-        const norm = (v: number) => Math.round(Math.min(1, Math.max(0, v)) * 10000) / 10000;
-        return [norm((e.clientX-box.left)/box.width), norm((e.clientY-box.top)/box.height)];
+      // Old pen answers stay visible on their original page.
+      const strokes = ink?.record.strokes?.[String(number)];
+      if (strokes?.length) {
+        const ctx = canvas.getContext("2d")!;
+        ctx.strokeStyle = "#008254";
+        ctx.lineWidth = canvas.width / 380;
+        ctx.lineCap = "round";
+        for (const stroke of strokes) {
+          ctx.beginPath();
+          for (const [i, [x, y]] of stroke.entries()) {
+            if (i === 0) ctx.moveTo(x * canvas.width, y * canvas.height);
+            ctx.lineTo(x * canvas.width, y * canvas.height);
+          }
+          ctx.stroke();
+        }
       }
-      inkLayer.onpointerdown = e => {
-        if (!writing || e.button !== 0 || points) return;
-        pointer = e.pointerId;
-        inkLayer.setPointerCapture(pointer);
-        points = [point(e)];
-        paint(points);
-      };
-      inkLayer.onpointermove = e => {
-        if (!points || pointer !== e.pointerId) return;
-        points.push(point(e));
-        paint(points);
-      };
-      inkLayer.onpointerup = e => {
-        if (!points || pointer !== e.pointerId) return;
-        const pages = ink.record.strokes ??= {};
-        (pages[String(number)] ??= []).push(points);
-        points = undefined;
-        pointer = undefined;
-        ink.save();
-        paint();
-      };
-      inkLayer.onpointercancel = () => { points = undefined; pointer = undefined; paint(); };
     } catch {
       if (!signal.aborted && thisRevision === revision) message.textContent = "ページを表示できません。PDFを開いてご覧ください。";
     }
   }
-  prev.disabled = next.disabled = undo.disabled = true;
+  prev.disabled = next.disabled = true;
   pageSelect.onchange = () => void show();
   controls.append(prev, pageSelect, next);
-  if (ink?.editable) controls.append(pen, undo);
+
   controls.append(external("PDFを開く ↗", url), external("IPA原本 ↗", official));
   view.append(controls, message, pageHost);
   const task = getDocument({url, cMapUrl: "/pdfjs/cmaps/", cMapPacked: true, standardFontDataUrl: "/pdfjs/standard_fonts/", wasmUrl: "/pdfjs/wasm/"});
@@ -180,12 +136,6 @@ export function renderPastPaper(app: HTMLElement, q: PastPaper, reviewing: boole
       guide.append(el("h2", "解き方"), el("p", q.studyNote));
       sheet.append(guide);
     }
-    const docs = [{kind:"answer", title:"IPA解答例", source:q.answer}, {kind:"comment", title:"IPA採点講評", source:q.comment}];
-    for (const {kind, title, source} of docs) {
-      const section = el("section");
-      section.append(el("h2", title), viewer(title, base + kind + ".pdf", source, signal));
-      sheet.append(section);
-    }
   }
   for (const [i, n] of q.sections.entries()) {
     const section = el("section");
@@ -194,18 +144,86 @@ export function renderPastPaper(app: HTMLElement, q: PastPaper, reviewing: boole
     for (const sub of q.subparts[i]?.length ? q.subparts[i] : [0]) {
       const label = sub ? heading + "（" + sub + "）" : heading;
       const key = "past-" + n + "-" + sub;
-      if (reviewing) {
-        section.append(el("h3", label + "の答案"), el("pre", record.fields[key]?.trim() || "未解答"));
-      } else {
-        section.append(answerField(key, label, record.fields[key] ?? "", value => { record.fields[key] = value; save(); }));
+      const question = afternoonId(q.year, q.part, q.number);
+      const fields = fieldsByQuestion[question].filter(f => f.section === n && f.sub === sub);
+      const models = (diagramsByQuestion[question] ?? []).filter(d => d.section === n && d.sub === sub);
+      const group = el("div", "", "legacy-subpart");
+      group.append(el("h3", label, "exam-prompt"));
+      for (const src of promptsByQuestion[question][n + "-" + sub]) {
+        const prompt = el("img", "", "legacy-prompt");
+        prompt.src = src;
+        prompt.alt = label + "の問題文（IPA問題冊子より）";
+        group.append(prompt);
       }
+      const grid = el("div", "", "legacy-fields");
+      const fieldKeys = new Map<string, string>();
+      const sheets: HTMLElement[] = [];
+      for (const f of fields) {
+        const id = key + "-" + f.label;
+        fieldKeys.set(f.label, id);
+        if (reviewing) {
+          const pair = el("div", "", "legacy-comparison");
+          pair.append(el("h4", f.label), el("small", "自分の答案"), schemaPreview(record.fields[id] || "未解答"),
+            el("small", "IPA解答例"), schemaPreview(f.answer));
+          grid.append(pair);
+        } else {
+          grid.append(answerField(id, f.label, record.fields[id] ?? "", value => {
+            record.fields[id] = value;
+            save();
+            for (const panel of sheets) panel.dispatchEvent(new Event("diagram-labels"));
+          }, f.control));
+        }
+      }
+      group.append(grid);
+      for (const model of models) {
+        const graphKey = key + "-" + model.title;
+        const nameFor = (node: string) => fieldKeys.get(node) ?? "model-name-" + graphKey + "-" + node;
+        const labels = () => Object.fromEntries(model.nodes.map(([node]) =>
+          [node, record.fields[nameFor(String(node))] || ""]));
+        // Unlettered boxes on the original sheet are named by their position.
+        for (const [node] of model.nodes) {
+          if (!/^(太枠|追加)/.test(String(node)) || fieldKeys.has(String(node))) continue;
+          const id = nameFor(String(node));
+          if (!reviewing) grid.append(answerField(id, String(node) + "のエンティティ名", record.fields[id] || "", value => {
+            record.fields[id] = value;
+            save();
+            for (const panel of sheets) panel.dispatchEvent(new Event("diagram-labels"));
+          }, "short"));
+        }
+        const panel = diagram(model, record.edges[graphKey] ??= [], reviewing ? undefined : save, "sheet", labels) as HTMLElement;
+        sheets.push(panel);
+        group.append(panel);
+        if (reviewing) {
+          const solution = el("img", "", "legacy-model-answer");
+          solution.src = model.solutionImage;
+          solution.alt = model.title + "のIPA解答例";
+          group.append(el("h4", "IPA解答例"), solution);
+        }
+      }
+      if (q.year === 2019 && q.part === "pm1" && q.number === 3 && n === 4 && sub === 3) {
+        group.append(partTree(record, save, reviewing));
+      }
+      if (record.fields[key]) {
+        const old = el("details");
+        old.append(el("summary", "以前の解答用紙に保存した答案"), el("pre", record.fields[key]));
+        group.append(old);
+      }
+      section.append(group);
     }
     sheet.append(section);
+  }
+  if (reviewing) {
+    const docs = [{kind:"answer", title:"IPA解答例", source:q.answer}, {kind:"comment", title:"IPA採点講評", source:q.comment}];
+    for (const {kind, title, source} of docs) {
+      const section = el("section");
+      section.append(el("h2", title), viewer(title, base + kind + ".pdf", source, signal));
+      sheet.append(section);
+    }
   }
   sheet.append(link(reviewing ? "解答用紙に戻る" : "解答例・採点講評を確認する →", reviewing ? solve : solve + "/answer", "primary"));
   const paperBar = el("div", "", "paper-bar");
   paperBar.append(el("h2", "問題資料"));
-  paper.append(paperBar, viewer("問題冊子", base + "question.pdf", q.paper, signal, {record, save, editable: !reviewing, firstPage: q.firstPage, lastPage: q.lastPage}));
+  paper.append(paperBar, viewer("問題冊子", base + "question.pdf", q.paper, signal, {record, firstPage: q.firstPage, lastPage: q.lastPage}));
   layout.append(sheet, paper);
   app.replaceChildren(top, layout);
   phoneQuestion(layout, sheet, paper, reviewing);

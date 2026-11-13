@@ -92,6 +92,7 @@ export function diagram(d: Diagram, additions: Edge[], onChange?: () => void, pr
     onChange?.();
     draw();
   }
+  let sourceMark = "○", targetMark = "○";
   function draw() {
     const defs = svg("defs");
     for (const [suffix, color] of [
@@ -118,6 +119,10 @@ export function diagram(d: Diagram, additions: Edge[], onChange?: () => void, pr
       defs.append(marker);
     }
     canvas.replaceChildren(defs);
+    if (d.background) {
+      const [, , width, height] = d.viewBox!.split(" ");
+      canvas.append(svg("image", {href: d.background, width, height, "pointer-events": "none"}));
+    }
     grayLines.replaceChildren();
     const symbols = svg("g", { "pointer-events": "none" });
     occupied = [...straightSegments(d.fixedPath ?? ""), ...sheetLanes];
@@ -140,7 +145,8 @@ export function diagram(d: Diagram, additions: Edge[], onChange?: () => void, pr
       canvas.append(svg("path", {d: d.solutionPath, fill: "none", stroke: "#097464", "stroke-width": answerStrokeWidth}));
     const names = labels?.() ?? {};
     const all = [...d.fixed, ...additions];
-    all.forEach(([a, b, type], i) => {
+    all.forEach(([a, b, savedType], i) => {
+      const [type, firstMark, lastMark] = savedType.split("|");
       if ((i < d.fixed.length && d.fixedPath) || (presentation === "solution" && d.solutionPath)) return;
       const start = d.nodes.find((n) => n[0] === a),
         end = d.nodes.find((n) => n[0] === b);
@@ -189,7 +195,18 @@ export function diagram(d: Diagram, additions: Edge[], onChange?: () => void, pr
       if (fixed) {
         occupied.push(...straightSegments(path));
         grayLines.append(line);
-      } else canvas.append(line);
+      } else {
+        canvas.append(line);
+        if (firstMark && lastMark) {
+          const curve = line as SVGPathElement;
+          const length = curve.getTotalLength();
+          for (const [distance, mark] of [[Math.min(10, length / 3), firstMark], [Math.max(length - 10, 2 * length / 3), lastMark]] as const) {
+            const point = curve.getPointAtLength(distance);
+            canvas.append(svg("circle", {cx: point.x, cy: point.y, r: 3.5,
+              stroke: "#097464", fill: mark === "○" ? "white" : "#097464", "pointer-events": "none"}));
+          }
+        }
+      }
       if (stem) canvas.append(svg("path", { d: stem, fill: "none", stroke: "#097464", "stroke-width": answerStrokeWidth }));
 
       if (symbol) symbols.append(svg("path", { d: symbol, class: "subtype-symbol" }));
@@ -253,7 +270,15 @@ export function diagram(d: Diagram, additions: Edge[], onChange?: () => void, pr
       } else {
         text.textContent = name;
       }
-      g.append(text);
+      if (d.background && !d.extraNodes?.includes(id) && name === id) {
+        const box = g.firstElementChild!;
+        box.setAttribute("fill", "transparent");
+        box.setAttribute("stroke", "none");
+        const tooltip = svg("title");
+        tooltip.textContent = id;
+        g.append(tooltip);
+      } else g.append(text);
+      if (d.background && name !== id) g.classList.add("filled-entity");
       if (onChange) {
         g.classList.add("selectable");
         g.setAttribute("data-entity", id);
@@ -304,7 +329,7 @@ export function diagram(d: Diagram, additions: Edge[], onChange?: () => void, pr
         message.textContent = "この組には既に関係があります。";
         return;
       }
-      additions.push([a, b, kind]);
+      additions.push([a, b, d.endpointMarks ? [kind, sourceMark, targetMark].join("|") : kind]);
       message.textContent = "関係を追加しました。";
       onChange?.();
       draw();
@@ -396,6 +421,19 @@ export function diagram(d: Diagram, additions: Edge[], onChange?: () => void, pr
           (d.selfRelations?.length ? "自己参照は箱の外を経由して同じ箱に戻します。" : ""),
       ),
     );
+    if (d.endpointMarks) {
+      for (const endpoint of ["始点", "終点"]) {
+        const label = el("label", endpoint);
+        const select = el("select");
+        for (const mark of ["○", "●"]) select.add(new Option(mark === "○" ? "○ ゼロを含む" : "● ゼロを含まない", mark));
+        select.onchange = () => {
+          if (endpoint === "始点") sourceMark = select.value;
+          else targetMark = select.value;
+        };
+        label.append(select);
+        toolbar.append(label);
+      }
+    }
     frame.prepend(toolbar);
     panel.append(message);
   }

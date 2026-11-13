@@ -1,6 +1,9 @@
 import type original from "./question.json";
 
 export type Diagram = (typeof original.diagrams)[number] & {
+  background?: string;
+  endpointMarks?: boolean;
+  extraNodes?: string[];
   sheetLayout?: Pick<Diagram, "viewBox" | "nodes" | "boxSize" | "nodeSizes" | "routes" | "fontSize">;
   subtypeJunctions?: Record<string, [number, number]>;
   fontSize?: number;
