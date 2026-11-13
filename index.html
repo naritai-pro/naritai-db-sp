@@ -11,12 +11,14 @@
   </head>
   <body>
     <header>
+      <button class="phone" id="phone-library" aria-label="年度・試験を選ぶ" aria-haspopup="dialog">☰</button>
       <a href="/" class="brand" aria-label="データベーススペシャリスト試験演習室 トップページ">
         <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round">
           <path d="m2.5 10.5 9.5-8 9.5 8M5 9v12h5v-7h4v7h5V9"/>
         </svg>
-        データベーススペシャリスト試験演習室
+        <span class="desktop-name">データベーススペシャリスト試験演習室</span><span class="phone">DBスペシャリスト演習室</span>
       </a>
+      <button class="phone" id="phone-index" aria-haspopup="dialog" hidden>問一覧</button>
     </header>
     <div class="workspace">
       <aside id="library">

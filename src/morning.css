@@ -86,3 +86,14 @@
   .index nav{max-height:calc(100dvh - 10rem)}
   @media(max-width:64rem){.index nav{max-height:45dvh}}
 }
+@media (max-width:760px) {
+  .morning :is(.scroll,.stem,.figure,.choice,pre) { overflow: visible; }
+  .morning table { white-space: normal; width: 100%; overflow-wrap: anywhere; }
+  .morning svg { min-width: 0 !important; }
+  .morning .fold-table, .morning .fold-table :is(caption,tbody,tr) { display: block; }
+  .morning .fold-table thead { display: none; }
+  .morning .fold-table td { display: grid; grid-template-columns: 40% minmax(0,1fr); gap: .4em; border: 0; border-bottom: 1px solid #d8e0da; }
+  .morning .fold-table td::before { content: attr(data-column); font-weight: 600; }
+  .morning .fold-table tr { margin-bottom: .75rem; }
+  .phone-panel.morning .index { position: static; }
+}

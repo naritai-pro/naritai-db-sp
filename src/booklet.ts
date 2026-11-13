@@ -343,6 +343,7 @@ function figureParts(figure: Element) {
 export function showFigure(number: number, labels: string[] = []) {
   const figure = document.getElementById("paper-figure-" + number);
   if (!figure) return;
+  figure.dispatchEvent(new Event("reveal-paper", {bubbles:true}));
   const parts = figureParts(figure);
   const selected = labels.flatMap(label => [...(parts.get(label) ?? [])]).filter(el => el.getClientRects().length);
   const targets = selected.length ? selected : [figure];
@@ -353,9 +354,11 @@ export function showPaperTarget(id: string, target?: Element) {
   const figure = target ?? document.getElementById(id);
   const paper = figure?.closest<HTMLElement>(".paper-viewport");
   if (!paper || !figure) return;
+  paper.dispatchEvent(new Event("reveal-paper", {bubbles:true}));
   for (const old of paper.querySelectorAll(".paper-figure-selected")) old.classList.remove("paper-figure-selected");
   figure.setAttribute("tabindex", "-1");
   if (figure instanceof HTMLElement || figure instanceof SVGElement) figure.focus({preventScroll: true});
+  if (matchMedia("(max-width: 760px)").matches) { figure.scrollIntoView({block:"start"}); return; }
   paper.scrollTop += figure.getBoundingClientRect().top - paper.getBoundingClientRect().top - 10;
   if (matchMedia("(max-width: 900px)").matches)
     paper.closest(".materials")?.scrollIntoView({block: "start"});

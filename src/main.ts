@@ -1,3 +1,4 @@
+import { setupPhone, phoneQuestion, resetPhone, morningIndex } from "./phone";
 import { morningInfo, morningRoute } from "./morning-catalog";
 import { enablePaperHighlights } from "./paper-highlights";
 import { questionPath, resolveRoute } from "./routes";
@@ -36,6 +37,7 @@ function examTerm(id: string) {
 }
 const lifetime = new AbortController();
 const navigatorTree = library(new Set(exercises.keys()), lifetime.signal);
+setupPhone(lifetime.signal);
 const unsaved: Map<string, ReturnType<typeof empty>> = import.meta.hot?.data.unsaved ?? new Map();
 let key = "";
 const status = el("span", "", "status");
@@ -372,10 +374,12 @@ function renderQuestion(q: Question, reviewing: boolean) {
     sheet.append(part);
   }
   sheet.append(el("h2", "AIに相談する"), copyBox(q, reviewing));
+  phoneQuestion(layout, sheet, booklet, reviewing);
   if (!reviewing) sheet.append(link("解説と答え合わせへ →", review, "primary"));
 }
 let morningLifetime: AbortController | undefined;
 async function route() {
+  resetPhone();
   delete app.dataset.morning;
   morningLifetime?.abort();
   const morning = morningRoute(location.pathname);
@@ -398,6 +402,7 @@ async function route() {
     try {
       const {renderMorning} = await import("./morning");
       await renderMorning(app, morning.year, morning.part, signal);
+      if (!signal.aborted) morningIndex(app);
     } catch {
       if (!signal.aborted) app.replaceChildren(el("p", "問題を読み込めませんでした。"), button("再読み込み", () => void route()));
     }

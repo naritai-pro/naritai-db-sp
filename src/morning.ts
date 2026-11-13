@@ -183,7 +183,11 @@ export async function renderMorning(app: HTMLElement, year: number, part: Mornin
   window.addEventListener("resize", placeConfirm, {signal});
   nav.addEventListener("click", () => { if (narrow.matches) index.open = false; });
   index.append(reset, confirm, notice, nav);
-  sheet.append(titleNode, returnButton, el("p", "左の記号を押すと解答が確定します。右の文章を押すと候補から外れ、もう一度押すと戻ります。"), link("採点状況を見る", "#result"));
+  const guide = el("details", "", "phone-guide phone");
+  const instructions = el("p", "左の記号を押すと解答が確定します。右の文章を押すと候補から外れ、もう一度押すと戻ります。");
+  guide.append(el("summary", "解答方法"), instructions.cloneNode(true));
+  instructions.className = "desktop-guide";
+  sheet.append(titleNode, returnButton, guide, instructions, link("採点状況を見る", "#result"));
   for (const q of paper.questions) {
     const n = q.number;
     readProgress(n);
@@ -276,6 +280,16 @@ export async function renderMorning(app: HTMLElement, year: number, part: Mornin
     el("p", "出典：IPA " + (part === "am1" ? "高度試験共通 " : "データベーススペシャリスト試験 ") + heading + " 問1〜" + count + "。図表と選択肢の配置を演習用に整えています。解説は本教材用に作成しました。"),
     link("公式問題冊子", paper.source), document.createTextNode("　"), link("公式解答例", paper.answerSource));
   sheet.append(footer);
+  // Keep each value beside its column heading when a wide table folds into rows.
+  for (const table of sheet.querySelectorAll("table")) {
+    const headers = table.tHead?.rows;
+    if (headers?.length !== 1 || headers[0].cells.length < 6) continue;
+    const rows = Array.from(table.tBodies).flatMap(body => Array.from(body.rows));
+    if (!rows.every(row => row.cells.length === headers[0].cells.length && Array.from(row.cells).every(cell => cell.colSpan === 1 && cell.rowSpan === 1))) continue;
+    table.classList.add("fold-table");
+    for (const row of rows) for (const cell of row.cells)
+      cell.dataset.column = headers[0].cells[cell.cellIndex].textContent;
+  }
   updateScore();
   wrapper.append(sheet, index);
   app.replaceChildren(wrapper);
