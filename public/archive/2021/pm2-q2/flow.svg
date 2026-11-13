@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 98" role="img"><title>業務の流れ</title><defs><marker id="arrow" orient="auto" markerWidth="6" markerHeight="6" refX="5" refY="3"><path d="M0 0L6 3 0 6Z"/></marker></defs><g font-family="serif" font-size="15" text-anchor="middle">
+<path d="M8 37h69" stroke="#222" marker-end="url(#arrow)"/><text x="45" y="84">受注</text>
+<path d="M140 37h69" stroke="#222" marker-end="url(#arrow)"/><text x="177" y="84">出荷指示</text>
+<path d="M272 37h69" stroke="#222" marker-end="url(#arrow)"/><text x="309" y="84">出庫指示</text>
+<path d="M404 37h69" stroke="#222" marker-end="url(#arrow)"/><text x="441" y="84">出庫実績</text>
+<path d="M536 37h69" stroke="#222" marker-end="url(#arrow)"/><text x="573" y="84">梱包実績</text>
+<path d="M668 37h69" stroke="#222" marker-end="url(#arrow)"/><text x="705" y="84">出荷実績</text>
+<rect x="78" y="13" width="65" height="46" fill="white" stroke="#222"/><text x="110.5" y="42">出荷指示</text>
+<rect x="210" y="13" width="65" height="46" fill="white" stroke="#222"/><text x="242.5" y="42">出庫指示</text>
+<rect x="342" y="13" width="65" height="46" fill="white" stroke="#222"/><text x="374.5" y="42">出庫</text>
+<rect x="474" y="13" width="65" height="46" fill="white" stroke="#222"/><text x="506.5" y="42">梱包</text>
+<rect x="606" y="13" width="65" height="46" fill="white" stroke="#222"/><text x="638.5" y="42">出荷</text>
+</g></svg>

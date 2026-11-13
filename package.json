@@ -1,0 +1,15 @@
+{
+  "name": "naritai-db-sp",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 4173 --strictPort",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --port 4174",
+    "check:archive": "node scripts/check-archive.mjs"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.0",
+    "vite": "^8.0.0"
+  }
+}

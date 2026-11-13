@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="133 601 875 419" role="img" aria-labelledby="title"><title id="title">宿泊管理システムの概念データモデル（図4）</title><style>text{font:18px serif;fill:#111}rect,path,circle,polyline{stroke:#222;stroke-width:1.7;fill:none}</style>
+<rect x="145" y="612" width="852" height="397" rx="12"/><text x="155" y="993">トランザクション領域</text>
+<polyline points="333,647 258,647 258,678"/>
+<path d="M258 678l-7 13h14Z"/>
+<polyline points="201,719 201,691 315,691 315,719"/>
+<polyline points="429,647 502,647 502,678"/>
+<path d="M502 678l-7 13h14Z"/>
+<polyline points="445,719 445,691 558,691 558,719"/>
+<polyline points="380,675 380,919"/>
+<circle cx="380" cy="690" r="6" style="fill:#222"/>
+<circle cx="380" cy="904" r="6" style="fill:white"/>
+<polyline points="385,908 380,919 375,908"/>
+<polyline points="728,648 892,648"/>
+<circle cx="743" cy="648" r="6" style="fill:#222"/>
+<circle cx="877" cy="648" r="6" style="fill:#222"/>
+<polyline points="728,662 801,662 801,685"/>
+<path d="M801 685l-7 13h14Z"/>
+<polyline points="744,719 744,698 857,698 857,720"/>
+<polyline points="680,676 680,919"/>
+<circle cx="680" cy="691" r="6" style="fill:#222"/>
+<circle cx="680" cy="904" r="6" style="fill:white"/>
+<polyline points="685,908 680,919 675,908"/>
+<polyline points="940,676 940,920"/>
+<circle cx="940" cy="691" r="6" style="fill:#222"/>
+<circle cx="940" cy="905" r="6" style="fill:white"/>
+<polyline points="945,909 940,920 935,909"/>
+<polyline points="446,773 446,817 725,817 725,773"/>
+<circle cx="446" cy="788" r="6" style="fill:#222"/>
+<circle cx="725" cy="788" r="6" style="fill:white"/>
+<polyline points="720,784 725,773 730,784"/>
+<polyline points="558,773 558,919"/>
+<circle cx="558" cy="788" r="6" style="fill:#222"/>
+<circle cx="558" cy="904" r="6" style="fill:#222"/>
+<polyline points="563,908 558,919 553,908"/>
+<polyline points="587,773 587,840 857,840 857,774"/>
+<circle cx="587" cy="788" r="6" style="fill:#222"/>
+<circle cx="857" cy="789" r="6" style="fill:white"/>
+<polyline points="764,773 764,817 814,817 814,879"/>
+<circle cx="764" cy="788" r="6" style="fill:#222"/>
+<circle cx="814" cy="864" r="6" style="fill:#222"/>
+<polyline points="819,868 814,879 809,868"/>
+<polyline points="891,947 728,947"/>
+<circle cx="876" cy="947" r="6" style="fill:#222"/>
+<circle cx="743" cy="947" r="6" style="fill:#222"/>
+<polyline points="739,952 728,947 739,942"/>
+<rect x="333" y="621" width="96" height="54" style="fill:white"/>
+<text text-anchor="middle" x="381.0" y="654.0">予約</text>
+<rect x="632" y="622" width="96" height="54" style="fill:white"/>
+<text text-anchor="middle" x="680.0" y="655.0">施設利用</text>
+<rect x="892" y="622" width="95" height="54" style="fill:white"/>
+<text text-anchor="middle" x="939.5" y="655.0">請求</text>
+<rect x="153" y="719" width="96" height="54" style="fill:white"/>
+<text text-anchor="middle" x="201.0" y="752.0">会員予約</text>
+<rect x="267" y="719" width="96" height="54" style="fill:white"/>
+<text text-anchor="middle" x="315.0" y="752.0">非会員予約</text>
+<rect x="398" y="719" width="96" height="54" style="fill:white"/>
+<text text-anchor="middle" x="446.0" y="752.0">宿泊予約</text>
+<rect x="510" y="719" width="96" height="54" style="fill:white"/>
+<text text-anchor="middle" x="558.0" y="741.5">貸会議室</text>
+<text text-anchor="middle" x="558.0" y="762.5">予約</text>
+<rect x="696" y="719" width="96" height="54" style="fill:white"/>
+<text text-anchor="middle" x="744.0" y="752.0">宿泊</text>
+<rect x="809" y="720" width="96" height="54" style="fill:white"/>
+<text text-anchor="middle" x="857.0" y="742.5">貸会議室</text>
+<text text-anchor="middle" x="857.0" y="763.5">利用</text>
+<rect x="766" y="879" width="96" height="54" style="fill:white"/>
+<text text-anchor="middle" x="814.0" y="912.0">宿泊者</text>
+<rect x="332" y="919" width="96" height="54" style="fill:white"/>
+<text text-anchor="middle" x="380.0" y="941.5">オプション</text>
+<text text-anchor="middle" x="380.0" y="962.5">予約</text>
+<rect x="510" y="919" width="96" height="54" style="fill:white"/>
+<text text-anchor="middle" x="558.0" y="941.5">貸会議室</text>
+<text text-anchor="middle" x="558.0" y="962.5">予約明細</text>
+<rect x="632" y="919" width="96" height="54" style="fill:white"/>
+<text text-anchor="middle" x="680.0" y="941.5">オプション</text>
+<text text-anchor="middle" x="680.0" y="962.5">利用</text>
+<rect x="891" y="920" width="96" height="54" style="fill:white"/>
+<text text-anchor="middle" x="939.0" y="953.0">請求明細</text>
+</svg>

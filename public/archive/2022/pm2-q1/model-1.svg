@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="134 378 890 868" role="img" aria-labelledby="title"><title id="title">宿泊管理システムの概念データモデル（図1）</title><style>text{font:18px serif;fill:#111}rect,path,circle,polyline{stroke:#222;stroke-width:1.7;fill:none}</style>
+<rect x="143" y="389" width="870" height="523" rx="12"/><text x="153" y="418">マスター領域</text>
+<rect x="143" y="926" width="870" height="303" rx="12"/><text x="153" y="1215">トランザクション領域</text>
+<polyline points="182,502 182,1049"/>
+<circle cx="182" cy="517" r="6" style="fill:#222"/>
+<circle cx="182" cy="1034" r="6" style="fill:white"/>
+<polyline points="187,1038 182,1049 177,1038"/>
+<polyline points="336,502 336,530 505,530 505,570"/>
+<circle cx="336" cy="517" r="6" style="fill:#222"/>
+<circle cx="505" cy="555" r="6" style="fill:white"/>
+<polyline points="510,559 505,570 500,559"/>
+<polyline points="548,501 548,570"/>
+<circle cx="548" cy="516" r="6" style="fill:#222"/>
+<circle cx="548" cy="555" r="6" style="fill:white"/>
+<polyline points="553,559 548,570 543,559"/>
+<polyline points="710,500 710,530 590,530 590,570"/>
+<circle cx="710" cy="515" r="6" style="fill:#222"/>
+<circle cx="590" cy="555" r="6" style="fill:#222"/>
+<polyline points="595,559 590,570 585,559"/>
+<polyline points="731,500 731,702"/>
+<circle cx="731" cy="515" r="6" style="fill:#222"/>
+<circle cx="731" cy="687" r="6" style="fill:white"/>
+<polyline points="736,691 731,702 726,691"/>
+<polyline points="752,500 752,529 942,529 942,568"/>
+<circle cx="752" cy="515" r="6" style="fill:#222"/>
+<circle cx="942" cy="553" r="6" style="fill:#222"/>
+<polyline points="947,557 942,568 937,557"/>
+<polyline points="505,633 505,664 358,664 358,704"/>
+<circle cx="505" cy="648" r="6" style="fill:#222"/>
+<circle cx="358" cy="689" r="6" style="fill:#222"/>
+<polyline points="363,693 358,704 353,693"/>
+<polyline points="548,633 548,703"/>
+<circle cx="548" cy="648" r="6" style="fill:#222"/>
+<circle cx="548" cy="688" r="6" style="fill:white"/>
+<polyline points="553,692 548,703 543,692"/>
+<polyline points="590,633 590,662 920,662 920,702"/>
+<circle cx="590" cy="648" r="6" style="fill:#222"/>
+<circle cx="920" cy="687" r="6" style="fill:#222"/>
+<polyline points="925,691 920,702 915,691"/>
+<polyline points="963,631 963,702"/>
+<circle cx="963" cy="646" r="6" style="fill:#222"/>
+<circle cx="963" cy="687" r="6" style="fill:#222"/>
+<polyline points="968,691 963,702 958,691"/>
+<polyline points="527,765 527,801 345,801 345,836"/>
+<circle cx="527" cy="780" r="6" style="fill:#222"/>
+<circle cx="345" cy="821" r="6" style="fill:#222"/>
+<polyline points="350,825 345,836 340,825"/>
+<polyline points="569,765 569,848 719,848 719,963"/>
+<circle cx="569" cy="780" r="6" style="fill:#222"/>
+<circle cx="719" cy="948" r="6" style="fill:white"/>
+<polyline points="724,952 719,963 714,952"/>
+<polyline points="942,764 942,870 483,870 483,964"/>
+<circle cx="942" cy="779" r="6" style="fill:#222"/>
+<circle cx="483" cy="949" r="6" style="fill:white"/>
+<polyline points="488,953 483,964 478,953"/>
+<polyline points="710,764 710,800 597,800 597,1092 483,1092 483,1154"/>
+<circle cx="710" cy="779" r="6" style="fill:#222"/>
+<circle cx="483" cy="1139" r="6" style="fill:white"/>
+<polyline points="488,1143 483,1154 478,1143"/>
+<polyline points="752,764 752,812 609,812 609,1153"/>
+<circle cx="752" cy="779" r="6" style="fill:#222"/>
+<circle cx="609" cy="1138" r="6" style="fill:white"/>
+<polyline points="614,1142 609,1153 604,1142"/>
+<polyline points="504,995 666,995"/>
+<circle cx="519" cy="995" r="6" style="fill:#222"/>
+<circle cx="651" cy="995" r="6" style="fill:white"/>
+<polyline points="655,990 666,995 655,1000"/>
+<polyline points="772,994 890,994"/>
+<circle cx="787" cy="994" r="6" style="fill:#222"/>
+<circle cx="875" cy="994" r="6" style="fill:#222"/>
+<polyline points="398,995 289,995 289,1009"/>
+<path d="M289 1009l-7 13h14Z"/>
+<polyline points="215,1049 215,1022 363,1022 363,1048"/>
+<polyline points="451,1026 451,1154"/>
+<circle cx="451" cy="1041" r="6" style="fill:#222"/>
+<circle cx="451" cy="1139" r="6" style="fill:white"/>
+<polyline points="456,1143 451,1154 446,1143"/>
+<polyline points="698,1025 698,1092 672,1092 672,1153"/>
+<circle cx="698" cy="1040" r="6" style="fill:#222"/>
+<circle cx="672" cy="1138" r="6" style="fill:white"/>
+<polyline points="677,1142 672,1153 667,1142"/>
+<polyline points="739,1025 739,1056 793,1056 793,1090"/>
+<circle cx="739" cy="1040" r="6" style="fill:#222"/>
+<circle cx="793" cy="1075" r="6" style="fill:#222"/>
+<polyline points="798,1079 793,1090 788,1079"/>
+<polyline points="943,1024 943,1152"/>
+<circle cx="943" cy="1039" r="6" style="fill:#222"/>
+<circle cx="943" cy="1137" r="6" style="fill:white"/>
+<polyline points="948,1141 943,1152 938,1141"/>
+<polyline points="890,1183 694,1183"/>
+<circle cx="875" cy="1183" r="6" style="fill:#222"/>
+<circle cx="709" cy="1183" r="6" style="fill:#222"/>
+<polyline points="705,1188 694,1183 705,1178"/>
+<rect x="160" y="439" width="106" height="63" style="fill:white"/>
+<text text-anchor="middle" x="213.0" y="476.5">会員</text>
+<rect x="283" y="439" width="106" height="63" style="fill:white"/>
+<text text-anchor="middle" x="336.0" y="476.5">価格区分</text>
+<rect x="494" y="438" width="106" height="63" style="fill:white"/>
+<text text-anchor="middle" x="547.0" y="475.5">客室タイプ</text>
+<rect x="678" y="437" width="106" height="63" style="fill:white"/>
+<text text-anchor="middle" x="731.0" y="474.5">施設</text>
+<rect x="494" y="570" width="106" height="63" style="fill:white"/>
+<text text-anchor="middle" x="547.0" y="597.0">施設客室</text>
+<text text-anchor="middle" x="547.0" y="618.0">タイプ</text>
+<rect x="889" y="568" width="106" height="63" style="fill:white"/>
+<text text-anchor="middle" x="942.0" y="605.5">プラン</text>
+<rect x="305" y="704" width="106" height="62" style="fill:white"/>
+<text text-anchor="middle" x="358.0" y="741.0">客室在庫</text>
+<rect x="494" y="703" width="106" height="62" style="fill:white"/>
+<text text-anchor="middle" x="547.0" y="740.0">客室</text>
+<rect x="679" y="702" width="106" height="62" style="fill:white"/>
+<text text-anchor="middle" x="732.0" y="739.0">オプション</text>
+<rect x="889" y="702" width="106" height="62" style="fill:white"/>
+<text text-anchor="middle" x="942.0" y="739.0">プラン明細</text>
+<rect x="293" y="836" width="106" height="62" style="fill:white"/>
+<text text-anchor="middle" x="346.0" y="873.0">客室状況</text>
+<rect x="398" y="964" width="106" height="62" style="fill:white"/>
+<text text-anchor="middle" x="451.0" y="1001.0">予約</text>
+<rect x="666" y="963" width="106" height="62" style="fill:white"/>
+<text text-anchor="middle" x="719.0" y="1000.0">宿泊</text>
+<rect x="890" y="962" width="106" height="62" style="fill:white"/>
+<text text-anchor="middle" x="943.0" y="999.0">請求</text>
+<rect x="162" y="1049" width="106" height="62" style="fill:white"/>
+<text text-anchor="middle" x="215.0" y="1086.0">会員予約</text>
+<rect x="311" y="1048" width="106" height="62" style="fill:white"/>
+<text text-anchor="middle" x="364.0" y="1085.0">非会員予約</text>
+<rect x="398" y="1154" width="106" height="62" style="fill:white"/>
+<text text-anchor="middle" x="451.0" y="1180.5">オプション</text>
+<text text-anchor="middle" x="451.0" y="1201.5">予約</text>
+<rect x="588" y="1153" width="106" height="62" style="fill:white"/>
+<text text-anchor="middle" x="641.0" y="1179.5">オプション</text>
+<text text-anchor="middle" x="641.0" y="1200.5">利用</text>
+<rect x="741" y="1090" width="106" height="62" style="fill:white"/>
+<text text-anchor="middle" x="794.0" y="1127.0">宿泊者</text>
+<rect x="890" y="1152" width="106" height="62" style="fill:white"/>
+<text text-anchor="middle" x="943.0" y="1189.0">請求明細</text>
+</svg>
