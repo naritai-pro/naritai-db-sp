@@ -270,11 +270,11 @@ export function bookletText(q: Question) {
     const model = block.diagramIndex === undefined ? undefined : q.diagrams[block.diagramIndex];
     const rows = block.table ? [block.table.headers, ...block.table.rows] : [];
     const sources = block.sourceImages?.map(image => "IPA原本 p." + image.page + "：" + q.paper.split("#")[0] + "#page=" + image.page) ?? [];
-    const layout = block.sourceImages?.length ? undefined : block.layout;
+    const layout = block.layout;
     return [
       block.text, ...sources, ...(block.underline ? ["下線部：" + block.underline] : []), ...(block.lines ?? []),
-      ...(layout ? layout.labels.map(([x, y, , , text]) => "(" + x + ", " + y + ") " + text) : []),
-      ...(layout?.rules.length ? ["図中の線（始点x,y・終点x,y）：" + JSON.stringify(layout.rules)] : []),
+      ...(layout ? layout.labels.map(([x, y, , , text]) => block.sourceImages?.length ? text : "(" + x + ", " + y + ") " + text) : []),
+      ...(!block.sourceImages?.length && layout?.rules.length ? ["図中の線（始点x,y・終点x,y）：" + JSON.stringify(layout.rules)] : []),
       ...rows.map(row => row.map(cell => cell ?? "（網掛け）").join("\t")),
       ...(model ? [JSON.stringify({ entities: model.nodes.map(n => n[0]), relationships: model.fixed })] : []),
       ...(block.description ? [block.description] : []), ...(block.notes ?? []),
