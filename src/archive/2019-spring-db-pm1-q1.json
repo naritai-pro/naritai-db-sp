@@ -1,7 +1,7 @@
 {
   "id": "2019-spring-db-pm1-q1",
   "title": "スポーツ大会運営システムのデータベース設計",
-  "source": "平成31年度 春期 データベーススペシャリスト試験 午後Ⅰ 問3",
+  "source": "平成31年度 春期 データベーススペシャリスト試験 午後Ⅰ 問1",
   "paper": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000ddiw-att/2019h31h_db_pm1_qs.pdf#page=6",
   "solution": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000ddiw-att/2019h31h_db_pm1_ans.pdf#page=1",
   "comment": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000ddiw-att/2019h31h_db_pm1_cmnt.pdf#page=1",
@@ -440,15 +440,7 @@
       "text": "図1　概念データモデル（未完成）",
       "diagramIndex": 0,
       "reference": 1,
-      "sourcePage": 9,
-      "sourceImages": [
-        {
-          "src": "/paper-figures/2019-pm1-q1-f1-1dec0e14.webp",
-          "width": 1110,
-          "height": 666,
-          "page": 9
-        }
-      ]
+      "sourcePage": 9
     },
     {
       "text": "図2　関係スキーマ（未完成）",
@@ -468,15 +460,7 @@
         "会員ポイント（PK[会員番号]，ポイント残高）"
       ],
       "reference": 2,
-      "sourcePage": 9,
-      "sourceImages": [
-        {
-          "src": "/paper-figures/2019-pm1-q1-f2-7c100adc.webp",
-          "width": 1134,
-          "height": 659,
-          "page": 9
-        }
-      ]
+      "sourcePage": 9
     },
     {
       "text": "〔指摘事項〕",
@@ -510,6 +494,9 @@
       "text": "抽選年月日に対する本日：抽選年月日よりも前の日（前），当日，抽選年月日よりも後の日（後）"
     },
     {
+      "reference": 3,
+      "text": "表1　日付が変わった時点及び参加申込受付時点で評価する決定表（未完成）",
+      "sourcePage": 10,
       "table": {
         "headers": [
           "先着順抽選区分",
@@ -565,7 +552,7 @@
             "後"
           ],
           [
-            "エントリ枠状態を「募集中」にする",
+            "エントリ枠状態を‘募集中’にする",
             "－",
             "X",
             "－",
@@ -578,7 +565,7 @@
             "－"
           ],
           [
-            "エントリ枠状態を「抽選中」にする",
+            "エントリ枠状態を‘抽選中’にする",
             "－",
             "－",
             "－",
@@ -604,7 +591,7 @@
             "－"
           ],
           [
-            "エントリ枠状態を「参加者確定」にする",
+            "エントリ枠状態を‘参加者確定’にする",
             "－",
             "－",
             "X",
@@ -617,18 +604,7 @@
             "X"
           ]
         ]
-      },
-      "reference": 3,
-      "text": "表1　日付が変わった時点及び参加申込受付時点で評価する決定表（未完成）",
-      "sourcePage": 10,
-      "sourceImages": [
-        {
-          "src": "/paper-figures/2019-pm1-q1-t1-68b6bdb8.webp",
-          "width": 1102,
-          "height": 626,
-          "page": 10
-        }
-      ]
+      }
     },
     {
       "text": "〔新たな要件の追加〕",

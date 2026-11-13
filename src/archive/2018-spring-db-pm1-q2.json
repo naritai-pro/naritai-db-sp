@@ -1,7 +1,7 @@
 {
   "id": "2018-spring-db-pm1-q2",
   "title": "人事情報データベースでの制約の実装",
-  "source": "平成30年度 春期 データベーススペシャリスト試験 午後Ⅰ 問4",
+  "source": "平成30年度 春期 データベーススペシャリスト試験 午後Ⅰ 問2",
   "paper": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000fabr-att/2018h30h_db_pm1_qs.pdf#page=12",
   "solution": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000fabr-att/2018h30h_db_pm1_ans.pdf#page=3",
   "comment": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000fabr-att/2018h30h_db_pm1_cmnt.pdf#page=1",
@@ -303,15 +303,7 @@
         "年月日を示す列のデータ型は，DATE型とする。"
       ],
       "reference": 1,
-      "sourcePage": 13,
-      "sourceImages": [
-        {
-          "src": "/paper-figures/2018-pm1-q2-f1-e51a9d63.webp",
-          "width": 1126,
-          "height": 300,
-          "page": 13
-        }
-      ]
+      "sourcePage": 13
     },
     {
       "text": "〔人事情報管理の業務概要〕",
@@ -361,15 +353,7 @@
       ],
       "reference": 2,
       "text": "表1　退職した従業員の行を削除するSQLの構文（未完成）",
-      "sourcePage": 14,
-      "sourceImages": [
-        {
-          "src": "/paper-figures/2018-pm1-q2-t1-5a22aaac.webp",
-          "width": 1125,
-          "height": 399,
-          "page": 14
-        }
-      ]
+      "sourcePage": 14
     },
     {
       "text": "2. 従業員家族構成の変更",
@@ -403,171 +387,9 @@
     },
     {
       "text": "図2　福利厚生担当者から求められた一覧表の例",
-      "layout": {
-        "width": 601.6,
-        "height": 215.4,
-        "rules": [
-          [
-            11.4,
-            17.1,
-            593.3,
-            17.1
-          ],
-          [
-            12.0,
-            204.4,
-            594.4,
-            204.4
-          ],
-          [
-            592.7,
-            15.1,
-            592.7,
-            203.8
-          ],
-          [
-            12.6,
-            17.9,
-            12.6,
-            207.2
-          ]
-        ],
-        "labels": [
-          [
-            29.9,
-            41.1,
-            34.9,
-            16.6,
-            "**"
-          ],
-          [
-            66.8,
-            43.5,
-            507.4,
-            25.5,
-            "部署別扶養対象者数（2007年1月1日以降生まれ）一覧 ＊*"
-          ],
-          [
-            85.3,
-            71.6,
-            88.3,
-            18.8,
-            "部署コード"
-          ],
-          [
-            253.7,
-            71.3,
-            71.9,
-            20.7,
-            "従業員数"
-          ],
-          [
-            378.8,
-            71.7,
-            107.0,
-            22.0,
-            "扶養対象者数"
-          ],
-          [
-            105.9,
-            102.7,
-            49.3,
-            16.5,
-            "78001"
-          ],
-          [
-            284.5,
-            100.9,
-            16.4,
-            14.4,
-            "4"
-          ],
-          [
-            426.2,
-            99.1,
-            12.3,
-            12.3,
-            "7"
-          ],
-          [
-            105.9,
-            135.4,
-            49.3,
-            18.8,
-            "78005"
-          ],
-          [
-            105.0,
-            166.9,
-            50.9,
-            20.4,
-            "79003"
-          ],
-          [
-            128.4,
-            195.4,
-            10.3,
-            14.4,
-            "："
-          ],
-          [
-            282.4,
-            133.5,
-            18.5,
-            16.4,
-            "2"
-          ],
-          [
-            282.4,
-            164.3,
-            16.4,
-            16.4,
-            "5"
-          ],
-          [
-            286.6,
-            195.1,
-            14.4,
-            16.4,
-            "："
-          ],
-          [
-            426.2,
-            130.0,
-            12.3,
-            12.3,
-            "4"
-          ],
-          [
-            422.1,
-            164.3,
-            20.5,
-            16.5,
-            "11"
-          ],
-          [
-            428.2,
-            194.8,
-            10.3,
-            18.5,
-            "："
-          ]
-        ],
-        "paths": [
-          "M591.6,16.0 591.6,115.2 592.7,200.7 591.6,201.8 98.7,204.7 13.1,204.1 12.0,46.2 12.5,18.2 269.8,17.7 562.5,15.4Z",
-          "M592.7,15.4 592.1,14.3 445.0,16.0 11.4,17.1 12.0,204.7 12.5,205.8 212.8,205.3 593.3,202.4Z"
-        ]
-      },
       "reference": 3,
       "sourcePage": 15,
-      "sourceImages": [
-        {
-          "src": "/paper-figures/2018-pm1-q2-f2-28a9c672.webp",
-          "width": 851,
-          "height": 330,
-          "page": 15
-        }
-      ]
+      "nativeSvg": "<svg viewBox=\"0 0 848 285\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"8\" y=\"8\" width=\"831\" height=\"268\" fill=\"white\" stroke=\"currentColor\" stroke-width=\"1.5\" /><text x=\"424\" y=\"42\" font-size=\"22\" text-anchor=\"middle\" fill=\"currentColor\">＊＊　部署別扶養対象者数（2007年1月1日以降生まれ）一覧　＊＊</text><text x=\"176\" y=\"87\" font-size=\"22\" text-anchor=\"middle\" fill=\"currentColor\">部署コード</text><text x=\"176\" y=\"131\" font-size=\"22\" text-anchor=\"middle\" fill=\"currentColor\">78001</text><text x=\"176\" y=\"175\" font-size=\"22\" text-anchor=\"middle\" fill=\"currentColor\">78005</text><text x=\"176\" y=\"219\" font-size=\"22\" text-anchor=\"middle\" fill=\"currentColor\">79003</text><text x=\"176\" y=\"263\" font-size=\"22\" text-anchor=\"middle\" fill=\"currentColor\">⋮</text><text x=\"411\" y=\"87\" font-size=\"22\" text-anchor=\"middle\" fill=\"currentColor\">従業員数</text><text x=\"411\" y=\"131\" font-size=\"22\" text-anchor=\"middle\" fill=\"currentColor\">4</text><text x=\"411\" y=\"175\" font-size=\"22\" text-anchor=\"middle\" fill=\"currentColor\">2</text><text x=\"411\" y=\"219\" font-size=\"22\" text-anchor=\"middle\" fill=\"currentColor\">5</text><text x=\"411\" y=\"263\" font-size=\"22\" text-anchor=\"middle\" fill=\"currentColor\">⋮</text><text x=\"614\" y=\"87\" font-size=\"22\" text-anchor=\"middle\" fill=\"currentColor\">扶養対象者数</text><text x=\"614\" y=\"131\" font-size=\"22\" text-anchor=\"middle\" fill=\"currentColor\">7</text><text x=\"614\" y=\"175\" font-size=\"22\" text-anchor=\"middle\" fill=\"currentColor\">4</text><text x=\"614\" y=\"219\" font-size=\"22\" text-anchor=\"middle\" fill=\"currentColor\">11</text><text x=\"614\" y=\"263\" font-size=\"22\" text-anchor=\"middle\" fill=\"currentColor\">⋮</text></svg>"
     },
     {
       "table": {
@@ -587,15 +409,7 @@
       ],
       "reference": 4,
       "text": "表2　一覧表を作成するSQLの構文（未完成）",
-      "sourcePage": 15,
-      "sourceImages": [
-        {
-          "src": "/paper-figures/2018-pm1-q2-t2-4396a8ad.webp",
-          "width": 1122,
-          "height": 517,
-          "page": 15
-        }
-      ]
+      "sourcePage": 15
     },
     {
       "text": "〔人事情報管理データベースで発生している問題点〕",
@@ -615,63 +429,87 @@
     },
     {
       "text": "表3　参照制約機能の利用案",
+      "notes": [
+        "注1）参照先には，参照先のテーブル名（参照先の列名）を示す。"
+      ],
+      "reference": 5,
+      "sourcePage": 16,
       "table": {
         "headers": [
           "テーブル名",
           "列名",
-          "参照先”",
+          "参照先 注1）",
           "実行契機",
           "挙動モード",
           "検査契機モード"
         ],
         "rows": [
           [
-            "",
+            "従業員",
             "部署コード",
             "部署（部署コード）",
-            "UPDATEDELETE",
-            "NO ACTIONCASCADE",
+            "UPDATE",
+            "NO ACTION",
+            "猶予モード"
+          ],
+          [
+            "従業員",
+            "部署コード",
+            "部署（部署コード）",
+            "DELETE",
+            "CASCADE",
             "猶予モード"
           ],
           [
             "従業員",
             "職位コード",
             "職位（職位コード）",
-            "UPDATEDELETE",
-            "NO ACTIONCASCADE",
+            "UPDATE",
+            "NO ACTION",
+            "即時モード"
+          ],
+          [
+            "従業員",
+            "職位コード",
+            "職位（職位コード）",
+            "DELETE",
+            "CASCADE",
             "即時モード"
           ],
           [
             "従業員家族",
             "従業員コード",
             "従業員（従業員コード）",
-            "UPDATEDELETE",
-            "NO ACTIONCASCADE",
+            "UPDATE",
+            "NO ACTION",
+            "即時モード"
+          ],
+          [
+            "従業員家族",
+            "従業員コード",
+            "従業員（従業員コード）",
+            "DELETE",
+            "CASCADE",
             "即時モード"
           ],
           [
             "部署",
             "管理者従業員コード",
             "従業員（従業員コード）",
-            "UPDATEDELETE",
-            "NO ACTIONNO ACTION",
+            "UPDATE",
+            "NO ACTION",
+            "即時モード"
+          ],
+          [
+            "部署",
+            "管理者従業員コード",
+            "従業員（従業員コード）",
+            "DELETE",
+            "NO ACTION",
             "即時モード"
           ]
         ]
-      },
-      "notes": [
-        "注”参照先には、参照先のテーブル名（参照先の列名）を示す。"
-      ],
-      "reference": 5,
-      "sourcePage": 16,
-      "sourceImages": [
-        {
-          "src": "/paper-figures/2018-pm1-q2-t3-d22739b7.webp",
-          "width": 1121,
-          "height": 482,
-          "page": 16
-        }
-      ]
+      }
     },
     {
       "text": "〔参照制約機能の利用の検討〕",
@@ -685,115 +523,9 @@
     },
     {
       "text": "図3　参照制約機能を利用する以前の更新手順",
-      "layout": {
-        "width": 756.5,
-        "height": 191.8,
-        "rules": [
-          [
-            11.2,
-            17.9,
-            747.6,
-            17.9
-          ],
-          [
-            11.2,
-            178.9,
-            747.6,
-            178.9
-          ],
-          [
-            746.8,
-            17.0,
-            746.8,
-            180.1
-          ],
-          [
-            11.4,
-            18.2,
-            11.4,
-            181.2
-          ]
-        ],
-        "labels": [
-          [
-            21.8,
-            43.6,
-            18.5,
-            20.6,
-            "①"
-          ],
-          [
-            60.6,
-            44.7,
-            337.1,
-            25.5,
-            "“部署”テーブルから不要な行を削除する。"
-          ],
-          [
-            19.7,
-            72.0,
-            152.0,
-            22.6,
-            "② コミットする。"
-          ],
-          [
-            58.6,
-            97.4,
-            392.5,
-            25.5,
-            "“部署”テーブルに対して、新規の行を挿入する。"
-          ],
-          [
-            19.7,
-            119.3,
-            22.6,
-            22.6,
-            "④"
-          ],
-          [
-            43.6,
-            122.9,
-            129.3,
-            25.5,
-            "コミットする。"
-          ],
-          [
-            17.6,
-            145.7,
-            26.7,
-            24.7,
-            "⑤"
-          ],
-          [
-            58.5,
-            147.4,
-            357.8,
-            25.5,
-            "“従業員”テーブルの部署コードを更新する。"
-          ],
-          [
-            17.3,
-            172.3,
-            156.8,
-            25.5,
-            "⑥ コミットする。"
-          ]
-        ],
-        "paths": [
-          "M746.1,18.2 746.7,175.6 745.6,177.9 705.6,177.3 634.3,178.5 13.1,179.0 12.0,177.9 12.0,20.0 13.1,18.8 533.4,18.2 745.0,17.1Z",
-          "M747.3,17.1 663.4,16.5 532.2,17.7 11.4,17.7 11.4,180.2 419.9,179.0 532.2,179.6 747.3,178.5Z"
-        ]
-      },
       "reference": 6,
       "sourcePage": 16,
-      "sourceImages": [
-        {
-          "src": "/paper-figures/2018-pm1-q2-f3-7eac5a86.webp",
-          "width": 1072,
-          "height": 290,
-          "page": 16
-        }
-      ]
+      "nativeSvg": "<svg viewBox=\"0 0 1110 236\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"8\" y=\"8\" width=\"1094\" height=\"219.20000000000002\" fill=\"white\" stroke=\"currentColor\" stroke-width=\"1.5\" /><text x=\"18\" y=\"35.2\" font-size=\"22\" text-anchor=\"start\" fill=\"currentColor\">①　“部署”テーブルから不要な行を削除する。</text><text x=\"18\" y=\"70.4\" font-size=\"22\" text-anchor=\"start\" fill=\"currentColor\">②　コミットする。</text><text x=\"18\" y=\"105.60000000000001\" font-size=\"22\" text-anchor=\"start\" fill=\"currentColor\">③　“部署”テーブルに対して，新規の行を挿入する。</text><text x=\"18\" y=\"140.8\" font-size=\"22\" text-anchor=\"start\" fill=\"currentColor\">④　コミットする。</text><text x=\"18\" y=\"176.0\" font-size=\"22\" text-anchor=\"start\" fill=\"currentColor\">⑤　“従業員”テーブルの部署コードを更新する。</text><text x=\"18\" y=\"211.20000000000002\" font-size=\"22\" text-anchor=\"start\" fill=\"currentColor\">⑥　コミットする。</text></svg>"
     },
     {
       "text": "設問1 〔人事情報管理の業務概要〕について，(1)，(2)に答えよ。",

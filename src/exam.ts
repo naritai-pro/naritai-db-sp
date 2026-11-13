@@ -32,18 +32,11 @@ export interface MaterialBlock {
   text: string;
   reference?: number;
   sourcePage?: number;
-  sourceImages?: { src: string; width: number; height: number; page: number }[];
+  nativeSvg?: string;
   heading?: boolean;
   lines?: string[];
-  table?: { headers: string[]; rows: (string | null)[][] };
+  table?: { headers: string[]; rows: (string | null)[][]; spans?: [number, number, number, number][]; frames?: [number, number, number, number][]; groups?: [number, number, string][]; hideHeader?: boolean };
   diagramIndex?: number;
-  layout?: {
-    width: number;
-    height: number;
-    rules: [number, number, number, number][];
-    paths?: string[];
-    labels: [number, number, number, number, string][];
-  };
   illustration?: string;
   illustrationParts?: { viewBox: string; paths: Record<string, string> };
   description?: string;

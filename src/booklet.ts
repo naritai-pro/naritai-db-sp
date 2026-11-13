@@ -269,12 +269,11 @@ export function bookletText(q: Question) {
   if (q.materialBlocks) return q.materialBlocks.map(block => {
     const model = block.diagramIndex === undefined ? undefined : q.diagrams[block.diagramIndex];
     const rows = block.table ? [block.table.headers, ...block.table.rows] : [];
-    const sources = block.sourceImages?.map(image => "IPA原本 p." + image.page + "：" + q.paper.split("#")[0] + "#page=" + image.page) ?? [];
-    const layout = block.layout;
+    const svg = block.nativeSvg ? new DOMParser().parseFromString(block.nativeSvg, "image/svg+xml") : null;
     return [
-      block.text, ...sources, ...(block.underline ? ["下線部：" + block.underline] : []), ...(block.lines ?? []),
-      ...(layout ? layout.labels.map(([x, y, , , text]) => block.sourceImages?.length ? text : "(" + x + ", " + y + ") " + text) : []),
-      ...(!block.sourceImages?.length && layout?.rules.length ? ["図中の線（始点x,y・終点x,y）：" + JSON.stringify(layout.rules)] : []),
+      block.text, ...(block.sourcePage ? ["IPA原本 p." + block.sourcePage + "：" + q.paper.split("#")[0] + "#page=" + block.sourcePage] : []),
+      ...(block.underline ? ["下線部：" + block.underline] : []), ...(block.lines ?? []),
+      ...Array.from(svg?.querySelectorAll("text,desc") ?? [], n => n.textContent),
       ...rows.map(row => row.map(cell => cell ?? "（網掛け）").join("\t")),
       ...(model ? [JSON.stringify({ entities: model.nodes.map(n => n[0]), relationships: model.fixed })] : []),
       ...(block.description ? [block.description] : []), ...(block.notes ?? []),
@@ -466,17 +465,34 @@ function archiveTables(caption: string, data: NonNullable<MaterialBlock["table"]
   function tableFor(indices: number[], title: string) {
     const table = el("table", "", "archive-table");
     table.createCaption().textContent = title;
-    const header = table.createTHead().insertRow();
-    for (const index of indices) {
-      const th = el("th", data.headers[index]);
-      th.scope = "col";
-      header.append(th);
+    if (!data.hideHeader) {
+      const head = table.createTHead(), header = head.insertRow();
+      const sub = data.groups?.length ? head.insertRow() : null;
+      for (const index of indices) {
+        const group = data.groups?.find(([start, count]) => start <= index && index < start + count);
+        if (group && group[0] === index) {
+          const label = el("th", group[2]); label.scope = "colgroup"; label.colSpan = group[1]; header.append(label);
+        }
+        const th = el("th", data.headers[index]); th.scope = "col";
+        if (!group && sub) th.rowSpan = 2;
+        (group && sub ? sub : header).append(th);
+      }
     }
     const body = table.createTBody();
     for (const [rowIndex, cells] of data.rows.entries()) {
       const row = body.insertRow();
       for (const index of indices) {
+        const span = data.spans?.find(([r,c,h,w]) => r <= rowIndex && rowIndex < r+h && c <= index && index < c+w);
+        if (span && (rowIndex !== span[0] || index !== span[1])) continue;
         const cell = row.insertCell(), value = cells[index];
+        if (span) { cell.rowSpan = span[2]; cell.colSpan = span[3]; }
+        for (const [r,c,h,w] of data.frames ?? []) {
+          if (rowIndex < r || rowIndex >= r+h || index < c || index >= c+w) continue;
+          if (rowIndex === r) cell.style.borderTopWidth = "3px";
+          if (rowIndex === r+h-1) cell.style.borderBottomWidth = "3px";
+          if (index === c) cell.style.borderLeftWidth = "3px";
+          if (index === c+w-1) cell.style.borderRightWidth = "3px";
+        }
         cell.dataset.figurePart = (rowIndex + 1) + "行" + (index + 1) + "列";
         if (value === null) {
           cell.className = "masked";
@@ -494,6 +510,11 @@ function archiveTables(caption: string, data: NonNullable<MaterialBlock["table"]
     return table;
   }
   const full = tableFor(columns, caption);
+  if (data.spans || data.groups || data.frames) {
+    const wrap = el("div", "", "native-table-scroll");
+    if (columns.length > 6) full.style.minWidth = columns.length * 3.4 + "em";
+    wrap.append(full); return wrap;
+  }
   if (columns.length < 8) return full;
   // A CRUD matrix may have fourteen columns. On narrow paper panels repeat the
   // row key in each band; readers can still compare cells without panning.
@@ -504,45 +525,6 @@ function archiveTables(caption: string, data: NonNullable<MaterialBlock["table"]
   }
   wrap.append(full, bands);
   return wrap;
-}
-
-function sourceFigure(q: Question, block: MaterialBlock) {
-  const figure = el("figure", "", "source-figure");
-  figure.id = "paper-figure-" + block.reference;
-  for (const source of block.sourceImages ?? []) {
-    const image = el("img");
-    image.width = source.width;
-    image.height = source.height;
-    image.alt = block.text + "（IPA原本 p." + source.page + "）";
-    image.loading = "lazy";
-    image.src = source.src;
-    const zoom = link("", source.src);
-    zoom.target = "_blank";
-    zoom.rel = "noopener";
-    zoom.title = "図表を拡大";
-    zoom.append(image);
-    figure.append(zoom);
-  }
-  const footer = el("figcaption", "", "source-figure-links");
-  for (const page of new Set(block.sourceImages?.map(image => image.page))) {
-    const original = link("IPA原本 p." + page + " ↗", q.paper.split("#")[0] + "#page=" + page);
-    original.target = "_blank";
-    original.rel = "noopener";
-    footer.append(original);
-  }
-  figure.append(footer);
-  if (block.table || block.lines) {
-    const details = el("details");
-    details.append(el("summary", "テキスト表示"));
-    if (block.table) details.append(archiveTables(block.text, block.table, block.underline));
-    if (block.lines) {
-      const frame = el("div", "", "schema-frame archive-lines");
-      for (const line of block.lines) frame.append(archiveText(line));
-      details.append(frame);
-    }
-    figure.append(details);
-  }
-  return figure;
 }
 
 export function materials(q: Question, reviewing: boolean, evidence: ReadonlyMap<string, string>) {
@@ -583,28 +565,31 @@ export function materials(q: Question, reviewing: boolean, evidence: ReadonlyMap
   }
   if (q.materialBlocks) {
     for (const block of q.materialBlocks) {
-      if (block.sourceImages?.length) {
-        paper.append(sourceFigure(q, block));
-        continue;
-      }
-      const item = el(block.layout || block.illustration || block.diagramIndex !== undefined || block.lines || block.table ? "figure" : block.heading ? "h3" : "p");
+      const item = el(block.nativeSvg || block.illustration || block.diagramIndex !== undefined || block.lines || block.table ? "figure" : block.heading ? "h3" : "p");
       if (block.reference) item.id = "paper-figure-" + block.reference;
       if (block.diagramIndex !== undefined) {
         item.append(diagram(q.diagrams[block.diagramIndex], [], undefined, "paper"), el("figcaption", block.text));
-      } else if (block.layout) {
-        const {width, height, rules, labels, paths} = block.layout;
-        const svg = vector("svg", {viewBox: "0 0 " + width + " " + height, class: "paper-illustration", role: "img", "aria-label": block.text});
-        if (rules.length) {
-          svg.append(vector("path", {d: rules.map(([x1,y1,x2,y2]) => "M"+x1+" "+y1+"L"+x2+" "+y2).join(" "), fill: "none", stroke: "currentColor", "stroke-width": .9}));
-        }
-        if (paths?.length) svg.append(vector("path", {d: paths.join(" "), fill: "currentColor", "fill-rule": "evenodd"}));
-        for (const [x,y,w,h,value] of labels) {
-          if (!value.trim()) continue;
-          const text = vector("text", {x,y, "font-size": h * .82, textLength: w, lengthAdjust: "spacingAndGlyphs"});
-          text.textContent = value;
-          svg.append(text);
-        }
-        item.append(svg, el("figcaption", block.text));
+      } else if (block.nativeSvg) {
+        const svg = document.importNode(new DOMParser().parseFromString(block.nativeSvg, "image/svg+xml").documentElement, true);
+        svg.classList.add("paper-illustration");
+        svg.setAttribute("role", "img");
+        svg.setAttribute("aria-label", block.text);
+        const expand = el("button", "図を拡大", "figure-zoom");
+        expand.type = "button";
+        expand.addEventListener("click", () => {
+          const dialog = el("dialog", "", "figure-dialog"), close = el("button", "閉じる");
+          dialog.setAttribute("aria-label", block.text);
+          const view = el("div", "", "figure-zoom-view");
+          const enlarged = svg.cloneNode(true) as SVGSVGElement;
+          enlarged.style.minWidth = Math.min(1800, enlarged.viewBox.baseVal.width) + "px";
+          view.append(enlarged);
+          close.addEventListener("click", () => dialog.close());
+          dialog.addEventListener("close", () => { dialog.remove(); expand.focus(); }, {once: true});
+          dialog.append(close, view);
+          document.body.append(dialog);
+          dialog.showModal();
+        });
+        item.append(svg, el("figcaption", block.text), expand);
       } else if (block.lines) {
         const frame = el("div", "", "schema-frame archive-lines");
         for (const line of block.lines) frame.append(archiveText(line));

@@ -1,7 +1,7 @@
 {
   "id": "2016-spring-db-pm1-q3",
   "title": "営業支援システムのアクセス制御",
-  "source": "平成28年度 春期 データベーススペシャリスト試験 午後Ⅰ 問6",
+  "source": "平成28年度 春期 データベーススペシャリスト試験 午後Ⅰ 問3",
   "paper": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000gn5o-att/2016h28h_db_pm1_qs.pdf#page=18",
   "solution": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000gn5o-att/2016h28h_db_pm1_ans.pdf#page=3",
   "comment": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000gn5o-att/2016h28h_db_pm1_cmnt.pdf#page=1",
@@ -237,286 +237,9 @@
     },
     {
       "text": "図1　営業部の組織（一部）",
-      "layout": {
-        "width": 427.9,
-        "height": 306.0,
-        "rules": [
-          [
-            119.1,
-            13.8,
-            273.2,
-            13.8
-          ],
-          [
-            119.1,
-            64.6,
-            273.2,
-            64.6
-          ],
-          [
-            90.6,
-            82.0,
-            239.5,
-            82.0
-          ],
-          [
-            240.7,
-            82.2,
-            408.9,
-            82.2
-          ],
-          [
-            14.2,
-            102.2,
-            168.2,
-            102.2
-          ],
-          [
-            192.2,
-            102.2,
-            346.2,
-            102.2
-          ],
-          [
-            14.2,
-            152.7,
-            168.2,
-            152.7
-          ],
-          [
-            192.2,
-            152.7,
-            345.6,
-            152.7
-          ],
-          [
-            26.7,
-            165.2,
-            59.2,
-            165.2
-          ],
-          [
-            210.4,
-            165.2,
-            244.1,
-            165.2
-          ],
-          [
-            26.7,
-            185.7,
-            59.2,
-            185.7
-          ],
-          [
-            211.0,
-            185.7,
-            244.1,
-            185.7
-          ],
-          [
-            26.7,
-            205.7,
-            58.7,
-            205.7
-          ],
-          [
-            210.4,
-            205.7,
-            244.1,
-            205.7
-          ],
-          [
-            120.0,
-            13.3,
-            120.0,
-            65.7
-          ],
-          [
-            272.3,
-            13.8,
-            272.3,
-            66.3
-          ],
-          [
-            196.2,
-            64.0,
-            196.2,
-            83.4
-          ],
-          [
-            91.2,
-            81.7,
-            91.2,
-            103.9
-          ],
-          [
-            268.9,
-            81.7,
-            268.9,
-            103.9
-          ],
-          [
-            15.0,
-            101.6,
-            15.0,
-            154.1
-          ],
-          [
-            167.3,
-            101.6,
-            167.3,
-            154.1
-          ],
-          [
-            193.0,
-            101.6,
-            193.0,
-            154.1
-          ],
-          [
-            345.0,
-            101.6,
-            345.0,
-            154.1
-          ],
-          [
-            27.6,
-            152.4,
-            27.6,
-            217.9
-          ],
-          [
-            211.3,
-            152.4,
-            211.3,
-            217.9
-          ]
-        ],
-        "labels": [
-          [
-            144.7,
-            38.6,
-            102.7,
-            20.8,
-            "営業部（B10）"
-          ],
-          [
-            126.2,
-            59.5,
-            137.6,
-            18.8,
-            "部長：L氏（E111）"
-          ],
-          [
-            31.6,
-            127.9,
-            117.4,
-            21.3,
-            "営業1課（B11）"
-          ],
-          [
-            21.4,
-            147.8,
-            139.6,
-            18.8,
-            "課長：P氏（E112））"
-          ],
-          [
-            70.7,
-            174.7,
-            92.4,
-            16.4,
-            "Q氏（E113）"
-          ],
-          [
-            70.7,
-            195.1,
-            92.5,
-            18.9,
-            "R氏（E114）"
-          ],
-          [
-            70.7,
-            215.8,
-            92.6,
-            19.3,
-            "S氏（E115）"
-          ],
-          [
-            210.3,
-            127.0,
-            115.1,
-            21.2,
-            "営業2課 （B12）"
-          ],
-          [
-            198.0,
-            147.8,
-            139.6,
-            18.8,
-            "課長：T氏（E116）"
-          ],
-          [
-            239.1,
-            174.7,
-            108.8,
-            16.4,
-            "- 0氏（E117）"
-          ],
-          [
-            239.1,
-            195.2,
-            108.8,
-            18.8,
-            "- V氏（E118）"
-          ],
-          [
-            239.1,
-            215.7,
-            110.9,
-            18.8,
-            "- W氏（E119）"
-          ],
-          [
-            9.1,
-            264.5,
-            37.0,
-            20.6,
-            "注記"
-          ],
-          [
-            50.2,
-            266.4,
-            355.2,
-            22.8,
-            "部門名の後ろのカツコ内は部門番号を表す。"
-          ],
-          [
-            60.5,
-            292.9,
-            345.0,
-            25.1,
-            "社員名の後ろのカツコ内は社員番号を表す。"
-          ]
-        ],
-        "paths": [
-          "M193.4,102.6 344.0,102.6 344.6,151.1 194.0,151.7 192.8,135.1Z",
-          "M14.8,103.8 16.0,102.6 19.4,102.1 166.0,102.1 166.6,151.1 15.4,151.7Z",
-          "M408.4,81.0 240.7,81.5 267.5,82.1 268.1,100.3 267.0,101.5 192.8,100.9 192.2,152.8 211.1,153.4 210.5,216.1 212.2,216.1 211.6,207.0 212.8,205.8 237.9,205.8 237.9,204.7 212.8,205.3 211.6,203.5 211.6,189.9 212.8,185.3 237.9,185.3 211.6,184.2 211.6,166.5 212.8,165.3 237.9,165.3 237.9,164.2 212.2,164.2 212.2,152.8 345.1,152.8 345.7,119.2 344.6,100.9 269.8,101.5 268.7,100.3 268.7,83.2 269.8,82.1 408.4,82.1Z",
-          "M120.4,14.3 271.0,13.7 272.1,16.5 271.5,63.3 122.1,63.9 119.8,62.1Z",
-          "M272.7,13.1 119.2,13.1 119.2,64.4 194.5,64.4 195.7,65.6 195.7,80.4 194.5,81.5 91.3,81.0 90.1,100.9 14.8,100.9 14.3,152.8 26.8,153.4 26.8,216.7 28.0,216.7 28.5,205.8 58.2,205.8 57.6,204.7 28.5,205.3 28.5,185.9 58.8,185.3 28.0,184.2 28.5,165.3 58.2,165.3 58.2,164.2 28.5,164.2 28.5,152.8 167.7,152.2 167.1,100.9 91.8,100.9 91.8,82.1 239.0,82.1 197.4,81.5 196.2,80.4 196.2,65.6 197.4,64.4 272.1,65.0Z"
-        ]
-      },
       "reference": 1,
       "sourcePage": 19,
-      "sourceImages": [
-        {
-          "src": "/paper-figures/2016-pm1-q3-f1-258cec2a.webp",
-          "width": 610,
-          "height": 458,
-          "page": 19
-        }
-      ]
+      "nativeSvg": "<svg viewBox=\"0 0 610 404\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"161\" y=\"8\" width=\"220\" height=\"76\" fill=\"white\" stroke=\"currentColor\" stroke-width=\"1.5\" /><text x=\"271.0\" y=\"42.32\" font-size=\"23\" text-anchor=\"middle\" fill=\"currentColor\">営業部（B10）</text><text x=\"271.0\" y=\"65.32\" font-size=\"23\" text-anchor=\"middle\" fill=\"currentColor\">部長：L氏（E111）</text><path d=\"M271 84 L271 107\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" /><path d=\"M120 135 L120 107 L577 107\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" /><text x=\"580\" y=\"113\" font-size=\"21\" text-anchor=\"start\" fill=\"currentColor\">…</text><path d=\"M375 107 L375 135\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" /><rect x=\"11\" y=\"135\" width=\"220\" height=\"75\" fill=\"white\" stroke=\"currentColor\" stroke-width=\"1.5\" /><text x=\"121.0\" y=\"169.14\" font-size=\"21\" text-anchor=\"middle\" fill=\"currentColor\">営業1課（B11）</text><text x=\"121.0\" y=\"190.14\" font-size=\"21\" text-anchor=\"middle\" fill=\"currentColor\">課長：P氏（E112）</text><path d=\"M30 210 L30 300\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" /><text x=\"30\" y=\"320\" font-size=\"23\" text-anchor=\"middle\" fill=\"currentColor\">⋮</text><path d=\"M30 226 L75 226\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" /><text x=\"92\" y=\"236\" font-size=\"20\" text-anchor=\"start\" fill=\"currentColor\">Q氏（E113）</text><path d=\"M30 254 L75 254\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" /><text x=\"92\" y=\"264\" font-size=\"20\" text-anchor=\"start\" fill=\"currentColor\">R氏（E114）</text><path d=\"M30 282 L75 282\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" /><text x=\"92\" y=\"292\" font-size=\"20\" text-anchor=\"start\" fill=\"currentColor\">S氏（E115）</text><rect x=\"266\" y=\"135\" width=\"220\" height=\"75\" fill=\"white\" stroke=\"currentColor\" stroke-width=\"1.5\" /><text x=\"376.0\" y=\"169.14\" font-size=\"21\" text-anchor=\"middle\" fill=\"currentColor\">営業2課（B12）</text><text x=\"376.0\" y=\"190.14\" font-size=\"21\" text-anchor=\"middle\" fill=\"currentColor\">課長：T氏（E116）</text><path d=\"M285 210 L285 300\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" /><text x=\"285\" y=\"320\" font-size=\"23\" text-anchor=\"middle\" fill=\"currentColor\">⋮</text><path d=\"M285 226 L330 226\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" /><text x=\"347\" y=\"236\" font-size=\"20\" text-anchor=\"start\" fill=\"currentColor\">U氏（E117）</text><path d=\"M285 254 L330 254\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" /><text x=\"347\" y=\"264\" font-size=\"20\" text-anchor=\"start\" fill=\"currentColor\">V氏（E118）</text><path d=\"M285 282 L330 282\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" /><text x=\"347\" y=\"292\" font-size=\"20\" text-anchor=\"start\" fill=\"currentColor\">W氏（E119）</text><text x=\"8\" y=\"360\" font-size=\"19\" text-anchor=\"start\" fill=\"currentColor\">注記　部門名の後ろのカッコ内は部門番号を表す。</text><text x=\"73\" y=\"393\" font-size=\"19\" text-anchor=\"start\" fill=\"currentColor\">社員名の後ろのカッコ内は社員番号を表す。</text></svg>"
     },
     {
       "text": "［営業支援システムの概要］"
@@ -538,15 +261,7 @@
         "訪問実績（PK[顧客番号]，PK[社員番号]，PK[訪問実施日]，訪問開始時刻，訪問終了時刻，訪問結果）"
       ],
       "reference": 2,
-      "sourcePage": 19,
-      "sourceImages": [
-        {
-          "src": "/paper-figures/2016-pm1-q3-f2-a399171e.webp",
-          "width": 1104,
-          "height": 253,
-          "page": 19
-        }
-      ]
+      "sourcePage": 19
     },
     {
       "text": "2．セキュリティ要件",
@@ -614,15 +329,7 @@
       ],
       "reference": 3,
       "text": "表1　営業1課及び営業2課のビューの定義",
-      "sourcePage": 20,
-      "sourceImages": [
-        {
-          "src": "/paper-figures/2016-pm1-q3-t1-8fa47d3f.webp",
-          "width": 1026,
-          "height": 297,
-          "page": 20
-        }
-      ]
+      "sourcePage": 20
     },
     {
       "text": "Fさんは、ビューを用いることを前提に、次のようにロールを設計し、運用することに決めた。営業課別ビューのアクセス権限をロールに付与する手順を，表2に示す。"
@@ -686,15 +393,7 @@
       ],
       "reference": 4,
       "text": "表2　営業課別ビューのアクセス権限をロールに付与する手順（未完成）",
-      "sourcePage": 21,
-      "sourceImages": [
-        {
-          "src": "/paper-figures/2016-pm1-q3-t2-ef61bf8a.webp",
-          "width": 1079,
-          "height": 586,
-          "page": 21
-        }
-      ]
+      "sourcePage": 21
     },
     {
       "text": "［ビューの設計変更］"
@@ -737,15 +436,7 @@
       ],
       "text": "表3　営業支援システムで使用する主なSQLの構文（未完成）",
       "reference": 5,
-      "sourcePage": 22,
-      "sourceImages": [
-        {
-          "src": "/paper-figures/2016-pm1-q3-t3-c0fb3bf6.webp",
-          "width": 1104,
-          "height": 673,
-          "page": 22
-        }
-      ]
+      "sourcePage": 22
     },
     {
       "text": "［セキュリティ要件の強化］"
@@ -789,15 +480,7 @@
         ]
       },
       "reference": 6,
-      "sourcePage": 23,
-      "sourceImages": [
-        {
-          "src": "/paper-figures/2016-pm1-q3-t4-e043cfd7.webp",
-          "width": 1104,
-          "height": 342,
-          "page": 23
-        }
-      ]
+      "sourcePage": 23
     },
     {
       "text": "設問1　［ビュー及びロールの設計］について、(1)，(2)に答えよ。",

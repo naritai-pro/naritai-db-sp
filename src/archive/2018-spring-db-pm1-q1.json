@@ -1,7 +1,7 @@
 {
   "id": "2018-spring-db-pm1-q1",
   "title": "コピー機販売会社のデータベース設計",
-  "source": "平成30年度 春期 データベーススペシャリスト試験 午後Ⅰ 問3",
+  "source": "平成30年度 春期 データベーススペシャリスト試験 午後Ⅰ 問1",
   "paper": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000fabr-att/2018h30h_db_pm1_qs.pdf#page=6",
   "solution": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000fabr-att/2018h30h_db_pm1_ans.pdf#page=1",
   "comment": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000fabr-att/2018h30h_db_pm1_cmnt.pdf#page=1",
@@ -936,15 +936,7 @@
       "text": "図1　概念データモデル（未完成）",
       "diagramIndex": 0,
       "reference": 1,
-      "sourcePage": 8,
-      "sourceImages": [
-        {
-          "src": "/paper-figures/2018-pm1-q1-f1-b808c357.webp",
-          "width": 1109,
-          "height": 840,
-          "page": 8
-        }
-      ]
+      "sourcePage": 8
     },
     {
       "text": "図2　関係スキーマ（未完成）",
@@ -966,15 +958,7 @@
         "注記　網掛け部分は表示していない。"
       ],
       "reference": 2,
-      "sourcePage": 9,
-      "sourceImages": [
-        {
-          "src": "/paper-figures/2018-pm1-q1-f2-f36b032a.webp",
-          "width": 1129,
-          "height": 956,
-          "page": 9
-        }
-      ]
+      "sourcePage": 9
     },
     {
       "text": "〔出荷指示の追加〕",
@@ -1132,15 +1116,7 @@
       },
       "reference": 3,
       "text": "表1　エンティティタイプに固有の属性（未完成）",
-      "sourcePage": 10,
-      "sourceImages": [
-        {
-          "src": "/paper-figures/2018-pm1-q1-t1-82eba468.webp",
-          "width": 960,
-          "height": 761,
-          "page": 10
-        }
-      ]
+      "sourcePage": 10
     },
     {
       "text": "(2) 図1中の商品とセット製品構成を対象に，商品をサブタイプに分割した概念データモデルを図3に示す。図3中の太枠内にエンティティタイプ名を入れ，欠落しているリレーションシップを補って図を完成させよ。"
@@ -1152,15 +1128,7 @@
       "text": "図3　商品をサブタイプに分割した概念データモデル（未完成）",
       "diagramIndex": 1,
       "reference": 4,
-      "sourcePage": 11,
-      "sourceImages": [
-        {
-          "src": "/paper-figures/2018-pm1-q1-f3-278cdbcb.webp",
-          "width": 1027,
-          "height": 607,
-          "page": 11
-        }
-      ]
+      "sourcePage": 11
     },
     {
       "text": "設問3 〔出荷指示の追加〕について，(1)，(2)に答えよ。",

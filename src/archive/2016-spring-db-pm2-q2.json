@@ -1,7 +1,7 @@
 {
   "id": "2016-spring-db-pm2-q2",
   "title": "アフタサービス業務の概念データモデリング",
-  "source": "平成28年度 春期 データベーススペシャリスト試験 午後Ⅱ 問3",
+  "source": "平成28年度 春期 データベーススペシャリスト試験 午後Ⅱ 問2",
   "paper": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000gn5o-att/2016h28h_db_pm2_qs.pdf#page=20",
   "solution": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000gn5o-att/2016h28h_db_pm2_ans.pdf#page=2",
   "comment": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000gn5o-att/2016h28h_db_pm2_cmnt.pdf#page=1",
@@ -468,80 +468,66 @@
     },
     {
       "text": "表1　現調・定期点検の結果の判断方法の決定表（未完成）",
+      "reference": 1,
+      "sourcePage": 25,
       "table": {
         "headers": [
           "修理が必要か",
-          "",
-          "",
-          "YYY",
-          "",
-          "NN",
-          "",
+          "Y",
+          "Y",
+          "Y",
+          "N",
+          "N",
           "N"
         ],
         "rows": [
           [
             "予防保全保守契約を結んでいるか",
-            "",
             "Y",
-            "Y N",
-            "",
+            "Y",
+            "N",
             "Y",
             "Y",
             "N"
           ],
           [
             "予防保全の対応が必要か",
-            "",
-            "",
-            "",
-            "",
-            "YN -YN-",
-            "",
-            ""
+            "Y",
+            "N",
+            "－",
+            "Y",
+            "N",
+            "－"
           ],
           [
             "修理対応を実施する",
-            "",
-            "",
-            "XXX-",
-            "",
-            "",
-            "-",
-            ""
+            "X",
+            "X",
+            "X",
+            "－",
+            "－",
+            "－"
           ],
           [
-            "ア",
-            "",
+            "［ア］",
             "X",
-            "",
-            "",
+            "－",
+            "－",
             "X",
-            "",
-            ""
+            "－",
+            "－"
           ],
           [
-            "イ",
-            "",
+            "［イ］",
             "X",
             "X",
-            "XX",
-            "",
-            "",
-            ""
+            "X",
+            "X",
+            "－",
+            "－"
           ]
         ]
-      },
-      "reference": 1,
-      "sourcePage": 25,
-      "sourceImages": [
-        {
-          "src": "/paper-figures/2016-pm2-q2-t1-02e9f538.webp",
-          "width": 855,
-          "height": 350,
-          "page": 25
-        }
-      ]
+      }
     },
     {
       "text": "〔概念データモデルと関係スキーマの設計〕",
@@ -580,15 +566,7 @@
       "text": "図1　概念データモデル（未完成）",
       "diagramIndex": 0,
       "reference": 2,
-      "sourcePage": 26,
-      "sourceImages": [
-        {
-          "src": "/paper-figures/2016-pm2-q2-f1-1faa8a87.webp",
-          "width": 1117,
-          "height": 1657,
-          "page": 26
-        }
-      ]
+      "sourcePage": 26
     },
     {
       "text": "図2　関係スキーマ（未完成）",
@@ -635,15 +613,7 @@
         "作業対応明細（PK[対応明細番号]，作業時間）"
       ],
       "reference": 3,
-      "sourcePage": 27,
-      "sourceImages": [
-        {
-          "src": "/paper-figures/2016-pm2-q2-f2-2746ad20.webp",
-          "width": 1136,
-          "height": 1653,
-          "page": 27
-        }
-      ]
+      "sourcePage": 27
     },
     {
       "text": "解答に当たっては，巻頭の表記ルールに従うこと。ただし，エンティティタイプ間の対応関係にゼロを含むか否かの表記は必要ない。"
