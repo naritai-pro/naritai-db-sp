@@ -1,14 +1,7 @@
 import { morningName, morningParts, morningTerm, morningYears } from "./morning-catalog";
+import { afternoonId, pastPapers } from "./past-papers";
 import { questionPath } from "./routes";
 import { el, link } from "./dom";
-
-const archives = [
-  [2025, "nl10bi0000009lh8"],
-  [2024, "m42obm000000afqx"],
-  [2023, "ps6vr70000010d6y"],
-  [2022, "gmcbt80000008smf"],
-  [2021, "gmcbt8000000apad"],
-] as const;
 
 export function library(availableIds: Set<string>, signal: AbortSignal) {
   const nav = el("nav", "", "library-nav");
@@ -51,14 +44,14 @@ export function library(availableIds: Set<string>, signal: AbortSignal) {
     for (let q = 1; q <= (pm === 1 ? 3 : 2); q++) {
       const group = el("details", "", "question-group");
       group.append(el("summary", "問" + q));
-      for (const [year, dir] of archives) {
-        const id = year + "-autumn-db-pm" + pm + "-q" + q;
+      for (const year of morningYears) {
+        const id = afternoonId(year, "pm" + pm, q);
         const ready = availableIds.has(id);
         const anchor = link(year + "年度", questionPath(id), "year-link");
         anchor.append(el("small", ready ? "演習" : "冊子"));
         anchor.onclick = () => { if (mobile.matches) { setOpen(false); toggle.focus(); } };
         group.append(anchor);
-        const paper = "https://www.ipa.go.jp/shiken/mondai-kaiotu/" + dir + "-att/" + year + "r0" + (year-2018) + "a_db_pm" + pm + "_qs.pdf";
+        const paper = pastPapers.get(id)?.paper ?? "";
         entries.set(id, {year, title: name + "　問" + q, paper, anchor, session, group});
       }
       session.append(group);

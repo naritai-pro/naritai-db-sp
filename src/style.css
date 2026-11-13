@@ -559,3 +559,17 @@ body:has(.phone-panel[open]) { overflow: hidden; }
   .paper-viewport p, .review-answers pre { line-break: anywhere; }
   .phone-panel .index nav { margin: .5rem 0 0; }
 }
+
+.pdf-controls { display: flex; align-items: center; flex-wrap: wrap; gap: .45rem; padding: .55rem; font-size: .85rem; }
+.pdf-controls select { width: auto; margin: 0; }
+.pdf-controls button[aria-pressed="true"] { background: #126546; color: white; }
+.pdf-controls button:disabled { opacity: .45; }
+.pdf-page { position: relative; }
+.pdf-page canvas { display: block; width: 100%; height: auto; }
+.pdf-page .pdf-ink { position: absolute; inset: 0; pointer-events: none; }
+.pdf-page.writing .pdf-ink { pointer-events: auto; touch-action: none; cursor: crosshair; }
+.materials .pdf-viewer { max-height: calc(100dvh - 82px); overflow-y: auto; }
+.pdf-viewer [role=status]:not(:empty) { padding: 1rem; }
+@media (max-width: 760px) {
+  .materials .pdf-viewer { max-height: none; }
+}

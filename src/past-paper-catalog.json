@@ -1,0 +1,764 @@
+[
+  {
+    "year": 2016,
+    "part": "pm1",
+    "number": 1,
+    "title": "駐車場管理業務のデータベース設計",
+    "paper": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000gn5o-att/2016h28h_db_pm1_qs.pdf#page=6",
+    "answer": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000gn5o-att/2016h28h_db_pm1_ans.pdf#page=1",
+    "comment": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000gn5o-att/2016h28h_db_pm1_cmnt.pdf#page=1",
+    "sections": [
+      1,
+      2,
+      3
+    ],
+    "subparts": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "firstPage": 6,
+    "lastPage": 11,
+    "studyNote": "周辺施設の1行がどの駐車場とどの施設を結ぶかを考えます。同じ施設をIDでも経度・緯度の組でも指定できるので、駐車場IDと組み合わせたときに行を識別できる最小の列の組は一つではありません。"
+  },
+  {
+    "year": 2016,
+    "part": "pm1",
+    "number": 2,
+    "title": "受発注在庫管理システムのバックアップと回復",
+    "paper": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000gn5o-att/2016h28h_db_pm1_qs.pdf#page=12",
+    "answer": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000gn5o-att/2016h28h_db_pm1_ans.pdf#page=2",
+    "comment": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000gn5o-att/2016h28h_db_pm1_cmnt.pdf#page=1",
+    "sections": [
+      1,
+      2,
+      3
+    ],
+    "subparts": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "firstPage": 12,
+    "lastPage": 17,
+    "studyNote": "オンラインとバッチの境界で時系列を区切り、各プログラムが読む表と書く表を並べます。不良プログラムの更新を後続処理が読んでいれば、その処理の出力にも影響が及びます。回復範囲を決めてから必要なバックアップを選びます。"
+  },
+  {
+    "year": 2016,
+    "part": "pm1",
+    "number": 3,
+    "title": "営業支援システムのアクセス制御",
+    "paper": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000gn5o-att/2016h28h_db_pm1_qs.pdf#page=18",
+    "answer": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000gn5o-att/2016h28h_db_pm1_ans.pdf#page=3",
+    "comment": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000gn5o-att/2016h28h_db_pm1_cmnt.pdf#page=1",
+    "sections": [
+      1,
+      2,
+      3
+    ],
+    "subparts": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        1,
+        2,
+        3
+      ]
+    ],
+    "firstPage": 18,
+    "lastPage": 23,
+    "studyNote": "社員が同じチームに再配属される例を作ります。社員とチームだけをキーにすると、以前の担当と今回の担当を別々に記録できません。また、チーム番号が一意なのは営業課内なので、異なる課の同じ番号も区別します。"
+  },
+  {
+    "year": 2016,
+    "part": "pm2",
+    "number": 1,
+    "title": "銀行の顧客情報管理システムの物理設計とデータ移行",
+    "paper": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000gn5o-att/2016h28h_db_pm2_qs.pdf#page=6",
+    "answer": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000gn5o-att/2016h28h_db_pm2_ans.pdf#page=1",
+    "comment": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000gn5o-att/2016h28h_db_pm2_cmnt.pdf#page=1",
+    "sections": [
+      1,
+      2,
+      3
+    ],
+    "subparts": [
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "firstPage": 6,
+    "lastPage": 18,
+    "studyNote": "列の格納長を足す前に、NULLを許す列に目印を付けます。本文の格納仕様でNULLを表す領域を含めて1行の長さを出してから行数を掛けると、容量計算の誤差を後の設問に持ち込まずに済みます。"
+  },
+  {
+    "year": 2016,
+    "part": "pm2",
+    "number": 2,
+    "title": "アフタサービス業務の概念データモデリング",
+    "paper": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000gn5o-att/2016h28h_db_pm2_qs.pdf#page=20",
+    "answer": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000gn5o-att/2016h28h_db_pm2_ans.pdf#page=2",
+    "comment": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000gn5o-att/2016h28h_db_pm2_cmnt.pdf#page=1",
+    "sections": [
+      0
+    ],
+    "subparts": [
+      [
+        1,
+        2,
+        3
+      ]
+    ],
+    "firstPage": 20,
+    "lastPage": 28,
+    "studyNote": "設備の問合せを一件選び、条件を変えたときに何の明細が何件残るかを決定表で追います。一時点で一つに見える対応も、修理や現調の履歴を蓄積した後に同じ制約が成り立つかを確かめます。"
+  },
+  {
+    "year": 2017,
+    "part": "pm1",
+    "number": 1,
+    "title": "グループウェアのデータベース設計",
+    "paper": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000fzx1-att/2017h29h_db_pm1_qs.pdf#page=6",
+    "answer": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000fzx1-att/2017h29h_db_pm1_ans.pdf#page=1",
+    "comment": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000fzx1-att/2017h29h_db_pm1_cmnt.pdf#page=1",
+    "sections": [
+      1,
+      2,
+      3
+    ],
+    "subparts": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "firstPage": 6,
+    "lastPage": 11,
+    "studyNote": "「上位のグループ」を別種の対象と考えず、あるグループから別のグループを参照する例を描きます。作成者や投稿者についても、その値がどのユーザを指すかを確認して、関係スキーマに外部キーの下線を付けます。"
+  },
+  {
+    "year": 2017,
+    "part": "pm1",
+    "number": 2,
+    "title": "在庫管理システムのトランザクションと排他制御",
+    "paper": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000fzx1-att/2017h29h_db_pm1_qs.pdf#page=12",
+    "answer": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000fzx1-att/2017h29h_db_pm1_ans.pdf#page=2",
+    "comment": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000fzx1-att/2017h29h_db_pm1_cmnt.pdf#page=1",
+    "sections": [
+      1,
+      2,
+      3
+    ],
+    "subparts": [
+      [],
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "firstPage": 12,
+    "lastPage": 17,
+    "studyNote": "同じ在庫行に対する二つの処理を左右に並べ、どの時点で共有ロックを持ち、どの時点で更新のためのロックを要求するかを書きます。対象が一行だけでも、互いのロック解放を待つ循環が生じるかを判定できます。"
+  },
+  {
+    "year": 2017,
+    "part": "pm1",
+    "number": 3,
+    "title": "販売分析支援システムのテーブルとSQL",
+    "paper": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000fzx1-att/2017h29h_db_pm1_qs.pdf#page=18",
+    "answer": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000fzx1-att/2017h29h_db_pm1_ans.pdf#page=3",
+    "comment": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000fzx1-att/2017h29h_db_pm1_cmnt.pdf#page=1",
+    "sections": [
+      1,
+      2
+    ],
+    "subparts": [
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ],
+    "firstPage": 18,
+    "lastPage": 23,
+    "studyNote": "「比較する二つの月」を変えたときにSQLのどこが変わるかを調べます。月が行の値なら条件値を変えれば済みますが、月別の列に売上を置くと、選ぶ列名そのものを切り替える必要があります。"
+  },
+  {
+    "year": 2017,
+    "part": "pm2",
+    "number": 1,
+    "title": "店舗販売とオンライン販売の情報統合",
+    "paper": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000fzx1-att/2017h29h_db_pm2_qs.pdf#page=6",
+    "answer": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000fzx1-att/2017h29h_db_pm2_ans.pdf#page=1",
+    "comment": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000fzx1-att/2017h29h_db_pm2_cmnt.pdf#page=1",
+    "sections": [
+      1,
+      2,
+      3
+    ],
+    "subparts": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "firstPage": 6,
+    "lastPage": 19,
+    "studyNote": "店舗で会員情報を更新した直後にオンライン側が同じ会員を参照する場面を描きます。情報の更新元と、最新値を必要とする処理を特定すると、どの表を共有し、どこに配置するかを判断できます。"
+  },
+  {
+    "year": 2017,
+    "part": "pm2",
+    "number": 2,
+    "title": "販売物流業務の概念データモデリング",
+    "paper": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000fzx1-att/2017h29h_db_pm2_qs.pdf#page=21",
+    "answer": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000fzx1-att/2017h29h_db_pm2_ans.pdf#page=2",
+    "comment": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000fzx1-att/2017h29h_db_pm2_cmnt.pdf#page=1",
+    "sections": [
+      1,
+      2,
+      3
+    ],
+    "subparts": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "firstPage": 21,
+    "lastPage": 33,
+    "studyNote": "計画生産品と補充生産品について、要求が発生してから物流の記録ができるまでを別々に描きます。統合時には、同じ名称かどうかだけでなく、一件を識別するキーと後続伝票へのつながりを比べます。"
+  },
+  {
+    "year": 2018,
+    "part": "pm1",
+    "number": 1,
+    "title": "コピー機販売会社のデータベース設計",
+    "paper": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000fabr-att/2018h30h_db_pm1_qs.pdf#page=6",
+    "answer": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000fabr-att/2018h30h_db_pm1_ans.pdf#page=1",
+    "comment": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000fabr-att/2018h30h_db_pm1_cmnt.pdf#page=1",
+    "sections": [
+      1,
+      2,
+      3
+    ],
+    "subparts": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "firstPage": 6,
+    "lastPage": 11,
+    "studyNote": "受注明細を一件選び、そのコピー機をどの事業所に設置するのかをたどります。発注した顧客だけで設置先が決まるかを確かめると、明細に必要な外部キーと図中の線を対応させられます。"
+  },
+  {
+    "year": 2018,
+    "part": "pm1",
+    "number": 2,
+    "title": "人事情報データベースでの制約の実装",
+    "paper": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000fabr-att/2018h30h_db_pm1_qs.pdf#page=12",
+    "answer": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000fabr-att/2018h30h_db_pm1_ans.pdf#page=3",
+    "comment": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000fabr-att/2018h30h_db_pm1_cmnt.pdf#page=1",
+    "sections": [
+      1,
+      2,
+      3
+    ],
+    "subparts": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2,
+        3
+      ]
+    ],
+    "firstPage": 12,
+    "lastPage": 17,
+    "studyNote": "制約違反になる更新を一例作り、どの表で何の操作が起きるか、更新の前と後のどちらで調べるか、どの条件なら拒否するかを分けて書きます。発火する時点と違反を判定する条件は別の解答です。"
+  },
+  {
+    "year": 2018,
+    "part": "pm1",
+    "number": 3,
+    "title": "温泉施設の物理データベース設計と実装",
+    "paper": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000fabr-att/2018h30h_db_pm1_qs.pdf#page=18",
+    "answer": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000fabr-att/2018h30h_db_pm1_ans.pdf#page=4",
+    "comment": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000fabr-att/2018h30h_db_pm1_cmnt.pdf#page=1",
+    "sections": [
+      1,
+      2
+    ],
+    "subparts": [
+      [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      [
+        1,
+        2,
+        3
+      ]
+    ],
+    "firstPage": 18,
+    "lastPage": 23,
+    "studyNote": "非会員が同じ施設の異なる精算機を使う例で、候補とする列の組が本当に一意か試します。既に主キーとして定義した組を再びUNIQUEに指定しても、追加の業務制約にはなりません。"
+  },
+  {
+    "year": 2018,
+    "part": "pm2",
+    "number": 1,
+    "title": "経費精算システムのデータベース設計と実装",
+    "paper": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000fabr-att/2018h30h_db_pm2_qs.pdf#page=6",
+    "answer": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000fabr-att/2018h30h_db_pm2_ans.pdf#page=1",
+    "comment": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000fabr-att/2018h30h_db_pm2_cmnt.pdf#page=1",
+    "sections": [
+      1,
+      2,
+      3
+    ],
+    "subparts": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [],
+      [
+        1,
+        2,
+        3
+      ]
+    ],
+    "firstPage": 6,
+    "lastPage": 19,
+    "studyNote": "申請種別だけを書いた制約式で、振込先などが不適切な行も通ってしまわないか確かめます。種別ごとに必須となる列を整理してから、条件の組合せを式にすると漏れが見つかります。"
+  },
+  {
+    "year": 2018,
+    "part": "pm2",
+    "number": 2,
+    "title": "製菓ラインの受注・製造指図・発注・入荷業務",
+    "paper": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000fabr-att/2018h30h_db_pm2_qs.pdf#page=21",
+    "answer": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000fabr-att/2018h30h_db_pm2_ans.pdf#page=2",
+    "comment": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000fabr-att/2018h30h_db_pm2_cmnt.pdf#page=1",
+    "sections": [
+      0
+    ],
+    "subparts": [
+      [
+        1,
+        2,
+        3,
+        4
+      ]
+    ],
+    "firstPage": 21,
+    "lastPage": 30,
+    "studyNote": "受注から入荷までの各記録を並べ、同じ品目がどの分類に同時に属し得るかを表にします。分類が排他的か共存可能かを決めてから図に戻ると、サブタイプの線とスキーマの外部キーが対応します。"
+  },
+  {
+    "year": 2019,
+    "part": "pm1",
+    "number": 1,
+    "title": "スポーツ大会運営システムのデータベース設計",
+    "paper": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000ddiw-att/2019h31h_db_pm1_qs.pdf#page=6",
+    "answer": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000ddiw-att/2019h31h_db_pm1_ans.pdf#page=1",
+    "comment": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000ddiw-att/2019h31h_db_pm1_cmnt.pdf#page=1",
+    "sections": [
+      1,
+      2,
+      3
+    ],
+    "subparts": [
+      [
+        1,
+        2
+      ],
+      [],
+      [
+        1,
+        2
+      ]
+    ],
+    "firstPage": 6,
+    "lastPage": 11,
+    "studyNote": "サービスそのものと、ある大会が採用したサービスを一行ずつ例示します。後者を識別するのに大会の情報も要るなら、サービスのサブタイプとみなすだけでは関係を表せません。"
+  },
+  {
+    "year": 2019,
+    "part": "pm1",
+    "number": 2,
+    "title": "在庫管理システムでのトリガの実装",
+    "paper": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000ddiw-att/2019h31h_db_pm1_qs.pdf#page=12",
+    "answer": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000ddiw-att/2019h31h_db_pm1_ans.pdf#page=2",
+    "comment": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000ddiw-att/2019h31h_db_pm1_cmnt.pdf#page=1",
+    "sections": [
+      1,
+      2,
+      3
+    ],
+    "subparts": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "firstPage": 12,
+    "lastPage": 16,
+    "studyNote": "同じ部品の入出庫を二つのトランザクションで追い、トリガ内でどの行をどの順でロックするかを並べます。表名が同じでも行の取得順が逆なら、片方ずつ行を押さえて互いに待つ場合があります。"
+  },
+  {
+    "year": 2019,
+    "part": "pm1",
+    "number": 3,
+    "title": "生産部品表の設計と処理",
+    "paper": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000ddiw-att/2019h31h_db_pm1_qs.pdf#page=17",
+    "answer": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000ddiw-att/2019h31h_db_pm1_ans.pdf#page=3",
+    "comment": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000ddiw-att/2019h31h_db_pm1_cmnt.pdf#page=1",
+    "sections": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "subparts": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2,
+        3,
+        4
+      ]
+    ],
+    "firstPage": 17,
+    "lastPage": 22,
+    "studyNote": "部品表を親から子へたどる照会と、子から親へたどる照会を分けます。それぞれで最初に等値条件を与える列を確認して、主索引と同じ順序で十分か、別の順序の索引が必要かを判定します。"
+  },
+  {
+    "year": 2019,
+    "part": "pm2",
+    "number": 1,
+    "title": "銀行の窓口端末ログの活用",
+    "paper": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000ddiw-att/2019h31h_db_pm2_qs.pdf#page=6",
+    "answer": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000ddiw-att/2019h31h_db_pm2_ans.pdf#page=1",
+    "comment": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000ddiw-att/2019h31h_db_pm2_cmnt.pdf#page=1",
+    "sections": [
+      1,
+      2,
+      3
+    ],
+    "subparts": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        1,
+        2,
+        3
+      ]
+    ],
+    "firstPage": 6,
+    "lastPage": 19,
+    "studyNote": "窓口の操作ログを二件の処理に分けて例示し、連番が何を単位に振り直されるかを確認します。連番だけでは別処理の行と区別できない場合、結合にはその単位を識別する列も必要です。"
+  },
+  {
+    "year": 2019,
+    "part": "pm2",
+    "number": 2,
+    "title": "ホテルの製パン業務とデータモデル",
+    "paper": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000ddiw-att/2019h31h_db_pm2_qs.pdf#page=21",
+    "answer": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000ddiw-att/2019h31h_db_pm2_ans.pdf#page=2",
+    "comment": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000ddiw-att/2019h31h_db_pm2_cmnt.pdf#page=1",
+    "sections": [
+      1,
+      2
+    ],
+    "subparts": [
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        1,
+        2,
+        3
+      ]
+    ],
+    "firstPage": 21,
+    "lastPage": 31,
+    "studyNote": "補充要求を一件選び、生地材料ならどの払出依頼に、調達品目ならどの納品明細につながるかを追います。先行する要求を後続の記録から特定できるかを調べると、図の線と外部キーを照合できます。"
+  },
+  {
+    "year": 2020,
+    "part": "pm1",
+    "number": 1,
+    "title": "商品配送管理システムのデータベース設計",
+    "paper": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000d05l-att/2020r02o_db_pm1_qs.pdf#page=6",
+    "answer": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000d05l-att/2020r02o_db_pm1_ans.pdf#page=1",
+    "comment": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000d05l-att/2020r02o_db_pm1_cmnt.pdf#page=1",
+    "sections": [
+      1,
+      2
+    ],
+    "subparts": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2,
+        3
+      ]
+    ],
+    "firstPage": 6,
+    "lastPage": 12,
+    "studyNote": "商品の移動を「工場→物流センタ」と「物流センタ→店舗」に分けます。それぞれを納入・配送のどちらとして記録するか決めてから、ルートの出発点、到着点、商品明細を図と突き合わせます。"
+  },
+  {
+    "year": 2020,
+    "part": "pm1",
+    "number": 2,
+    "title": "オンラインチケット販売システムのデータベース実装",
+    "paper": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000d05l-att/2020r02o_db_pm1_qs.pdf#page=13",
+    "answer": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000d05l-att/2020r02o_db_pm1_ans.pdf#page=3",
+    "comment": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000d05l-att/2020r02o_db_pm1_cmnt.pdf#page=1",
+    "sections": [
+      1,
+      2,
+      3
+    ],
+    "subparts": [
+      [],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2,
+        3
+      ]
+    ],
+    "firstPage": 13,
+    "lastPage": 19,
+    "studyNote": "同じ公演のチケットを二人が同時に申し込む例を作り、片方の検索と更新の間にもう片方が操作した場合を追います。必要な分離レベルは、待ち時間の長さではなく、販売処理で許せない読み取り結果から判断します。"
+  },
+  {
+    "year": 2020,
+    "part": "pm1",
+    "number": 3,
+    "title": "ホームセンタのデータウェアハウス",
+    "paper": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000d05l-att/2020r02o_db_pm1_qs.pdf#page=20",
+    "answer": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000d05l-att/2020r02o_db_pm1_ans.pdf#page=4",
+    "comment": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000d05l-att/2020r02o_db_pm1_cmnt.pdf#page=1",
+    "sections": [
+      1,
+      2,
+      3
+    ],
+    "subparts": [
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "firstPage": 20,
+    "lastPage": 25,
+    "studyNote": "外部結合では、右表に条件を満たす行がない会員も残すべきかを先に決めます。その行を残すなら結合対象を絞る条件に置き、結合後に除くなら結果行の条件に置きます。ONとWHEREを入れ替えて同じ結果になるとは限りません。"
+  },
+  {
+    "year": 2020,
+    "part": "pm2",
+    "number": 1,
+    "title": "節電支援システムのデータベース設計と実装",
+    "paper": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000d05l-att/2020r02o_db_pm2_qs.pdf#page=6",
+    "answer": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000d05l-att/2020r02o_db_pm2_ans.pdf#page=1",
+    "comment": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000d05l-att/2020r02o_db_pm2_cmnt.pdf#page=1",
+    "sections": [
+      1,
+      2,
+      3
+    ],
+    "subparts": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "firstPage": 6,
+    "lastPage": 18,
+    "studyNote": "電力データを検索する条件と読み出す順を索引の先頭列から照合します。必要な行数が同じでも、それらが少数のページにまとまる場合と分散する場合では入出力回数が変わります。"
+  },
+  {
+    "year": 2020,
+    "part": "pm2",
+    "number": 2,
+    "title": "調達業務と調達物流業務のデータモデル",
+    "paper": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000d05l-att/2020r02o_db_pm2_qs.pdf#page=20",
+    "answer": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000d05l-att/2020r02o_db_pm2_ans.pdf#page=2",
+    "comment": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000d05l-att/2020r02o_db_pm2_cmnt.pdf#page=1",
+    "sections": [
+      1,
+      2,
+      3
+    ],
+    "subparts": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2,
+        3
+      ]
+    ],
+    "firstPage": 20,
+    "lastPage": 31,
+    "studyNote": "一つの荷物がどこからどこへ移り、どの記録を根拠に在庫が増減するかを追います。その根拠となる明細を外部キーから一意に引けるか確認すると、業務の流れと概念図の線を対応させられます。"
+  }
+]

@@ -1,4 +1,5 @@
 import { setupPhone, phoneQuestion, resetPhone, morningIndex } from "./phone";
+import { pastPapers } from "./past-papers";
 import { morningInfo, morningRoute } from "./morning-catalog";
 import { enablePaperHighlights } from "./paper-highlights";
 import { questionPath, resolveRoute } from "./routes";
@@ -23,7 +24,7 @@ const exercises = new Map<string, () => Promise<{default: Question}>>([
   ["2025-autumn-db-pm1-q3", () => import("./inventory")],
 ]);
 for (const id of Object.keys(questionTitles)) {
-  if (!exercises.has(id)) exercises.set(id, archiveModules["./archive/" + id + ".json"]);
+  if (!pastPapers.has(id) && !exercises.has(id)) exercises.set(id, archiveModules["./archive/" + id + ".json"]);
 }
 function sessionName(id: string) {
   return id.includes("-pm2-") ? "午後Ⅱ" : "午後Ⅰ";
@@ -36,7 +37,7 @@ function examTerm(id: string) {
   return "令和" + (Number(id.slice(0, 4)) - 2018) + "年度 秋期";
 }
 const lifetime = new AbortController();
-const navigatorTree = library(new Set(exercises.keys()), lifetime.signal);
+const navigatorTree = library(new Set(Object.keys(questionTitles)), lifetime.signal);
 setupPhone(lifetime.signal);
 const unsaved: Map<string, ReturnType<typeof empty>> = import.meta.hot?.data.unsaved ?? new Map();
 let key = "";
@@ -408,7 +409,16 @@ async function route() {
     }
     return;
   }
-  if (exercise) {
+  const past = pastPapers.get(id);
+  if (past) {
+    const controller = new AbortController();
+    morningLifetime = controller;
+    const signal = AbortSignal.any([controller.signal, lifetime.signal]);
+    const { renderPastPaper } = await import("./past-paper-view");
+    if (signal.aborted) return;
+    restore(id);
+    renderPastPaper(app, past, reviewing, status, record, save, signal);
+  } else if (exercise) {
     const { default: q } = await exercise();
     if (lifetime.signal.aborted || location.href !== requested) return;
     restore(id);

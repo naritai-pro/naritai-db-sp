@@ -2,6 +2,7 @@ export type Edge = [string, string, string];
 export type PaperHighlight = { start: number; end: number; text: string };
 export type RecordData = {
   highlights: PaperHighlight[];
+  strokes?: Record<string, [number, number][][]>;
   fields: Record<string, string>;
   edges: Record<string, Edge[]>;
   ratings: Record<string, string>;

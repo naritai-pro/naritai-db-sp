@@ -7,10 +7,15 @@
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview --port 4174",
     "check:morning": "node scripts/check-morning.mjs",
-    "check:archive": "node scripts/check-archive.mjs && node scripts/check-scores.mjs"
+    "check:archive": "node scripts/check-archive.mjs && node scripts/check-scores.mjs && node scripts/check-past-papers.mjs",
+    "predev": "node scripts/prepare-pdf-assets.mjs",
+    "prebuild": "node scripts/prepare-pdf-assets.mjs"
   },
   "devDependencies": {
     "typescript": "^5.9.0",
     "vite": "^8.0.0"
+  },
+  "dependencies": {
+    "pdfjs-dist": "^6.5.438"
   }
 }
