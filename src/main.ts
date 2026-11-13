@@ -1,6 +1,7 @@
+import { questionReset } from "./question-reset";
 import { setupPhone, phoneQuestion, resetPhone, morningIndex } from "./phone";
 import { pastPapers } from "./past-papers";
-import { morningInfo, morningRoute } from "./morning-catalog";
+import { morningInfo, morningTerm, morningRoute } from "./morning-catalog";
 import { enablePaperHighlights } from "./paper-highlights";
 import { questionPath, resolveRoute } from "./routes";
 import { schemaControls, schemaPreview } from "./schema-input";
@@ -436,6 +437,23 @@ async function route() {
       el("p", page.description),
       el("p", "左の一覧から区分と年度を選んでください。午前は年度ごとに、午後は大問ごとに演習できます。"),
     );
+  }
+  const top = app.querySelector(".question-top");
+  if (top) {
+    const year = Number(id.slice(0, 4));
+    const label = year + "年度 " + morningTerm(year) + " " + sessionName(id) + " 問" + id.slice(-1);
+    top.append(questionReset(label, () => {
+      try {
+        localStorage.removeItem(key);
+      } catch {
+        status.textContent = "端末に保存した答案を削除できませんでした";
+        return;
+      }
+      unsaved.delete(key);
+      const solve = questionPath(id);
+      if (location.pathname !== solve || location.search) history.replaceState(null, "", solve);
+      void route();
+    }));
   }
   window.scrollTo(0, 0);
   const params = new URLSearchParams(location.search);

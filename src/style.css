@@ -573,3 +573,13 @@ body:has(.phone-panel[open]) { overflow: hidden; }
 @media (max-width: 760px) {
   .materials .pdf-viewer { max-height: none; }
 }
+
+.question-reset { flex: none; }
+.question-reset > button { background: white; color: #385450; border: 1px solid #afbfbe; }
+.reset-confirm { position: fixed; inset: auto; margin: 0; box-sizing: border-box; width: min(20rem, calc(100vw - 16px)); padding: 1rem; border: 1px solid #afbfbe; border-radius: .65rem; color: inherit; background: white; box-shadow: 0 6px 24px #18383529; }
+.reset-confirm p { margin: 0 0 .75rem; }
+.reset-confirm button:last-child { margin-left: .5rem; background: #914337; color: white; }
+@media (max-width: 760px) {
+  .question-top .question-reset { display: none; }
+  .jump-list .question-reset > button { width: 100%; }
+}

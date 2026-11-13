@@ -77,7 +77,12 @@ export function phoneQuestion(layout: HTMLElement, sheet: HTMLElement, paper: HT
   const more = button("その他", () => {
     const items = el("div", "", "jump-list");
     for (const a of layout.querySelectorAll<HTMLAnchorElement>(".paper-bar a:not(.active)")) items.append(a.cloneNode(true));
-    panel("その他", "bottom", items);
+    const reset = layout.parentElement?.querySelector<HTMLElement>(".question-top .question-reset");
+    const parent = reset?.parentElement;
+    if (reset) items.append(reset);
+    panel("その他", "bottom", items, () => {
+      if (reset && parent) parent.append(reset);
+    });
   });
   function render() {
     layout.dataset.pane = active;
