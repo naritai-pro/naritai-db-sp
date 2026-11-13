@@ -399,9 +399,9 @@ async function route() {
     app.replaceChildren(el("small", entry.year + "年度 秋期", "eyebrow"), el("h1", entry.title), card);
   } else {
     app.replaceChildren(
-      el("h1", "午後問題演習"),
-      el("p", "データベーススペシャリスト試験の午後Ⅰ・午後Ⅱの過去問を使って、データベースの設計やSQLを練習できるサイトです。"),
-      el("p", "左のサイドバーで午後Ⅰ・午後Ⅱを開き、解きたい問番号の下にある年度を選んでください。問題文を読みながら解答を入力し、解説で考え方を確認できます。"),
+      el("h1", page.heading),
+      el("p", page.description),
+      el("p", "左のサイドバーで午後Ⅰ・午後Ⅱを開き、解きたい問番号の下にある年度を選んでください。午前Ⅰ・午前Ⅱの過去問も追加予定です。"),
     );
   }
   window.scrollTo(0, 0);

@@ -12,9 +12,9 @@ export const questionTitles: Record<string, string> = {
 
 export function pageInfo(id = "", reviewing = false) {
   if (!questionTitles[id]) return {
-    path: "/", heading: "データベーススペシャリスト試験の午後過去問",
-    title: "データベーススペシャリスト試験の午後過去問・解説｜" + siteName,
-    description: "2021〜2025年度秋期のデータベーススペシャリスト試験から、午後Ⅰ・午後Ⅱの過去問全25問を収録。問題文や図表を見ながらブラウザで解答し、IPAの解答例と解説で復習できます。",
+    path: "/", heading: "データベーススペシャリスト試験の過去問演習",
+    title: "データベーススペシャリスト試験の過去問演習・解説",
+    description: "データベーススペシャリスト試験の過去問をブラウザで演習できます。現在は2021〜2025年度秋期の午後Ⅰ・午後Ⅱを全25問収録。問題文や図表を見ながら解答し、IPAの解答例と解説で復習できます。",
   };
   const [year, pm, number] = questionPath(id).slice(1).split("/");
   const exam = year + "年度 秋期 " + (pm === "pm1" ? "午後Ⅰ" : "午後Ⅱ") + " 問" + number.slice(1);

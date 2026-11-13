@@ -19,9 +19,12 @@ function render(template: string, page: typeof home) {
     `<meta property="og:url" content="${url}" />`,
     `<meta property="og:title" content="${title}" />`,
     `<meta property="og:description" content="${description}" />`,
-    `<meta property="og:image" content="${origin}/apple-touch-icon.png" />`,
-    `<meta property="og:image:alt" content="DB" />`,
-    `<meta name="twitter:card" content="summary" />`,
+    `<meta property="og:image" content="${origin}/ogp.png" />`,
+    `<meta property="og:image:type" content="image/png" />`,
+    `<meta property="og:image:width" content="1200" />`,
+    `<meta property="og:image:height" content="630" />`,
+    `<meta property="og:image:alt" content="DB データベーススペシャリスト試験 過去問演習" />`,
+    `<meta name="twitter:card" content="summary_large_image" />`,
   ].join("\n    ");
   const links = page === home
     ? "<ul>" + questions.map(([q]) => `<li><a href="${q.path}">${escape(q.heading)}</a></li>`).join("") + "</ul>"
