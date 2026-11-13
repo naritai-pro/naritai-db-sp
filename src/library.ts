@@ -50,7 +50,6 @@ export function library(availableIds: Set<string>, signal: AbortSignal) {
     session.append(el("summary", name));
     for (let q = 1; q <= (pm === 1 ? 3 : 2); q++) {
       const group = el("details", "", "question-group");
-      group.name = "library-afternoon-question";
       group.append(el("summary", "問" + q));
       for (const [year, dir] of archives) {
         const id = year + "-autumn-db-pm" + pm + "-q" + q;
