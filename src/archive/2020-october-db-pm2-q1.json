@@ -3136,11 +3136,11 @@
     {
       "lines": [
         "WITH W1 AS (SELECT B.地域コード, B.住居番号, SUM(A.使用電力量) AS 合計使用電力量",
-        " FROM ［網掛け］ WHERE ［網掛け］ GROUP BY B.地域コード, B.住居番号),",
+        " FROM 【網掛け】 WHERE 【網掛け】 GROUP BY B.地域コード, B.住居番号),",
         "W2 AS (SELECT 地域コード, 住居番号, 合計使用電力量, NTILE(5) OVER(［p］) AS 階級番号 FROM W1),",
         "W3 AS (SELECT 地域コード, 階級番号, AVG(合計使用電力量) AS 平均使用電力量",
         " FROM W2 GROUP BY 地域コード, 階級番号)",
-        "SELECT A.地域コード, B.地域名, A.階級番号, A.平均使用電力量 FROM ［網掛け］"
+        "SELECT A.地域コード, B.地域名, A.階級番号, A.平均使用電力量 FROM 【網掛け】"
       ],
       "notes": [
         "網掛け部分は表示していない。"
