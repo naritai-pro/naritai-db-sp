@@ -2,6 +2,16 @@ import type { PaperHighlight } from "./store";
 
 export function enablePaperHighlights(paper: HTMLElement, highlights: PaperHighlight[], save: () => void) {
   const content = paper.textContent ?? "";
+  // Figures can change the offsets of previously marked passages.
+  for (const highlight of highlights) {
+    if (content.slice(highlight.start, highlight.end) === highlight.text || !highlight.text) continue;
+    const start = content.indexOf(highlight.text);
+    if (start >= 0 && start === content.lastIndexOf(highlight.text)) {
+      highlight.start = start;
+      highlight.end = start + highlight.text.length;
+    }
+  }
+  highlights.sort((a, b) => a.start - b.start);
   function paint() {
     for (const mark of paper.querySelectorAll("mark.user-highlight")) {
       const parent = mark.parentNode!;
