@@ -598,3 +598,19 @@ body:has(.phone-panel[open]) { overflow: hidden; }
 .part-tree-figure button:enabled:hover { background: #13977822; }
 
 .figure-source { display: block; text-align: right; font-size: .78em; margin: .3rem 0; }
+
+.circle-table-scroll { max-width: 100%; overflow-x: auto; margin: .8rem 0 1rem; }
+.circle-table { width: 100%; border-collapse: separate; border-spacing: 0; font-size: .85rem; line-height: 1.35; }
+.circle-table caption { text-align: left; padding-bottom: .5rem; }
+.circle-table th, .circle-table td { border: solid #a1b3ac; border-width: 0 1px 1px 0; padding: .35rem; text-align: center; }
+.circle-table tr > :first-child { border-left-width: 1px; }
+.circle-table thead tr:first-child th { border-top-width: 1px; }
+.circle-table th { background: #eef4f1; min-width: 2.6rem; }
+.circle-table th:first-child:is([scope="row"], [rowspan]), .circle-table thead tr:first-child th:first-child { position: sticky; left: 0; z-index: 1; min-width: 4.5rem; }
+.circle-table tbody th { text-align: left; }
+.circle-table td { padding: 0; position: relative; height: 2.7rem; }
+.circle-table .circle-given { background: #f2f3f2; }
+.circle-table button { position: absolute; inset: 0; width: 100%; height: 100%; padding: 0; border: 0; border-radius: 0; background: white; color: #075e4e; font-size: 1.3rem; cursor: pointer; touch-action: manipulation; }
+.circle-table button[aria-pressed="true"] { background: #d8eee5; }
+.circle-table button:focus-visible { outline: 2px solid #087758; outline-offset: -3px; }
+@media (hover: hover) { .circle-table button:hover { box-shadow: inset 0 0 0 2px #5d9f89; } }

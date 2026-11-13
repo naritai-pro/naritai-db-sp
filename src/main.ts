@@ -1,5 +1,6 @@
 import { questionReset } from "./question-reset";
 import { setupPhone, phoneQuestion, resetPhone, morningIndex } from "./phone";
+import { circleTable } from "./circle-table";
 import { partTree, treeAnswer } from "./part-tree";
 import { pastAnswerHistory, pastNotesText } from "./past-paper-history";
 import { morningInfo, morningTerm, morningRoute } from "./morning-catalog";
@@ -332,12 +333,20 @@ function renderQuestion(q: Question, reviewing: boolean) {
         if (slot) appendDiagram(slot, prompt.before);
       }
     }
+    const circles = reviewing ? undefined : circleTable(q, s.fields, record.fields, (key, value) => {
+      record.fields[key] = value;
+      save();
+    });
     let shared: ReturnType<typeof schemaControls> | undefined;
     for (const [k, label, answer] of s.fields) {
       diagramsBefore(k);
       appendScoreHeading(k);
       appendPrompt(k);
       appendExplanation(k);
+      if (circles?.keys.has(k)) {
+        if (k === circles.first) part.append(circles.element);
+        continue;
+      }
       if (k === "deadlock-case2") {
         if (scores) part.append(el("p", "予想配点 " + scores.get(k)!.item.points + "点", "score-note"));
         part.append(partTree(record, save, reviewing));
