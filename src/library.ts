@@ -28,7 +28,7 @@ export function library(availableIds: Set<string>, signal: AbortSignal) {
   mobile.addEventListener("change", () => setOpen(!mobile.matches), {signal});
   panel.append(nav);
   signal.addEventListener("abort", () => nav.remove(), {once: true});
-  const entries = new Map<string, {year: number; title: string; paper: string; anchor: HTMLAnchorElement; session: HTMLDetailsElement}>();
+  const entries = new Map<string, {year: number; title: string; paper: string; anchor: HTMLAnchorElement; session: HTMLDetailsElement; group: HTMLDetailsElement}>();
   const morningLinks = new Map<string, HTMLAnchorElement>();
   for (const part of morningParts) {
     const session = el("details", "", "session");
@@ -49,8 +49,9 @@ export function library(availableIds: Set<string>, signal: AbortSignal) {
     session.open = pm === 1 && !morningLinks.has(location.pathname.replace(/\/$/, ""));
     session.append(el("summary", name));
     for (let q = 1; q <= (pm === 1 ? 3 : 2); q++) {
-      const group = el("section", "", "question-group");
-      group.append(el("h2", "問" + q));
+      const group = el("details", "", "question-group");
+      group.name = "library-afternoon-question";
+      group.append(el("summary", "問" + q));
       for (const [year, dir] of archives) {
         const id = year + "-autumn-db-pm" + pm + "-q" + q;
         const ready = availableIds.has(id);
@@ -59,7 +60,7 @@ export function library(availableIds: Set<string>, signal: AbortSignal) {
         anchor.onclick = () => { if (mobile.matches) { setOpen(false); toggle.focus(); } };
         group.append(anchor);
         const paper = "https://www.ipa.go.jp/shiken/mondai-kaiotu/" + dir + "-att/" + year + "r0" + (year-2018) + "a_db_pm" + pm + "_qs.pdf";
-        entries.set(id, {year, title: name + "　問" + q, paper, anchor, session});
+        entries.set(id, {year, title: name + "　問" + q, paper, anchor, session, group});
       }
       session.append(group);
     }
@@ -77,6 +78,7 @@ export function library(availableIds: Set<string>, signal: AbortSignal) {
       const entry = entries.get(id);
       if (entry) {
         entry.session.open = true;
+        entry.group.open = true;
         entry.anchor.setAttribute("aria-current", "page");
       }
       return entry;

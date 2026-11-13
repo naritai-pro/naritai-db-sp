@@ -311,7 +311,7 @@ pre {
 .session > summary { margin-bottom: var(--divider-gap); padding: 5px 6px; font-size: 1rem; font-weight: 700; }
 .session + .session > summary { margin-top: var(--divider-gap); }
 .question-group { border-top: 0; margin-left: 14px; padding: var(--divider-gap) 0; }
-.question-group > h2 { margin: 0; font-size: inherit; padding: 5px 6px; font-weight: 600; }
+.question-group > summary { margin: 0; font-size: inherit; padding: 5px 6px; font-weight: 600; }
 .year-link { margin-left: 12px; border-left: 2px solid #dde5df; display: flex; align-items: center; justify-content: space-between; gap: 6px; padding: 5px 8px; text-decoration: none; color: #385450; }
 .year-link small { font-size: .7rem; }
 .year-link:hover, .library-nav summary:hover { background: #eef3ed; }
