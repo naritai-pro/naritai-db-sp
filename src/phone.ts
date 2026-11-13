@@ -112,9 +112,4 @@ export function phoneQuestion(layout: HTMLElement, sheet: HTMLElement, paper: HT
     }
     panel("問一覧", "bottom", list);
   };
-  for (const graphic of layout.querySelectorAll<HTMLElement>(".canvas, figure > img, figure > svg")) {
-    const zoom = button("図を拡大", () => borrow(graphic, "図の拡大", "zoom"));
-    zoom.className = "phone zoom-button";
-    graphic.after(zoom);
-  }
 }

@@ -549,10 +549,6 @@ body:has(.phone-panel[open]) { overflow: hidden; }
   .phone-panel .index summary { display: none; }
   .phone-panel .index nav { max-height: none; }
   .phone-guide { margin-bottom: .5rem; }
-  .zoom-button { margin: 6px 0; background: #e3efe9; color: #24554e; }
-  .phone-panel.zoom { width: 100vw; max-height: 94dvh; padding: 0; }
-  .phone-panel.zoom .panel-title { position: sticky; left: 0; padding: 6px 12px; }
-  .phone-panel.zoom > :is(.canvas,img,svg) { display: block; width: max(180vw,680px); height: auto; margin: 0; }
 }
 @media (max-width:760px) {
   .layout .canvas { margin-inline: 0; }
@@ -617,7 +613,3 @@ body:has(.phone-panel[open]) { overflow: hidden; }
 
 .native-table-scroll { max-width: 100%; overflow-x: auto; }
 .archive-table td { white-space: pre-line; }
-.figure-zoom { display: block; margin: .35em auto; font-size: .82em; }
-.figure-dialog { box-sizing: border-box; width: min(96vw, 90rem); max-height: 92dvh; padding: 1em; color: #222; background: white; border: 1px solid #a1b3ac; border-radius: .4em; }
-.figure-dialog::backdrop { background: #15201db3; }
-.figure-zoom-view { overflow: auto; max-height: 78dvh; margin-top: .5em; }

@@ -574,22 +574,7 @@ export function materials(q: Question, reviewing: boolean, evidence: ReadonlyMap
         svg.classList.add("paper-illustration");
         svg.setAttribute("role", "img");
         svg.setAttribute("aria-label", block.text);
-        const expand = el("button", "図を拡大", "figure-zoom");
-        expand.type = "button";
-        expand.addEventListener("click", () => {
-          const dialog = el("dialog", "", "figure-dialog"), close = el("button", "閉じる");
-          dialog.setAttribute("aria-label", block.text);
-          const view = el("div", "", "figure-zoom-view");
-          const enlarged = svg.cloneNode(true) as SVGSVGElement;
-          enlarged.style.minWidth = Math.min(1800, enlarged.viewBox.baseVal.width) + "px";
-          view.append(enlarged);
-          close.addEventListener("click", () => dialog.close());
-          dialog.addEventListener("close", () => { dialog.remove(); expand.focus(); }, {once: true});
-          dialog.append(close, view);
-          document.body.append(dialog);
-          dialog.showModal();
-        });
-        item.append(svg, el("figcaption", block.text), expand);
+        item.append(svg, el("figcaption", block.text));
       } else if (block.lines) {
         const frame = el("div", "", "schema-frame archive-lines");
         for (const line of block.lines) frame.append(archiveText(line));
