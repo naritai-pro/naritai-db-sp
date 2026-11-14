@@ -8,7 +8,7 @@
 
 ## 起動方法
 
-Node.js 24で `npm ci`、`npm run dev` を順に実行し、[開発画面](http://127.0.0.1:4173/)を開く。サーバーを起動したまま編集すると、CSS・TypeScript・問題データの変更がHMRで反映される。HTMLの変更時はブラウザが自動で再読み込みする。本番用の確認は `npm run build` の後に `npm run preview`。Cloudflare Workers Static Assets の配信先は `wrangler.jsonc` で `dist/` に設定している。
+Node.js 24で `npm ci`、`npm run dev` を順に実行し、[開発画面](http://127.0.0.1:4173/)を開く。サーバーを起動したまま編集すると、CSS・TypeScript・問題データの変更がHMRで反映される。HTMLの変更時はブラウザが自動で再読み込みする。本番用の確認は `npm run build` の後に `npm run preview`。Cloudflare CLI（`cf`）とCloudflare Viteプラグインを使用し、`cloudflare.config.ts` に本番アカウント・Worker名・SPAの設定を記載する。配信用ファイルは `.cloudflare/output/v0/` に生成される。
 
 一覧から問2を開き、図1または図4の始点の箱から終点の箱までドラッグする。追加した緑の線はクリックで削除できる。同じURLを再読み込みすると、矢印と記述答案を復元する。「解説を見る」で答案を見比べ、ページ末尾で大問全体または設問を選んで「問題・答案・解答例をコピー」を押す。
 
@@ -33,9 +33,9 @@ Node.js 24で `npm ci`、`npm run dev` を順に実行し、[開発画面](http:
 
 ## フロントエンドの構成
 
-初版は静的配信するSPAとする。Wrangler の `assets.directory` に `./dist` を指定し、Worker スクリプトのエントリーポイント（`main`）は設けない。たとえば `/2025/pm1/q1` を直接開くと、Cloudflare はトップページを配信し、ブラウザがパスを読んで該当する大問のデータを読み込む。画面の描画・答案の復元・保存期限の判定はすべてブラウザで行う。
+初版は静的配信するSPAとする。Cloudflare Viteプラグインが静的アセットをビルドし、Workerスクリプトのエントリーポイントは設けない。たとえば `/2025/pm1/q1` を直接開くと、Cloudflare はトップページを配信し、ブラウザがパスを読んで該当する大問のデータを読み込む。画面の描画・答案の復元・保存期限の判定はすべてブラウザで行う。
 
-Vite の `vanilla-ts` テンプレートを使い、HTML・CSS・TypeScript で実装する。開発中は Vite の開発サーバーを使い、本番用には `tsc --noEmit && vite build` で型検査とビルドを実行する。生成された `dist/` を Workers Static Assets の配信ディレクトリに指定する。[Vite の TypeScript ガイド](https://vite.dev/guide/features.html#typescript)
+Vite の `vanilla-ts` テンプレートを使い、HTML・CSS・TypeScript で実装する。開発中は Vite の開発サーバーを使い、本番用には `npm run build`（`tsc --noEmit && cf build`）で型検査とビルドを実行する。`npm run check:deploy` で生成物のデプロイをアップロードなしで検証できる。[Vite の TypeScript ガイド](https://vite.dev/guide/features.html#typescript)
 
 問題一覧・解答・解説は画面ごとに TypeScript モジュールを分ける。年度・区分・問番号をURLのパスにし、解説には `/answer` を付ける。これにより、通常のリンクとブラウザの「戻る」で移動でき、再読み込みでも同じ大問が開く。解答画面では入力欄を維持したまま答案を保存し、日本語変換やカーソル位置を保つ。
 
@@ -64,3 +64,16 @@ HTML・CSS・JavaScript、問題データ（JSON）、図表は [Cloudflare Work
 3. **午前Ⅰ・午前Ⅱを追加する。** 択一用の選択肢と正答判定を加え、年度別一覧と復習の仕組みは共用する。
 
 教材は[IPAの過去問題・解答例・採点講評](https://www.ipa.go.jp/shiken/mondai-kaiotu/)を基にする。[過去問題の使用に関するIPAの案内](https://www.ipa.go.jp/shiken/faq.html)に沿って、各問に年度・期・試験名・区分・問番号と原本へのリンクを載せる。問題を改変した場合は明記し、IPAの解答例・採点講評と、このアプリで作成した解説を区別する。
+
+## cfへの移行と本番ビルド
+
+`cf` と `@cloudflare/vite-plugin` はベータ版のため、`package.json` とロックファイルでバージョンを固定する。Wranglerへの直接依存は使用しない。
+
+本番反映は [AGENTS.md](AGENTS.md) に従い、GitHubの `main` へのコミット・プッシュから行う。Cloudflare Workers Builds側のコマンドは、移行時に次の設定へ切り替える。
+
+- ビルドコマンド：`npm run build`
+- デプロイコマンド：`npm run deploy`（`cf deploy --prebuilt --mode production`）
+
+ローカルでは `npm run build`、`npm run check:deploy`、`npm run preview` で確認する。`npm run deploy` はCI用であり、本番反映のためにローカルから実行しない。
+
+移行準備中は旧 `wrangler.jsonc` を残す。Cloudflare側のコマンド変更とcfによる本番デプロイ成功を確認してから削除する。新しいビルド出力先は `.cloudflare/output/v0/` のため、旧デプロイコマンドのままmainへプッシュしない。

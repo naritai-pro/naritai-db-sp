@@ -1,5 +1,6 @@
 import { morningInfo, morningParts, morningYears } from "./src/morning-catalog.ts";
 import { defineConfig } from "vite";
+import { cloudflare } from "@cloudflare/vite-plugin";
 import { origin, pageInfo, questionTitles, siteName } from "./src/seo.ts";
 
 const home = pageInfo();
@@ -39,7 +40,7 @@ function render(template: string, page: typeof home) {
 }
 
 export default defineConfig({
-  plugins: [{
+  plugins: [cloudflare(), {
     name: "exam-page-metadata",
     transformIndexHtml(html, ctx) {
       if (ctx.server) return render(html, pages.find(p => p.path === ctx.path.replace(/\/$/, "")) ?? home);
