@@ -24,11 +24,11 @@ function render(template: string, page: typeof home) {
     `<meta property="og:url" content="${url}" />`,
     `<meta property="og:title" content="${title}" />`,
     `<meta property="og:description" content="${description}" />`,
-    `<meta property="og:image" content="${origin}/ogp.png" />`,
+    `<meta property="og:image" content="${origin}/ogp-v2.png" />`,
     `<meta property="og:image:type" content="image/png" />`,
-    `<meta property="og:image:width" content="1200" />`,
-    `<meta property="og:image:height" content="630" />`,
-    `<meta property="og:image:alt" content="DB データベーススペシャリスト試験 過去問演習" />`,
+    `<meta property="og:image:width" content="1731" />`,
+    `<meta property="og:image:height" content="909" />`,
+    `<meta property="og:image:alt" content="データベーススペシャリスト試験。2016〜2025年の10年分の過去問解説を無料で。午前Ⅰ・午後Ⅰ・午後Ⅱに対応。ブラウザで過去問に挑戦！PDFあり・AI質問用プロンプトをコピー。" />`,
     `<meta name="twitter:card" content="summary_large_image" />`,
   ].join("\n    ");
   const links = page === home
