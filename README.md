@@ -69,11 +69,11 @@ HTML・CSS・JavaScript、問題データ（JSON）、図表は [Cloudflare Work
 
 `cf` と `@cloudflare/vite-plugin` はベータ版のため、`package.json` とロックファイルでバージョンを固定する。Wranglerへの直接依存は使用しない。
 
-本番反映は [AGENTS.md](AGENTS.md) に従い、GitHubの `main` へのコミット・プッシュから行う。Cloudflare Workers Builds側のコマンドは、移行時に次の設定へ切り替える。
+本番反映は [AGENTS.md](AGENTS.md) に従い、GitHubの `main` へのコミット・プッシュから行う。Cloudflare Workers Builds側は次のコマンドに設定済み。
 
 - ビルドコマンド：`npm run build`
 - デプロイコマンド：`npm run deploy`（`cf deploy --prebuilt --mode production`）
 
 ローカルでは `npm run build`、`npm run check:deploy`、`npm run preview` で確認する。`npm run deploy` はCI用であり、本番反映のためにローカルから実行しない。
 
-移行準備中は旧 `wrangler.jsonc` を残す。Cloudflare側のコマンド変更とcfによる本番デプロイ成功を確認してから削除する。新しいビルド出力先は `.cloudflare/output/v0/` のため、旧デプロイコマンドのままmainへプッシュしない。
+cfによる本番デプロイ成功を確認し、旧 `wrangler.jsonc` は削除済み。ビルド出力先は `.cloudflare/output/v0/`。

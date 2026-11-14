@@ -11,4 +11,4 @@
 
 本番反映のためにローカルから `wrangler deploy`、`cf deploy`、`npm run deploy` を実行しない。ローカルのCLI認証先は本番のCloudflareアカウントと異なる場合があるため、Workersの直接デプロイや `workers.dev` での確認を、本番反映の代わりにしない。
 
-Cloudflare CLIは `cf` を使用する。設定は `cloudflare.config.ts`、ビルドは `npm run build`、アップロードなしの検証は `npm run check:deploy`。Cloudflare Workers Buildsのデプロイコマンドは移行時に `npm run deploy` へ変更する。移行準備中は、Cloudflare側のコマンド変更前にmainへプッシュしない。
+Cloudflare CLIは `cf` を使用する。設定は `cloudflare.config.ts`、ビルドは `npm run build`、アップロードなしの検証は `npm run check:deploy`。Cloudflare Workers Buildsはビルドコマンド `npm run build`、デプロイコマンド `npm run deploy` に設定済み。
