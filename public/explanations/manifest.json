@@ -1,0 +1,322 @@
+[
+  {
+    "year": 2025,
+    "part": "pm1",
+    "file": "2025-pm1.pdf",
+    "questionCount": 3,
+    "explanationCount": 32,
+    "pages": 15
+  },
+  {
+    "year": 2025,
+    "part": "pm2",
+    "file": "2025-pm2.pdf",
+    "questionCount": 2,
+    "explanationCount": 28,
+    "pages": 14
+  },
+  {
+    "year": 2024,
+    "part": "pm1",
+    "file": "2024-pm1.pdf",
+    "questionCount": 3,
+    "explanationCount": 31,
+    "pages": 16
+  },
+  {
+    "year": 2024,
+    "part": "pm2",
+    "file": "2024-pm2.pdf",
+    "questionCount": 2,
+    "explanationCount": 21,
+    "pages": 12
+  },
+  {
+    "year": 2023,
+    "part": "pm1",
+    "file": "2023-pm1.pdf",
+    "questionCount": 3,
+    "explanationCount": 33,
+    "pages": 17
+  },
+  {
+    "year": 2023,
+    "part": "pm2",
+    "file": "2023-pm2.pdf",
+    "questionCount": 2,
+    "explanationCount": 22,
+    "pages": 11
+  },
+  {
+    "year": 2022,
+    "part": "pm1",
+    "file": "2022-pm1.pdf",
+    "questionCount": 3,
+    "explanationCount": 28,
+    "pages": 14
+  },
+  {
+    "year": 2022,
+    "part": "pm2",
+    "file": "2022-pm2.pdf",
+    "questionCount": 2,
+    "explanationCount": 24,
+    "pages": 14
+  },
+  {
+    "year": 2021,
+    "part": "pm1",
+    "file": "2021-pm1.pdf",
+    "questionCount": 3,
+    "explanationCount": 28,
+    "pages": 14
+  },
+  {
+    "year": 2021,
+    "part": "pm2",
+    "file": "2021-pm2.pdf",
+    "questionCount": 2,
+    "explanationCount": 24,
+    "pages": 14
+  },
+  {
+    "year": 2020,
+    "part": "pm1",
+    "file": "2020-pm1.pdf",
+    "questionCount": 3,
+    "explanationCount": 18,
+    "pages": 12
+  },
+  {
+    "year": 2020,
+    "part": "pm2",
+    "file": "2020-pm2.pdf",
+    "questionCount": 2,
+    "explanationCount": 13,
+    "pages": 9
+  },
+  {
+    "year": 2019,
+    "part": "pm1",
+    "file": "2019-pm1.pdf",
+    "questionCount": 3,
+    "explanationCount": 21,
+    "pages": 12
+  },
+  {
+    "year": 2019,
+    "part": "pm2",
+    "file": "2019-pm2.pdf",
+    "questionCount": 2,
+    "explanationCount": 16,
+    "pages": 11
+  },
+  {
+    "year": 2018,
+    "part": "pm1",
+    "file": "2018-pm1.pdf",
+    "questionCount": 3,
+    "explanationCount": 21,
+    "pages": 19
+  },
+  {
+    "year": 2018,
+    "part": "pm2",
+    "file": "2018-pm2.pdf",
+    "questionCount": 2,
+    "explanationCount": 12,
+    "pages": 13
+  },
+  {
+    "year": 2017,
+    "part": "pm1",
+    "file": "2017-pm1.pdf",
+    "questionCount": 3,
+    "explanationCount": 20,
+    "pages": 12
+  },
+  {
+    "year": 2017,
+    "part": "pm2",
+    "file": "2017-pm2.pdf",
+    "questionCount": 2,
+    "explanationCount": 13,
+    "pages": 22
+  },
+  {
+    "year": 2016,
+    "part": "pm1",
+    "file": "2016-pm1.pdf",
+    "questionCount": 3,
+    "explanationCount": 21,
+    "pages": 16
+  },
+  {
+    "year": 2016,
+    "part": "pm2",
+    "file": "2016-pm2.pdf",
+    "questionCount": 2,
+    "explanationCount": 11,
+    "pages": 11
+  },
+  {
+    "year": 2025,
+    "part": "am1",
+    "file": "2025-am1.pdf",
+    "questionCount": 30,
+    "explanationCount": 30,
+    "pages": 18
+  },
+  {
+    "year": 2025,
+    "part": "am2",
+    "file": "2025-am2.pdf",
+    "questionCount": 25,
+    "explanationCount": 25,
+    "pages": 18
+  },
+  {
+    "year": 2024,
+    "part": "am1",
+    "file": "2024-am1.pdf",
+    "questionCount": 30,
+    "explanationCount": 30,
+    "pages": 18
+  },
+  {
+    "year": 2024,
+    "part": "am2",
+    "file": "2024-am2.pdf",
+    "questionCount": 25,
+    "explanationCount": 25,
+    "pages": 21
+  },
+  {
+    "year": 2023,
+    "part": "am1",
+    "file": "2023-am1.pdf",
+    "questionCount": 30,
+    "explanationCount": 30,
+    "pages": 20
+  },
+  {
+    "year": 2023,
+    "part": "am2",
+    "file": "2023-am2.pdf",
+    "questionCount": 25,
+    "explanationCount": 25,
+    "pages": 17
+  },
+  {
+    "year": 2022,
+    "part": "am1",
+    "file": "2022-am1.pdf",
+    "questionCount": 30,
+    "explanationCount": 30,
+    "pages": 20
+  },
+  {
+    "year": 2022,
+    "part": "am2",
+    "file": "2022-am2.pdf",
+    "questionCount": 25,
+    "explanationCount": 25,
+    "pages": 19
+  },
+  {
+    "year": 2021,
+    "part": "am1",
+    "file": "2021-am1.pdf",
+    "questionCount": 30,
+    "explanationCount": 30,
+    "pages": 22
+  },
+  {
+    "year": 2021,
+    "part": "am2",
+    "file": "2021-am2.pdf",
+    "questionCount": 25,
+    "explanationCount": 25,
+    "pages": 19
+  },
+  {
+    "year": 2020,
+    "part": "am1",
+    "file": "2020-am1.pdf",
+    "questionCount": 30,
+    "explanationCount": 30,
+    "pages": 21
+  },
+  {
+    "year": 2020,
+    "part": "am2",
+    "file": "2020-am2.pdf",
+    "questionCount": 25,
+    "explanationCount": 25,
+    "pages": 19
+  },
+  {
+    "year": 2019,
+    "part": "am1",
+    "file": "2019-am1.pdf",
+    "questionCount": 30,
+    "explanationCount": 30,
+    "pages": 21
+  },
+  {
+    "year": 2019,
+    "part": "am2",
+    "file": "2019-am2.pdf",
+    "questionCount": 25,
+    "explanationCount": 25,
+    "pages": 22
+  },
+  {
+    "year": 2018,
+    "part": "am1",
+    "file": "2018-am1.pdf",
+    "questionCount": 30,
+    "explanationCount": 30,
+    "pages": 20
+  },
+  {
+    "year": 2018,
+    "part": "am2",
+    "file": "2018-am2.pdf",
+    "questionCount": 25,
+    "explanationCount": 25,
+    "pages": 18
+  },
+  {
+    "year": 2017,
+    "part": "am1",
+    "file": "2017-am1.pdf",
+    "questionCount": 30,
+    "explanationCount": 30,
+    "pages": 21
+  },
+  {
+    "year": 2017,
+    "part": "am2",
+    "file": "2017-am2.pdf",
+    "questionCount": 25,
+    "explanationCount": 25,
+    "pages": 21
+  },
+  {
+    "year": 2016,
+    "part": "am1",
+    "file": "2016-am1.pdf",
+    "questionCount": 30,
+    "explanationCount": 30,
+    "pages": 19
+  },
+  {
+    "year": 2016,
+    "part": "am2",
+    "file": "2016-am2.pdf",
+    "questionCount": 25,
+    "explanationCount": 25,
+    "pages": 16
+  }
+]

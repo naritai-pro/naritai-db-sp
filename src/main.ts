@@ -435,7 +435,9 @@ async function route() {
   const entry = navigatorTree.select(id);
   const exercise = exercises.get(id);
   if (isPdf || isContact) {
-    app.replaceChildren(isContact ? contactPage() : pdfPage());
+    const controller = new AbortController();
+    routeLifetime = controller;
+    app.replaceChildren(isContact ? contactPage() : pdfPage(AbortSignal.any([controller.signal, lifetime.signal])));
     window.scrollTo(0, 0);
     return;
   }

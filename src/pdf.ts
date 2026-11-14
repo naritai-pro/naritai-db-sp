@@ -2,6 +2,7 @@ import { diagramScoringNotice } from "./diagram-scoring";
 import archiveInfo from "../public/downloads/DB-Exam-PDF-2016-2025.json" with { type: "json" };
 import catalog from "./pdf-catalog.json" with { type: "json" };
 import answerSheets from "../public/answer-sheets/manifest.json" with { type: "json" };
+import explanationPdfs from "../public/explanations/manifest.json" with { type: "json" };
 import { el, link } from "./dom.ts";
 import { morningTerm } from "./morning-catalog.ts";
 
@@ -59,7 +60,7 @@ function bindArchiveDownload(download: HTMLButtonElement, downloadStatus: HTMLEl
   };
 }
 
-export function pdfPage() {
+export function pdfPage(signal: AbortSignal) {
   const page = el("div", "", "pdf-page");
   page.append(
     el("p", "IPA公式・2016〜2025年度", "eyebrow"),
@@ -67,12 +68,12 @@ export function pdfPage() {
     el("p", "2016〜2025年度の公式問題冊子と、学習用の解答用紙を掲載しています。年度別の問題リンクからはIPA公式のPDFを新しいタブで開きます。"),
     el("p", "午前Ⅰは高度試験共通の問題です。", "exam-note"),
   );
-  page.append(el("h2", "10年分の問題・解答用紙をまとめてダウンロード"), el("p", "公式問題冊子・IPA公式の解答例と学習用の解答用紙、図の採点ルールをまとめて収録しています。"));
-  const download = el("button", "問題・解答用紙・解答例をすべてダウンロード（ZIP）", "pdf-download");
+  page.append(el("h2", "10年分の問題・解答用紙・解説をまとめてダウンロード"), el("p", "公式問題冊子・IPA公式の解答例・学習用の解答用紙・当サイトの解答・解説・図の採点ルールをまとめて収録しています。"));
+  const download = el("button", "問題・解答用紙・解答例・解説をすべてダウンロード（ZIP）", "pdf-download");
   download.type = "button";
-  const downloadStatus = el("p", `${archiveInfo.pdfCount}本・約${Math.round(archiveInfo.size / 1_000_000)}MB／問題冊子・学習用の解答用紙・IPA公式の解答例・図の採点ルール`, "exam-note");
+  const downloadStatus = el("p", `${archiveInfo.pdfCount}本・約${Math.round(archiveInfo.size / 1_000_000)}MB／問題冊子・学習用の解答用紙・IPA公式の解答例・当サイトの解答・解説・図の採点ルール`, "exam-note");
   downloadStatus.setAttribute("role", "status");
-  bindArchiveDownload(download, downloadStatus, "/downloads/DB-Exam-PDF-2016-2025.json", "問題・解答用紙・解答例・図の採点ルールをまとめたZIPの保存を開始しました。");
+  bindArchiveDownload(download, downloadStatus, "/downloads/DB-Exam-PDF-2016-2025.json", "問題・解答用紙・解答例・解説・図の採点ルールをまとめたZIPの保存を開始しました。");
   page.append(download, downloadStatus);
   const printInfo = el("section", "", "card pdf-print-info");
   const sheetDownloads = el("div", "", "pdf-bulk-links");
@@ -106,10 +107,10 @@ export function pdfPage() {
     const links = el("ul", "", "pdf-links");
     const bulkDownload = el("button", "10年分まとめて", "pdf-part-download");
     bulkDownload.type = "button";
-    bulkDownload.setAttribute("aria-label", `${label}の問題・解答用紙・解答例10年分をまとめてダウンロード（ZIP）`);
+    bulkDownload.setAttribute("aria-label", `${label}の問題・解答用紙・解答例・解説10年分をまとめてダウンロード（ZIP）`);
     const bulkStatus = el("p", "", "exam-note");
     bulkStatus.setAttribute("role", "status");
-    bindArchiveDownload(bulkDownload, bulkStatus, `/downloads/DB-Exam-PDF-2016-2025-${part}.json`, `${label}の問題・解答用紙・解答例10年分のZIPの保存を開始しました。`);
+    bindArchiveDownload(bulkDownload, bulkStatus, `/downloads/DB-Exam-PDF-2016-2025-${part}.json`, `${label}の問題・解答用紙・解答例・解説10年分のZIPの保存を開始しました。`);
     for (const {year, papers} of years) {
       const item = el("li");
       const yearLabel = year + "年度 " + morningTerm(year);
@@ -119,8 +120,8 @@ export function pdfPage() {
       links.append(item);
     }
     const contents = part === "am1" || part === "am2"
-      ? "収録内容：試験問題10年分・年度共通のマークシート・IPA公式の解答例10年分"
-      : "収録内容：試験問題10年分・学習用の解答用紙10年分・IPA公式の解答例10年分";
+      ? "収録内容：試験問題10年分・年度共通のマークシート・IPA公式の解答例10年分・当サイトの解答・解説10年分"
+      : "収録内容：試験問題10年分・学習用の解答用紙10年分・IPA公式の解答例10年分・当サイトの解答・解説10年分";
     section.append(heading, bulkDownload, el("p", contents, "exam-note pdf-bundle-contents"), bulkStatus, el("h3", "試験問題"), links);
     if (part === "am1" || part === "am2") {
       const sheetLink = el("p", "", "pdf-morning-sheet");
@@ -150,6 +151,18 @@ export function pdfPage() {
       officialAnswers.append(item);
     }
     section.append(el("h3", "IPA公式の解答例"), officialAnswers);
+    const explanations = el("ul", "", "pdf-links pdf-answer-links pdf-explanation-links");
+    for (const {year} of years) {
+      const item = el("li");
+      const pdf = explanationPdfs.find(pdf => pdf.year === year && pdf.part === part)!;
+      const anchor = officialLink(year + "年度 " + morningTerm(year), `/explanations/${year}-${part}.pdf`);
+      anchor.setAttribute("aria-label", `${year}年度 ${label} 当サイトの解答・解説PDF（新しいタブで開く）`);
+      anchor.append(el("small", `A4・${pdf.pages}ページ`));
+      item.append(anchor);
+      explanations.append(item);
+    }
+    section.append(el("h3", "当サイトの解答・解説"),
+      el("p", "当サイト作成の学習用解説です。まとめてダウンロードのZIPにも収録しています。", "exam-note"), explanations);
     groups.append(section);
   }
   const sources = el("details", "", "pdf-source");
@@ -162,5 +175,53 @@ export function pdfPage() {
   }
   sources.append(sourceList);
   page.append(groups, sources);
-  return page;
+  const layout = el("div", "", "pdf-layout");
+  const toc = el("aside", "", "pdf-toc");
+  const tocDetails = el("details");
+  tocDetails.open = !matchMedia("(max-width: 1100px)").matches;
+  tocDetails.append(el("summary", "このページの目次"));
+  const nav = el("nav");
+  nav.setAttribute("aria-label", "PDFページ内の目次");
+  const headings = [...page.querySelectorAll<HTMLHeadingElement>("h2, h3")];
+  const tocLinks = headings.map((heading, index) => {
+    heading.id ||= "pdf-section-" + index;
+    heading.tabIndex = -1;
+    const anchor = link(heading.textContent!, "#" + heading.id, heading.tagName === "H3" ? "pdf-toc-child" : "");
+    if (index === 0) anchor.textContent = "すべてまとめて";
+    anchor.onclick = event => {
+      event.preventDefault();
+      history.replaceState(null, "", "#" + heading.id);
+      heading.scrollIntoView({behavior: "instant", block: "start"});
+      heading.focus({preventScroll: true});
+      updateActive();
+    };
+    nav.append(anchor);
+    return anchor;
+  });
+  function updateActive() {
+    let current = 0;
+    headings.forEach((heading, index) => { if (heading.getBoundingClientRect().top <= 130) current = index; });
+    tocLinks.forEach((anchor, index) => {
+      if (index === current) anchor.setAttribute("aria-current", "location");
+      else anchor.removeAttribute("aria-current");
+    });
+  }
+  let pending = 0;
+  const onScroll = () => {
+    if (pending) return;
+    pending = requestAnimationFrame(() => { pending = 0; updateActive(); });
+  };
+  window.addEventListener("scroll", onScroll, {passive: true, signal});
+  window.addEventListener("resize", onScroll, {signal});
+  signal.addEventListener("abort", () => cancelAnimationFrame(pending), {once: true});
+  tocDetails.append(nav);
+  toc.append(tocDetails);
+  layout.append(page, toc);
+  pending = requestAnimationFrame(() => {
+    pending = 0;
+    const target = headings.find(h => "#" + h.id === location.hash);
+    target?.scrollIntoView({block: "start"});
+    updateActive();
+  });
+  return layout;
 }

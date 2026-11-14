@@ -1,4 +1,4 @@
-"""Download the catalog's official question PDFs and package an ASCII-only ZIP."""
+"""Package official PDFs, learning answer sheets, and site explanations."""
 
 import json
 import sys
@@ -24,9 +24,10 @@ answer_jobs = [
 ]
 
 cached_questions = {}
-if "--reuse-questions" in sys.argv:
+if "--reuse-questions" in sys.argv or "--reuse-official" in sys.argv:
     with ZipFile(ROOT / "output" / f"{NAME}.zip") as existing:
-        cached_questions = {name: existing.read(name) for name, _ in jobs}
+        cached_jobs = jobs + answer_jobs if "--reuse-official" in sys.argv else jobs
+        cached_questions = {name: existing.read(name) for name, _ in cached_jobs}
 
 
 def download(job):
@@ -61,8 +62,19 @@ try:
             info.compress_type = ZIP_DEFLATED
             info.create_system = 0
             archive.writestr(info, data)
+        explanations = json.loads((ROOT / "public/explanations/manifest.json").read_text())
+        assert {(entry["year"], entry["part"]) for entry in explanations} == {
+            (year, part) for year in range(2016, 2026) for part in ("am1", "am2", "pm1", "pm2")
+        }
+        for entry in sorted(explanations, key=lambda entry: (entry["part"], entry["year"])):
+            data = (ROOT / "public/explanations" / entry["file"]).read_bytes()
+            assert data.startswith(b"%PDF-")
+            info = ZipInfo(f"{NAME}/{entry['part'].upper()}/EXPLANATIONS/{entry['file']}", date_time=(2026, 1, 1, 0, 0, 0))
+            info.compress_type = ZIP_DEFLATED
+            info.create_system = 0
+            archive.writestr(info, data)
     with ZipFile(temporary) as archive:
-        assert len(archive.namelist()) == 84
+        assert len(archive.namelist()) == 124
         assert all(name.isascii() for name in archive.namelist())
         assert archive.testzip() is None
     temporary.replace(destination)
@@ -81,7 +93,7 @@ with destination.open("rb") as source:
         parts.append({"file": name, "size": len(data)})
 (assets / f"{NAME}.json").write_text(json.dumps({
     "filename": destination.name,
-    "pdfCount": 84,
+    "pdfCount": 124,
     "size": destination.stat().st_size,
     "parts": parts,
 }, indent=2) + "\n")
@@ -92,7 +104,7 @@ with ZipFile(destination) as all_in_one:
         session_name = f"{NAME}-{session}"
         session_zip = destination.parent / f"{session_name}.zip"
         names = [name for name in all_in_one.namelist() if name.startswith(f"{NAME}/{session.upper()}/")]
-        assert len(names) == 20
+        assert len(names) == 30
         if session in ("am1", "am2"):
             names.append(f"{NAME}/ANSWER-SHEETS/am1-am2.pdf")
         else:
@@ -111,7 +123,7 @@ with ZipFile(destination) as all_in_one:
                 session_parts.append({"file": name, "size": len(data)})
         (assets / f"{session_name}.json").write_text(json.dumps({
             "filename": session_zip.name,
-            "pdfCount": 21,
+            "pdfCount": 31,
             "size": session_zip.stat().st_size,
             "parts": session_parts,
         }, indent=2) + "\n")

@@ -681,3 +681,22 @@ body:has(.phone-panel[open]) { overflow: hidden; }
 .pdf-group > [role="status"]:empty { display: none; }
 
 .pdf-bundle-contents { margin-top: 8px; }
+
+.pdf-layout { display: grid; grid-template-columns: minmax(0, 1000px) 196px; align-items: start; gap: 24px; }
+.pdf-layout .pdf-page { min-width: 0; }
+.pdf-page :is(h2, h3) { scroll-margin-top: 96px; }
+.pdf-toc { position: sticky; top: 20px; margin-top: 20px; padding: 16px 10px; border: 1px solid #cad5ce; border-radius: 10px; background: #fff; max-height: calc(100dvh - 40px); overflow-y: auto; }
+.pdf-toc summary { padding: 0 6px 10px; font-size: .85rem; font-weight: 700; cursor: pointer; }
+.pdf-toc nav { display: grid; gap: 2px; margin: 0; }
+.pdf-toc a { padding: 5px 7px; border-left: 3px solid transparent; border-radius: 4px; text-decoration: none; font-size: .8rem; line-height: 1.4; }
+.pdf-toc .pdf-toc-child { padding-left: 15px; font-size: .73rem; }
+.pdf-toc a:hover { background: #f0f6f2; }
+.pdf-toc a[aria-current="location"] { border-left-color: #126854; background: #deeee5; color: #0c5141; font-weight: 700; }
+@media (max-width: 760px) {
+  .pdf-page :is(h2, h3) { scroll-margin-top: 6px; }
+}
+@media (max-width: 1100px) {
+  .pdf-layout { display: flex; flex-direction: column; gap: 16px; }
+  .pdf-toc { position: static; order: -1; width: 100%; max-height: 260px; margin-top: 0; }
+  .pdf-toc nav { grid-template-columns: minmax(0, 1fr); }
+}
