@@ -19,7 +19,7 @@ W, H = A4
 
 
 def build():
-    output = ROOT / "output/pdf/db-answer-sheet-morning.pdf"
+    output = ROOT / "output/pdf/db-answer-sheet-am1-am2.pdf"
     output.parent.mkdir(parents=True, exist_ok=True)
     c = canvas.Canvas(str(output), pagesize=A4, invariant=1)
     c.setTitle("午前Ⅰ・午前Ⅱ マークシート（年度共通）")
@@ -61,12 +61,12 @@ def build():
     c.linkURL(contact_url, (qr_x, qr_y, W - 36, qr_y + qr_size), relative=0)
     c.showPage()
     c.save()
-    public = ROOT / "public/answer-sheets/morning.pdf"
+    public = ROOT / "public/answer-sheets/am1-am2.pdf"
     public.parent.mkdir(parents=True, exist_ok=True)
     copyfile(output, public)
     # One download includes the common morning sheet and both afternoon bundles.
     with PdfWriter() as writer:
-        for name in ["morning.pdf", "2016-2025-pm1.pdf", "2016-2025-pm2.pdf"]:
+        for name in ["am1-am2.pdf", "2016-2025-pm1.pdf", "2016-2025-pm2.pdf"]:
             writer.append(PdfReader(public.parent / name))
         writer.add_metadata({"/Title": "学習用解答用紙（午前Ⅰ・Ⅱ／午後Ⅰ・Ⅱ 2016〜2025年度）"})
         writer.write(public.parent / "2016-2025-all.pdf")

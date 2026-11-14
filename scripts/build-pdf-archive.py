@@ -49,7 +49,7 @@ try:
                 archive.writestr(info, data)
                 print(f"Added {name} ({len(data):,} bytes)", flush=True)
     with ZipFile(temporary, "a", compression=ZIP_DEFLATED) as archive:
-        for filename in ["morning.pdf", "2016-2025-pm1.pdf", "2016-2025-pm2.pdf", "diagram-scoring-guide.pdf"]:
+        for filename in ["am1-am2.pdf", "2016-2025-pm1.pdf", "2016-2025-pm2.pdf", "diagram-scoring-guide.pdf"]:
             data = (ROOT / "public/answer-sheets" / filename).read_bytes()
             assert data.startswith(b"%PDF-")
             info = ZipInfo(f"{NAME}/ANSWER-SHEETS/{filename}", date_time=(2026, 1, 1, 0, 0, 0))

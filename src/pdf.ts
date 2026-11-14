@@ -20,7 +20,7 @@ function officialLink(label: string, href: string) {
 }
 
 function morningSheetLink() {
-  return officialLink("午前Ⅰ・午前Ⅱのマークシート（年度共通）", "/answer-sheets/morning.pdf");
+  return officialLink("午前Ⅰ・午前Ⅱのマークシート（年度共通）", "/answer-sheets/am1-am2.pdf");
 }
 
 function bindArchiveDownload(download: HTMLButtonElement, downloadStatus: HTMLElement, manifestPath: string, completedMessage: string) {
@@ -77,15 +77,14 @@ export function pdfPage() {
   const printInfo = el("section", "", "card pdf-print-info");
   const sheetDownloads = el("div", "", "pdf-bulk-links");
   for (const [file, label, description] of [
-    ["morning.pdf", "午前Ⅰ・Ⅱ マークシート（PDF）", "年度共通・1ページ／午前Ⅰ30問＋午前Ⅱ25問"],
+    ["am1-am2.pdf", "午前Ⅰ・Ⅱ マークシート（PDF）", "年度共通・1ページ／午前Ⅰ30問＋午前Ⅱ25問"],
     ["2016-2025-pm1.pdf", "午後Ⅰ 解答用紙10年分（PDF）", "2016〜2025年度・60ページ"],
     ["2016-2025-pm2.pdf", "午後Ⅱ 解答用紙10年分（PDF）", "2016〜2025年度・40ページ"],
   ]) {
-    const anchor = link(label, "/answer-sheets/" + file);
+    const anchor = officialLink(label, "/answer-sheets/" + file);
     anchor.className = "primary";
-    anchor.download = file;
     const item = el("div");
-    item.append(anchor, el("small", description));
+    item.append(anchor, el("small", description + "・新しいタブで開きます"));
     sheetDownloads.append(item);
   }
   printInfo.append(
