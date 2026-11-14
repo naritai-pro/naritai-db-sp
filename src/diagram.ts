@@ -2,6 +2,7 @@ import { relationshipPath, straightSegments, type Segment, type Box } from "./re
 import type { Diagram } from "./exam";
 import type { Edge } from "./store";
 import { el } from "./dom";
+import { diagramScoringNotice } from "./diagram-scoring";
 
 
 const answerStrokeWidth = 2;
@@ -303,7 +304,9 @@ export function diagram(d: Diagram, additions: Edge[], onChange?: () => void, pr
     title.className = "scored-diagram-title";
     title.append(el("span", "予想配点 " + estimatedPoints + "点", "diagram-score"));
   }
-  panel.append(title, frame);
+  panel.append(title);
+  if (d.answer.length) panel.append(diagramScoringNotice());
+  panel.append(frame);
   const footer = el("div", "", "diagram-footer");
   const legend = el("div", "", "diagram-legend");
   const symbols = [

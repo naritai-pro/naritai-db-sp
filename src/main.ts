@@ -1,5 +1,8 @@
+import { diagramScoringText } from "./diagram-scoring";
 import { questionReset } from "./question-reset";
 import { examInfo } from "./exam-info";
+import { pdfPage, pdfPageInfo } from "./pdf";
+import { contactPage, contactPageInfo } from "./contact";
 import { setupPhone, phoneQuestion, resetPhone, morningIndex } from "./phone";
 import { circleTable } from "./circle-table";
 import { partTree, treeAnswer } from "./part-tree";
@@ -117,6 +120,7 @@ function exportText(q: Question, withAnswer: boolean, section: number) {
       const slot = diagrams.get(id);
       if (slot) {
         const d = slot.model;
+        if (d.answer.length) blocks.push("図の採点ルール：\n" + diagramScoringText);
         blocks.push(
           "エンティティ：" + d.nodes.map(v => v[0]).join("、"),
           "問題で与えられた関係：\n" + graph(d.fixed),
@@ -304,7 +308,8 @@ function renderQuestion(q: Question, reviewing: boolean) {
         return Object.fromEntries(Object.entries(d.nodeFields ?? {}).map(([node, field]) => [node, values[field]?.trim() || node]));
       }
 
-      const panel = diagram(d, added, reviewing ? undefined : save, "sheet", () => labels(record.fields));
+      const points = sectionScores(q.id, i, s.heading).get(scoreId)?.item.points;
+      const panel = diagram(d, added, reviewing ? undefined : save, "sheet", () => labels(record.fields), points);
       if (reviewing) {
         const own = el("div", "", "own-answer");
         own.append(el("h3", "自分の答案" + (added.length ? "" : "（未解答）")), panel);
@@ -417,7 +422,9 @@ async function route() {
   routeLifetime?.abort();
   const morning = morningRoute(location.pathname);
   const {id, reviewing} = resolveRoute();
-  const page = morning ? morningInfo(morning.year, morning.part) : pageInfo(id, reviewing);
+  const isPdf = location.pathname.replace(/\/$/, "") === "/pdf";
+  const isContact = location.pathname.replace(/\/$/, "") === "/contact";
+  const page = isContact ? contactPageInfo : isPdf ? pdfPageInfo : morning ? morningInfo(morning.year, morning.part) : pageInfo(id, reviewing);
   document.title = page.title;
   document.querySelector('meta[name="description"]')?.setAttribute("content", page.description);
   document.querySelector('meta[property="og:title"]')?.setAttribute("content", page.title);
@@ -427,6 +434,11 @@ async function route() {
   const requested = location.href;
   const entry = navigatorTree.select(id);
   const exercise = exercises.get(id);
+  if (isPdf || isContact) {
+    app.replaceChildren(isContact ? contactPage() : pdfPage());
+    window.scrollTo(0, 0);
+    return;
+  }
   if (morning) {
     const controller = new AbortController();
     routeLifetime = controller;

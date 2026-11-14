@@ -23,6 +23,11 @@ export function library(availableIds: Set<string>, signal: AbortSignal) {
   signal.addEventListener("abort", () => nav.remove(), {once: true});
   const entries = new Map<string, {year: number; title: string; paper: string; anchor: HTMLAnchorElement; session: HTMLDetailsElement; group: HTMLDetailsElement}>();
   const morningLinks = new Map<string, HTMLAnchorElement>();
+  const homeLink = link("", "/", "library-home");
+  const homeIcon = document.querySelector("header .brand svg")!.cloneNode(true);
+  homeLink.append(homeIcon, el("span", "ホーム"));
+  homeLink.onclick = () => { if (mobile.matches) setOpen(false); };
+  nav.append(homeLink);
   for (const part of morningParts) {
     const session = el("details", "", "session");
     session.append(el("summary", morningName(part)));
@@ -58,8 +63,20 @@ export function library(availableIds: Set<string>, signal: AbortSignal) {
     }
     nav.append(session);
   }
+  const pdfLink = link("PDF", "/pdf", "library-pdf");
+  pdfLink.onclick = () => { if (mobile.matches) setOpen(false); };
+  const contactLink = link("問い合わせ先", "/contact", "library-pdf library-contact");
+  contactLink.onclick = () => { if (mobile.matches) setOpen(false); };
+  nav.append(pdfLink, contactLink);
   return {
     select(id: string) {
+      const path = location.pathname.replace(/\/$/, "");
+      if (path === "") homeLink.setAttribute("aria-current", "page");
+      else homeLink.removeAttribute("aria-current");
+      if (path === "/contact") contactLink.setAttribute("aria-current", "page");
+      else contactLink.removeAttribute("aria-current");
+      if (location.pathname.replace(/\/$/, "") === "/pdf") pdfLink.setAttribute("aria-current", "page");
+      else pdfLink.removeAttribute("aria-current");
       for (const [path, anchor] of morningLinks) {
         if (path === location.pathname.replace(/\/$/, "")) {
           anchor.setAttribute("aria-current", "page");
@@ -67,7 +84,7 @@ export function library(availableIds: Set<string>, signal: AbortSignal) {
         } else anchor.removeAttribute("aria-current");
       }
       for (const entry of entries.values()) entry.anchor.removeAttribute("aria-current");
-      const entry = entries.get(id);
+      const entry = path === "/contact" || path === "/pdf" ? undefined : entries.get(id);
       if (entry) {
         entry.session.open = true;
         entry.group.open = true;

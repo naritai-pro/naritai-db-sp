@@ -1,0 +1,2868 @@
+[
+  {
+    "year": 2025,
+    "part": "pm1",
+    "pages": 6,
+    "contentPages": 6,
+    "memoPages": 0,
+    "fields": 55,
+    "questions": [
+      {
+        "question": 1,
+        "startPage": 1,
+        "contentPages": 2,
+        "memoPage": null,
+        "endPage": 2
+      },
+      {
+        "question": 2,
+        "startPage": 3,
+        "contentPages": 2,
+        "memoPage": null,
+        "endPage": 4
+      },
+      {
+        "question": 3,
+        "startPage": 5,
+        "contentPages": 2,
+        "memoPage": null,
+        "endPage": 6
+      }
+    ],
+    "scoreHeadings": [
+      {
+        "page": 1,
+        "question": "2025-autumn-db-pm1-q1",
+        "context": "設問1（1）",
+        "text": "予想配点 2点　a:2点"
+      },
+      {
+        "page": 1,
+        "question": "2025-autumn-db-pm1-q1",
+        "context": "設問1（2）",
+        "text": "予想配点 17点　関係の種類・向きの誤り−1点／本、接続先の誤り・線の不足・余分な線−2点／本"
+      },
+      {
+        "page": 1,
+        "question": "2025-autumn-db-pm1-q1",
+        "context": "設問1（3）",
+        "text": "予想配点 6点　ア:2点／イ:2点／ウ:1点／エ:1点"
+      },
+      {
+        "page": 2,
+        "question": "2025-autumn-db-pm1-q1",
+        "context": "設問1（3）",
+        "text": "予想配点 17点　オ:1点／カ:2点／キ:3点／ク:2点／ケ:1点／コ:2点／サ:2点／シ:2点／ス:2点"
+      },
+      {
+        "page": 2,
+        "question": "2025-autumn-db-pm1-q1",
+        "context": "設問2",
+        "text": "予想配点 8点　セ:2点／ソ:2点／タ:1点／チ:1点／ツ:2点"
+      },
+      {
+        "page": 3,
+        "question": "2025-autumn-db-pm1-q2",
+        "context": "設問1（1）",
+        "text": "予想配点 4点　候補キー:4点"
+      },
+      {
+        "page": 3,
+        "question": "2025-autumn-db-pm1-q2",
+        "context": "設問1（2）",
+        "text": "予想配点 13点　正規形:2点／根拠:5点／関係スキーマ:6点"
+      },
+      {
+        "page": 3,
+        "question": "2025-autumn-db-pm1-q2",
+        "context": "設問2（1）",
+        "text": "予想配点 8点　関係の種類・向きの誤り−1点／本、接続先の誤り・線の不足・余分な線−2点／本"
+      },
+      {
+        "page": 3,
+        "question": "2025-autumn-db-pm1-q2",
+        "context": "設問2（2）",
+        "text": "予想配点 7点　a:2点／b:2点／c:3点"
+      },
+      {
+        "page": 4,
+        "question": "2025-autumn-db-pm1-q2",
+        "context": "設問2（2）",
+        "text": "予想配点 2点　d:2点"
+      },
+      {
+        "page": 4,
+        "question": "2025-autumn-db-pm1-q2",
+        "context": "設問3（1）",
+        "text": "予想配点 5点　関係の種類・向きの誤り−1点／本、接続先の誤り・線の不足・余分な線−2点／本"
+      },
+      {
+        "page": 4,
+        "question": "2025-autumn-db-pm1-q2",
+        "context": "設問3（2）",
+        "text": "予想配点 11点　関係スキーマ:11点"
+      },
+      {
+        "page": 5,
+        "question": "2025-autumn-db-pm1-q3",
+        "context": "設問1（1）",
+        "text": "予想配点 13点　a:2点／b:2点／c:1点／d:1点／e:2点／f:2点／g:1点／h・i:2点"
+      },
+      {
+        "page": 5,
+        "question": "2025-autumn-db-pm1-q3",
+        "context": "設問1（2）",
+        "text": "予想配点 4点　理由:4点"
+      },
+      {
+        "page": 5,
+        "question": "2025-autumn-db-pm1-q3",
+        "context": "設問2（1）",
+        "text": "予想配点 4点　j:2点／k:2点"
+      },
+      {
+        "page": 5,
+        "question": "2025-autumn-db-pm1-q3",
+        "context": "設問2（2）",
+        "text": "予想配点 6点　l:2点／m:3点／n:1点"
+      },
+      {
+        "page": 5,
+        "question": "2025-autumn-db-pm1-q3",
+        "context": "設問2（3）",
+        "text": "予想配点 4点　o:4点"
+      },
+      {
+        "page": 5,
+        "question": "2025-autumn-db-pm1-q3",
+        "context": "設問2（4）",
+        "text": "予想配点 4点　p:4点"
+      },
+      {
+        "page": 6,
+        "question": "2025-autumn-db-pm1-q3",
+        "context": "設問3（1）",
+        "text": "予想配点 9点　q:1点／r:1点／s:1点／t:2点／u:2点／v:2点"
+      },
+      {
+        "page": 6,
+        "question": "2025-autumn-db-pm1-q3",
+        "context": "設問3（2）",
+        "text": "予想配点 6点　理由:6点"
+      }
+    ],
+    "gridCells": 125,
+    "grids": 3,
+    "file": "2025-pm1.pdf",
+    "size": 540011
+  },
+  {
+    "year": 2025,
+    "part": "pm2",
+    "pages": 4,
+    "contentPages": 4,
+    "memoPages": 0,
+    "fields": 58,
+    "questions": [
+      {
+        "question": 1,
+        "startPage": 1,
+        "contentPages": 2,
+        "memoPage": null,
+        "endPage": 2
+      },
+      {
+        "question": 2,
+        "startPage": 3,
+        "contentPages": 2,
+        "memoPage": null,
+        "endPage": 4
+      }
+    ],
+    "scoreHeadings": [
+      {
+        "page": 1,
+        "question": "2025-autumn-db-pm2-q1",
+        "context": "設問1（1）",
+        "text": "予想配点 10点　a:2点／b:2点／c:3点／d:3点"
+      },
+      {
+        "page": 1,
+        "question": "2025-autumn-db-pm2-q1",
+        "context": "設問1（2）",
+        "text": "予想配点 12点　理由:6点／理由:6点"
+      },
+      {
+        "page": 1,
+        "question": "2025-autumn-db-pm2-q1",
+        "context": "設問2（1）",
+        "text": "予想配点 13点　番号:3点／メッセージの内容:3点／状態の相違点:7点"
+      },
+      {
+        "page": 1,
+        "question": "2025-autumn-db-pm2-q1",
+        "context": "設問2（2）",
+        "text": "予想配点 19点　e:3点／f:3点／g:2点／業務上の不都合:5点／データの状態:6点"
+      },
+      {
+        "page": 1,
+        "question": "2025-autumn-db-pm2-q1",
+        "context": "設問3（1）",
+        "text": "予想配点 9点　テーブル名・列名:4点／処理概要:5点"
+      },
+      {
+        "page": 2,
+        "question": "2025-autumn-db-pm2-q1",
+        "context": "設問3（1）",
+        "text": "予想配点 10点　先頭:7点／末尾:3点"
+      },
+      {
+        "page": 2,
+        "question": "2025-autumn-db-pm2-q1",
+        "context": "設問3（2）",
+        "text": "予想配点 17点　h:6点／i:6点／j:5点"
+      },
+      {
+        "page": 2,
+        "question": "2025-autumn-db-pm2-q1",
+        "context": "設問3（3）",
+        "text": "予想配点 10点　事例:2点／内容:8点"
+      },
+      {
+        "page": 3,
+        "question": "2025-autumn-db-pm2-q2",
+        "context": "設問1（1）",
+        "text": "予想配点 15点　関係の種類・向きの誤り−1点／本、接続先の誤り・線の不足・余分な線−2点／本"
+      },
+      {
+        "page": 3,
+        "question": "2025-autumn-db-pm2-q2",
+        "context": "設問1（2）",
+        "text": "予想配点 10点　関係の種類・向きの誤り−1点／本、接続先の誤り・線の不足・余分な線−2点／本"
+      },
+      {
+        "page": 3,
+        "question": "2025-autumn-db-pm2-q2",
+        "context": "設問1（3）",
+        "text": "予想配点 18点　ア:1点／イ:1点／ウ:2点／エ:3点／オ:2点／カ:3点／キ:2点／ク:2点／ケ:2点"
+      },
+      {
+        "page": 4,
+        "question": "2025-autumn-db-pm2-q2",
+        "context": "設問1（4）",
+        "text": "予想配点 25点　コ:2点／サ:2点／シ:2点／ス:2点／セ:2点／ソ:2点／タ:2点／チ:2点／ツ:2点／テ:2点／ト:2点／ナ:3点"
+      },
+      {
+        "page": 4,
+        "question": "2025-autumn-db-pm2-q2",
+        "context": "設問2（1）",
+        "text": "予想配点 12点　図8:8点（関係の種類・向きの誤り−1点／本、接続先の誤り・線の不足・余分な線−2点／本）／①:1点／②:1点／③:1点／④:1点"
+      },
+      {
+        "page": 4,
+        "question": "2025-autumn-db-pm2-q2",
+        "context": "設問2（2）",
+        "text": "予想配点 15点　①:4点／②:3点／③:4点／④:4点"
+      },
+      {
+        "page": 4,
+        "question": "2025-autumn-db-pm2-q2",
+        "context": "設問2（3）",
+        "text": "予想配点 5点　ニ:2点／ヌ:3点"
+      }
+    ],
+    "gridCells": 425,
+    "grids": 11,
+    "file": "2025-pm2.pdf",
+    "size": 464902
+  },
+  {
+    "year": 2024,
+    "part": "pm1",
+    "pages": 6,
+    "contentPages": 6,
+    "memoPages": 0,
+    "fields": 61,
+    "questions": [
+      {
+        "question": 1,
+        "startPage": 1,
+        "contentPages": 2,
+        "memoPage": null,
+        "endPage": 2
+      },
+      {
+        "question": 2,
+        "startPage": 3,
+        "contentPages": 2,
+        "memoPage": null,
+        "endPage": 4
+      },
+      {
+        "question": 3,
+        "startPage": 5,
+        "contentPages": 2,
+        "memoPage": null,
+        "endPage": 6
+      }
+    ],
+    "scoreHeadings": [
+      {
+        "page": 1,
+        "question": "2024-autumn-db-pm1-q1",
+        "context": "設問1（1）",
+        "text": "予想配点 12点　関係の種類・向きの誤り−1点／本、接続先の誤り・線の不足・余分な線−2点／本"
+      },
+      {
+        "page": 1,
+        "question": "2024-autumn-db-pm1-q1",
+        "context": "設問1（2）",
+        "text": "予想配点 7点　a:4点／b:3点"
+      },
+      {
+        "page": 2,
+        "question": "2024-autumn-db-pm1-q1",
+        "context": "設問2（1）",
+        "text": "予想配点 7点　関係の種類・向きの誤り−1点／本、接続先の誤り・線の不足・余分な線−2点／本"
+      },
+      {
+        "page": 2,
+        "question": "2024-autumn-db-pm1-q1",
+        "context": "設問2（2）",
+        "text": "予想配点 12点　c:2点／d:2点／e:3点／f:3点／g:2点"
+      },
+      {
+        "page": 2,
+        "question": "2024-autumn-db-pm1-q1",
+        "context": "設問3（1）",
+        "text": "予想配点 4点　変更内容:4点"
+      },
+      {
+        "page": 2,
+        "question": "2024-autumn-db-pm1-q1",
+        "context": "設問3（2）",
+        "text": "予想配点 8点　①:4点／②:4点"
+      },
+      {
+        "page": 3,
+        "question": "2024-autumn-db-pm1-q2",
+        "context": "設問1（1）",
+        "text": "予想配点 8点　a:2点／b:2点／c:2点／d:2点"
+      },
+      {
+        "page": 3,
+        "question": "2024-autumn-db-pm1-q2",
+        "context": "設問1（2）",
+        "text": "予想配点 12点　時系列1　テーブル名・時系列1　トランザクション・時系列1　ロック種別・時系列1　ロック状態:3点／時系列2　テーブル名・時系列2　トランザクション・時系列2　ロック種別・時系列2　ロック状態:3点／時系列3　テーブル名・時系列3　トランザクション・時系列3　ロック種別・時系列3　ロック状態:3点／時系列4　テーブル名・時系列4　トランザクション・時系列4　ロック種別・時系列4　ロック状態:3点"
+      },
+      {
+        "page": 3,
+        "question": "2024-autumn-db-pm1-q2",
+        "context": "設問1（3）",
+        "text": "予想配点 5点　変更内容:5点"
+      },
+      {
+        "page": 3,
+        "question": "2024-autumn-db-pm1-q2",
+        "context": "設問2（1）",
+        "text": "予想配点 8点　e:2点／f:2点／g:2点／h:2点"
+      },
+      {
+        "page": 3,
+        "question": "2024-autumn-db-pm1-q2",
+        "context": "設問2（2）",
+        "text": "予想配点 7点　ア:7点"
+      },
+      {
+        "page": 4,
+        "question": "2024-autumn-db-pm1-q2",
+        "context": "設問2（3）",
+        "text": "予想配点 10点　A:5点／B:5点"
+      },
+      {
+        "page": 5,
+        "question": "2024-autumn-db-pm1-q3",
+        "context": "設問1（1）",
+        "text": "予想配点 8点　a:2点／b:1点／c:2点／d:2点／e:1点"
+      },
+      {
+        "page": 5,
+        "question": "2024-autumn-db-pm1-q3",
+        "context": "設問1（2）",
+        "text": "予想配点 4点　組織長従業員コード:2点／上位組織コード:2点"
+      },
+      {
+        "page": 5,
+        "question": "2024-autumn-db-pm1-q3",
+        "context": "設問1（3）",
+        "text": "予想配点 6点　SET NULL の場合:3点／RESTRICT の場合:3点"
+      },
+      {
+        "page": 5,
+        "question": "2024-autumn-db-pm1-q3",
+        "context": "設問2",
+        "text": "予想配点 8点　ア:2点／イ:2点／ウ:2点／エ:2点"
+      },
+      {
+        "page": 6,
+        "question": "2024-autumn-db-pm1-q3",
+        "context": "設問3（1）",
+        "text": "予想配点 5点　理由:5点"
+      },
+      {
+        "page": 6,
+        "question": "2024-autumn-db-pm1-q3",
+        "context": "設問3（2）",
+        "text": "予想配点 3点　f:3点"
+      },
+      {
+        "page": 6,
+        "question": "2024-autumn-db-pm1-q3",
+        "context": "設問3（3）",
+        "text": "予想配点 5点　理由:5点"
+      },
+      {
+        "page": 6,
+        "question": "2024-autumn-db-pm1-q3",
+        "context": "設問3（4）",
+        "text": "予想配点 11点　g:2点／h:2点／i:3点／j:2点／k:2点"
+      }
+    ],
+    "gridCells": 380,
+    "grids": 11,
+    "file": "2024-pm1.pdf",
+    "size": 516167
+  },
+  {
+    "year": 2024,
+    "part": "pm2",
+    "pages": 4,
+    "contentPages": 4,
+    "memoPages": 0,
+    "fields": 61,
+    "questions": [
+      {
+        "question": 1,
+        "startPage": 1,
+        "contentPages": 2,
+        "memoPage": null,
+        "endPage": 2
+      },
+      {
+        "question": 2,
+        "startPage": 3,
+        "contentPages": 2,
+        "memoPage": null,
+        "endPage": 4
+      }
+    ],
+    "scoreHeadings": [
+      {
+        "page": 1,
+        "question": "2024-autumn-db-pm2-q1",
+        "context": "設問1（1）",
+        "text": "予想配点 8点　T1:4点／T6:4点"
+      },
+      {
+        "page": 1,
+        "question": "2024-autumn-db-pm2-q1",
+        "context": "設問1（2）",
+        "text": "予想配点 27点　a:1点／b:2点／c:2点／d:2点／e:2点／f:1点／g:2点／h:2点／i:1点／j:3点／k:3点／l:3点／m:3点"
+      },
+      {
+        "page": 1,
+        "question": "2024-autumn-db-pm2-q1",
+        "context": "設問2（1）",
+        "text": "予想配点 14点　ア:2点／イ:2点／変更内容:5点／有無・根拠:5点"
+      },
+      {
+        "page": 1,
+        "question": "2024-autumn-db-pm2-q1",
+        "context": "設問2（2）",
+        "text": "予想配点 11点　ウ:2点／エ:2点／AP名:2点／変更内容:5点"
+      },
+      {
+        "page": 1,
+        "question": "2024-autumn-db-pm2-q1",
+        "context": "設問2（3）",
+        "text": "予想配点 13点　状況:6点／修正内容:5点／AP名:2点"
+      },
+      {
+        "page": 2,
+        "question": "2024-autumn-db-pm2-q1",
+        "context": "設問2（3）",
+        "text": "予想配点 5点　変更内容:5点"
+      },
+      {
+        "page": 2,
+        "question": "2024-autumn-db-pm2-q1",
+        "context": "設問3（1）",
+        "text": "予想配点 14点　オ:3点／カ:3点／キ:3点／ク:3点／ケ:2点"
+      },
+      {
+        "page": 2,
+        "question": "2024-autumn-db-pm2-q1",
+        "context": "設問3（2）",
+        "text": "予想配点 8点　コ:2点／サ:4点／シ:2点"
+      },
+      {
+        "page": 3,
+        "question": "2024-autumn-db-pm2-q2",
+        "context": "設問1（1）",
+        "text": "予想配点 15点　関係の種類・向きの誤り−1点／本、接続先の誤り・線の不足・余分な線−2点／本"
+      },
+      {
+        "page": 3,
+        "question": "2024-autumn-db-pm2-q2",
+        "context": "設問1（2）",
+        "text": "予想配点 23点　関係の種類・向きの誤り−1点／本、接続先の誤り・線の不足・余分な線−2点／本"
+      },
+      {
+        "page": 4,
+        "question": "2024-autumn-db-pm2-q2",
+        "context": "設問1（3）",
+        "text": "予想配点 20点　ア:1点／イ:3点／ウ:2点／エ:2点／オ:1点／カ:1点／キ:2点／ク:4点／ケ:4点"
+      },
+      {
+        "page": 4,
+        "question": "2024-autumn-db-pm2-q2",
+        "context": "設問1（4）",
+        "text": "予想配点 42点　コ:3点／サ:4点／シ:3点／ス:3点／セ:2点／ソ:4点／タ:3点／チ:3点／ツ:4点／テ:3点／ト:3点／ナ:1点／ニ:3点／ヌ:3点"
+      }
+    ],
+    "gridCells": 215,
+    "grids": 7,
+    "file": "2024-pm2.pdf",
+    "size": 452154
+  },
+  {
+    "year": 2023,
+    "part": "pm1",
+    "pages": 6,
+    "contentPages": 6,
+    "memoPages": 0,
+    "fields": 59,
+    "questions": [
+      {
+        "question": 1,
+        "startPage": 1,
+        "contentPages": 2,
+        "memoPage": null,
+        "endPage": 2
+      },
+      {
+        "question": 2,
+        "startPage": 3,
+        "contentPages": 2,
+        "memoPage": null,
+        "endPage": 4
+      },
+      {
+        "question": 3,
+        "startPage": 5,
+        "contentPages": 2,
+        "memoPage": null,
+        "endPage": 6
+      }
+    ],
+    "scoreHeadings": [
+      {
+        "page": 1,
+        "question": "2023-autumn-db-pm1-q1",
+        "context": "設問1（1）",
+        "text": "予想配点 3点　候補キー:3点"
+      },
+      {
+        "page": 1,
+        "question": "2023-autumn-db-pm1-q1",
+        "context": "設問1（2）",
+        "text": "予想配点 10点　正規形:1点／根拠:4点／関係スキーマ:5点"
+      },
+      {
+        "page": 1,
+        "question": "2023-autumn-db-pm1-q1",
+        "context": "設問2（1）",
+        "text": "予想配点 9点　関係の種類・向きの誤り−1点／本、接続先の誤り・線の不足・余分な線−2点／本"
+      },
+      {
+        "page": 2,
+        "question": "2023-autumn-db-pm1-q1",
+        "context": "設問2（2）",
+        "text": "予想配点 10点　a:1点／b:2点／c:2点／d:3点／e:2点"
+      },
+      {
+        "page": 2,
+        "question": "2023-autumn-db-pm1-q1",
+        "context": "設問3（1）",
+        "text": "予想配点 7点　（a）変更:4点／（b）関係名・属性名:3点"
+      },
+      {
+        "page": 2,
+        "question": "2023-autumn-db-pm1-q1",
+        "context": "設問3（2）",
+        "text": "予想配点 11点　（a）変更:5点／① 関係名・属性名:3点／② 関係名・属性名:3点"
+      },
+      {
+        "page": 3,
+        "question": "2023-autumn-db-pm1-q2",
+        "context": "設問1（1）",
+        "text": "予想配点 10点　関係の種類・向きの誤り−1点／本、接続先の誤り・線の不足・余分な線−2点／本"
+      },
+      {
+        "page": 3,
+        "question": "2023-autumn-db-pm1-q2",
+        "context": "設問1（2）",
+        "text": "予想配点 8点　ア:1点／イ:3点／ウ:3点／エ:1点"
+      },
+      {
+        "page": 3,
+        "question": "2023-autumn-db-pm1-q2",
+        "context": "設問2（1）",
+        "text": "予想配点 4点　a:1点／b:1点／c・d:2点"
+      },
+      {
+        "page": 3,
+        "question": "2023-autumn-db-pm1-q2",
+        "context": "設問2（2）",
+        "text": "予想配点 4点　e・f:2点／g・h:2点"
+      },
+      {
+        "page": 4,
+        "question": "2023-autumn-db-pm1-q2",
+        "context": "設問2（2）",
+        "text": "予想配点 2点　i・j:2点"
+      },
+      {
+        "page": 4,
+        "question": "2023-autumn-db-pm1-q2",
+        "context": "設問3（1）",
+        "text": "予想配点 7点　関係の種類・向きの誤り−1点／本、接続先の誤り・線の不足・余分な線−2点／本"
+      },
+      {
+        "page": 4,
+        "question": "2023-autumn-db-pm1-q2",
+        "context": "設問3（2）",
+        "text": "予想配点 10点　オ:1点／カ:1点／キ:2点／ク:2点／ケ:1点／コ:1点／サ:2点"
+      },
+      {
+        "page": 4,
+        "question": "2023-autumn-db-pm1-q2",
+        "context": "設問3（3）",
+        "text": "予想配点 5点　（a）消込み対象の条件:2点／（b）消込みの順序:3点"
+      },
+      {
+        "page": 5,
+        "question": "2023-autumn-db-pm1-q3",
+        "context": "設問1（1）",
+        "text": "予想配点 5点　a:3点／b:2点"
+      },
+      {
+        "page": 5,
+        "question": "2023-autumn-db-pm1-q3",
+        "context": "設問1（2）",
+        "text": "予想配点 5点　理由:5点"
+      },
+      {
+        "page": 5,
+        "question": "2023-autumn-db-pm1-q3",
+        "context": "設問1（3）",
+        "text": "予想配点 6点　c:2点／d:2点／e:2点"
+      },
+      {
+        "page": 5,
+        "question": "2023-autumn-db-pm1-q3",
+        "context": "設問1（4）",
+        "text": "予想配点 6点　f:2点／g:2点／h:2点"
+      },
+      {
+        "page": 5,
+        "question": "2023-autumn-db-pm1-q3",
+        "context": "設問2（1）",
+        "text": "予想配点 5点　理由:5点"
+      },
+      {
+        "page": 5,
+        "question": "2023-autumn-db-pm1-q3",
+        "context": "設問2（2）",
+        "text": "予想配点 3点　ア:3点"
+      },
+      {
+        "page": 5,
+        "question": "2023-autumn-db-pm1-q3",
+        "context": "設問2（3）",
+        "text": "予想配点 6点　理由:6点"
+      },
+      {
+        "page": 6,
+        "question": "2023-autumn-db-pm1-q3",
+        "context": "設問2（4）",
+        "text": "予想配点 5点　理由:5点"
+      },
+      {
+        "page": 6,
+        "question": "2023-autumn-db-pm1-q3",
+        "context": "設問2（5）",
+        "text": "予想配点 9点　イ:2点／ウ:2点／エ:2点／オ:2点／カ:1点"
+      }
+    ],
+    "gridCells": 305,
+    "grids": 9,
+    "file": "2023-pm1.pdf",
+    "size": 573626
+  },
+  {
+    "year": 2023,
+    "part": "pm2",
+    "pages": 4,
+    "contentPages": 4,
+    "memoPages": 0,
+    "fields": 66,
+    "questions": [
+      {
+        "question": 1,
+        "startPage": 1,
+        "contentPages": 2,
+        "memoPage": null,
+        "endPage": 2
+      },
+      {
+        "question": 2,
+        "startPage": 3,
+        "contentPages": 2,
+        "memoPage": null,
+        "endPage": 4
+      }
+    ],
+    "scoreHeadings": [
+      {
+        "page": 1,
+        "question": "2023-autumn-db-pm2-q1",
+        "context": "設問1（1）",
+        "text": "予想配点 4点　a:4点"
+      },
+      {
+        "page": 1,
+        "question": "2023-autumn-db-pm2-q1",
+        "context": "設問1（2）",
+        "text": "予想配点 10点　b:2点／c:2点／d:2点／e:2点／f:2点"
+      },
+      {
+        "page": 1,
+        "question": "2023-autumn-db-pm2-q1",
+        "context": "設問2（1）",
+        "text": "予想配点 9点　累計出荷数量:4点／移動累計出荷数量:5点"
+      },
+      {
+        "page": 1,
+        "question": "2023-autumn-db-pm2-q1",
+        "context": "設問2（2）",
+        "text": "予想配点 9点　ア:2点／イ:2点／ウ:1点／エ:1点／オ:1点／カ:2点"
+      },
+      {
+        "page": 1,
+        "question": "2023-autumn-db-pm2-q1",
+        "context": "設問2（3）",
+        "text": "予想配点 10点　キ:3点／ク:2点／ケ:2点／コ:3点"
+      },
+      {
+        "page": 1,
+        "question": "2023-autumn-db-pm2-q1",
+        "context": "設問2（4）",
+        "text": "予想配点 4点　棚#の組:4点"
+      },
+      {
+        "page": 1,
+        "question": "2023-autumn-db-pm2-q1",
+        "context": "設問2（5）",
+        "text": "予想配点 8点　テーブル名①・操作①:4点／テーブル名②・操作②:4点"
+      },
+      {
+        "page": 1,
+        "question": "2023-autumn-db-pm2-q1",
+        "context": "設問3（1）",
+        "text": "予想配点 12点　g:2点／h:2点／i:2点／j:2点／k:2点／l:2点"
+      },
+      {
+        "page": 1,
+        "question": "2023-autumn-db-pm2-q1",
+        "context": "設問3（2）",
+        "text": "予想配点 5点　（a）選択条件:5点"
+      },
+      {
+        "page": 2,
+        "question": "2023-autumn-db-pm2-q1",
+        "context": "設問3（2）",
+        "text": "予想配点 5点　（b）指定する条件:5点"
+      },
+      {
+        "page": 2,
+        "question": "2023-autumn-db-pm2-q1",
+        "context": "設問3（3）",
+        "text": "予想配点 7点　確認方法:7点"
+      },
+      {
+        "page": 2,
+        "question": "2023-autumn-db-pm2-q1",
+        "context": "設問3（4）",
+        "text": "予想配点 6点　m:2点／n:2点／o:2点"
+      },
+      {
+        "page": 2,
+        "question": "2023-autumn-db-pm2-q1",
+        "context": "設問3（5）",
+        "text": "予想配点 11点　受払残高の追加行（外部キーの属性名 → 参照先）:6点／残高集計の追加行（外部キーの属性名 → 参照先）:5点"
+      },
+      {
+        "page": 3,
+        "question": "2023-autumn-db-pm2-q2",
+        "context": "設問1（1）",
+        "text": "予想配点 4点　a:2点／b:2点"
+      },
+      {
+        "page": 3,
+        "question": "2023-autumn-db-pm2-q2",
+        "context": "設問1（2）",
+        "text": "予想配点 24点　関係の種類・向きの誤り−1点／本、接続先の誤り・線の不足・余分な線−2点／本"
+      },
+      {
+        "page": 3,
+        "question": "2023-autumn-db-pm2-q2",
+        "context": "設問1（3）",
+        "text": "予想配点 12点　関係の種類・向きの誤り−1点／本、接続先の誤り・線の不足・余分な線−2点／本"
+      },
+      {
+        "page": 4,
+        "question": "2023-autumn-db-pm2-q2",
+        "context": "設問1（4）",
+        "text": "予想配点 60点　ア:1点／イ:3点／ウ:2点／エ:2点／オ:3点／カ:3点／キ:3点／ク:1点／ケ:1点／コ:1点／サ:3点／シ:2点／ス:3点／セ:2点／ソ:1点／タ:2点／チ:4点／ツ:3点／テ:3点／ト:3点／ナ:2点／ニ:2点／ヌ:4点／ネ:1点／ノ:5点"
+      }
+    ],
+    "gridCells": 215,
+    "grids": 6,
+    "file": "2023-pm2.pdf",
+    "size": 419737
+  },
+  {
+    "year": 2022,
+    "part": "pm1",
+    "pages": 6,
+    "contentPages": 6,
+    "memoPages": 0,
+    "fields": 53,
+    "questions": [
+      {
+        "question": 1,
+        "startPage": 1,
+        "contentPages": 2,
+        "memoPage": null,
+        "endPage": 2
+      },
+      {
+        "question": 2,
+        "startPage": 3,
+        "contentPages": 2,
+        "memoPage": null,
+        "endPage": 4
+      },
+      {
+        "question": 3,
+        "startPage": 5,
+        "contentPages": 2,
+        "memoPage": null,
+        "endPage": 6
+      }
+    ],
+    "scoreHeadings": [
+      {
+        "page": 1,
+        "question": "2022-autumn-db-pm1-q1",
+        "context": "設問1（1）",
+        "text": "予想配点 12点　関係の種類・向きの誤り−1点／本、接続先の誤り・線の不足・余分な線−2点／本"
+      },
+      {
+        "page": 1,
+        "question": "2022-autumn-db-pm1-q1",
+        "context": "設問1（2）",
+        "text": "予想配点 13点　ア:3点／イ:1点／ウ:2点／エ:3点／オ:2点／カ:2点"
+      },
+      {
+        "page": 2,
+        "question": "2022-autumn-db-pm1-q1",
+        "context": "設問2（1）",
+        "text": "予想配点 13点　あ:2点／い:2点／う:2点／図3:7点（関係の種類・向きの誤り−1点／本、接続先の誤り・線の不足・余分な線−2点／本）"
+      },
+      {
+        "page": 2,
+        "question": "2022-autumn-db-pm1-q1",
+        "context": "設問2（2）",
+        "text": "予想配点 12点　キ:2点／ク:2点／ケ:2点／コ:2点／サ:2点／シ:2点"
+      },
+      {
+        "page": 3,
+        "question": "2022-autumn-db-pm1-q2",
+        "context": "設問1（1）",
+        "text": "予想配点 3点　a:2点／b:1点"
+      },
+      {
+        "page": 3,
+        "question": "2022-autumn-db-pm1-q2",
+        "context": "設問1（2）",
+        "text": "予想配点 4点　テーブル名・制約:4点"
+      },
+      {
+        "page": 3,
+        "question": "2022-autumn-db-pm1-q2",
+        "context": "設問1（3）",
+        "text": "予想配点 12点　c:2点／d:2点／e:2点／f:2点／g:2点／h:2点"
+      },
+      {
+        "page": 3,
+        "question": "2022-autumn-db-pm1-q2",
+        "context": "設問1（4）",
+        "text": "予想配点 5点　i:2点／j:2点／k:1点"
+      },
+      {
+        "page": 3,
+        "question": "2022-autumn-db-pm1-q2",
+        "context": "設問1（5）",
+        "text": "予想配点 6点　商品:3点／商品履歴:3点"
+      },
+      {
+        "page": 3,
+        "question": "2022-autumn-db-pm1-q2",
+        "context": "設問2（1）",
+        "text": "予想配点 5点　ア:1点／イ:2点／ウ:2点"
+      },
+      {
+        "page": 4,
+        "question": "2022-autumn-db-pm1-q2",
+        "context": "設問2（1）",
+        "text": "予想配点 4点　エ:2点／オ:2点"
+      },
+      {
+        "page": 4,
+        "question": "2022-autumn-db-pm1-q2",
+        "context": "設問2（2）",
+        "text": "予想配点 6点　理由:6点"
+      },
+      {
+        "page": 4,
+        "question": "2022-autumn-db-pm1-q2",
+        "context": "設問2（3）",
+        "text": "予想配点 5点　場合:5点"
+      },
+      {
+        "page": 5,
+        "question": "2022-autumn-db-pm1-q3",
+        "context": "設問1（1）",
+        "text": "予想配点 6点　理由:6点"
+      },
+      {
+        "page": 5,
+        "question": "2022-autumn-db-pm1-q3",
+        "context": "設問1（2）",
+        "text": "予想配点 7点　理由:7点"
+      },
+      {
+        "page": 5,
+        "question": "2022-autumn-db-pm1-q3",
+        "context": "設問2（1）",
+        "text": "予想配点 12点　a:4点／b:4点／c:4点"
+      },
+      {
+        "page": 5,
+        "question": "2022-autumn-db-pm1-q3",
+        "context": "設問2（2）",
+        "text": "予想配点 6点　処理名・変更内容:6点"
+      },
+      {
+        "page": 5,
+        "question": "2022-autumn-db-pm1-q3",
+        "context": "設問3（1）",
+        "text": "予想配点 10点　あ:2点／い:2点／う・え:3点／お・か:3点"
+      },
+      {
+        "page": 6,
+        "question": "2022-autumn-db-pm1-q3",
+        "context": "設問3（2）",
+        "text": "予想配点 9点　変更内容:9点"
+      }
+    ],
+    "gridCells": 300,
+    "grids": 9,
+    "file": "2022-pm1.pdf",
+    "size": 505783
+  },
+  {
+    "year": 2022,
+    "part": "pm2",
+    "pages": 4,
+    "contentPages": 4,
+    "memoPages": 0,
+    "fields": 69,
+    "questions": [
+      {
+        "question": 1,
+        "startPage": 1,
+        "contentPages": 2,
+        "memoPage": null,
+        "endPage": 2
+      },
+      {
+        "question": 2,
+        "startPage": 3,
+        "contentPages": 2,
+        "memoPage": null,
+        "endPage": 4
+      }
+    ],
+    "scoreHeadings": [
+      {
+        "page": 1,
+        "question": "2022-autumn-db-pm2-q1",
+        "context": "設問1（1）",
+        "text": "予想配点 14点　a:1点／b:1点／c:1点／d:1点／e:1点／f:1点／ア:4点／イ:4点"
+      },
+      {
+        "page": 1,
+        "question": "2022-autumn-db-pm2-q1",
+        "context": "設問1（2）",
+        "text": "予想配点 15点　ウ:3点／エ:2点／オ:3点／カ:3点／キ:4点"
+      },
+      {
+        "page": 1,
+        "question": "2022-autumn-db-pm2-q1",
+        "context": "設問1（3）",
+        "text": "予想配点 9点　会員番号 101 の階級番号:1点／会員番号 102 の階級番号:1点／会員番号 103 の階級番号:1点／会員番号 104 の階級番号:1点／会員番号 105 の階級番号:1点／会員番号 106 の階級番号:1点／会員番号 107 の階級番号:1点／会員番号 108 の階級番号:1点／会員番号 109 の階級番号:1点"
+      },
+      {
+        "page": 1,
+        "question": "2022-autumn-db-pm2-q1",
+        "context": "設問2（1）",
+        "text": "予想配点 7点　変更内容:7点"
+      },
+      {
+        "page": 1,
+        "question": "2022-autumn-db-pm2-q1",
+        "context": "設問2（2）",
+        "text": "予想配点 8点　理由:8点"
+      },
+      {
+        "page": 1,
+        "question": "2022-autumn-db-pm2-q1",
+        "context": "設問2（3）",
+        "text": "予想配点 3点　テーブル名:3点"
+      },
+      {
+        "page": 2,
+        "question": "2022-autumn-db-pm2-q1",
+        "context": "設問2（4）",
+        "text": "予想配点 12点　（a）:6点／（b）:6点"
+      },
+      {
+        "page": 2,
+        "question": "2022-autumn-db-pm2-q1",
+        "context": "設問3（1）",
+        "text": "予想配点 7点　ク:3点／ケ:4点"
+      },
+      {
+        "page": 2,
+        "question": "2022-autumn-db-pm2-q1",
+        "context": "設問3（2）",
+        "text": "予想配点 8点　手順番号:2点／理由:6点"
+      },
+      {
+        "page": 2,
+        "question": "2022-autumn-db-pm2-q1",
+        "context": "設問3（3）",
+        "text": "予想配点 7点　場合:7点"
+      },
+      {
+        "page": 2,
+        "question": "2022-autumn-db-pm2-q1",
+        "context": "設問3（4）",
+        "text": "予想配点 10点　問題:4点／コ:6点"
+      },
+      {
+        "page": 3,
+        "question": "2022-autumn-db-pm2-q2",
+        "context": "設問1（1）",
+        "text": "予想配点 13点　ア:3点／図1:10点（関係の種類・向きの誤り−1点／本、接続先の誤り・線の不足・余分な線−2点／本）"
+      },
+      {
+        "page": 3,
+        "question": "2022-autumn-db-pm2-q2",
+        "context": "設問1（2）",
+        "text": "予想配点 13点　イ:2点／ウ:2点／エ:2点／オ:2点／図1:5点（関係の種類・向きの誤り−1点／本、接続先の誤り・線の不足・余分な線−2点／本）"
+      },
+      {
+        "page": 4,
+        "question": "2022-autumn-db-pm2-q2",
+        "context": "設問1（3）",
+        "text": "予想配点 5点　カ:5点"
+      },
+      {
+        "page": 4,
+        "question": "2022-autumn-db-pm2-q2",
+        "context": "設問2（1）",
+        "text": "予想配点 17点　テーブル名・列名:5点／主キーの列名:3点／列値①・列値②・列値③:5点／変更する列名・変更内容:4点"
+      },
+      {
+        "page": 4,
+        "question": "2022-autumn-db-pm2-q2",
+        "context": "設問2（2）",
+        "text": "予想配点 6点　a:3点／b:3点"
+      },
+      {
+        "page": 4,
+        "question": "2022-autumn-db-pm2-q2",
+        "context": "設問2（3）",
+        "text": "予想配点 6点　条件:6点"
+      },
+      {
+        "page": 4,
+        "question": "2022-autumn-db-pm2-q2",
+        "context": "設問3（1）",
+        "text": "予想配点 8点　① テーブル名・① 列名:4点／② テーブル名・② 列名:4点"
+      },
+      {
+        "page": 4,
+        "question": "2022-autumn-db-pm2-q2",
+        "context": "設問3（2）",
+        "text": "予想配点 4点　テーブル名・列名:4点"
+      },
+      {
+        "page": 4,
+        "question": "2022-autumn-db-pm2-q2",
+        "context": "設問3（3）",
+        "text": "予想配点 8点　役割:4点／テーブル名・実行契機:4点"
+      },
+      {
+        "page": 4,
+        "question": "2022-autumn-db-pm2-q2",
+        "context": "設問3（4）",
+        "text": "予想配点 8点　① テーブル名・① 列名:4点／② テーブル名・② 列名:4点"
+      },
+      {
+        "page": 4,
+        "question": "2022-autumn-db-pm2-q2",
+        "context": "設問3（5）",
+        "text": "予想配点 12点　テーブル構造:7点／テーブル名・列名:5点"
+      }
+    ],
+    "gridCells": 395,
+    "grids": 10,
+    "file": "2022-pm2.pdf",
+    "size": 458069
+  },
+  {
+    "year": 2021,
+    "part": "pm1",
+    "pages": 6,
+    "contentPages": 6,
+    "memoPages": 0,
+    "fields": 65,
+    "questions": [
+      {
+        "question": 1,
+        "startPage": 1,
+        "contentPages": 2,
+        "memoPage": null,
+        "endPage": 2
+      },
+      {
+        "question": 2,
+        "startPage": 3,
+        "contentPages": 2,
+        "memoPage": null,
+        "endPage": 4
+      },
+      {
+        "question": 3,
+        "startPage": 5,
+        "contentPages": 2,
+        "memoPage": null,
+        "endPage": 6
+      }
+    ],
+    "scoreHeadings": [
+      {
+        "page": 1,
+        "question": "2021-autumn-db-pm1-q1",
+        "context": "設問1（1）",
+        "text": "予想配点 15点　a:1点／b:1点／c:1点／d:1点／e:1点／f:1点／g:1点／h:2点／i:2点／j:2点／k:2点"
+      },
+      {
+        "page": 1,
+        "question": "2021-autumn-db-pm1-q1",
+        "context": "設問1（2）",
+        "text": "予想配点 9点　関係の種類・向きの誤り−1点／本、接続先の誤り・線の不足・余分な線−2点／本"
+      },
+      {
+        "page": 1,
+        "question": "2021-autumn-db-pm1-q1",
+        "context": "設問2（1）",
+        "text": "予想配点 6点　候補キー:3点／部分関数従属性の有無・具体例:3点　推移的関数従属性の有無:3点（他頁と合算）"
+      },
+      {
+        "page": 2,
+        "question": "2021-autumn-db-pm1-q1",
+        "context": "設問2（1）",
+        "text": "予想配点（他頁と合算）　具体例:3点（他頁と合算）"
+      },
+      {
+        "page": 2,
+        "question": "2021-autumn-db-pm1-q1",
+        "context": "設問2（2）",
+        "text": "予想配点 5点　候補キー:2点／理由:3点"
+      },
+      {
+        "page": 2,
+        "question": "2021-autumn-db-pm1-q1",
+        "context": "設問2（3）",
+        "text": "予想配点 6点　正規形:1点／関係スキーマ:5点"
+      },
+      {
+        "page": 2,
+        "question": "2021-autumn-db-pm1-q1",
+        "context": "設問3（1）",
+        "text": "予想配点 3点　場合:3点"
+      },
+      {
+        "page": 2,
+        "question": "2021-autumn-db-pm1-q1",
+        "context": "設問3（2）",
+        "text": "予想配点 3点　役割:3点"
+      },
+      {
+        "page": 3,
+        "question": "2021-autumn-db-pm1-q2",
+        "context": "設問1（1）",
+        "text": "予想配点 13点　a:2点／b:1点／c:2点／d:1点／e:1点／f:2点／g:2点／h:2点"
+      },
+      {
+        "page": 3,
+        "question": "2021-autumn-db-pm1-q2",
+        "context": "設問1（2）",
+        "text": "予想配点 6点　加盟店:3点／オーソリ履歴:3点"
+      },
+      {
+        "page": 3,
+        "question": "2021-autumn-db-pm1-q2",
+        "context": "設問1（3）",
+        "text": "予想配点 4点　理由:4点"
+      },
+      {
+        "page": 3,
+        "question": "2021-autumn-db-pm1-q2",
+        "context": "設問2（1）",
+        "text": "予想配点 4点　理由:4点"
+      },
+      {
+        "page": 3,
+        "question": "2021-autumn-db-pm1-q2",
+        "context": "設問2（2）",
+        "text": "予想配点 5点　イ:2点／ロ:3点"
+      },
+      {
+        "page": 4,
+        "question": "2021-autumn-db-pm1-q2",
+        "context": "設問2（3）",
+        "text": "予想配点 5点　理由:5点"
+      },
+      {
+        "page": 4,
+        "question": "2021-autumn-db-pm1-q2",
+        "context": "設問2（4）",
+        "text": "予想配点 4点　理由:4点"
+      },
+      {
+        "page": 4,
+        "question": "2021-autumn-db-pm1-q2",
+        "context": "設問3（1）",
+        "text": "予想配点 5点　理由:5点"
+      },
+      {
+        "page": 4,
+        "question": "2021-autumn-db-pm1-q2",
+        "context": "設問3（2）",
+        "text": "予想配点 4点　変化:4点"
+      },
+      {
+        "page": 5,
+        "question": "2021-autumn-db-pm1-q3",
+        "context": "設問1（1）",
+        "text": "予想配点 8点　イ:2点／ロ:2点／ハ:1点／ニ:1点／ホ:2点"
+      },
+      {
+        "page": 5,
+        "question": "2021-autumn-db-pm1-q3",
+        "context": "設問1（2）",
+        "text": "予想配点 5点　長所:5点"
+      },
+      {
+        "page": 5,
+        "question": "2021-autumn-db-pm1-q3",
+        "context": "設問1（3）",
+        "text": "予想配点 10点　a:2点／b:2点／c:2点／d:2点／e:2点"
+      },
+      {
+        "page": 5,
+        "question": "2021-autumn-db-pm1-q3",
+        "context": "設問1（4）",
+        "text": "予想配点 4点　あ:2点／い:2点"
+      },
+      {
+        "page": 5,
+        "question": "2021-autumn-db-pm1-q3",
+        "context": "設問2（1）",
+        "text": "予想配点 9点　f:1点／g:1点／h:2点／i:2点／j:3点"
+      },
+      {
+        "page": 6,
+        "question": "2021-autumn-db-pm1-q3",
+        "context": "設問2（2）",
+        "text": "予想配点 4点　場合:4点"
+      },
+      {
+        "page": 6,
+        "question": "2021-autumn-db-pm1-q3",
+        "context": "設問2（3）",
+        "text": "予想配点 10点　k:2点／l・m:2点／n:3点／o:3点"
+      }
+    ],
+    "gridCells": 365,
+    "grids": 13,
+    "file": "2021-pm1.pdf",
+    "size": 464128
+  },
+  {
+    "year": 2021,
+    "part": "pm2",
+    "pages": 4,
+    "contentPages": 4,
+    "memoPages": 0,
+    "fields": 80,
+    "questions": [
+      {
+        "question": 1,
+        "startPage": 1,
+        "contentPages": 2,
+        "memoPage": null,
+        "endPage": 2
+      },
+      {
+        "question": 2,
+        "startPage": 3,
+        "contentPages": 2,
+        "memoPage": null,
+        "endPage": 4
+      }
+    ],
+    "scoreHeadings": [
+      {
+        "page": 1,
+        "question": "2021-autumn-db-pm2-q1",
+        "context": "設問1（1）",
+        "text": "予想配点 9点　ア:3点／イ:2点／ウ:2点／エ:1点／オ:1点"
+      },
+      {
+        "page": 1,
+        "question": "2021-autumn-db-pm2-q1",
+        "context": "設問1（2）",
+        "text": "予想配点 8点　カ:2点／キ:3点／ク:3点"
+      },
+      {
+        "page": 1,
+        "question": "2021-autumn-db-pm2-q1",
+        "context": "設問1（3）",
+        "text": "予想配点 9点　ケ:4点／コ:5点"
+      },
+      {
+        "page": 1,
+        "question": "2021-autumn-db-pm2-q1",
+        "context": "設問1（4）",
+        "text": "予想配点 6点　①:3点／②:3点"
+      },
+      {
+        "page": 1,
+        "question": "2021-autumn-db-pm2-q1",
+        "context": "設問2（1）",
+        "text": "予想配点 9点　理由:5点／サ:4点"
+      },
+      {
+        "page": 1,
+        "question": "2021-autumn-db-pm2-q1",
+        "context": "設問2（2）",
+        "text": "予想配点 10点　シ:2点／ス:2点／セ:2点／ソ:4点"
+      },
+      {
+        "page": 1,
+        "question": "2021-autumn-db-pm2-q1",
+        "context": "設問3（1）",
+        "text": "予想配点 4点　a:2点／b:2点"
+      },
+      {
+        "page": 2,
+        "question": "2021-autumn-db-pm2-q1",
+        "context": "設問3（1）",
+        "text": "予想配点 11点　c:2点／d:2点／e:1点／f:2点／理由:4点"
+      },
+      {
+        "page": 2,
+        "question": "2021-autumn-db-pm2-q1",
+        "context": "設問3（2）",
+        "text": "予想配点 14点　理由:5点／g:3点／h:2点／i:2点／j:2点"
+      },
+      {
+        "page": 2,
+        "question": "2021-autumn-db-pm2-q1",
+        "context": "設問3（3）",
+        "text": "予想配点 20点　k:2点／l:1点／m:3点／n:2点／o:1点／p:4点／q:2点／r:1点／s:4点"
+      },
+      {
+        "page": 3,
+        "question": "2021-autumn-db-pm2-q2",
+        "context": "設問1（1）",
+        "text": "予想配点 14点　ア:2点／図2:12点（関係の種類・向きの誤り−1点／本、接続先の誤り・線の不足・余分な線−2点／本）"
+      },
+      {
+        "page": 3,
+        "question": "2021-autumn-db-pm2-q2",
+        "context": "設問1（2）",
+        "text": "予想配点 16点　イ:2点／図3:14点（関係の種類・向きの誤り−1点／本、接続先の誤り・線の不足・余分な線−2点／本）"
+      },
+      {
+        "page": 3,
+        "question": "2021-autumn-db-pm2-q2",
+        "context": "設問1（3）",
+        "text": "予想配点 13点　a:2点／b:2点／c:2点／d:3点／e:2点／f:2点"
+      },
+      {
+        "page": 3,
+        "question": "2021-autumn-db-pm2-q2",
+        "context": "設問1（4）",
+        "text": "予想配点 9点　g:1点／h:2点／i:1点／j:3点／k:1点／l:1点"
+      },
+      {
+        "page": 4,
+        "question": "2021-autumn-db-pm2-q2",
+        "context": "設問1（4）",
+        "text": "予想配点 20点　m:2点／n:3点／o:2点／p:2点／q:2点／r:2点／s:2点／t:1点／u:2点／v:2点"
+      },
+      {
+        "page": 4,
+        "question": "2021-autumn-db-pm2-q2",
+        "context": "設問2（1）",
+        "text": "予想配点 8点　関係の種類・向きの誤り−1点／本、接続先の誤り・線の不足・余分な線−2点／本"
+      },
+      {
+        "page": 4,
+        "question": "2021-autumn-db-pm2-q2",
+        "context": "設問2（2）",
+        "text": "予想配点 14点　あ:2点／い:2点／う:2点／え:1点／お:2点／か:1点／き:2点／く:2点"
+      },
+      {
+        "page": 4,
+        "question": "2021-autumn-db-pm2-q2",
+        "context": "設問2（3）",
+        "text": "予想配点 6点　① 変更前・① 変更後の参照先:2点／② 変更前・② 変更後の参照先:2点／③ 変更前・③ 変更後の参照先:2点"
+      }
+    ],
+    "gridCells": 400,
+    "grids": 10,
+    "file": "2021-pm2.pdf",
+    "size": 541416
+  },
+  {
+    "year": 2020,
+    "part": "pm1",
+    "pages": 6,
+    "contentPages": 6,
+    "memoPages": 0,
+    "fields": 74,
+    "questions": [
+      {
+        "question": 1,
+        "startPage": 1,
+        "contentPages": 2,
+        "memoPage": null,
+        "endPage": 2
+      },
+      {
+        "question": 2,
+        "startPage": 3,
+        "contentPages": 2,
+        "memoPage": null,
+        "endPage": 4
+      },
+      {
+        "question": 3,
+        "startPage": 5,
+        "contentPages": 2,
+        "memoPage": null,
+        "endPage": 6
+      }
+    ],
+    "scoreHeadings": [
+      {
+        "page": 1,
+        "question": "2020-october-db-pm1-q1",
+        "context": "設問1（1）",
+        "text": "予想配点 11点　ア:2点／イ:2点／図1:7点（関係の種類・向きの誤り−1点／本、接続先の誤り・線の不足・余分な線−2点／本）"
+      },
+      {
+        "page": 1,
+        "question": "2020-october-db-pm1-q1",
+        "context": "設問1（2）",
+        "text": "予想配点 14点　a〜c:5点／d〜f:5点／g・h:4点"
+      },
+      {
+        "page": 1,
+        "question": "2020-october-db-pm1-q1",
+        "context": "設問2（1）",
+        "text": "予想配点 6点　ウ・エ:3点／オ・カ:3点"
+      },
+      {
+        "page": 2,
+        "question": "2020-october-db-pm1-q1",
+        "context": "設問2（1）",
+        "text": "予想配点 7点　関係の種類・向きの誤り−1点／本、接続先の誤り・線の不足・余分な線−2点／本"
+      },
+      {
+        "page": 2,
+        "question": "2020-october-db-pm1-q1",
+        "context": "設問2（2）",
+        "text": "予想配点 6点　i:2点／j:2点／k:2点"
+      },
+      {
+        "page": 2,
+        "question": "2020-october-db-pm1-q1",
+        "context": "設問2（3）",
+        "text": "予想配点 6点　① カーディナリティ・① 発生する場合:3点／② カーディナリティ・② 発生する場合:3点"
+      },
+      {
+        "page": 3,
+        "question": "2020-october-db-pm1-q2",
+        "context": "設問1",
+        "text": "予想配点 16点　a〜c:7点／d〜f:7点／g:2点"
+      },
+      {
+        "page": 3,
+        "question": "2020-october-db-pm1-q2",
+        "context": "設問2（1）",
+        "text": "予想配点 12点　あ・い:5点／う・え:5点／お:2点"
+      },
+      {
+        "page": 3,
+        "question": "2020-october-db-pm1-q2",
+        "context": "設問2（2）",
+        "text": "予想配点 4点　ISOLATIONレベル:2点／理由:2点"
+      },
+      {
+        "page": 3,
+        "question": "2020-october-db-pm1-q2",
+        "context": "設問3（1）",
+        "text": "予想配点 6点　ア:2点／イ:2点／ウ:2点"
+      },
+      {
+        "page": 3,
+        "question": "2020-october-db-pm1-q2",
+        "context": "設問3（2）",
+        "text": "予想配点 2点　エ:2点"
+      },
+      {
+        "page": 4,
+        "question": "2020-october-db-pm1-q2",
+        "context": "設問3（3）",
+        "text": "予想配点 10点　1行目［全空欄］:5点／2行目［全空欄］:5点"
+      },
+      {
+        "page": 5,
+        "question": "2020-october-db-pm1-q3",
+        "context": "設問1（1）",
+        "text": "予想配点 4点　a:2点／b:2点"
+      },
+      {
+        "page": 5,
+        "question": "2020-october-db-pm1-q3",
+        "context": "設問1（2）",
+        "text": "予想配点 4点　場合:2点／不都合:2点"
+      },
+      {
+        "page": 5,
+        "question": "2020-october-db-pm1-q3",
+        "context": "設問1（3）",
+        "text": "予想配点 16点　c〜f:6点／g〜j:5点／k〜m:5点"
+      },
+      {
+        "page": 5,
+        "question": "2020-october-db-pm1-q3",
+        "context": "設問2（1）",
+        "text": "予想配点 5点　あ〜う:5点　え:5点（他頁と合算）"
+      },
+      {
+        "page": 6,
+        "question": "2020-october-db-pm1-q3",
+        "context": "設問2（1）",
+        "text": "予想配点 4点　き・く:4点　お・か:5点（他頁と合算）"
+      },
+      {
+        "page": 6,
+        "question": "2020-october-db-pm1-q3",
+        "context": "設問2（2）",
+        "text": "予想配点 4点　販売額:2点／クーポン額:2点"
+      },
+      {
+        "page": 6,
+        "question": "2020-october-db-pm1-q3",
+        "context": "設問3（1）",
+        "text": "予想配点 6点　イ:2点／ロ:2点／ハ:2点"
+      },
+      {
+        "page": 6,
+        "question": "2020-october-db-pm1-q3",
+        "context": "設問3（2）",
+        "text": "予想配点 2点　A:2点"
+      }
+    ],
+    "gridCells": 210,
+    "grids": 8,
+    "file": "2020-pm1.pdf",
+    "size": 533515
+  },
+  {
+    "year": 2020,
+    "part": "pm2",
+    "pages": 4,
+    "contentPages": 4,
+    "memoPages": 0,
+    "fields": 55,
+    "questions": [
+      {
+        "question": 1,
+        "startPage": 1,
+        "contentPages": 2,
+        "memoPage": null,
+        "endPage": 2
+      },
+      {
+        "question": 2,
+        "startPage": 3,
+        "contentPages": 2,
+        "memoPage": null,
+        "endPage": 4
+      }
+    ],
+    "scoreHeadings": [
+      {
+        "page": 1,
+        "question": "2020-october-db-pm2-q1",
+        "context": "設問1（1）",
+        "text": "予想配点 4点　列名:4点"
+      },
+      {
+        "page": 1,
+        "question": "2020-october-db-pm2-q1",
+        "context": "設問1（2）",
+        "text": "予想配点 39点　a〜c:13点／d〜f:13点／② テーブル構造・③ 最小読込みページ数・③ 最大読込みページ数:13点"
+      },
+      {
+        "page": 1,
+        "question": "2020-october-db-pm2-q1",
+        "context": "設問2（1）",
+        "text": "予想配点 21点　g・h:9点／i・j:8点／k:4点"
+      },
+      {
+        "page": 1,
+        "question": "2020-october-db-pm2-q1",
+        "context": "設問2（2）",
+        "text": "予想配点 20点　l・m:8点／n・o:8点／p:4点"
+      },
+      {
+        "page": 2,
+        "question": "2020-october-db-pm2-q1",
+        "context": "設問3（1）",
+        "text": "予想配点 8点　①:4点／②:4点"
+      },
+      {
+        "page": 2,
+        "question": "2020-october-db-pm2-q1",
+        "context": "設問3（2）",
+        "text": "予想配点 8点　差異1:4点／差異2:4点"
+      },
+      {
+        "page": 3,
+        "question": "2020-october-db-pm2-q2",
+        "context": "設問1（1）",
+        "text": "予想配点 11点　関係の種類・向きの誤り−1点／本、接続先の誤り・線の不足・余分な線−2点／本"
+      },
+      {
+        "page": 3,
+        "question": "2020-october-db-pm2-q2",
+        "context": "設問1（2）",
+        "text": "予想配点 22点　ア〜エ:8点／オ〜ク:8点／ケ・コ:6点"
+      },
+      {
+        "page": 4,
+        "question": "2020-october-db-pm2-q2",
+        "context": "設問2（1）",
+        "text": "予想配点 11点　関係の種類・向きの誤り−1点／本、接続先の誤り・線の不足・余分な線−2点／本"
+      },
+      {
+        "page": 4,
+        "question": "2020-october-db-pm2-q2",
+        "context": "設問2（2）",
+        "text": "予想配点 18点　サ・シ:6点／ス・セ:6点／ソ・タ:6点"
+      },
+      {
+        "page": 4,
+        "question": "2020-october-db-pm2-q2",
+        "context": "設問3（1）",
+        "text": "予想配点 24点　a〜d:8点／e〜h:8点／i〜k:8点"
+      },
+      {
+        "page": 4,
+        "question": "2020-october-db-pm2-q2",
+        "context": "設問3（2）",
+        "text": "予想配点 11点　関係の種類・向きの誤り−1点／本、接続先の誤り・線の不足・余分な線−2点／本"
+      },
+      {
+        "page": 4,
+        "question": "2020-october-db-pm2-q2",
+        "context": "設問3（3）",
+        "text": "予想配点 3点　属性名:3点"
+      }
+    ],
+    "gridCells": 200,
+    "grids": 4,
+    "file": "2020-pm2.pdf",
+    "size": 521611
+  },
+  {
+    "year": 2019,
+    "part": "pm1",
+    "pages": 6,
+    "contentPages": 6,
+    "memoPages": 0,
+    "fields": 69,
+    "questions": [
+      {
+        "question": 1,
+        "startPage": 1,
+        "contentPages": 2,
+        "memoPage": null,
+        "endPage": 2
+      },
+      {
+        "question": 2,
+        "startPage": 3,
+        "contentPages": 2,
+        "memoPage": null,
+        "endPage": 4
+      },
+      {
+        "question": 3,
+        "startPage": 5,
+        "contentPages": 2,
+        "memoPage": null,
+        "endPage": 6
+      }
+    ],
+    "scoreHeadings": [
+      {
+        "page": 1,
+        "question": "2019-spring-db-pm1-q1",
+        "context": "設問1（1）",
+        "text": "予想配点 14点　a〜c:6点／d〜f:6点／g:2点"
+      },
+      {
+        "page": 1,
+        "question": "2019-spring-db-pm1-q1",
+        "context": "設問1（2）",
+        "text": "予想配点 7点　関係の種類・向きの誤り−1点／本、接続先の誤り・線の不足・余分な線−2点／本"
+      },
+      {
+        "page": 2,
+        "question": "2019-spring-db-pm1-q1",
+        "context": "設問2",
+        "text": "予想配点 17点　募集期間に対する本日［全空欄］:6点／参加申込数［全空欄］:6点／抽選年月日に対する本日［全空欄］:5点"
+      },
+      {
+        "page": 2,
+        "question": "2019-spring-db-pm1-q1",
+        "context": "設問3（1）",
+        "text": "予想配点 10点　① 関係名・① 属性名:4点／② 関係名・② 属性名:4点／③ 関係スキーマ:2点"
+      },
+      {
+        "page": 2,
+        "question": "2019-spring-db-pm1-q1",
+        "context": "設問3（2）",
+        "text": "予想配点 2点　属性名:2点"
+      },
+      {
+        "page": 3,
+        "question": "2019-spring-db-pm1-q2",
+        "context": "設問1（1）",
+        "text": "予想配点 15点　ア・イ:5点／ウ・エ:5点／オ・カ:5点"
+      },
+      {
+        "page": 3,
+        "question": "2019-spring-db-pm1-q2",
+        "context": "設問1（2）",
+        "text": "予想配点 6点　(a):3点／(b):3点"
+      },
+      {
+        "page": 3,
+        "question": "2019-spring-db-pm1-q2",
+        "context": "設問2（1）",
+        "text": "予想配点 10点　a・b:5点／c・d:5点"
+      },
+      {
+        "page": 3,
+        "question": "2019-spring-db-pm1-q2",
+        "context": "設問2（2）",
+        "text": "予想配点 10点　あ・い:5点／う・え:5点"
+      },
+      {
+        "page": 3,
+        "question": "2019-spring-db-pm1-q2",
+        "context": "設問3（1）",
+        "text": "予想配点 3点　テーブル名:3点"
+      },
+      {
+        "page": 4,
+        "question": "2019-spring-db-pm1-q2",
+        "context": "設問3（2）",
+        "text": "予想配点 6点　①:3点／②:3点"
+      },
+      {
+        "page": 5,
+        "question": "2019-spring-db-pm1-q3",
+        "context": "設問1（1）",
+        "text": "予想配点 9点　ア:3点／イ:3点／ウ:3点"
+      },
+      {
+        "page": 5,
+        "question": "2019-spring-db-pm1-q3",
+        "context": "設問1（2）",
+        "text": "予想配点 9点　エ:3点／オ:3点／カ:3点"
+      },
+      {
+        "page": 5,
+        "question": "2019-spring-db-pm1-q3",
+        "context": "設問2（1）",
+        "text": "予想配点 6点　a:3点／b:3点"
+      },
+      {
+        "page": 5,
+        "question": "2019-spring-db-pm1-q3",
+        "context": "設問2（2）",
+        "text": "予想配点 9点　P2:3点／P3:3点／P4:3点"
+      },
+      {
+        "page": 5,
+        "question": "2019-spring-db-pm1-q3",
+        "context": "設問3（1）",
+        "text": "予想配点 7点　c:3点／d:2点／品番:2点"
+      },
+      {
+        "page": 5,
+        "question": "2019-spring-db-pm1-q3",
+        "context": "設問3（2）",
+        "text": "予想配点 2点　列名:2点"
+      },
+      {
+        "page": 5,
+        "question": "2019-spring-db-pm1-q3",
+        "context": "設問4（1）",
+        "text": "予想配点 2点　理由:2点"
+      },
+      {
+        "page": 6,
+        "question": "2019-spring-db-pm1-q3",
+        "context": "設問4（2）",
+        "text": "予想配点 2点　結果:2点"
+      },
+      {
+        "page": 6,
+        "question": "2019-spring-db-pm1-q3",
+        "context": "設問4（3）",
+        "text": "予想配点 2点　図4:2点"
+      },
+      {
+        "page": 6,
+        "question": "2019-spring-db-pm1-q3",
+        "context": "設問4（4）",
+        "text": "予想配点 2点　実行順序:2点"
+      }
+    ],
+    "gridCells": 270,
+    "grids": 7,
+    "file": "2019-pm1.pdf",
+    "size": 529354
+  },
+  {
+    "year": 2019,
+    "part": "pm2",
+    "pages": 4,
+    "contentPages": 4,
+    "memoPages": 0,
+    "fields": 85,
+    "questions": [
+      {
+        "question": 1,
+        "startPage": 1,
+        "contentPages": 2,
+        "memoPage": null,
+        "endPage": 2
+      },
+      {
+        "question": 2,
+        "startPage": 3,
+        "contentPages": 2,
+        "memoPage": null,
+        "endPage": 4
+      }
+    ],
+    "scoreHeadings": [
+      {
+        "page": 1,
+        "question": "2019-spring-db-pm2-q1",
+        "context": "設問1（1）",
+        "text": "予想配点 24点　処理5［支店〜画面］:8点／処理5［行員・行員所属］・処理6［支店〜取引種別］:8点／処理6［取引〜行員所属］:8点"
+      },
+      {
+        "page": 1,
+        "question": "2019-spring-db-pm2-q1",
+        "context": "設問1（2）",
+        "text": "予想配点 10点　1行目［全空欄］:5点／2行目［全空欄］:5点"
+      },
+      {
+        "page": 1,
+        "question": "2019-spring-db-pm2-q1",
+        "context": "設問1（3）",
+        "text": "予想配点 10点　a・b:5点／c・d:5点"
+      },
+      {
+        "page": 1,
+        "question": "2019-spring-db-pm2-q1",
+        "context": "設問1（4）",
+        "text": "予想配点 3点　採番方法:3点"
+      },
+      {
+        "page": 1,
+        "question": "2019-spring-db-pm2-q1",
+        "context": "設問2（1）",
+        "text": "予想配点 10点　e・f:5点／g・h:5点"
+      },
+      {
+        "page": 1,
+        "question": "2019-spring-db-pm2-q1",
+        "context": "設問2（2）",
+        "text": "予想配点 15点　i・j:5点／k・l:5点／m・n:5点"
+      },
+      {
+        "page": 1,
+        "question": "2019-spring-db-pm2-q1",
+        "context": "設問2（3）",
+        "text": "予想配点 3点　理由:3点"
+      },
+      {
+        "page": 1,
+        "question": "2019-spring-db-pm2-q1",
+        "context": "設問3（1）",
+        "text": "予想配点 3点　①:3点"
+      },
+      {
+        "page": 2,
+        "question": "2019-spring-db-pm2-q1",
+        "context": "設問3（1）",
+        "text": "予想配点 3点　②:3点"
+      },
+      {
+        "page": 2,
+        "question": "2019-spring-db-pm2-q1",
+        "context": "設問3（2）",
+        "text": "予想配点 13点　o・p:5点／q・r:5点／ローカル索引を構成する列名:3点"
+      },
+      {
+        "page": 2,
+        "question": "2019-spring-db-pm2-q1",
+        "context": "設問3（3）",
+        "text": "予想配点 6点　①:2点／②:2点／③:2点"
+      },
+      {
+        "page": 3,
+        "question": "2019-spring-db-pm2-q2",
+        "context": "設問1（1）",
+        "text": "予想配点 13点　関係の種類・向きの誤り−1点／本、接続先の誤り・線の不足・余分な線−2点／本"
+      },
+      {
+        "page": 3,
+        "question": "2019-spring-db-pm2-q2",
+        "context": "設問1（2）",
+        "text": "予想配点 12点　関係の種類・向きの誤り−1点／本、接続先の誤り・線の不足・余分な線−2点／本"
+      },
+      {
+        "page": 3,
+        "question": "2019-spring-db-pm2-q2",
+        "context": "設問1（3）",
+        "text": "予想配点（他頁と合算）　a・b:9点（他頁と合算）"
+      },
+      {
+        "page": 4,
+        "question": "2019-spring-db-pm2-q2",
+        "context": "設問1（3）",
+        "text": "予想配点 18点　e〜h:9点／i〜k:9点　c・d:9点（他頁と合算）"
+      },
+      {
+        "page": 4,
+        "question": "2019-spring-db-pm2-q2",
+        "context": "設問2（1）",
+        "text": "予想配点 27点　① 行番号・② 変更後の指示情報①・② 変更後の指示情報②・③ 指示情報・③ 実績情報・③ 物流の始点・終点［食材業者〜新館貯蔵庫］:9点／③ 物流の始点・終点［本館Mix部門〜CD］:9点／③ 物流の始点・終点［BQ・CF］・③ 物流の対象物［全空欄］:9点"
+      },
+      {
+        "page": 4,
+        "question": "2019-spring-db-pm2-q2",
+        "context": "設問2（2）",
+        "text": "予想配点 12点　関係の種類・向きの誤り−1点／本、接続先の誤り・線の不足・余分な線−2点／本"
+      },
+      {
+        "page": 4,
+        "question": "2019-spring-db-pm2-q2",
+        "context": "設問2（3）",
+        "text": "予想配点 9点　l:3点／m:3点／n:3点"
+      }
+    ],
+    "gridCells": 200,
+    "grids": 7,
+    "file": "2019-pm2.pdf",
+    "size": 612612
+  },
+  {
+    "year": 2018,
+    "part": "pm1",
+    "pages": 6,
+    "contentPages": 6,
+    "memoPages": 0,
+    "fields": 131,
+    "questions": [
+      {
+        "question": 1,
+        "startPage": 1,
+        "contentPages": 2,
+        "memoPage": null,
+        "endPage": 2
+      },
+      {
+        "question": 2,
+        "startPage": 3,
+        "contentPages": 2,
+        "memoPage": null,
+        "endPage": 4
+      },
+      {
+        "question": 3,
+        "startPage": 5,
+        "contentPages": 2,
+        "memoPage": null,
+        "endPage": 6
+      }
+    ],
+    "scoreHeadings": [
+      {
+        "page": 1,
+        "question": "2018-spring-db-pm1-q1",
+        "context": "設問1（1）",
+        "text": "予想配点 14点　a〜d:5点／e〜h:5点／i〜k:4点"
+      },
+      {
+        "page": 1,
+        "question": "2018-spring-db-pm1-q1",
+        "context": "設問1（2）",
+        "text": "予想配点 6点　関係の種類・向きの誤り−1点／本、接続先の誤り・線の不足・余分な線−2点／本"
+      },
+      {
+        "page": 2,
+        "question": "2018-spring-db-pm1-q1",
+        "context": "設問2（1）",
+        "text": "予想配点 12点　商品・製品［全空欄］・設置サービス［商品区分〜オプション区分］:4点／設置サービス［単体セット製品区分〜セット製品本体製品商品コード］・本体製品［全空欄］・オプション製品［商品区分〜製品サイズ］:4点／オプション製品［標準設置時間〜セット製品本体製品商品コード］・セット製品・単体製品［全空欄］:4点"
+      },
+      {
+        "page": 2,
+        "question": "2018-spring-db-pm1-q1",
+        "context": "設問2（2）",
+        "text": "予想配点 13点　太枠⑤・太枠③:3点／太枠④・太枠②:3点／太枠①:1点／図3:6点（関係の種類・向きの誤り−1点／本、接続先の誤り・線の不足・余分な線−2点／本）"
+      },
+      {
+        "page": 2,
+        "question": "2018-spring-db-pm1-q1",
+        "context": "設問3（1）",
+        "text": "予想配点 3点　関係スキーマ:1点／関係名:1点／属性名:1点"
+      },
+      {
+        "page": 2,
+        "question": "2018-spring-db-pm1-q1",
+        "context": "設問3（2）",
+        "text": "予想配点 2点　①:1点／②:1点"
+      },
+      {
+        "page": 3,
+        "question": "2018-spring-db-pm1-q2",
+        "context": "設問1（1）",
+        "text": "予想配点 9点　a:3点／b:3点／c:3点"
+      },
+      {
+        "page": 3,
+        "question": "2018-spring-db-pm1-q2",
+        "context": "設問1（2）",
+        "text": "予想配点 9点　d:3点／e:3点／f:3点"
+      },
+      {
+        "page": 3,
+        "question": "2018-spring-db-pm1-q2",
+        "context": "設問2（1）",
+        "text": "予想配点 10点　(a) 結果・(a) 理由:5点／(b) 結果・(b) 理由:5点"
+      },
+      {
+        "page": 3,
+        "question": "2018-spring-db-pm1-q2",
+        "context": "設問2（2）",
+        "text": "予想配点 8点　テーブル名:3点／実行タイミング:3点／処理内容:2点"
+      },
+      {
+        "page": 3,
+        "question": "2018-spring-db-pm1-q2",
+        "context": "設問3（1）",
+        "text": "予想配点 4点　契機:2点／不具合:2点"
+      },
+      {
+        "page": 3,
+        "question": "2018-spring-db-pm1-q2",
+        "context": "設問3（2）",
+        "text": "予想配点 2点　最初の空欄:2点"
+      },
+      {
+        "page": 4,
+        "question": "2018-spring-db-pm1-q2",
+        "context": "設問3（2）",
+        "text": "予想配点 4点　2番目の空欄:2点／3番目の空欄:2点"
+      },
+      {
+        "page": 4,
+        "question": "2018-spring-db-pm1-q2",
+        "context": "設問3（3）",
+        "text": "予想配点 4点　(a):2点／(b):2点"
+      },
+      {
+        "page": 5,
+        "question": "2018-spring-db-pm1-q3",
+        "context": "設問1（1）",
+        "text": "予想配点 4点　店舗:2点／精算:2点"
+      },
+      {
+        "page": 5,
+        "question": "2018-spring-db-pm1-q3",
+        "context": "設問1（2）",
+        "text": "予想配点 8点　a・b:4点／c・d:4点"
+      },
+      {
+        "page": 5,
+        "question": "2018-spring-db-pm1-q3",
+        "context": "設問1（3）",
+        "text": "予想配点 4点　①:2点／②:2点"
+      },
+      {
+        "page": 5,
+        "question": "2018-spring-db-pm1-q3",
+        "context": "設問1（4）",
+        "text": "予想配点 14点　ア〜ウ:6点／エ〜カ:6点／キ:2点"
+      },
+      {
+        "page": 5,
+        "question": "2018-spring-db-pm1-q3",
+        "context": "設問1（5）",
+        "text": "予想配点 6点　ク:2点／ケ:2点／コ:2点"
+      },
+      {
+        "page": 6,
+        "question": "2018-spring-db-pm1-q3",
+        "context": "設問2（1）",
+        "text": "予想配点 8点　W3［全空欄］:4点／W9［全空欄］:4点"
+      },
+      {
+        "page": 6,
+        "question": "2018-spring-db-pm1-q3",
+        "context": "設問2（2）",
+        "text": "予想配点 4点　DML:2点／理由:2点"
+      },
+      {
+        "page": 6,
+        "question": "2018-spring-db-pm1-q3",
+        "context": "設問2（3）",
+        "text": "予想配点 2点　あ:2点"
+      }
+    ],
+    "gridCells": 290,
+    "grids": 8,
+    "file": "2018-pm1.pdf",
+    "size": 531814
+  },
+  {
+    "year": 2018,
+    "part": "pm2",
+    "pages": 4,
+    "contentPages": 4,
+    "memoPages": 0,
+    "fields": 125,
+    "questions": [
+      {
+        "question": 1,
+        "startPage": 1,
+        "contentPages": 2,
+        "memoPage": null,
+        "endPage": 2
+      },
+      {
+        "question": 2,
+        "startPage": 3,
+        "contentPages": 2,
+        "memoPage": null,
+        "endPage": 4
+      }
+    ],
+    "scoreHeadings": [
+      {
+        "page": 1,
+        "question": "2018-spring-db-pm2-q1",
+        "context": "設問1（1）",
+        "text": "予想配点 6点　ア:3点／イ:3点"
+      },
+      {
+        "page": 1,
+        "question": "2018-spring-db-pm2-q1",
+        "context": "設問1（2）",
+        "text": "予想配点 30点　外貨金額〜支払予定日［データ型〜格納長（バイト）］・支払番号［データ型・NOT NULL］:10点／支払番号［格納長（バイト）］・外貨金額・支払先［索引 P〜索引 U］・支払目的［索引 P〜索引 NU②］:10点／支払目的［索引 NU③・索引 U］・支払予定日・支払番号［索引 P〜索引 U］:10点"
+      },
+      {
+        "page": 1,
+        "question": "2018-spring-db-pm2-q1",
+        "context": "設問1（3）",
+        "text": "予想配点 3点　ウ:3点"
+      },
+      {
+        "page": 1,
+        "question": "2018-spring-db-pm2-q1",
+        "context": "設問1（4）",
+        "text": "予想配点 12点　a・b:6点／c・d:6点"
+      },
+      {
+        "page": 1,
+        "question": "2018-spring-db-pm2-q1",
+        "context": "設問2",
+        "text": "予想配点 15点　e・f:6点／g・h:6点／i:3点"
+      },
+      {
+        "page": 1,
+        "question": "2018-spring-db-pm2-q1",
+        "context": "設問3（1）",
+        "text": "予想配点 9点　① 仮想CPU数:3点／① クラス名:3点／②:3点"
+      },
+      {
+        "page": 1,
+        "question": "2018-spring-db-pm2-q1",
+        "context": "設問3（2）",
+        "text": "予想配点 22点　j〜l:10点／m・n・② 処理名:9点／② 対策内容:3点"
+      },
+      {
+        "page": 2,
+        "question": "2018-spring-db-pm2-q1",
+        "context": "設問3（3）",
+        "text": "予想配点 3点　対策:3点"
+      },
+      {
+        "page": 3,
+        "question": "2018-spring-db-pm2-q2",
+        "context": "設問1（1）",
+        "text": "予想配点 6点　ア:3点／イ:3点"
+      },
+      {
+        "page": 3,
+        "question": "2018-spring-db-pm2-q2",
+        "context": "設問1（2）",
+        "text": "予想配点 30点　購買ユニット・中間仕掛品［全空欄］・構成部品［受注品目・投入品目］:10点／構成部品［製造品目・発注品目］・専用すり合せ部品・汎用すり合せ部品［全空欄］:10点／ソフトウェア・設置・試運転［全空欄］:10点"
+      },
+      {
+        "page": 3,
+        "question": "2018-spring-db-pm2-q2",
+        "context": "設問1（3）",
+        "text": "予想配点 37点　あ〜う:9点／追加①・追加⑤・追加④:9点／追加②・追加③:6点／図1:13点（関係の種類・向きの誤り−1点／本、接続先の誤り・線の不足・余分な線−2点／本）"
+      },
+      {
+        "page": 4,
+        "question": "2018-spring-db-pm2-q2",
+        "context": "設問1（4）",
+        "text": "予想配点 27点　a〜h:9点／i〜p:9点／q・r・追加するサブタイプ①・追加するサブタイプ②・追加するサブタイプ③・追加するサブタイプ④・追加するサブタイプ⑤:9点"
+      }
+    ],
+    "gridCells": 105,
+    "grids": 3,
+    "file": "2018-pm2.pdf",
+    "size": 565567
+  },
+  {
+    "year": 2017,
+    "part": "pm1",
+    "pages": 6,
+    "contentPages": 6,
+    "memoPages": 0,
+    "fields": 76,
+    "questions": [
+      {
+        "question": 1,
+        "startPage": 1,
+        "contentPages": 2,
+        "memoPage": null,
+        "endPage": 2
+      },
+      {
+        "question": 2,
+        "startPage": 3,
+        "contentPages": 2,
+        "memoPage": null,
+        "endPage": 4
+      },
+      {
+        "question": 3,
+        "startPage": 5,
+        "contentPages": 2,
+        "memoPage": null,
+        "endPage": 6
+      }
+    ],
+    "scoreHeadings": [
+      {
+        "page": 1,
+        "question": "2017-spring-db-pm1-q1",
+        "context": "設問1（1）",
+        "text": "予想配点 10点　候補キー・部分関数従属性:4点／推移的関数従属性・部分関数従属性の有無:4点／推移的関数従属性の有無:2点"
+      },
+      {
+        "page": 1,
+        "question": "2017-spring-db-pm1-q1",
+        "context": "設問1（2）",
+        "text": "予想配点 8点　正規形・関係スキーマ①:4点／関係スキーマ②・関係スキーマ③:4点"
+      },
+      {
+        "page": 1,
+        "question": "2017-spring-db-pm1-q1",
+        "context": "設問2（1）",
+        "text": "予想配点 12点　a・b:4点／c・d:4点／e・f:4点"
+      },
+      {
+        "page": 2,
+        "question": "2017-spring-db-pm1-q1",
+        "context": "設問2（2）",
+        "text": "予想配点 8点　関係の種類・向きの誤り−1点／本、接続先の誤り・線の不足・余分な線−2点／本"
+      },
+      {
+        "page": 2,
+        "question": "2017-spring-db-pm1-q1",
+        "context": "設問3（1）",
+        "text": "予想配点 8点　関係スキーマ①・関係スキーマ②:4点／関係名・属性名:4点"
+      },
+      {
+        "page": 2,
+        "question": "2017-spring-db-pm1-q1",
+        "context": "設問3（2）",
+        "text": "予想配点 4点　状況:2点／関係スキーマ:2点"
+      },
+      {
+        "page": 3,
+        "question": "2017-spring-db-pm1-q2",
+        "context": "設問1",
+        "text": "予想配点 12点　a・b:5点／c・d:5点／e:2点"
+      },
+      {
+        "page": 3,
+        "question": "2017-spring-db-pm1-q2",
+        "context": "設問2（1）",
+        "text": "予想配点 2点　実行された場合:2点"
+      },
+      {
+        "page": 3,
+        "question": "2017-spring-db-pm1-q2",
+        "context": "設問2（2）",
+        "text": "予想配点 12点　状態・実行状況 t2:5点／実行状況 t4・実行状況 t6:5点／実行状況 t8:2点"
+      },
+      {
+        "page": 3,
+        "question": "2017-spring-db-pm1-q2",
+        "context": "設問2（3）",
+        "text": "予想配点 2点　f:2点"
+      },
+      {
+        "page": 3,
+        "question": "2017-spring-db-pm1-q2",
+        "context": "設問3（1）",
+        "text": "予想配点 10点　ア・イ:5点／ウ・エ:5点"
+      },
+      {
+        "page": 4,
+        "question": "2017-spring-db-pm1-q2",
+        "context": "設問3（2）",
+        "text": "予想配点 12点　オ・カ:5点／キ・ク:5点／ケ:2点"
+      },
+      {
+        "page": 5,
+        "question": "2017-spring-db-pm1-q3",
+        "context": "設問1（1）",
+        "text": "予想配点 13点　ア〜エ:5点／オ〜ク:5点／ケ・コ:3点"
+      },
+      {
+        "page": 5,
+        "question": "2017-spring-db-pm1-q3",
+        "context": "設問1（2）",
+        "text": "予想配点 4点　a:2点／b:2点"
+      },
+      {
+        "page": 5,
+        "question": "2017-spring-db-pm1-q3",
+        "context": "設問1（3）",
+        "text": "予想配点 2点　理由:2点"
+      },
+      {
+        "page": 5,
+        "question": "2017-spring-db-pm1-q3",
+        "context": "設問2（1）",
+        "text": "予想配点 2点　理由:2点"
+      },
+      {
+        "page": 5,
+        "question": "2017-spring-db-pm1-q3",
+        "context": "設問2（2）",
+        "text": "予想配点 2点　列名:2点"
+      },
+      {
+        "page": 5,
+        "question": "2017-spring-db-pm1-q3",
+        "context": "設問2（3）",
+        "text": "予想配点 4点　c:2点／d:2点"
+      },
+      {
+        "page": 6,
+        "question": "2017-spring-db-pm1-q3",
+        "context": "設問2（3）",
+        "text": "予想配点 2点　e:2点"
+      },
+      {
+        "page": 6,
+        "question": "2017-spring-db-pm1-q3",
+        "context": "設問2（4）",
+        "text": "予想配点 6点　f:2点／g:2点／h:2点"
+      },
+      {
+        "page": 6,
+        "question": "2017-spring-db-pm1-q3",
+        "context": "設問2（5）",
+        "text": "予想配点 15点　2行目［全空欄］・3行目［社員ID］:5点／3行目［表示順・電話番号］・4行目［社員ID・表示順］:5点／4行目［電話番号］・5行目［全空欄］:5点"
+      }
+    ],
+    "gridCells": 195,
+    "grids": 5,
+    "file": "2017-pm1.pdf",
+    "size": 494600
+  },
+  {
+    "year": 2017,
+    "part": "pm2",
+    "pages": 4,
+    "contentPages": 4,
+    "memoPages": 0,
+    "fields": 227,
+    "questions": [
+      {
+        "question": 1,
+        "startPage": 1,
+        "contentPages": 2,
+        "memoPage": null,
+        "endPage": 2
+      },
+      {
+        "question": 2,
+        "startPage": 3,
+        "contentPages": 2,
+        "memoPage": null,
+        "endPage": 4
+      }
+    ],
+    "scoreHeadings": [
+      {
+        "page": 1,
+        "question": "2017-spring-db-pm2-q1",
+        "context": "設問1（1）",
+        "text": "予想配点 6点　①:3点／②:3点"
+      },
+      {
+        "page": 1,
+        "question": "2017-spring-db-pm2-q1",
+        "context": "設問1（2）",
+        "text": "予想配点 15点　a・b:6点／c・d:6点／e:3点"
+      },
+      {
+        "page": 1,
+        "question": "2017-spring-db-pm2-q1",
+        "context": "設問2（1）",
+        "text": "予想配点 25点　f　表7 2行目［全空欄］・f　表7 3行目［追加する列名］:9点／f　表7 3行目［列値の内容］・f　表7 4行目［全空欄］:8点／制約の内容・f　表7 5行目［全空欄］:8点"
+      },
+      {
+        "page": 1,
+        "question": "2017-spring-db-pm2-q1",
+        "context": "設問2（2）",
+        "text": "予想配点 18点　会員V1・会員V2［全空欄］:6点／g・h:6点／i・j:6点"
+      },
+      {
+        "page": 1,
+        "question": "2017-spring-db-pm2-q1",
+        "context": "設問2（3）",
+        "text": "予想配点 6点　日締処理で行う操作・トリガの定義内容①:6点"
+      },
+      {
+        "page": 2,
+        "question": "2017-spring-db-pm2-q1",
+        "context": "設問2（3）",
+        "text": "予想配点 6点　トリガの定義内容②・トリガの定義内容③:6点"
+      },
+      {
+        "page": 2,
+        "question": "2017-spring-db-pm2-q1",
+        "context": "設問3（1）",
+        "text": "予想配点 12点　追加するテーブル・k:6点／l・m:6点"
+      },
+      {
+        "page": 2,
+        "question": "2017-spring-db-pm2-q1",
+        "context": "設問3（2）",
+        "text": "予想配点 12点　ア・イ:6点／ウ・エ:6点"
+      },
+      {
+        "page": 3,
+        "question": "2017-spring-db-pm2-q2",
+        "context": "設問1",
+        "text": "予想配点 33点　図3:10点（関係の種類・向きの誤り−1点／本、接続先の誤り・線の不足・余分な線−2点／本）／a〜d:8点／e〜h:8点／i〜k:7点"
+      },
+      {
+        "page": 3,
+        "question": "2017-spring-db-pm2-q2",
+        "context": "設問2（1）",
+        "text": "予想配点 14点　補充要求番号〜補充生産品商品コード［全空欄］・補充番号［物流センタ補充要求〜補充出庫明細］:7点／補充番号［補充入庫・補充入庫明細］・補充出庫年月日〜生産要求年月日［全空欄］・生産要求時刻［物流センタ補充要求・補充要求明細］:7点　生産要求時刻［補充出庫〜補充入庫明細］:7点（他頁と合算）"
+      },
+      {
+        "page": 4,
+        "question": "2017-spring-db-pm2-q2",
+        "context": "設問2（1）",
+        "text": "予想配点（他頁と合算）　生産要求数量〜入庫完了時刻［全空欄］:7点（他頁と合算）"
+      },
+      {
+        "page": 4,
+        "question": "2017-spring-db-pm2-q2",
+        "context": "設問2（2）",
+        "text": "予想配点 10点　関係の種類・向きの誤り−1点／本、接続先の誤り・線の不足・余分な線−2点／本"
+      },
+      {
+        "page": 4,
+        "question": "2017-spring-db-pm2-q2",
+        "context": "設問3（1）",
+        "text": "予想配点 21点　補充要求 ／ 計画生産品〜営業所補充要求 ／ 補充生産品［全空欄］:7点／物流センタ補充要求 ／ 計画生産品〜補充要求明細 ／ 補充生産品［全空欄］:7点／計画生産品補充要求明細 ／ 計画生産品〜補充生産品補充要求明細 ／ 補充生産品［全空欄］:7点"
+      },
+      {
+        "page": 4,
+        "question": "2017-spring-db-pm2-q2",
+        "context": "設問3（2）",
+        "text": "予想配点 15点　ア・イ:5点／ウ・エ:5点／オ・カ:5点"
+      }
+    ],
+    "gridCells": 130,
+    "grids": 3,
+    "file": "2017-pm2.pdf",
+    "size": 701288
+  },
+  {
+    "year": 2016,
+    "part": "pm1",
+    "pages": 6,
+    "contentPages": 6,
+    "memoPages": 0,
+    "fields": 133,
+    "questions": [
+      {
+        "question": 1,
+        "startPage": 1,
+        "contentPages": 2,
+        "memoPage": null,
+        "endPage": 2
+      },
+      {
+        "question": 2,
+        "startPage": 3,
+        "contentPages": 2,
+        "memoPage": null,
+        "endPage": 4
+      },
+      {
+        "question": 3,
+        "startPage": 5,
+        "contentPages": 2,
+        "memoPage": null,
+        "endPage": 6
+      }
+    ],
+    "scoreHeadings": [
+      {
+        "page": 1,
+        "question": "2016-spring-db-pm1-q1",
+        "context": "設問1（1）",
+        "text": "予想配点 10点　候補キー・部分関数従属性:4点／推移的関数従属性・部分関数従属性の有無:4点／推移的関数従属性の有無:2点"
+      },
+      {
+        "page": 1,
+        "question": "2016-spring-db-pm1-q1",
+        "context": "設問1（2）",
+        "text": "予想配点 8点　正規形・関係スキーマ①:4点／関係スキーマ②・関係スキーマ③:4点"
+      },
+      {
+        "page": 1,
+        "question": "2016-spring-db-pm1-q1",
+        "context": "設問2（1）",
+        "text": "予想配点 8点　a・b:3点／c・d:3点／e:2点"
+      },
+      {
+        "page": 2,
+        "question": "2016-spring-db-pm1-q1",
+        "context": "設問2（2）",
+        "text": "予想配点 7点　関係の種類・向きの誤り−1点／本、接続先の誤り・線の不足・余分な線−2点／本"
+      },
+      {
+        "page": 2,
+        "question": "2016-spring-db-pm1-q1",
+        "context": "設問3（1）",
+        "text": "予想配点 2点　ポイント交換の問題:2点"
+      },
+      {
+        "page": 2,
+        "question": "2016-spring-db-pm1-q1",
+        "context": "設問3（2）",
+        "text": "予想配点 15点　(a)・(c) 1行目［全空欄］・(c) 2行目［会員ID・付与年月］:5点／(c) 2行目［交換年月日・消費ポイント］・(c) 3行目［全空欄］・(c) 4行目［会員ID］:5点／(b) 属性名 1列目・(b) 属性名 2列目・(b) 属性名 3列目・(b) 属性名 4列目・(c) 4行目［付与年月〜消費ポイント］:5点"
+      },
+      {
+        "page": 3,
+        "question": "2016-spring-db-pm1-q2",
+        "context": "設問1（1）",
+        "text": "予想配点 15点　T1［全空欄］・T2［マスタ更新登録〜発注対象データ］:5点／T2［需要予測〜分析用データ］・T3［全空欄］・T4［マスタ更新登録〜受注］:5点／T4［出荷指図〜分析用データ］・T5［全空欄］:5点"
+      },
+      {
+        "page": 3,
+        "question": "2016-spring-db-pm1-q2",
+        "context": "設問1（2）",
+        "text": "予想配点 12点　a・b:4点／c・d:4点／e・f:4点"
+      },
+      {
+        "page": 3,
+        "question": "2016-spring-db-pm1-q2",
+        "context": "設問2（1）",
+        "text": "予想配点 11点　在庫［バックアップの種類・選択根拠］:4点／在庫［理由］・出荷［バックアップの種類］:4点／出荷［選択根拠・理由］:3点"
+      },
+      {
+        "page": 4,
+        "question": "2016-spring-db-pm1-q2",
+        "context": "設問2（2）",
+        "text": "予想配点 2点　テーブル名:2点"
+      },
+      {
+        "page": 4,
+        "question": "2016-spring-db-pm1-q2",
+        "context": "設問2（3）",
+        "text": "予想配点 2点　回復手順:2点"
+      },
+      {
+        "page": 4,
+        "question": "2016-spring-db-pm1-q2",
+        "context": "設問3（1）",
+        "text": "予想配点 6点　ア・イ:3点／ウ・エ:3点"
+      },
+      {
+        "page": 4,
+        "question": "2016-spring-db-pm1-q2",
+        "context": "設問3（2）",
+        "text": "予想配点 2点　理由:2点"
+      },
+      {
+        "page": 5,
+        "question": "2016-spring-db-pm1-q3",
+        "context": "設問1（1）",
+        "text": "予想配点 14点　a:5点／b:5点／c:4点"
+      },
+      {
+        "page": 5,
+        "question": "2016-spring-db-pm1-q3",
+        "context": "設問1（2）",
+        "text": "予想配点 4点　実行順序:4点"
+      },
+      {
+        "page": 5,
+        "question": "2016-spring-db-pm1-q3",
+        "context": "設問2（1）",
+        "text": "予想配点 8点　d:4点／e:4点"
+      },
+      {
+        "page": 5,
+        "question": "2016-spring-db-pm1-q3",
+        "context": "設問2（2）",
+        "text": "予想配点 4点　二重線で消す箇所:4点"
+      },
+      {
+        "page": 5,
+        "question": "2016-spring-db-pm1-q3",
+        "context": "設問2（3）",
+        "text": "予想配点 4点　SQL文:4点"
+      },
+      {
+        "page": 5,
+        "question": "2016-spring-db-pm1-q3",
+        "context": "設問3（1）",
+        "text": "予想配点 4点　関係スキーマ:4点"
+      },
+      {
+        "page": 5,
+        "question": "2016-spring-db-pm1-q3",
+        "context": "設問3（2）",
+        "text": "予想配点 4点　社員番号:4点"
+      },
+      {
+        "page": 6,
+        "question": "2016-spring-db-pm1-q3",
+        "context": "設問3（2）",
+        "text": "予想配点 4点　操作:4点"
+      },
+      {
+        "page": 6,
+        "question": "2016-spring-db-pm1-q3",
+        "context": "設問3（3）",
+        "text": "予想配点 4点　理由:4点"
+      }
+    ],
+    "gridCells": 260,
+    "grids": 7,
+    "file": "2016-pm1.pdf",
+    "size": 548285
+  },
+  {
+    "year": 2016,
+    "part": "pm2",
+    "pages": 4,
+    "contentPages": 4,
+    "memoPages": 0,
+    "fields": 109,
+    "questions": [
+      {
+        "question": 1,
+        "startPage": 1,
+        "contentPages": 2,
+        "memoPage": null,
+        "endPage": 2
+      },
+      {
+        "question": 2,
+        "startPage": 3,
+        "contentPages": 2,
+        "memoPage": null,
+        "endPage": 4
+      }
+    ],
+    "scoreHeadings": [
+      {
+        "page": 1,
+        "question": "2016-spring-db-pm2-q1",
+        "context": "設問1（1）",
+        "text": "予想配点 24点　開始時刻〜支店コード［データ型〜格納長（バイト）］:8点／a・b・c・索引① の種類・索引② の種類・索引③ の種類・案件番号［データ型〜格納長（バイト）］・行員番号・予定日［全空欄］・開始時刻［索引① の構成順〜索引③ の構成順］:8点／行番号〜案件番号［索引① の構成順〜索引③ の構成順］:8点"
+      },
+      {
+        "page": 1,
+        "question": "2016-spring-db-pm2-q1",
+        "context": "設問1（2）",
+        "text": "予想配点 11点　d・e:6点／f・g:5点"
+      },
+      {
+        "page": 1,
+        "question": "2016-spring-db-pm2-q1",
+        "context": "設問1（3）",
+        "text": "予想配点 10点　h・i:5点／有効でない場合・トレードオフの事象:5点"
+      },
+      {
+        "page": 1,
+        "question": "2016-spring-db-pm2-q1",
+        "context": "設問2（1）",
+        "text": "予想配点 13点　j・k:5点／l・m:5点／n:3点"
+      },
+      {
+        "page": 1,
+        "question": "2016-spring-db-pm2-q1",
+        "context": "設問2（2）",
+        "text": "予想配点 10点　o・p:5点／q・r:5点"
+      },
+      {
+        "page": 2,
+        "question": "2016-spring-db-pm2-q1",
+        "context": "設問2（2）",
+        "text": "予想配点 3点　s:3点"
+      },
+      {
+        "page": 2,
+        "question": "2016-spring-db-pm2-q1",
+        "context": "設問2（3）",
+        "text": "予想配点 10点　t・u:5点／v・w:5点"
+      },
+      {
+        "page": 2,
+        "question": "2016-spring-db-pm2-q1",
+        "context": "設問3（1）",
+        "text": "予想配点 9点　x:3点／y:3点／z:3点"
+      },
+      {
+        "page": 2,
+        "question": "2016-spring-db-pm2-q1",
+        "context": "設問3（2）",
+        "text": "予想配点 10点　要因①・修正内容①:5点／要因②・修正内容②:5点"
+      },
+      {
+        "page": 3,
+        "question": "2016-spring-db-pm2-q2",
+        "context": "設問1（1）",
+        "text": "予想配点 10点　ア:5点／イ:5点"
+      },
+      {
+        "page": 3,
+        "question": "2016-spring-db-pm2-q2",
+        "context": "設問1（2）",
+        "text": "予想配点 45点　あ・い:10点／う・え:10点／お:5点／図1:20点（関係の種類・向きの誤り−1点／本、接続先の誤り・線の不足・余分な線−2点／本）"
+      },
+      {
+        "page": 3,
+        "question": "2016-spring-db-pm2-q2",
+        "context": "設問1（3）",
+        "text": "予想配点（他頁と合算）　a〜d:15点（他頁と合算）／g・j・l:15点（他頁と合算）／o:15点（他頁と合算）"
+      },
+      {
+        "page": 4,
+        "question": "2016-spring-db-pm2-q2",
+        "context": "設問1（3）",
+        "text": "予想配点（他頁と合算）　e・f:15点（他頁と合算）／h・i・k:15点（他頁と合算）／m・n・p・q・r:15点（他頁と合算）"
+      }
+    ],
+    "gridCells": 255,
+    "grids": 8,
+    "file": "2016-pm2.pdf",
+    "size": 517319
+  }
+]

@@ -1,4 +1,5 @@
 import { el, link } from "./dom";
+import { contactPageInfo } from "./contact";
 
 export function examInfo() {
   const info = el("div", "", "exam-info");
@@ -46,5 +47,19 @@ export function examInfo() {
   }
   official.append(officialHeading, links, el("p", "IPAは2027年度から新試験制度へ移行予定と案内しています。翌年度以降の受験についても、公式情報をご確認ください。", "exam-note"));
   info.append(schedule, official, el("p", "情報確認日：2026年11月14日 ｜ 最新情報はIPA公式サイトをご確認ください。", "exam-note exam-checked"));
+  const contact = el("section", "", "card exam-contact");
+  const contactHeading = el("h2", "問い合わせ先");
+  contactHeading.id = "exam-contact-title";
+  contact.setAttribute("aria-labelledby", contactHeading.id);
+  const contactLinks = el("ul", "", "exam-links");
+  const contactItem = el("li");
+  const account = link("@taiki_smec（X） ↗", "https://x.com/taiki_smec");
+  account.target = "_blank";
+  account.rel = "noopener noreferrer";
+  contactItem.append(account, el("small", "誤字・誤記のご報告、ご要望・その他のお問い合わせ"));
+  contactLinks.append(contactItem);
+  contact.append(contactHeading, el("p", contactPageInfo.description), contactLinks,
+    el("p", "誤字・誤記のご報告には、該当ページのURLや年度・問題番号を添えていただけると助かります。", "exam-note"));
+  info.append(contact);
   return info;
 }
