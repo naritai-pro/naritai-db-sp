@@ -1,5 +1,6 @@
 {
   "name": "naritai-db-sp",
+  "license": "MIT-0",
   "private": true,
   "type": "module",
   "scripts": {

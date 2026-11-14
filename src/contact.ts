@@ -1,4 +1,5 @@
 import { el, link } from "./dom";
+import { openSourceSection } from "./open-source";
 
 export const contactPageInfo = {
   path: "/contact",
@@ -18,5 +19,6 @@ export function contactPage() {
     account,
     el("p", "誤字・誤記のご報告には、該当ページのURLや年度・問題番号を添えていただけると助かります。"),
   );
+  page.append(openSourceSection());
   return page;
 }

@@ -1,5 +1,6 @@
 import { el, link } from "./dom";
 import { contactPageInfo } from "./contact";
+import { openSourceSection } from "./open-source";
 
 export function examInfo() {
   const info = el("div", "", "exam-info");
@@ -60,6 +61,6 @@ export function examInfo() {
   contactLinks.append(contactItem);
   contact.append(contactHeading, el("p", contactPageInfo.description), contactLinks,
     el("p", "誤字・誤記のご報告には、該当ページのURLや年度・問題番号を添えていただけると助かります。", "exam-note"));
-  info.append(contact);
+  info.append(contact, openSourceSection(true));
   return info;
 }
