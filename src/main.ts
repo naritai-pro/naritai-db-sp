@@ -1,4 +1,5 @@
 import { questionReset } from "./question-reset";
+import { examInfo } from "./exam-info";
 import { setupPhone, phoneQuestion, resetPhone, morningIndex } from "./phone";
 import { circleTable } from "./circle-table";
 import { partTree, treeAnswer } from "./part-tree";
@@ -459,6 +460,7 @@ async function route() {
       el("h1", page.heading),
       el("p", page.description),
       el("p", "左の一覧から区分と年度を選んでください。午前は年度ごとに、午後は大問ごとに演習できます。"),
+      examInfo(),
     );
   }
   const top = app.querySelector(".question-top");

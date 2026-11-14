@@ -83,6 +83,26 @@ small,
 .catalog small {
   display: block;
 }
+.exam-info { max-width: 1000px; display: grid; gap: 20px; margin-top: 28px; }
+.exam-schedule { border-top: 4px solid #17745f; }
+.exam-application { background: #edf5ef; border-radius: 8px; padding: 16px; margin-block: 18px; }
+.exam-application span, .exam-application strong { display: block; }
+.exam-application strong { font-size: clamp(1.1rem, 2vw, 1.4rem); margin-top: 4px; }
+.exam-dates { margin: 0 0 20px; }
+.exam-dates > div { display: grid; grid-template-columns: 160px minmax(0, 1fr); gap: 8px 16px; padding: 12px 0; border-bottom: 1px solid #dce4de; }
+.exam-dates dt { font-weight: 650; }
+.exam-dates dd { margin: 0; }
+.exam-links { list-style: none; padding: 0; margin: 0; }
+.exam-links li { padding-block: 12px; }
+.exam-links a { font-weight: 650; text-underline-offset: 3px; }
+.exam-links small { display: block; margin-top: 4px; }
+.exam-note { font-size: .85rem; color: #4c6365; }
+.exam-official > .exam-note { margin: 16px 0 0; }
+.exam-checked { margin: 0; }
+@media (max-width: 760px) {
+  .exam-info { margin-inline: 12px; }
+  .exam-dates > div { grid-template-columns: 1fr; gap: 4px; }
+}
 .primary,
 button {
   background: #126854;
