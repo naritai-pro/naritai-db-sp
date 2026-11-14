@@ -672,8 +672,10 @@ body:has(.phone-panel[open]) { overflow: hidden; }
 .contact-page { max-width: 760px; }
 .contact-page p { line-height: 1.8; }
 
-.pdf-links .pdf-part-download { display: block; width: 100%; padding: 12px 8px; border: 1px solid #126854; border-radius: 6px; background: #126854; color: #fff; font: inherit; font-weight: 650; text-align: center; cursor: pointer; }
-.pdf-links .pdf-part-download:hover { background: #0c5141; }
-.pdf-links .pdf-part-download:focus-visible { outline: 3px solid #126854; outline-offset: 3px; }
-.pdf-links .pdf-part-download:disabled { opacity: .65; cursor: wait; }
+.pdf-part-download { display: block; width: max-content; min-width: 160px; max-width: 100%; padding: 12px 8px; border: 1px solid #126854; border-radius: 6px; background: #126854; color: #fff; font: inherit; font-weight: 650; text-align: center; cursor: pointer; }
+.pdf-part-download:hover { background: #0c5141; }
+.pdf-part-download:focus-visible { outline: 3px solid #126854; outline-offset: 3px; }
+.pdf-part-download:disabled { opacity: .65; cursor: wait; }
 .pdf-group > [role="status"]:empty { display: none; }
+
+.pdf-bundle-contents { margin-top: 8px; }

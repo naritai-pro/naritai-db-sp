@@ -17,6 +17,11 @@ jobs = [
     for entry in sorted(catalog, key=lambda entry: entry["year"])
 ]
 
+answer_jobs = [
+    (f"{NAME}/{part.upper()}/OFFICIAL-ANSWERS/{entry['year']}-{part.upper()}-answer.pdf", entry["answers"][part])
+    for part in ("am1", "am2", "pm1", "pm2")
+    for entry in sorted(catalog, key=lambda entry: entry["year"])
+]
 
 cached_questions = {}
 if "--reuse-questions" in sys.argv:
@@ -42,7 +47,7 @@ temporary = destination.with_suffix(".zip.tmp")
 try:
     with ThreadPoolExecutor(max_workers=4) as executor:
         with ZipFile(temporary, "w", compression=ZIP_DEFLATED) as archive:
-            for name, data in executor.map(download, jobs):
+            for name, data in executor.map(download, jobs + answer_jobs):
                 info = ZipInfo(name, date_time=(2026, 1, 1, 0, 0, 0))
                 info.compress_type = ZIP_DEFLATED
                 info.create_system = 0
@@ -57,7 +62,7 @@ try:
             info.create_system = 0
             archive.writestr(info, data)
     with ZipFile(temporary) as archive:
-        assert len(archive.namelist()) == 44
+        assert len(archive.namelist()) == 84
         assert all(name.isascii() for name in archive.namelist())
         assert archive.testzip() is None
     temporary.replace(destination)
@@ -76,7 +81,7 @@ with destination.open("rb") as source:
         parts.append({"file": name, "size": len(data)})
 (assets / f"{NAME}.json").write_text(json.dumps({
     "filename": destination.name,
-    "pdfCount": 44,
+    "pdfCount": 84,
     "size": destination.stat().st_size,
     "parts": parts,
 }, indent=2) + "\n")
@@ -87,7 +92,11 @@ with ZipFile(destination) as all_in_one:
         session_name = f"{NAME}-{session}"
         session_zip = destination.parent / f"{session_name}.zip"
         names = [name for name in all_in_one.namelist() if name.startswith(f"{NAME}/{session.upper()}/")]
-        assert len(names) == 10
+        assert len(names) == 20
+        if session in ("am1", "am2"):
+            names.append(f"{NAME}/ANSWER-SHEETS/am1-am2.pdf")
+        else:
+            names.append(f"{NAME}/ANSWER-SHEETS/2016-2025-{session}.pdf")
         with ZipFile(session_zip, "w", compression=ZIP_DEFLATED) as archive:
             for name in names:
                 info = ZipInfo(name, date_time=(2026, 1, 1, 0, 0, 0))
@@ -102,7 +111,7 @@ with ZipFile(destination) as all_in_one:
                 session_parts.append({"file": name, "size": len(data)})
         (assets / f"{session_name}.json").write_text(json.dumps({
             "filename": session_zip.name,
-            "pdfCount": 10,
+            "pdfCount": 21,
             "size": session_zip.stat().st_size,
             "parts": session_parts,
         }, indent=2) + "\n")

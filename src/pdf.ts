@@ -67,12 +67,12 @@ export function pdfPage() {
     el("p", "2016〜2025年度の公式問題冊子と、学習用の解答用紙を掲載しています。年度別の問題リンクからはIPA公式のPDFを新しいタブで開きます。"),
     el("p", "午前Ⅰは高度試験共通の問題です。", "exam-note"),
   );
-  page.append(el("h2", "10年分の問題・解答用紙をまとめてダウンロード"), el("p", "公式問題冊子と学習用の解答用紙、図の採点ルールをまとめて収録しています。"));
-  const download = el("button", "問題・解答用紙をすべてダウンロード（ZIP）", "pdf-download");
+  page.append(el("h2", "10年分の問題・解答用紙をまとめてダウンロード"), el("p", "公式問題冊子・IPA公式の解答例と学習用の解答用紙、図の採点ルールをまとめて収録しています。"));
+  const download = el("button", "問題・解答用紙・解答例をすべてダウンロード（ZIP）", "pdf-download");
   download.type = "button";
-  const downloadStatus = el("p", `${archiveInfo.pdfCount}本・約${Math.round(archiveInfo.size / 1_000_000)}MB／問題冊子・午前共通マークシート・午後Ⅰ／Ⅱの解答用紙10年分・図の採点ルール`, "exam-note");
+  const downloadStatus = el("p", `${archiveInfo.pdfCount}本・約${Math.round(archiveInfo.size / 1_000_000)}MB／問題冊子・学習用の解答用紙・IPA公式の解答例・図の採点ルール`, "exam-note");
   downloadStatus.setAttribute("role", "status");
-  bindArchiveDownload(download, downloadStatus, "/downloads/DB-Exam-PDF-2016-2025.json", "問題・解答用紙・図の採点ルールをまとめたZIPの保存を開始しました。");
+  bindArchiveDownload(download, downloadStatus, "/downloads/DB-Exam-PDF-2016-2025.json", "問題・解答用紙・解答例・図の採点ルールをまとめたZIPの保存を開始しました。");
   page.append(download, downloadStatus);
   const printInfo = el("section", "", "card pdf-print-info");
   const sheetDownloads = el("div", "", "pdf-bulk-links");
@@ -104,15 +104,12 @@ export function pdfPage() {
     heading.id = "pdf-part-" + part;
     section.setAttribute("aria-labelledby", heading.id);
     const links = el("ul", "", "pdf-links");
-    const bulkItem = el("li");
     const bulkDownload = el("button", "10年分まとめて", "pdf-part-download");
     bulkDownload.type = "button";
-    bulkDownload.setAttribute("aria-label", `${label}の問題10年分をまとめてダウンロード（ZIP）`);
+    bulkDownload.setAttribute("aria-label", `${label}の問題・解答用紙・解答例10年分をまとめてダウンロード（ZIP）`);
     const bulkStatus = el("p", "", "exam-note");
     bulkStatus.setAttribute("role", "status");
-    bindArchiveDownload(bulkDownload, bulkStatus, `/downloads/DB-Exam-PDF-2016-2025-${part}.json`, `${label}の問題10年分のZIPの保存を開始しました。`);
-    bulkItem.append(bulkDownload);
-    links.append(bulkItem);
+    bindArchiveDownload(bulkDownload, bulkStatus, `/downloads/DB-Exam-PDF-2016-2025-${part}.json`, `${label}の問題・解答用紙・解答例10年分のZIPの保存を開始しました。`);
     for (const {year, papers} of years) {
       const item = el("li");
       const yearLabel = year + "年度 " + morningTerm(year);
@@ -121,7 +118,10 @@ export function pdfPage() {
       item.append(anchor);
       links.append(item);
     }
-    section.append(heading, links, bulkStatus);
+    const contents = part === "am1" || part === "am2"
+      ? "収録内容：試験問題10年分・年度共通のマークシート・IPA公式の解答例10年分"
+      : "収録内容：試験問題10年分・学習用の解答用紙10年分・IPA公式の解答例10年分";
+    section.append(heading, bulkDownload, el("p", contents, "exam-note pdf-bundle-contents"), bulkStatus, el("h3", "試験問題"), links);
     if (part === "am1" || part === "am2") {
       const sheetLink = el("p", "", "pdf-morning-sheet");
       sheetLink.append(morningSheetLink(), el("small", "A4・1ページ／全年度で使えます"));
@@ -140,6 +140,16 @@ export function pdfPage() {
       }
       section.append(el("h3", "学習用の解答用紙"), sheetLinks);
     }
+    const officialAnswers = el("ul", "", "pdf-links pdf-official-answer-links");
+    for (const {year, answers} of years) {
+      const item = el("li");
+      const yearLabel = year + "年度 " + morningTerm(year);
+      const anchor = officialLink(yearLabel, answers[part]);
+      anchor.setAttribute("aria-label", `${yearLabel} ${label} IPA公式の解答例PDF（新しいタブで開く）`);
+      item.append(anchor);
+      officialAnswers.append(item);
+    }
+    section.append(el("h3", "IPA公式の解答例"), officialAnswers);
     groups.append(section);
   }
   const sources = el("details", "", "pdf-source");
